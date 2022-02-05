@@ -1,0 +1,2462 @@
+
+%% bare_conf.tex
+%% V1.2
+%% 2002/11/18
+%% by Michael Shell
+%% mshell@ece.gatech.edu
+%%
+%% NOTE: This text file uses MS Windows line feed conventions. When (human)
+%% reading this file on other platforms, you may have to use a text
+%% editor that can handle lines terminated by the MS Windows line feed
+%% characters (0x0D 0x0A).
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.6b or later) with an IEEE conference paper.
+%%
+%% Support sites:
+%% http://www.ieee.org
+%% and/or
+%% http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/
+%%
+%% This code is offered as-is - no warranty - user assumes all risk.
+%% Free to use, distribute and modify.
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. IEEE's font choices can trigger bugs that do  ***
+% *** not appear when using other class files.                            ***
+% Testflow can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/testflow
+
+
+% Note that the a4paper option is mainly intended so that authors in
+% countries using A4 can easily print to A4 and see how their papers will
+% look in print. Authors are encouraged to use U.S. letter paper when
+% submitting to IEEE. Use the testflow package mentioned above to verify
+% correct handling of both paper sizes by the author's LaTeX system.
+%
+% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
+% should be used if it is desired that the figures are to be displayed in
+% draft mode.
+%
+% This paper can be formatted using the peerreviewca
+% (instead of conference) mode.
+\documentclass[conference]{IEEEtran}
+
+
+% correct bad hyphenation here
+%\hyphenation{op-tical net-works semi-conduc-tor IEEEtran}
+
+
+%-------------------------------------------------------------------------
+% take the % away on next line to produce the final camera-ready version
+%\pagestyle{empty}
+\pagenumbering{arabic}
+\usepackage{verbatim}
+
+\begin{comment}
+%--------------- added by honggang, to make it tighter---------------
+\topskip 0in            %between header and text
+\parskip 0in            %gap between paragraphs
+\floatsep 0in           %space left between floats
+\textfloatsep 0.01in       %space between last top float or first bottom float and the text
+\intextsep 0.01in          %space left on top and bottom of an in-text float
+\dblfloatsep 0in        %floatsep for 2 column
+\dbltextfloatsep 0in    %space between last top float or first bottom float and the text
+%\abovecaptionskip 0in   %space above caption
+%\belowcaptionskip 0in   %space below caption
+\abovedisplayskip 0in   %space before maths
+\belowdisplayskip 0in   %space after maths
+\arraycolsep 0in       %gap between columns of an array
+\topsep 0in             %space between first list item and preceding paragraph.
+\partopsep 0in          %extra space added to \topsep when environment
+                        %starts a new paragraph.
+\itemsep 0in            %space between successive list items
+%----------------------- added by honggang, to make it tighter--------
+\end{comment}
+
+
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+
+
+
+\def\@begintheorem#1#2{\tmpitemindent\itemindent\topsep 0pt\rmfamily\trivlist
+    \item[\hskip \labelsep{\indent\itshape #1\ #2:}]\itemindent\tmpitemindent}
+\def\@opargbegintheorem#1#2#3{\tmpitemindent\itemindent\topsep 0pt\rmfamily \trivlist
+% IEEE uses a long dash between the theorem number and name and does not
+% put () around the name
+%    \item[\hskip\labelsep{\indent\itshape #1\ #2\ \rmfamily(#3)}]\itemindent\tmpitemindent}
+    \item[\hskip\labelsep{\indent\itshape #1\ #2\rmfamily---#3:}]\itemindent\tmpitemindent}
+\def\@endtheorem{\endtrivlist\unskip}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{claim}{Claim}
+\newtheorem{proposition}{Proposition}
+
+\def\QED{\mbox{\rule[0pt]{1.5ex}{1.5ex}}}
+\def\proof{\noindent\hspace{2em}{\itshape Proof: }}
+\def\endproof{\hspace*{\fill}~\QED\par\endtrivlist\unskip}
+
+
+%
+%  dubfigsingle.  2x1 double figure with only one \caption.
+%
+
+\newcommand{\dubfigsingle}[6]{
+%\vspace*{-0.2in}
+\begin{figure*}[t]
+\centerline{
+    \begin{minipage}{0.55\textwidth}
+      \begin{center}
+        \leavevmode
+        \setlength{\epsfxsize}{0.9\textwidth}
+        \setlength{\epsfysize}{0.59\textwidth}
+        \epsffile{\Figdir#1}
+       \newline{\small (a) #2}
+      \end{center}
+    \end{minipage}
+    \begin{minipage}{0.55\textwidth}
+      \begin{center}
+        \leavevmode
+        \setlength{\epsfxsize}{0.9\textwidth}
+        \setlength{\epsfysize}{0.59\textwidth}
+        \epsffile{\Figdir#3}
+       \newline{\small (b) #4}
+      \end{center}
+    \end{minipage}
+} \caption{#5}\label{fig:#6}
+%\hrule
+%\vspace*{-0.2in}
+\end{figure*}
+}
+
+
+%\input{epsf}
+
+\usepackage{epsfig}
+\usepackage{times}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{amssymb}
+
+
+
+\begin{document}
+
+\title{On Unstructured File Sharing Networks
+%\\
+%Multipath and Multiple TCP Connections
+}
+
+
+\author {
+ \normalsize
+\begin{tabular}{ccc}
+\multicolumn{3}{c}{ \large{Honggang Zhang$^*$, Giovanni
+Neglia$^{\dag}$, Don Towsley$^*$, Giuseppe Lo Presti$^\S$}
+} \\
+ $^*$Computer Science Dept.  & $^{\dag}$D.I.E.E.T.
+& $^\S$IT Dept.\\
+ University of Massachusetts Amherst& Universit\`a degli Studi di Palermo, Italy &
+ C.E.R.N., Switzerland\\
+\{honggang, towsley\}@cs.umass.edu & giovanni.neglia@ieee.org
+& giuseppe.lopresti@cern.ch\\
+\end{tabular}\\
+\\
+\large{\textbf{UMass Amherst Computer Science Department Technical Report 2006-40}}\\
+First version: August 1, 2006\\
+This version: August 15, 2006}
+%\large{Honggang Zhang} & \large{Giovanni Neglia} &
+%\large{Don Towsley}
+
+
+%\author{Honggang Zhang\\
+%honggang@cs.umass.edu\\
+%\today
+%}
+
+
+
+\maketitle
+%\thispagestyle{empty}
+
+
+
+\begin{abstract}
+
+We study the interaction among users of unstructured file sharing
+applications, who compete for available network resources (link
+bandwidth or capacity) by opening multiple connections on multiple
+paths so as to accelerate data transfer. We model this interaction
+with an \textit{unstructured file sharing game}. Users are players
+and their strategies are the numbers of sessions on available
+paths. We consider a general bandwidth sharing framework proposed
+by Kelly \cite{kelly98rate} and Mo and Walrand \cite{mo00fair},
+with TCP as a special case. Furthermore, we incorporate the
+Tit-for-Tat strategy (adopted by BitTorrent \cite{bt} networks)
+into the unstructured file sharing game to model the competition
+in which a connection can be set up only when both users find this
+connection beneficial.
+%This strategy is a widely known strategy built
+%into BitTorrent \cite{bt} networks.
+%Whether a connection setup is successful or not depends on whether
+%both peers find this connection beneficial or not. To make our
+%model more tractable, we restrict users to open either zero or one
+%connection to another peer.
+We refer to this as an \textit{overlay formation game}. We prove
+the existence of Nash equilibrium in several variants of both
+games, and quantify the losses of efficiency of Nash equilibria.
+We find that the loss of efficiency due to selfish behavior is
+still unbounded even when the Tit-for-Tat strategy is believed to
+prevent selfish behavior.
+%can be arbitrarily large if users are not resource constrained.
+%Fortunately, the loss of efficiency is upper bounded when users
+%are resource constrained.
+%Potential
+%solutions are recommended to improve the system efficiency (to be
+%done !!!).
+\end{abstract}
+
+
+
+% no keywords
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+%
+% for peerreview papers, inserts a page break and creates the second title.
+% Will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+
+%\input{tcpgame-general-intro}
+%\parskip=-5pt
+\section{Introduction}
+%\parskip=0pt
+
+
+\noindent Recently peer-to-peer applications (e.g., BitTorrent
+\cite{bt}, Kazaa, eDonkey, and Gnutella \cite{p2p}) have become
+very popular. They can be major contributors of the Internet
+traffic. For example, Sprint's IP Monitoring Project \cite{sprint}
+shows that in April $2003$, $20-40\%$ of total bytes corresponded
+to peer-to-peer traffic on one backbone link. CacheLogic
+\cite{cachelogic} estimates that peer-to-peer generated $60\%$ of
+all US Internet traffic at the end of $2004$.
+%ISPs
+%cannot afford to ignore peer-to-peer traffic as more than $92\%$
+%of p2p traffic cross transit or peer links. On average, $80\%$ of
+%upstream capacity is consumed by p2p.
+
+We refer to the networks for these peer-to-peer applications as
+unstructured file sharing overlay networks. These networks are
+overlay networks since users forward or relay traffic for each
+other. These networks are also \textit{unstructured} because there
+are no well-defined network topologies, and users are not under
+the control of some central entity. For comparison,
+%Akamai
+%\cite{akamai} and
+Resilient Overlay Network \cite{andersen01resilient} is a
+\textit{structured} overlay network.
+%As more content providers use peer-to-peer applications
+%to deliver content, their costs will be passed onto service
+%providers.
+Given the increasingly large share of Internet traffic from
+unstructured file sharing networks, it is important to understand
+the behavior and performance of such networks, and such a
+fundamental understanding will certainly help ISPs and aid in the
+design of future Internet architecture.
+
+In this paper, we investigate the strategic behavior of
+self-interested peers/users of such unstructured file sharing
+overlay networks. Our work differs from  previous works on
+peer-to-peer applications, whose focus are on file searching and
+replication \cite{cohen02replication}, and topology discovery
+\cite{stutzbach05p2p}. Specifically, our investigations are from
+two different angles.
+
+First, we study the interaction among users of unstructured file
+sharing applications, who compete for available network resources
+(link bandwidth or capacity) by opening multiple connections or
+sessions on multiple paths so as to accelerate data transfer. We
+introduce an \textit{unstructured file sharing game} to model this
+interaction. In this game, users are players and their strategies
+are the numbers of sessions on available paths. The data rate
+allocated to connections are determined by the network. The
+mechanism of rate allocation considered by us is a general
+bandwidth sharing framework proposed by Kelly \cite{kelly98rate}
+with TCP networks as special cases
+\cite{bonald01impact}\cite{mo00fair}. Our focus is on TCP networks
+in which all connections/sessions are TCP connections. The
+unstructured file sharing game generalizes the \textit{TCP
+connection game} introduced in \cite{zhang05tcpgame_icnp} where
+the competition for a single bottleneck link capacity is
+investigated.
+
+Second, we incorporate the Tit-for-Tat strategy into the
+unstructured file sharing game. This strategy is widely known and
+built into BitTorrent \cite{bt} networks. With this strategy,
+peers set up a connection between themselves only when they both
+find it beneficial. We model this interaction scenario as an
+\textit{overlay formation game}. In order to make our model
+tractable, we restrict users to open either zero or one connection
+to another peer.
+%A user makes a decision on which peer among
+%multiple other peers to open a connection, with the objective to
+%maximize its benefit. However,
+
+In both games, users are interested in maximizing their benefits,
+a combination of some utility function and the cost associated
+with maintaining data transfer sessions. We assume that utility
+functions are increasing and concave functions of the data
+throughput in bits per second. Throughput is defined as the
+successful packet delivery rate. The cost incurred to users
+includes memory cost and CPU cost. As in
+\cite{zhang05tcpgame_icnp}, we consider a cost that is
+proportional to the total number of connections opened by a user.
+We also consider another type of cost which is proportional to a
+user's packet sending rate.
+
+We are interested in the following questions. First, does there
+exist a stable network state (i.e., Nash equilibrium (NE)
+\cite{basar98game}) in both games?  If so, what is the system
+performance at a NE? Specifically, we are interested in the loss
+of efficiency of a NE and the price of anarchy
+\cite{koutsoupias99worstcase} of NE(s). The loss of efficiency of
+a NE is defined as the ratio of the optimal system performance
+over the system performance at the NE, and the worst loss of
+efficiency is referred to as the price of anarchy
+\cite{koutsoupias99worstcase}. These metrics capture how bad the
+competition can be among self-interested TCP users. Here we focus
+on pure strategy NE.
+
+We make the following contributions.
+
+First, we give a formal formulation of unstructured file sharing
+game, and show by examples that multiple NEs exist on general
+network topologies. We then focus on parallel link networks and
+star networks, which are used to model peer-to-peer applications
+(similar topologies were also studied in
+\cite{qiu04bt}\cite{piccolo04p2p}). We prove the existence of NE
+of unstructured file sharing games on both networks, and find
+that, if users are not resource constrained, the efficiency loss
+of NEs can be unbounded (i.e., price of anarchy is arbitrarily
+large). Fortunately, if there are resource constraints for users,
+the efficiency loss is upper bounded. We also demonstrate the
+stability of NE in best-response dynamics in several variants of
+the game.
+
+Second, we model the Tit-for-Tat strategy in unstructured file
+sharing networks by an overlay formation game. We show
+analytically the existence of equilibrium overlay networks and
+that the loss of efficiency can be arbitrarily large. Tit-for-Tat
+is believed to prevent selfish behavior. However, our results show
+that the loss of efficiency due to selfish behavior can still be
+unbounded.
+%Our numerical simulations further verify our analytical
+%results.
+
+The rest of this paper is organized as follows. Related work is
+presented in Section \ref{sec:related}. The problem formulation
+for unstructured file sharing game is given in Section
+\ref{sec:form}. In Sections \ref{sec:para} and \ref{sec:star}, we
+focus on unstructured file sharing game on a parallel link network
+and star network. We address the overlay formation game in Section
+\ref{sec:topo}. Conclusions are given in Section \ref{sec:con}.
+
+\begin{comment}
+
+We first demonstrate that there exists a unique Nash equilibrium
+in the unstructured file sharing game when user's benefit includes
+only utility. At the Nash equilibrium, each user opens maximum
+allowable number of connections on each available path.
+Furthermore, the price of anarchy can be unbounded if users can
+open arbitrarily large number of data transfer sessions.
+
+If user's benefit includes both utility and cost, then we
+demonstrate through simple examples that there might exist
+multiple Nash equilibria in unstructured file sharing games.
+
+Then, we focus on two specific network topologies: parallel link
+topology and star topology. We show that Nash equilibrium exists
+for the games on these two kinds of topologies, and there are
+losses of efficiency at those Nash equilibria.
+
+(.....)
+
+(... network formation game using tit-for-tat ...)
+\end{comment}
+
+
+
+\begin{comment}
+Then, we suppose that all users of such kind of overlay network
+use multi-path congestion controller recently proposed by \cite{}
+and \cite{}. We demonstrate in Section \ref{sec:un-coord} that
+multi-path congestion controller is able to improve the average
+throughtput of such kind of networks when compared with the
+multiple un-coordinated congestion controllers which are adopted
+by BitTorrent networks.
+\end{comment}
+
+%\input{tcpgame-general-related}
+
+%\parskip=-15pt
+
+\section{Related Work}\label{sec:related}
+
+%\parskip=0pt
+
+Johari \textit{et al} \cite{johari04allocation} study a congestion
+game where users of a congested resource anticipate the effect of
+their actions on the price of the resource.
+%For a general network
+%topology, they show that the selfish behavior of the users leads
+%to an aggregate utility which is no worse than 3/4 the maximum
+%possible aggregate utility.
+In \cite{johari04allocation} users compete for each link
+independently from other links in the network. But this
+independence characteristic is not true for our model, because if
+a user opens a connection on a path, then all links of this path
+must carry this connection. \cite{akella02selfish} and
+\cite{zhang05tcpgame_icnp} study the interactions among selfish
+TCP users competing for a single bottleneck link. The unstructured
+file sharing game in this paper can be thought of as a generalized
+version of the game in \cite{zhang05tcpgame_icnp}.
+%Morris and Tay \cite{morris03user}
+%study the influence of user behavior on congestion collapse
+%through a Markovian model.
+
+%Several recent studies on congestion control
+\cite{kelly05joint}\cite{han07overlay_tcp} propose multi-path
+congestion controllers by which users can coordinate the data
+transfer sessions on several different paths to improve data
+throughput. A multi-path congestion controller chooses rates at
+which to send data on all of the paths available to it.
+%is a coordinated
+%controller where all sessions on different paths coordinate with
+%each other and all sessions act together like a single congestion
+%controller.
+%However,
+In our models, all sessions controlled by a single user are
+independent congestion controllers.
+%The Tit-for-Tat strategy was studied in the past
+%\cite{srinivasan03cooperation}\cite{qiu04bt}.
+%This strategy is
+%generally considered robust as analytically supported
+%by~\cite{qiu04bt}.
+\cite{qiu04bt} studies how Tit-for-Tat affects selfish peers who
+are able to set their uploading bandwidth. Our work differs from
+\cite{qiu04bt} in that we assume that a user can benefit by
+changing the number of connections to open. The analytical
+framework for our overlay formation game is in~\cite{jackson04}.
+
+%????? many research on p2p focused on searching, replication
+%techniques, topology discovery... Not the focus of this paper, ...
+
+
+
+\begin{comment}
+\begin{eqnarray}
+\sum_{m=1}^i\sum_{n=1}^js_{mi}q_{mn}s_{nj} &=&
+\big(\frac{-1}{\delta}\big)^{i+j}\sum_{m=1}^i\sum_{n=1}^j(-1)^{i+j}{i\choose
+m}{j \choose n}q_{mn}\nonumber\\
+& = &
+\big(\frac{-1}{\delta}\big)^{i+j}\sum_{m=1}^i\sum_{n=1}^j(-1)^{i+j}{i\choose
+m}{j \choose n} \Big\{E_\theta
+\big[\frac{f(Y|\theta+m\delta)f(Y|\theta+n\delta)}{f^2(Y|\theta)}\big]-1\Big\}
+\nonumber\\
+&=&
+\big(\frac{-1}{\delta}\big)^{i+j}\sum_{m=1}^i\sum_{n=1}^j(-1)^{i+j}{i\choose
+m}{j \choose
+n} \Big\{ E_{\theta}\Big[\frac{f(Y|\theta+m\delta)f(Y|\theta+n\delta)}{f^2(Y|\theta)}\Big]\nonumber\\
+&&\rightarrow E_\theta[\frac{(\partial^{i}f(X,\theta)/
+\partial\theta^i)(\partial^{j}f(X,\theta)/\partial\theta^j)}{f^2(X,\theta)}]=w_{ij}(\theta),
+\nonumber
+\end{eqnarray}
+
+\end{comment}
+
+
+%\input{tcpgame-general-formulation}
+%\parskip=-10pt
+\section{Unstructured File Sharing Game}\label{sec:form}
+
+%In this section, we formally introduce the model of
+%\textit{unstructured file sharing game}.
+%\parskip=0pt
+\subsection{Formulations}
+
+%\parskip=0pt
+Consider a network consisting of $J$ links, numbered $1, ..., J$.
+Link $j$ has a capacity given by $C_j>0$; we let $\mathbf{C}=(C_1,
+C_2, ..., C_J)$ denote the vector of capacities. A set of users
+$\{1,..., R\}$ share this network. We assume that there exists a set
+of paths through the network, numbered $1,...,P$. By an abuse of
+notation, we will use $J,N,P$ to also denote the sets of links,
+users, and paths, respectively. Each path $p\in P$ uses a subset of
+the set of links $J$; if link $j$ is used by path $p$, we will denote
+this by writing $j\in p$. Each user $r\in \mathbf{R}$ has a
+collection of paths available through the network; if path $p$ serves
+user $r$, we will denote this by writing $p\in r$.
+%We will
+%assume without loss of generality that paths are uniquely
+%identified with users, so that for each path $p$ there exists a
+%unique user $r$ such that $p\in r$. If two users happen to share
+%the same path, that is captured in our model by creating two paths
+%which use exactly the same subset of links.
+
+\begin{comment}
+Links required by individual paths are captured by the path-link
+incidence matrix $A$, defined by:
+\begin{equation}
+A_{jp}= \left \{
+\begin{array}{ll}
+1, & \textrm{if $j\in p$}\\
+0, & \textrm{if $j\notin p$}
+\end{array} \right.
+\end{equation}
+Furthermore, we can capture the relationship between paths and
+users by the path-user incidence matrix $H$, defined by:
+\begin{equation}
+H_{rp}= \left \{
+\begin{array}{ll}
+1, & \textrm{if $p\in r$}\\
+0, & \textrm{if $p\notin r$}
+\end{array} \right.
+\end{equation}
+%%%Note that by our assumption on paths, for each path $p$, we have
+%%%$H_{rp}=1$ for exactly one user $r$.
+%For convenience, we will use $P_r$ to represent the set of paths
+%belong to user $r$. We will also use $P_r$ to denote the size of
+%set $P_r$.
+\end{comment}
+
+Each user can open a number of concurrent connections $n_{rp}$ on
+each path $p$ with $p\in r$. This defines a strategy vector for
+user $r$ as $\mathbf{n}_r=(n_{rp})$ with $p\in P$ and $p\in r$.
+Then a composite strategy vector of all users is given by
+$\mathbf{n}=(\mathbf{n}_1, ..., \mathbf{n}_R)$.
+%Based on our
+%definition, each path is associated with only one user, so,
+%$\mathbf{n}$ is a $P\times 1$ column vector.
+For a given $\mathbf{n}$, a certain rate allocation mechanism
+allocates a traffic rate $y_p$ to each connection on path $p$. We
+will discuss rate allocation mechanisms in the following section.
+For now, we simply state that, $\forall p\in P$, $y_p$ is a
+function of $\mathbf{n}$. We use vector $\mathbf{y}=(y_p, p\in P)$
+to represent a rate allocation on all paths.
+
+The total date rate or throughput $G_r$ obtained by a user $r$ is:
+%\begin{equation}
+$G_r(\mathbf{n}_r)=\sum_{p\in r} n_{rp} y_p
+\label{eqn:throughput}$,
+%\end{equation}
+where $n_{rp}$ is the number of connections opened by user $r$ on
+path $p$. As  $y_p$ ($\forall p\in P$) is a function of
+$\mathbf{n}$, the throughput of user $r$ is a function of the
+number of connections of all users, namely, $G_r=f(\mathbf{n})$.
+%In addition, for convenience, we can also use a matrix to
+%represent rate allocation. Specifically, let $\mathbf{Y}$ be a
+%$P\times P$ diagonal matrix with element $Y_{(p,p)}=y_p$ and
+%$Y_{(p,k)}=0, \forall p\ne k$. $\mathbf{Y}$ is different way to
+%represent rate vector $\mathbf{y}=(y_p, p\in P)$. We have
+%$$\mathbf{H \cdot Y \cdot n =G}.$$
+Any feasible rate allocation $\mathbf{y}$ must satisfy the
+capacity constraint:
+%\begin{equation}
+$\sum_{r\in \mathbf{R}} \sum_{p: j\in p} n_{rp} y_p \le C_j, j\in J.$
+%\label{eqn:constraint}
+%\end{equation}
+%Using matrix $\mathbf{A}$, we may write this constraint as
+%$$\mathbf{A \cdot Y \cdot n \le C}.$$
+
+We assume that user $r$ receives a utility $U_r(G_r)$ when
+obtaining throughput $G_r$. We assume that $U_r$ is a continuous,
+concave, and non-decreasing function of $G_r$, with domain $G_r
+\ge 0$. A user $r$ has some cost $\Phi_r(\mathbf{n}_r)$ associated
+with opened connections. We assume that this cost is proportional
+to the total number of connections opened by this user on all its
+available paths:
+%\begin{equation}
+$\Phi_r(\mathbf{n}_r) = \beta \sum_{p\in r} n_{rp}.$
+%\label{eqn:cost1}
+%\end{equation}
+Note that $\beta \in [0,1]$, and it is interpreted as the
+aggressiveness coefficient. Smaller $\beta$ corresponds to more
+powerful computation resources. This type of cost is also
+considered in \cite{zhang05tcpgame_icnp}. In general, we can
+assume that $\Phi_r$ is a continuous, convex, and non-decreasing
+function of $\mathbf{n}_r$.
+%This general cost function is our
+%future research topic.
+The payoff or benefit of a user $r$ is a linear combination of
+utility $U_r$ and cost $\Phi_r$, defined as:
+\begin{equation}
+B_r(\mathbf{n}_r)=U_r(\mathbf{n}_r) -
+\Phi_r(\mathbf{n}_r).\label{eqn:benefit}
+\end{equation}
+
+\begin{comment}
+%For an unstructured overlay network,
+The system optimization problem is to maximize the average payoff
+for all users of this overlay network. Formally, this problem is
+defined as:
+\begin{eqnarray}
+SYSTEM \nonumber \\
+&\mbox{maximize} & \sum_r B_r(d_r)    \\
+&\mbox{subject to} & \mathbf{Ay\le C} \\
+&& \mathbf{Hy=G} \\
+&& y_p\ge 0, p\in P.
+\end{eqnarray}
+Since the objective function is continuous and the feasible region
+is compact, an optimal solution $y$ exists. Since the feasible
+region is also convex, if the functions $B^r$ are strictly
+concave, then the optimal vector $\mathbf{G=Hy}$ is uniquely
+defined (though $\mathbf{y}$ may not be unique).
+\end{comment}
+
+%\parskip=-5pt
+
+\subsection{Rate Allocation Mechanism}\label{sec:rate.alloc}
+%\parskip=0pt
+
+
+We assume that the network allocates data rates to connections
+based on the $\alpha$-bandwidth allocation scheme
+\cite{bonald01impact}\cite{kelly98rate}\cite{mo00fair}:
+\begin{eqnarray}
+\mbox{maximize}_{\mathbf{y}}
+& \sum_p w_p n_p^\alpha \frac{(y_p n_p)^{(1-\alpha)}}{1-\alpha} \label{eqn:rate.alloc}\\
+\mbox{subject to} & \sum_{r\in \mathbf{R}} \sum_{p: j\in p} n_{rp}
+y_p \le
+C_j, j\in J  \\
+& n_p=\sum_{r: p\in r} n_{rp} \forall p \in P.
+\end{eqnarray}
+where $w_p$ is the weight of path $p$. $n_p$ is the number of
+connections or sessions on path $p$. Different values of $\alpha$
+give different rate allocations. For example, as $\alpha \to
+\infty$, this allocation mechanism corresponds to Max-Min
+fairness. Rate allocation in a TCP network is well approximated
+with $\alpha=2$ and $w_p=1/(RTT_p)^2$. Here, $RTT_p$ is the Round
+Trip Time (RTT) of path $p$.
+
+In a single link case and where all paths have the same RTT, this
+$\alpha$-bandwidth allocation is simplified to a \textit{simple
+rate allocation mechanism}. That is, for a link shared by $n$
+flows with the same RTT, each flow or connection gets an equal
+share of the bandwidth of the link, namely,
+\begin{equation}
+y= C /n. \label{eqn:prop}
+\end{equation}
+Thus if a user $r$ has $n_{r}$ flows, then its throughput $G_{r}$
+is:
+\begin{equation}
+G_{r}(\mathbf{n}_r)= \left \{
+\begin{array}{ll}
+C n_{r}/\sum_{w\in \mathbf{R}} n_{w}, &\quad \textrm{if $n_{r}>0$}\\
+0 , &\quad \textrm{otherwise}
+\end{array} \right.
+\end{equation}
+
+\bigskip
+\noindent \textbf{Remarks.} Note that this \textit{simple rate
+allocation mechanism} cannot be extended to a network setting.
+%Please see \cite{zhang06tcpgame_general} for more details.
+Specifically, after we calculate the rate allocated to each user on
+each link according to (\ref{eqn:prop}), we cannot simply say that
+the allocated rate on a path can be given by $y_{rp}=
+\mbox{min}_{j\in p} y_{rj}, \forall r\in \mathbf{R}.$ An illustrative
+example is given in Appendix \ref{appd:simple}.
+
+
+Note that the authors of \cite{johari04allocation} can use this
+rate allocation mechanism because in their case, users compete for
+each link independently from other links. However, in our case,
+links can not be treated independently, as all links of a path
+must carry the connections opened on this path. As shown in the
+following section, this requirement makes the throughput of a user
+neither a concave nor convex in the numbers of connections opened
+by this user.
+%This is illustrated in an example of grid network topology.
+Thus, it is difficult to apply the existing game-theoretic results
+(which requires concavity of utility functions) to the
+unstructured file sharing game on general network topology. Thus,
+in this paper we focus on two specific networks: parallel links
+and a star.
+
+%\parskip=-5pt
+
+\subsection{Unstructured File Sharing Game}
+%\parskip=0pt
+
+Based on the previous formulations, we now introduce an
+\textit{unstructured file sharing game}.
+% to model the interaction
+%among multiple users who use multiple concurrent connections on
+%multiple paths to compete for the total network bandwidth.
+In this game, each user $r$ tries to maximize its aggregate
+benefit $B_r$ by adjusting $\mathbf{n}_r$, its number of
+connections on its available paths. Namely, a user $r$ tries to
+solve the following optimization problem:
+\begin{eqnarray}
+\mbox{max}_{\mathbf{n}_r} &  B_r(\mathbf{n}_r,
+\mathbf{y^*}(\mathbf{n}_r))
+\label{eqn:usr.opt}\\
+\mbox{s.t.} & n_{r_p} \in [0, n_{r_p}^{max}], & \forall r_p \in P_r \label{eqn:usr.ss}\\
+ &  \mathbf{y^*} = \mbox{argmax}_\mathbf{y} &
+\sum_p w_p n_p^\alpha \frac{(y_p
+ n_p)^{(1-\alpha)}}{1-\alpha} \label{eqn:usr.opt.alloc}\\
+& \mbox{s.t.} & \sum_{r\in \mathbf{R}} \sum_{p: j\in p} n_{r_p} y_p
+\le C_j, j\in J \nonumber \\
+&  & n_p=\sum_{r: p\in r} n_{r_p}, \forall p \in P \nonumber
+\end{eqnarray}
+The decision variables of user $r$ is given by vector
+$\mathbf{n}_r$. The set of available paths of user $r$ is
+represented by $P_r$. (\ref{eqn:usr.opt.alloc}) indicates that the
+throughput of each connection on a path is the solution of the
+optimization problem defined in (\ref{eqn:rate.alloc}).
+%(\ref{eqn:usr.opt.con}) represents the capacity constraints.
+If $\alpha=2$ and $w_p=1/(RTT_p)^2$ and the network is a single
+bottleneck link, this game becomes the TCP connection game
+\cite{zhang05tcpgame_icnp}.
+
+For a general network, we cannot obtain an explicit form of
+function $B_r(\mathbf{n}_r)$ because there is no closed form
+solution for the rate allocation problem
+(\ref{eqn:usr.opt.alloc}). However, as shown later, we can obtain
+an explicit form of $B_r(\mathbf{n}_r)$ for some specific networks
+such as grid network, parallel link, and star network.
+
+In fact, (\ref{eqn:usr.opt}) is a Bi-level Programming problem
+which in general is NP-hard \cite{vicente94bilevel}. In this
+paper, we do not try to obtain a general solution for
+(\ref{eqn:usr.opt}) for each user. Instead, we focus on some
+special network topologies for which there exist analytically
+tractable and closed form solutions to (\ref{eqn:usr.opt.alloc}),
+and for these networks, we investigate the existence of Nash
+equilibrium.
+
+Let $\mathbf{n}^*_r$ represent the solution to user $r$'s
+optimization problem defined above. Formally, we have
+$\mathbf{n}^*_r = \mbox{argmax}_{\mathbf{n}_r}  B_r(\mathbf{n})$.
+A Nash equilibrium (NE) is defined as a composite strategy profile
+or a vector of connections of all users, and no user can gain by
+unilaterally deviating from it. We denote a Nash equilibrium by:
+%\begin{equation}
+$\mathbf{n}^*=(\mathbf{n_1}^*, \mathbf{n_2}^*, ...,
+\mathbf{n_R}^*).$
+%\end{equation}
+%where no user can benefit by deviating his/her strategy given all
+%other users do not change.
+
+The NE of this game represents the stable network state of the
+interaction among all users.
+%First we would like to know whether there exist such
+%stable network states, and whether a dynamic interaction process
+%will converge to a NE. Furthermore,
+The network performance at a NE is described by the loss of
+efficiency, defined as:
+\begin{equation}
+L_{eff} = B_{max}/B_{ne} \label{eqn:leff}
+\end{equation}
+where $B_{ne}$ is the total benefit of all users when the network
+is at a NE, and $B_{max}$ is the maximum benefit. The worst
+efficiency loss is also known as the \textit{price of anarchy}
+\cite{koutsoupias99worstcase}.
+
+\bigskip
+\noindent \textbf{Remarks.} It is not necessarily true that the
+throughput $G_r(\mathbf{n}_r)$
+%defined in (\ref{eqn:throughput})
+is an increasing function of $\mathbf{n}_r$. For example, in the
+network shown in Figure \ref{fig:not.in}, user $r$ has three
+paths: $p_1, p_2$ and $p_3$. $p_1$ contains two links $j_1$ and
+$j_2$ with capacity $C$. $p_2$ contains link $j_1$ and $p_2$
+contains link $j_2$. According to the simple rate allocation
+mechanism introduced before, if $\mathbf{n}_r=(0,1,1)$, then
+$G_r(\mathbf{n}_r)=2C$. However, if user $r$ increases its number
+of connections on path $p_1$ from zero to one, then
+$G_r(\mathbf{n}_r)=3C/2$. Thus, $G_r(\mathbf{n}_r)$ is a
+decreasing function of $n_{p1}$.
+%If for any user $r$,
+%$G_r(\mathbf{n}_r)$ is an increasing function of $\mathbf{n}_r$,
+%then there always exists a NE at extreme point
+%$(\mathbf{n}_1^{max}, ..., \mathbf{n}_R^{max})$ in the strategy
+%space where all users open their maximum allowable number of
+%connections. However, as shown in Figure \ref{fig:not.in}, this is
+%not necessarily true.
+
+
+
+
+\begin{figure}[htb!]
+    \begin{center}
+%%\includegraphics[width=0.5\textwidth, height=0.25\textheight]{./network1_2.eps}
+\includegraphics[scale=0.3]{./eps_BT_research/network7.eps}\\
+        \caption{A case where the throughput of user $r$ is not increasing in $\mathbf{n}_r$.}
+        \label{fig:not.in}
+     \end{center}
+\end{figure}
+
+One interesting special case is that a user can only choose either
+zero or one connection on a given available path. That is,
+(\ref{eqn:usr.ss}) can be described as $n_{r_p}\in \{0, 1\},
+\forall r_p \in P_r$. In this case, each user only has finite
+number of strategies. This variant of the game is a finite game.
+According to \cite{nash50}, this game admits a mixed strategy NE.
+This NE is related to randomly choosing of connections to other
+peers in BitTorrent applications \cite{bt}. This is an interesting
+future research topic.
+%In addition, as
+%shown in Section \ref{sec:topo}, we incorporate Tit-for-Tat
+%strategy into this variant of game to study the unstructured file
+%sharing from a different angle.
+
+%In the following section, we illustrate the possible Nash
+%equilibrium on some simple network topology.
+
+
+%\section{Resource Constrained Users}
+%\noindent \textbf{Grid Network}\\
+
+%\parskip=-10pt
+
+\subsection{Existence of Multiple Nash Equilibria in Grid Network}
+\label{sec:multiple}
+
+%\parskip=0pt
+
+In this section, we use a simple example to illustrate the
+unstructured file sharing game and possible NEs. The network
+topology in this example is a so called grid network introduced in
+\cite{bonald01impact}, shown in Figure \ref{fig:fish}.(a). A
+possible instance of this grid network is called ``fish" network,
+shown in Figure \ref{fig:fish}.(b).
+
+\begin{figure}[htb]
+% FIRST TWO FIGS
+\centerline{
+    \begin{minipage}{1.6in}
+     \begin{center}
+        \setlength{\epsfxsize}{1.6in}
+        \epsffile{eps_BT_research/grid-network-2.eps}\\
+       %\newline{\small (a)}
+       {\small (a)}
+      \end{center}
+    \end{minipage}
+    \begin{minipage}{1.6in}
+     \begin{center}
+        \setlength{\epsfxsize}{1.1in}
+        \epsffile{eps_BT_research/fish.eps}\\
+        %\newline{\small (b)}
+        {\small (b)}
+      \end{center}
+    \end{minipage}
+}\caption{(a) is a grid network where
+         squares represent links.
+        (b) is an instance of (a).
+        $A\to E\to B$ and $C\to D\to A$ correspond to route 1 and 2
+        in (a).
+        $D\to A\to E, E\to F\to D, C\to F\to B$
+        correspond to routes $3,4,5$. }
+        \label{fig:fish}
+\end{figure}
+
+
+%\dubfigsingle{epidemic_comp_delay.eps}{Average delay for different
+%$N$}{eps_BT_research/fish.eps}{CDF of delay with $N=160$}{Delay
+%under epidemic routing}{epidemic_delay}
+
+
+A closed form rate allocation based on the $\alpha$-bandwidth
+sharing mechanism for such a grid network is given in
+\cite{bonald01impact}. Specifically, if there are $K$ horizontal
+routes and $L$ vertical routes, then the total throughput on
+horizontal path $p$ is given by
+\begin{equation}
+n_p y_p = \frac{ (\sum_{k=1}^K \frac{1}{RTT_k}
+n_k^\alpha)^{1/\alpha} }{ (\sum_{k=1}^K \frac{1}{RTT_k}
+n_k^\alpha)^{1/\alpha} + (\sum_{l=1}^L \frac{1}{RTT_l}
+n_l^\alpha)^{1/\alpha}} \label{eqn:grid.rate}
+\end{equation}
+where $n_p$ denotes the number of flows on horizontal path $p$.
+%$RTT_p$ denotes the round trip time of path $p$.
+$y_p$ is the throughput of a single flow on path $p$.
+
+In the following, we discuss two variants of the game by
+considering two users playing the game on the grid network. User
+$1$ uses route $1$ and user $2$ uses route $2$. Suppose $\alpha=2$
+in (\ref{eqn:grid.rate}), which corresponds to TCP. Suppose that
+all vertical and horizontal routes have RTT of $50$ms, and there
+are $10$ background flows on all vertical routes.
+
+\bigskip
+\noindent \textbf{Benefit includes throughput only.} When both
+users are only concerned with total throughput and have no
+resource limitations, we have identified the following case
+% where throughput $G$
+%is neither a concave nor convex function of the number of
+%connections for an unstructured file sharing game on the grid
+%network.  This suggests that results on the existence of NE cannot
+%be applied here because these results require the concavity of the
+%utility function \cite{basar98game,rosen65}. We find that
+where there is a unique NE, at which both players open their
+maximal allowable number of connections.
+%See \cite{zhang06tcpgame_general} for details.
+
+%\begin{comment}
+%For example,
+%consider (\ref{eqn:grid.rate}) with $\alpha=2$
+%corresponding to TCP.
+%%Suppose that all vertical
+%%and horizontal routes have RTT of $50$ms, all vertical routes have
+%%$10$ flows.
+There are two users. User $1$ uses the upper horizontal route and
+user $2$ uses the lower horizontal route. Suppose that user $2$
+opens $100$ connections. In Figure \ref{fig:thpt.p1.100}, we plot
+the throughput of user 1 as a function of its number of
+connections on its single available path.
+% (route $1$ in Figure
+%\ref{fig:grid}).
+We find that the throughput of user $1$ is neither a concave nor
+convex function of its number of connections on its single
+available path.  This suggests that the current results on the
+existence of Nash equilibrium cannot be applied here because these
+results require the concavity of the utility function
+\cite{basar98game}\cite{rosen65}.
+
+However, note that the throughput of user $1$ is an increasing
+function of $n_1$, which can be verified by checking its
+first-order derivative. Similarly, we can also show that
+%given
+%user $1$ has a certain number of connections on its single
+%available path, then
+user $2$'s throughput is also an increasing function of its number
+of connections. Therefore, if both users play the unstructured
+file sharing game, there is a unique NE. Furthermore, at the NE
+both players opens their maximal allowable number of connections.
+%\end{comment}
+
+%\begin{comment}
+\begin{figure}[htb]
+    \begin{center}
+%%\includegraphics[width=0.5\textwidth, height=0.25\textheight]{./network1_2.eps}
+\includegraphics[scale=0.25]{./eps_BT_research/player1_thpt_100.eps}\\
+        \caption{Total data rate $G$ of user $1$ as a function
+        of the number of connections on its path, when user 2 has 100 connections.}
+        \label{fig:thpt.p1.100}
+     \end{center}
+\end{figure}
+%\end{comment}
+
+\bigskip
+\noindent \textbf{Benefit includes both throughput and cost.} In
+this variant of the game, not only is that $B_r$ neither a concave
+nor a convex function of its number of connections $\mathbf{n}_r$,
+but $B_r$ is not always increasing in $\mathbf{n}_r$.
+%See \cite{zhang06tcpgame_general} for details.
+
+%\begin{comment}
+ For example,
+suppose $\beta=0.0005$ in the cost function $\Phi(\mathbf{n}_r)$.
+%(\ref{eqn:cost1}).
+We plot in Figures \ref{fig:ben.p1.50} and \ref{fig:ben.p1.100}
+the benefit $B$ of user $1$ as a function of its number of
+connections on its single available route, given that the number
+of connections of user $2$ is $50$ and $100$ respectively.
+%Note
+%that the benefit of player $1$ is neither concave nor convex
+%function of the number of connections. In addition,
+Note that, depending on the number of connections opened by user
+$2$, the benefit of user $1$ can be either an increasing or a
+decreasing function of $\mathbf{n}_1$.
+
+\begin{figure}[htb!]
+% FIRST TWO FIGS
+\centerline{
+        \begin{minipage}{1.6in}
+     \begin{center}
+        \setlength{\epsfxsize}{1.6in}
+        \epsffile{eps_BT_research/player1_benefit_50.eps}\\
+       {}
+        \caption{Benefit of user $1$ as a function of the number of connections
+         when user $2$ has $50$ connection. }
+        \label{fig:ben.p1.50}
+      \end{center}
+    \end{minipage}
+   \begin{minipage}{1.6in}
+     \begin{center}
+        \setlength{\epsfxsize}{1.6in}
+        \epsffile{eps_BT_research/player1_benefit_100.eps}\\
+       {}
+        \caption{Benefit of user $1$ as a function of the number of connections
+        when user $2$ has $100$ connection. }
+        \label{fig:ben.p1.100}
+      \end{center}
+    \end{minipage}
+    }
+\end{figure}
+
+%\end{comment}
+
+
+%Consider that both players have the same $\beta=0.0005$.
+We define the best response $\mathbf{n}_r^*$ of player $r$ as the
+solution of $r$'s optimization problem given fixed strategies of
+all other players $\mathbf{n}_{-r}$. In Figure \ref{fig:p1.p2.br},
+we plot the best response curves of both players. Note that there
+are three intersecting points. An intersecting point is a NE
+because at that point, each user's response is the best response
+to the other user's strategy. Thus, there are three NE in this
+game. For comparison, in the single link TCP connection game
+\cite{zhang05tcpgame_icnp}, there is only one unique NE when the
+cost is proportional to the number of connections.
+
+\begin{figure}[htb!]
+    \begin{center}
+%%\includegraphics[width=0.5\textwidth, height=0.25\textheight]{./network1_2.eps}
+\includegraphics[scale=0.25]{./eps_BT_research/player1_player2_br.eps}\\
+        \caption{Best response curves of both player 1 and player 2.}
+        \label{fig:p1.p2.br}
+     \end{center}
+%created by matlab script tcp_grid.m in
+%C:\honggang\Toshiba_D\research\proposal\BT_research
+\end{figure}
+
+It is also interesting to note that these two players do not share
+any common link (Figure \ref{fig:fish}), so, their interaction
+arises because they share links with other common sessions.
+
+This simple example indicates that the interaction among multiple
+users on a general network topology can be much more complex than
+the single link TCP connection game. The existence and uniqueness
+of Nash equilibrium can depend on network topologies and the
+utility functions adopted by users.
+%, as demonstrated by the
+%previous examples.
+
+
+
+% Figure \cite{}
+%shows the throughput obtained by this user as a function of the
+%number of flows he/she puts on this route. Note that this
+%throughput is neither a concave nor convex function of the number
+%of connections on this path. However, this throughput is a
+%strictly increasing function of the number of connections. Thus,
+%in the game on this grid topology, a unique Nash equilibrium is
+%$\mathbf{n}=(n^1_{max},..., n^R_{max})$ where all users open their
+%maximum allowable number of connections.
+
+
+
+
+\begin{comment}
+\begin{figure*}[htb!]
+% FIRST TWO FIGS
+\centerline{
+    \begin{minipage}{2.2in}
+     \begin{center}
+        \setlength{\epsfxsize}{2in}
+        \epsffile{eps_BT_research/player1_benefit_1.eps}\\
+       {}
+        \caption{Benefit of user 1 as a function of the number of connections opened by
+        user 1 when user 2 has 1 connection. }
+        \label{fig:ben.p1.1}
+      \end{center}
+    \end{minipage}
+    \begin{minipage}{2.2in}
+     \begin{center}
+        \setlength{\epsfxsize}{2in}
+        \epsffile{eps_BT_research/player1_benefit_10.eps}\\
+       {}
+        \caption{Benefit of user 1 as a function of the number of connections opened by
+        user 1 when user 2 has 10 connection. }
+        \label{fig:ben.p1.10}
+      \end{center}
+    \end{minipage}
+        \begin{minipage}{2.2in}
+     \begin{center}
+        \setlength{\epsfxsize}{2in}
+        \epsffile{eps_BT_research/player1_benefit_50.eps}\\
+       {}
+        \caption{Benefit of user 1 as a function of the number of connections opened by
+        user 1 when user 2 has 50 connection. }
+        \label{fig:ben.p1.50}
+      \end{center}
+    \end{minipage}
+    }
+\centerline{
+    \begin{minipage}{2.2in}
+     \begin{center}
+        \setlength{\epsfxsize}{2in}
+        \epsffile{eps_BT_research/player1_benefit_100.eps}\\
+       {}
+        \caption{Benefit of user 1 as a function of the number of connections opened by
+        user 1 when user 2 has 100 connection. }
+        \label{fig:ben.p1.100}
+      \end{center}
+    \end{minipage}
+    \begin{minipage}{2.2in}
+     \begin{center}
+        \setlength{\epsfxsize}{2in}
+        \epsffile{eps_BT_research/player1_benefit_150.eps}\\
+       {}
+        \caption{Benefit of user 1 as a function of the number of connections opened by
+        user 1 when user 2 has 150 connection. }
+        \label{fig:ben.p1.150}
+      \end{center}
+    \end{minipage}
+        \begin{minipage}{2.2in}
+     \begin{center}
+        \setlength{\epsfxsize}{2in}
+        \epsffile{eps_BT_research/player1_benefit_200.eps}\\
+       {}
+        \caption{Benefit of user 1 as a function of the number of connections opened by
+        user 1 when user 2 has 200 connection. }
+        \label{fig:ben.p1.200}
+      \end{center}
+    \end{minipage}
+}
+\end{figure*}
+
+\end{comment}
+
+
+
+
+
+
+\begin{comment}
+
+\begin{figure}[htb]
+% FIRST TWO FIGS
+\centerline{
+    \begin{minipage}{3in}
+     \begin{center}
+        \setlength{\epsfxsize}{3in}
+        \epsffile{eps_BT_research/concave3.eps}\\
+       {}
+        \caption{Total data rate $G^i$ of user $i$ as a function
+        of the number of connections on both paths. Side view. }
+        \label{fig:cost.total.n100}
+      \end{center}
+    \end{minipage}
+    }
+\centerline{
+    \begin{minipage}{3in}
+      \begin{center}
+        \setlength{\epsfxsize}{3in}
+        \epsffile{eps_BT_research/concave3_2.eps}\\
+       {}
+        \caption{Total data rate $G^i$ of user $i$ as a function
+        of the number of connections on both paths. Top view. }
+        \label{fig:cost1.n100}
+      \end{center}
+    \end{minipage}
+}
+\end{figure}
+
+
+\begin{figure}[htb]
+% FIRST TWO FIGS
+\centerline{
+    \begin{minipage}{2.5in}
+     \begin{center}
+        \setlength{\epsfxsize}{2.5in}
+        \epsffile{eps_BT_research/grid_1.eps}\\
+       {}
+        \caption{Total data rate $G^i$ of user $i$ as a function
+        of the number of connections on both paths. Side view. }
+        \label{fig:cost.total.n100}
+      \end{center}
+    \end{minipage}
+    }
+\centerline{
+    \begin{minipage}{3in}
+      \begin{center}
+        \setlength{\epsfxsize}{3in}
+        \epsffile{eps_BT_research/grid_2.eps}\\
+       {}
+        \caption{Total data rate $G^i$ of user $i$ as a function
+        of the number of connections on both paths. Top view. }
+        \label{fig:cost1.n100}
+      \end{center}
+    \end{minipage}
+}
+\end{figure}
+\end{comment}
+
+%However, if we consider the payoff including the throughput and the cost
+%as a function of $\mathbf{n^i}$, then we might end up with a function
+%neither increasing nor decreasing, besides neither concave nor convex.
+%For example, if we consider payoff as $B^i=G^i - 0.0004 n^i_p$,
+%we plot the payoff of this user in Figure \ref{}.
+
+In the following, we focus on two special networks: a parallel
+link network and a star network. Both can be used to model
+peer-to-peer networks.
+
+%\parskip=-10pt
+
+%\input{tcpgame-general-parallel}
+
+\section{Parallel Link Network}\label{sec:para}
+
+%\parskip=0pt
+
+In this section, we investigate an unstructured file sharing game
+on a parallel-link network where all users share a common source
+and a common destination node interconnected by a number of
+parallel links.
+%This type of network is not only practically interesting itself,
+%but also can be thought of as some special case of a star network
+%addressed in the next section.
+Parallel-link networks can be used as simple models for
+unstructured file sharing. For example, in eDonkey networks
+\cite{p2p}, a peer can download a file from multiple other peers
+providing this file. There are possibly many peers simultaneously
+downloading the same file, and they can be thought of as
+associated with a common destination node. Each of the
+file-providing peers can be thought of as a ``link" or ``path"
+connecting the common destination node with a common super virtual
+file-providing source node. Those downloading peers compete for
+these parallel links/paths for bandwidth. This scenario can be
+approximated by a parallel link network.
+
+
+
+%Parallel-link networks can represent many practical situations.
+%For example \cite{korilis97achieving}, in broadband networks,
+%bandwidth is separated among different virtual paths, resulting in
+%a network of parallel and noninterfering ``links" between source
+%and destination pairs.
+%%Another scenario can be that
+%%some organization can buy service from several different network
+%%providers, and then split its total traffic over the various
+%%network facilities, each of which can be represented as a link in
+%%the parallel link topology.
+%In addition, this parallel link
+%network topology can also be used to model balancing the load
+%among several different resources \cite{roughgarden01stackelberg}.
+In this section, we first show the existence of stable network
+states (NEs) on a parallel-link network. We then present the
+results on the efficiency loss of NE and the stability of NE in
+the best-response dynamics.
+
+%\parskip=-10pt
+
+\subsection{Nash equilibrium}
+
+%\parskip=0pt
+
+Suppose that there are $L$ links and $R$ users. By an abuse of
+notation, we will use $L$ and $R$ to denote the set of links and
+the set of users respectively.
+%The utility function of user $r$ is
+%$U_r$. The cost incurred to user $r$ is a convex and
+%non-decreasing function of the number of connections opened by
+%user $r$.
+An example of a parallel link network is shown in Figure
+\ref{fig:network4}.
+%In this parallel link network,
+The throughput $G_{rj}$ obtained by user $r$ on link $j$ is given
+by the simple rate allocation mechanism introduced in the previous
+section:
+ $G_{rj}(n_{rj})=C_j n_{rj}/RTT_{rj}/(\sum_{k=1}^R
+n_{kj}/RTT_{kj})$, where $RTT_{rj}$ is the Round Trip Time of user
+$r$ on link/path $j$, $C_j$ is the capacity of link $j$, and
+$n_{rj}$ is the number of connections of user $r$ on link $j$. The
+strategy of user $r$ is a vector of the number of connections on
+its available paths or links: $\mathbf{n}_r=(n_{r1},...,n_{rL})$
+and $n_{rj}\in (0, n^{max}_r], \forall j\in L$. $n^{max}_r$ is the
+maximum allowable number of connections for user $r$. Note that
+this game is a continuous kernel game \cite{basar98game} as we
+assume that a user's strategy is a real-valued vector.
+\begin{figure}[htb!]
+    \begin{center}
+%%\includegraphics[width=0.5\textwidth, height=0.25\textheight]{./network1_2.eps}
+\includegraphics[scale=0.3]{./eps_BT_research/network4_2.eps}
+\caption{A parallel-link network topology.} \label{fig:network4}
+     \end{center}
+\end{figure}
+
+In this section, we only consider the case where
+$U_r(\mathbf{n}_r)=G_r(\mathbf{n}_r)$. The benefit or payoff
+obtained by user $r$ is: $B_r(\mathbf{n}_r) =
+G_r(\mathbf{n}_r)-\Phi_{r}(\mathbf{n}_r)$.
+
+
+
+
+We consider two scenarios: an unconstrained game and a constrained
+game. In an unconstrained game, there is no upper limit on the
+total number of connections a user can open. In a constrained
+game, each user must choose a certain total number of
+connections\footnote{This is motivated by BitTorrent \cite{bt}
+where each peer always has $5$ active connections open to $5$
+different other peers.}. We have shown the existence of a unique
+NE in both constrained and unconstrained games.
+
+%More results for the constrained game can be found in
+%\cite{zhang06tcpgame_general}. In the following we only present
+%results for the unconstrained game.
+
+
+\subsection{Unconstrained Game}
+In an unconstrained game,
+%users can open arbitrarily large number of connections.
+users essentially play an independent game on each distinct
+path/link. Since a NE exists and is unique on a single link game
+\cite{zhang05tcpgame_icnp}, we know that a NE also exists and is
+unique on this parallel link network. This is summarized in the
+following theorem.
+
+\begin{theorem}
+There exists a unique interior-point NE in an unstructured file
+sharing game on a parallel link network.
+%when all users have either Type 1 or Type 2 costs.
+\end{theorem}
+
+\bigskip
+\noindent \textbf{Social Benefit at Nash equilibrium.} As shown in
+\cite{zhang05tcpgame_icnp}, a single bottleneck link TCP
+connection game admits a symmetric NE when users have the same
+Round Trip Times (RTT) and their benefit function includes
+throughput and a cost proportional to the number of connections.
+This result can be extended to our uncontrained game. That is,
+when all users have the same RTTs, the unique NE is symmetric, in
+the sense that all users have the same number of connections at
+the NE.
+
+Solving the optimization problem for a user $r$, we can get the
+vector of connections of user $r$ at the symmetric NE as:
+$$
+n^*_{rj} = (R-1) C_j / (R^2 \beta).$$ Then, user $r$'s benefit at
+the NE is $$ B_r^*=\sum_{j=1}^L C_j/R - \sum_{j=1}^L
+(R-1)C_j/R^2.$$ Therefore, the total social benefit of the NE is
+$$B_{ne}=\sum_{j=1}^{L} C_j/R.$$ Note that $B_{ne}$ is not related
+to the cost of users. It is simply a function of the total network
+capacity and the number of users. As the number of users
+increases, the total social benefit of the NE goes to zero.
+
+\bigskip
+\noindent \textbf{Reaction functions.} The reaction function of a
+user $r$ is defined as the best response of user $r$ as a function
+(if it exists) of the total number of connections of all other
+users. A response of user $r$ is
+%a vector
+%of numbers of connections on all links, that is,
+$\mathbf{n_r}=(n_{r1},n_{r2},...,n_{rL})$. Since in an
+unconstrained game users essentially play an independent game on
+each individual link, we can solve for a user's best response on
+each link separately. Specifically, for any link $j$, we have
+\begin{equation}
+\bar{n}_{rj}=\mbox{argmax}_{n_{rj}\in (0, \infty)}
+B_{rj}(\sum_{k\ne r}^R n_{kj}).
+\end{equation}
+For convenience,
+let $n_{-rj}$ denote $\sum_{k\ne r}^R n_{kj}$. It is easy to show
+that
+\begin{equation}
+\bar{n}_{rj}= f(n_{-rj}) = -n_{-rj} + \sqrt{C_j n_{-rj}/\beta}.
+\label{eqn:react}
+\end{equation}
+
+$\bar{n}_{rj}$ is a continuous function of $n_{-rj}$. We note that
+in order to guarantee that the best response of user $r$ is an
+interior point of its strategy space, we must have
+\begin{equation}
+\bar{n}_{rj} > 0 \quad \mbox{or} \quad n_{-rj} < C_j /\beta.
+\end{equation}
+%\nonumber
+%\end{equation}
+
+%Please see\cite{zhang06tcpgame_general} for more details.
+
+As shown in Section \ref{sec:multiple}, we can use reaction
+functions to identify NEs by checking the intersecting point(s) of
+the reaction function (best response) curves of all players. We
+can also use reaction functions to investigate the best-response
+dynamics of the game playing process, as discussed later.
+
+\bigskip
+\noindent \textbf{Stability of NE in Best-response Dynamics}.
+Suppose that users interact with each other using best-response in
+a discrete time process, a so called \textit{best-response
+dynamics} \cite{basar98game}\cite{zhang05tcpgame_icnp}. This
+process proceeds in discrete time steps or rounds, and only one
+randomly chosen user makes a move at each round.
+%At each round,
+%one randomly chosen user makes a move.
+Whenever a user makes a move, it calculates its best response to
+other users' numbers of connections which are determined in
+previous steps. That is, the user who makes a move solves its
+optimization problem to maximize its benefit. If all users'
+strategies converge to or stabilize at some point $\mathbf{n}_s$
+as time goes to infinity, then $\mathbf{n}_s$ is a NE, and it is
+\textit{globally stable}. Regarding an unstructured file sharing
+game on a parallel link network, we have the following stability
+result.
+%Please refer to \cite{zhang06tcpgame_general} for detailed proof.
+
+
+\begin{theorem}
+The unique NE is globally stable in the two-player version of the
+unstructured file sharing game on parallel link network when both
+players use best-response to play the game.
+\end{theorem}
+\begin{proof}
+We want to show that the best response of a user is a concave
+function of the other player's number of connections. In the
+unconstrained game, users actually play independent games on
+different links. For a given user $r$, the best response function
+or reaction function on link $j$ is given by (\ref{eqn:react}),
+and re-stated as follows:
+$$
+\bar{n}_{r,j}=-n_{-r,j} + \sqrt{C_j n_{-r,j}/\beta},
+$$
+where $n_{-r,j}$ is the number of connections of all other users.
+It can be shown that
+$$
+\partial^2 \bar{n}_{r,j}/\partial n_{-r,j}^2 = (-1/4)\sqrt{C_j/\beta} \cdot n_{-r,j}^{-3/2} \le 0.
+$$
+Thus, the reaction function of user $r$ is a concave function of
+number of connections of other users. Then, from
+\cite{zhang05tcpgame_tech}, we know that in a two-player version
+of the game, Nash equilibrium is globally stable.
+\end{proof}
+
+
+
+
+%\cite{zhang06tcpgame_general} that the Nash equilibrium in the
+%two-player version of unconstrained game is globally stable if
+%players use best-response to play the game.
+
+
+
+%If all links have the same capacity $C$,
+%then social benefit of Nash equilibrium is as follows.
+%\begin{eqnarray}
+%B^* &=& \sum_{i=1}^n B^{i*} \nonumber \\
+%    &=& n (m C/n - m (n-1) C /n) \nonumber \\
+%    &=& mC /n
+%\end{eqnarray}
+
+
+%\parskip=-10pt
+\bigskip
+\noindent \textbf{Efficiency loss of Nash equilibrium}
+
+%\parskip=0pt
+
+%\subsubsection{Unconstrained game}
+First note that the maximal system benefit is the solution of a
+straightforward optimization problem. The system benefit can be
+represented as:
+\begin{equation}
+B = \sum_{r=1}^R B_r = \sum_{r=1}^R \sum_{j=1}^L G_{rj} -
+  \beta \sum_{r=1}^R  \sum_{j=1}^L n_{rj}. \label{eqn:B.pa}
+\end{equation}
+We find that the maximal value of $B$
+%(\ref{eqn:B.pa})
+is
+\begin{equation}
+B_{max} = \sum_{j=1}^L C_j - \beta N_{min}. \label{eqn:B.pa.1}
+\end{equation}
+
+Consider a homogeneous network where all links have the same
+capacity. Then we have $B_{max}= L C - \beta L$, as we need at
+least one connection for each link in order to get the bandwidth
+of each link. The efficiency loss of a NE is given by
+\begin{equation}
+L_{eff}= \frac{B_{max}}{B_{ne}}= \frac{L C-\beta L}{LC/R}.
+\end{equation}
+This result essentially suggests that the efficiency loss of the
+unique NE is bounded.
+%If $L,R$ are fixed, and let $C\to \infty$, then $L_{eff} \to R$.
+However, if $L,C$ are fixed, and let $R\to \infty$, then $L_{eff}
+\to \infty$. This suggests that the system performance at NE can
+degrade arbitrarily if the number of users becomes large.
+
+%\parskip=-10pt
+\bigskip
+\noindent \textbf{Socially Responsible Users}
+
+%\parskip=0pt
+
+Note that we can think of users as data senders in the game
+discussed above.
+%The links in the parallel network are bottleneck
+%links.
+Let the packet loss rate associated with each link/path $j$ be
+$p_j$. Suppose that the packet sending rate of a TCP connection of
+user $r$ on path/link $j$ is $T_{rj}$. The throughput of this
+connection is given by $G_{rj}=T_{rj}(1-p_j)$. Not all packets
+coming to bottleneck link $j$ are delivered. The network resources
+before link $j$ are partially wasted because that they carry data
+at a higher rate than the actual delivery rate of link $j$.
+Therefore we can think of this extra traffic as a cost to the
+network and that is proportional to the packet sending rate
+$T_{rj}$. A user is considered as socially responsible if his/her
+benefit function includes this cost term. That is, we have
+$B_r(\mathbf{n}_r)= G_{rj}-\gamma \sum_{i=1}^L n_{rj} T_{rj}$,
+where $\gamma\in (0,1)$. Based on
+%the result on a single link TCP
+%connection game
+\cite{zhang05tcpgame_icnp}, we can show that there exists a pure
+strategy unique NE because users actually play a game on each link
+independently from other links. It also follows that the loss of
+efficiency of the NE is bounded as the unique NE is an interior
+point in the strategy space.
+%See \cite{zhang06tcpgame_general} for more details.
+%\footnote{
+Note that the definition of loss of efficiency in unstructured
+file sharing game is different from that of the single bottleneck
+link TCP connection game. The latter is defined as the ratio of
+total sending rate from all users at NE over the minimum total
+sending rate. The latter is the efficiency loss from network's
+point of view, whereas the former is from user's point of view.
+
+
+\subsection{Constrained Game}
+
+Consider another model where the total number of connections that
+are allowed to open by a user is fixed. Formally, for any user
+$r$, we have $\sum_{j}^L x_{rj}= n_r$, where $n_r$ is the required
+total number of connections.
+
+%Then, a user $r$ has the following constrained optimization
+%problem.
+%\begin{eqnarray}
+%\mbox{maximize} & B_r(\mathbf{n}_r)    \\
+%\mbox{subject to} & \sum_{j}^L n_{rj}= n_r \\
+%& \mathbf{n}_r = (n_{r1},n_{r2},...,n_{rL})\nonumber \\
+%& n_{rj} \in (0,\infty) \nonumber
+%\end{eqnarray}
+
+We refer to this game as a \textit{constrained game}. As
+summarized in the following theorem, this game admits a unique
+symmetric Nash equilibrium.
+%Please see \cite{zhang06tcpgame_general} for the
+%proof of this theorem.
+
+Please see Appendix \ref{appd:con} for the proof of this theorem.
+
+\begin{theorem}
+There exists a unique interior-point symmetric Nash equilibrium in
+a constrained unstructured file sharing game in parallel-link
+network. \label{them:con}
+\end{theorem}
+
+\bigskip
+\noindent \textbf{Remarks.} It can be true that there are
+\textit{asymmetric} NE. For example, suppose that there are two
+users and two links with the same capacity, and each user is
+constrained to use two and only two connections. Then one NE is
+that user 1 opens its two connections on link 1 and user 2 opens
+its two connections on link 2, or a NE could be that user 1 opens
+its two connections on link 2, and user 2 opens its two
+connections on link 1.
+
+\bigskip
+\noindent \textbf{An Illustrative Example for the existence and
+stability of NE.} We use a simple example to illustrate the Nash
+equilibrium proved in Theorem \ref{them:con} . There are three
+users: $A$, $B$, and $C$. There are two paths (or two links) in a
+parallel link topology. Suppose that the capacity of link 1 is
+$C_1=25$Mbps and the capacity of link 2 is $C_2=100$Mbps. Suppose
+that each user has to open $20$ connections. As proved in Theorem
+\ref{them:con}, at Nash equilibrium, each user will open $4$ and
+$16$ connections on link 1 and 2 respectively, because
+$n^*_1/n^*_2=C_1/C_2=1/4$. That is, at Nash equilibrium we have, $
+\mathbf{n^*_A}=\mathbf{n^*_B}=\mathbf{n^*_C}=(4,16). $
+
+Suppose users interact with each other using \textit{best-response
+dynamics} \cite{basar98game}\cite{zhang05tcpgame_icnp}. If all
+users' strategies converge to or stabilize at some points as time
+goes by, then the stablized numbers of connections are the Nash
+equilibrium strategies for all users. As shown in Figure
+\ref{fig:parallel_1_conn}, the best-response dynamics indeed
+converges to a stable point which corresponds to the Nash
+equilibrium obtained from the previous analysis.
+
+
+\begin{figure}[htb!]
+% FIRST TWO FIGS
+\centerline{
+    \begin{minipage}{1.6in}
+     \begin{center}
+        \setlength{\epsfxsize}{1.6in}
+       \epsffile{eps_BT_research/parallel_1_benefit.eps}
+          \end{center}
+    \end{minipage}
+    \begin{minipage}{1.6in}
+      \begin{center}
+        \setlength{\epsfxsize}{1.6in}
+        \epsffile{eps_BT_research/parallel_1_conn.eps}
+      \end{center}
+    \end{minipage}
+    }
+\caption{An example of the best-response dynamics on two parallel
+links. This dynamic process converges to Nash equilibrium. The
+left figure shows the benefit of three users. The right figure
+shows the numbers of connections.} \label{fig:parallel_1_conn}
+\end{figure}
+
+%\bigskip
+\noindent \textbf{Loss of Efficiency.}
+ Given the constraint
+that the total number of connections of user $r$ should be equal
+to $n_r$, the maximal value of (\ref{eqn:B.pa}) is given by $
+B_{max}= \sum_{j=1}^L C_j - \beta\sum_{r=1}^R n_r$. The system
+optimal performance is exactly the same as the system performance
+at Nash equilibrium. Then, the Nash equilibrium has no efficiency
+loss, that is, $L_{eff}=1.$
+
+%\noindent \textbf{System performance of Nash equilibrium when users have
+%cost type 1.}
+%$$
+%\sum_r B_r = \sum_{k=1}^L C_k - \beta \sum_r n_r.
+%$$
+
+%\subsection{Proof of Theorem \ref{them:con}}
+%\label{appnd:constrained}
+
+
+
+
+
+%\bigskip
+% (... TO BE FILLED, stability of NE in constrained game...)
+%\bigskip
+
+
+%It is interesting to note that Figure \ref{fig:parallel_1_benefit}
+%and Figure \ref{fig:parallel_1_conn} actually suggest that the
+%unique Nash equilibrium is globally stable in the best-response
+%dynamics.
+%\end{comment}
+
+\begin{comment}
+Depending the values of the number of users $m$ and the number of
+links $n$, we can have the following two cases.
+
+\noindent \textbf{Case 1, more users than links.} If $R>L$, then
+$X_{min}=m$, and we have $ B_{max}=mC-m.$ In this case, the
+efficiency loss of Nash equilibrium is
+\begin{equation}
+L_{eff}= B_{max}/B_{ne}= \frac{mC-m}{mC- m(n-1)C /n} = n(1-1/C).
+\end{equation}
+Asymptotically, if $n \to \infty$, $L_{eff}\to \infty$. On the
+other hand, if $m,n$ are fixed, and we let $C\to \infty$, then
+$L_{eff}\to n$.
+
+\noindent \textbf{Case 2, more links than users.} If $m\le n$,
+$X_{min}=n$, then $B_{max}= mC - n.$ Efficiency loss of Nash
+equilibrium is
+\begin{equation}
+L_{eff}= B_{max}/B_{ne}= (mC-n)/(mC/n)= 1- n/(mC).
+\end{equation}
+If $m,n$ are fixed, and let $C\to \infty$, then $L_{eff} \to 1$.
+If $m,C$ are fixed, and let $n\to \infty$, then $L_{eff} \to
+-\infty$.
+
+\end{comment}
+
+%\input{tcpgame-general-star}
+
+%\parskip=-5pt
+
+\section{Star Network}\label{sec:star}
+
+%\parskip=0pt
+
+%We consider a star network in this section.
+In this section, we use a star network to approximately model a
+peer-to-peer file sharing overlay network, and investigate the
+unstructured file sharing game on such a star network. Figure
+\ref{fig:network3} presents one such example.
+
+In the star network, we assume that a user has two asymmetric
+access links to the Internet: one downstream link and one upstream
+link. This assumption is supported in a measurement study in
+\cite{saroiu02measurement}, where it is found that most users in
+current peer-to-peer networks use cable modem or ADSL to get
+connected to the Internet. Usually the downstream link has higher
+capacity than the upstream link \cite{saroiu02measurement}.
+
+A user $r$ uses its downstream link to get data from other peers.
+The downstream link of user $r$ is a ``private" link in the sense
+that this link is only used by user $r$ itself. On the other hand,
+the upstream link of user $r$ is shared by all other peers or
+users who are downloading files from user $r$. We can think of the
+upstream link of user $r$ as a ``public" link from the point of
+view of user $r$.
+
+In addition, similar to \cite{qiu04bt}\cite{piccolo04p2p}, we
+assume that in a peer-to-peer file sharing network, bottlenecks
+can occur at access links, not in the core Internet. This
+assumption is a reasonable approximation of the current
+peer-to-peer file sharing networks such as Gnutella and
+BitTorrent, where usually the data throughput is limited by the
+``last mile" (cable or ADSL or modem) of a connection. Thus, in
+the star network shown in Figure \ref{fig:network3}, the Internet
+cloud can be represented simply as a central node.
+
+
+In the following,
+%we first describe the characteristics of this
+%star network and give justifications based on previous studies.
+%measurement studies and previous research on peer-to-peer
+%networks.
+we first prove the existence of NE in unstructured file sharing
+game on a star network. We then use examples to illustrate the
+best response dynamics of this game playing process, and finally
+we present our results on the loss of efficiency of NE.
+
+\begin{comment}
+\begin{figure}[htb!]
+    \begin{center}
+    \includegraphics[width=0.2\textwidth, height=0.1\textheight]{./eps_BT_research/network3_5_2_new.eps}
+    %\includegraphics[scale=0.3]{network3_5_2.eps}
+\caption{An example of star network topology.}
+\label{fig:network3}
+    \end{center}
+\end{figure}
+\end{comment}
+
+\begin{figure}[htb!]
+% FIRST TWO FIGS
+\centerline{
+    \begin{minipage}{1.8in}
+     \begin{center}
+        \setlength{\epsfxsize}{1.2in}
+       \epsffile{eps_BT_research/network3_5_2_new.eps}
+          \end{center}
+\caption{An example of star network.} \label{fig:network3}
+    \end{minipage}
+    \begin{minipage}{1.6in}
+      \begin{center}
+        \setlength{\epsfxsize}{1.6in}
+        \epsffile{./eps_BT_research/network1.eps}
+      \end{center}
+\caption{A three node topology.} \label{fig:network1}
+    \end{minipage}
+    }
+\end{figure}
+
+%\parskip=-10pt
+
+\subsection{Nash Equilibrium}
+
+%\parskip=0pt
+
+Recall that the benefit of user $r$ is given by
+(\ref{eqn:benefit}).
+%\begin{equation}
+%B_r(\mathbf{n_r}) = U_r(G_r(\mathbf{n_r})) -
+%\Phi_r(\mathbf{n_r}).\label{eqn:benefit.star}
+%\end{equation}
+In the following, we first present a lemma (Lemma \ref{lem:lem1})
+and later use it to prove that a utility
+function\footnote{$U_r(x)$ is assumed to be continuous,
+nondecreasing, and concave.} $U_r(G_r(\mathbf{n_r}))$ is a
+non-decreasing, continuous, and concave function of user $r$'s
+number of connections $\mathbf{n_r}=(n_{r1}, ..., n_{rP_r})$,
+where $P_r$ represents the set of available paths of user $r$ and
+the number of paths as well. Since we assume that cost
+$\Phi_r(\mathbf{n}_r)$ is an increasing and convex function of
+$\mathbf{n}_r$, it then follows that the benefit $B_r$ is a
+non-decreasing, continuous, and concave function of
+$\mathbf{n_r}$.
+
+Lemma \ref{lem:lem1} is introduced for the simple network in
+Figure \ref{fig:network1}, where a user $r$ has two paths ($A\to C
+\to D$ and $B\to C \to D$) to transfer data to destination node
+$D$. Both paths share a common link $CD$.
+%(++++ THis is needed for tech report)
+%Link $AC$, $BC$, and $CD$ have
+%capacities $C_1$, $C_2$, and $C_3$ respectively.
+Suppose that the number of connections user $r$ opens on path
+$A\to C \to D$ is $n_{p1}$, and on path $B\to C \to D$ is
+$n_{p2}$. Then we have $\mathbf{n}_r=(n_{p1}, n_{p2})$.
+
+We assume that link $CD$ is a private link of user $r$, i.e., no
+other users use this link. This private link corresponds to the
+downstream link of user $r$ in a star network. On the other hand,
+links $AC$ and $BC$ are shared by user $r$ and other users. $AC$
+and $BC$ correspond to two public links of user $r$ in a star
+network.
+%(++++ THis is needed for tech report)
+%We use $n_{-r1}$ denote the number of connections opened on link
+%$AC$ by users other than user $r$. Similarly, let $n_{-r2}$ denote
+%the number of connections opened on link $BC$ by users other than
+%user $r$.
+
+\begin{comment}
+\begin{figure}[htb!]
+    \begin{center}
+%\includegraphics[width=0.3\textwidth, height=0.15\textheight]{./network1.eps}
+\includegraphics[scale=0.5]{./eps_BT_research/network1.eps}
+\caption{A three-node topology.
+%Link $AC$ has capacity $C_1$, and
+%link $BC$ has capacity $C_2$, and link $CD$ has capacity $C_3$.
+} \label{fig:network1}
+     \end{center}
+\end{figure}
+\end{comment}
+
+Recall that throughput $G_r$ obtained by user $r$ is a function of
+$\mathbf{n}_r$. Lemma \ref{lem:lem1} shows that $G_r$ is a concave
+function of $\mathbf{n}_r$.
+%A detailed proof and an illustrative example are given in
+%\cite{zhang06tcpgame_general}.
+
+
+\begin{lemma}
+Throughput $G_r$ of user $r$ in Figure \ref{fig:network1} is a
+concave function of
+%its vector of numbers of connections denoted
+%as
+$\mathbf{n}_r=(n_{p1}, n_{p2})$. \label{lem:lem1}
+\end{lemma}
+
+%\begin{comment}
+
+\begin{proof}
+The strategy vector of user $r$ is $\mathbf{n}_r=(n_{p1},
+n_{p2})$. Let $z=\frac{n_{p1} C_1}{n_{p1} + n_{-r1}} +
+\frac{n_{p2} C_2}{n_{p2}+n_{-r2}}$.
+
+Then, the throughput obtained by user $r$ is
+\begin{equation}
+G(n_{p1},n_{p2}) = \left \{ \begin{array}{ll}
+C_3 & \textrm{, if $z \ge C_3$} \\
+z & \textrm{, if $z \le C_3$}
+\end{array} \right.
+\end{equation}
+
+%\frac{C_3(x_{p1}+x_{p2})}{x_{p1}+x_{p2}+y_3} & \textrm{if $z<C_3$}
+
+First, we note that this function is continuous and increasing.
+Second, this function has two parts, with each part being a
+concave function. Now we want to show that this function is a
+concave function of $\mathbf{n}_r$ \textit{everywhere} in its
+domain.
+
+Take any two points $\mathbf{n^1}$ and $\mathbf{n^2}$. Without
+loss of generality, we assume that $\mathbf{n^1}$ satisfies $z \le
+C_3$ and that $\mathbf{n^2}$ satisfies $z \ge C_3$, as shown in
+Figure \ref{fig:two.regions}. We would like to show that
+$$
+G(\delta \mathbf{n^1} + (1-\delta) \mathbf{n^2}) \ge \delta
+G(\mathbf{n^1})+ (1-\delta) G(\mathbf{n^2}), \delta \in [0,1].
+$$
+%Let $D$ denote region $z \ge C_3$.
+
+\begin{figure}[htb!]
+    \begin{center}
+    %%\includegraphics[width=0.5\textwidth, height=0.25\textheight]{./network1_2.eps}
+    \includegraphics[scale=0.6]{./eps_BT_research/graph1.eps}
+    \caption{The domain of $G_r$,
+    the throughput of user r, can be divided into two regions.
+    One region is $z\ge C_3$, and the other region is $z\le C_3$.}
+    \label{fig:two.regions}
+    \end{center}
+\end{figure}
+
+
+
+If we connect points $\mathbf{n^1}$ and $\mathbf{n^2}$ with a
+line, then this line intersects with the boundary of region $z \ge
+C_3$ at point $\mathbf{n^0}$. Then we have,
+\begin{eqnarray}
+G(\delta \mathbf{n^1} + (1-\delta) \mathbf{n^2}) &\ge &
+G(\delta \mathbf{n^1} + (1-\delta) \mathbf{n^0}) \label{eqn:lec3} \\
+&\ge & \delta G(\mathbf{n^1})+ (1-\delta) G(\mathbf{n^0}) \label{eqn:concave}\\
+&=& \delta G(\mathbf{n^1})+ (1-\delta) G(\mathbf{n^2})
+\label{eqn:contin}
+\end{eqnarray}
+
+(\ref{eqn:lec3}) is true because that $G(\mathbf{x})$ is an
+increasing function of $\mathbf{x}$, and $\delta \mathbf{n^1} +
+(1-\delta) \mathbf{n^2} \ge \delta \mathbf{n^1} + (1-\delta)
+\mathbf{n^0}$. (\ref{eqn:concave}) is true because function $G$ is
+a concave function in region $z \le C_3$. (\ref{eqn:contin}) is
+true because function $G$ is a continuous function.
+
+\end{proof}
+
+%\end{comment}
+
+%\begin{comment}
+
+\bigskip
+\noindent \textbf{An illustrative example.} In Figure
+\ref{fig:network1}, suppose we choose $6$bps as capacities for
+links $A\to C$ and $B\to C$ and $2$bps for link $C\to D$. User $r$
+wants to open some number of connections on paths $A\to C\to D$
+(path $1$) and $B\to C\to D$ (path $2$) to transfer data from $A$
+and $B$ to destination node $D$.
+%Consider user $r$ has the
+%following benefit function
+%\begin{equation}
+%B_r(\mathbf{n_r}) = G_r(\mathbf{n_r}) -
+%\Phi_r(\mathbf{n_r}).\label{eqn:benefit.star.simple}
+%\end{equation}
+%Suppose $\beta=0.005$ in user's benefit function
+%(\ref{eqn:benefit.star.simple}).
+The numbers of connections or sessions from other users on links
+$AC$ and $BC$ are $100$. We vary the numbers of connections from
+user $r$ on path $1$ and $2$, and then compute the throughput
+received by user $r$.
+% according to
+%(\ref{eqn:benefit.star.simple}).
+As shown in Figure \ref{fig:cost.total.n100}, we see that user
+$r$'s throughput is indeed a concave function.
+
+
+\begin{figure}[htb!]
+% FIRST TWO FIGS
+\centerline{
+    \begin{minipage}{1.6in}
+     \begin{center}
+        \setlength{\epsfxsize}{1.6in}
+        \epsffile{eps_BT_research/concave2.eps}\\
+       {}
+      \end{center}
+    \end{minipage}
+    \begin{minipage}{1.6in}
+      \begin{center}
+        \setlength{\epsfxsize}{1.6in}
+        \epsffile{eps_BT_research/concave2_2.eps}\\
+       {}
+      \end{center}
+    \end{minipage}
+} \caption{Throughput $G_r$ of user $r$ as a function
+        of the number of connections on both paths. The left figure is a side view. The
+        right figure is a top view. }
+        \label{fig:cost.total.n100}
+%        \label{fig:cost1.n100}
+\end{figure}
+
+%\end{comment}
+
+Consider the network in Figure \ref{fig:network2}, a generalized
+version of the network in Figure \ref{fig:network1}. In Figure
+\ref{fig:network2}, there are $M$ (multiple) paths along which
+user $r$ can get data from the sender. All paths share a common
+link $BA$. A strategy vector of user $r$ is $\mathbf{n}_r=(n_{r1},
+n_{r2}, ..., n_{rM})$ with $M\ge 2$. We can extend the result in
+Lemma \ref{lem:lem1} to show that a user $r$'s throughput is also
+a concave function of $\mathbf{n}_r$.
+%its strategy vector in this more general
+%network.
+This is summarized in Lemma \ref{lem:lem2}.
+
+\begin{figure}[htb!]
+    \begin{center}
+    %%\includegraphics[width=0.5\textwidth, height=0.25\textheight]{./network1_2.eps}
+    \includegraphics[scale=0.5]{eps_BT_research/network2.eps}
+       \caption{A network where a user has multiple paths(or peers) to get data.}
+\label{fig:network2}
+    \end{center}
+\end{figure}
+
+\begin{lemma}
+Suppose that user $r$ has $M$ ($M\ge 2$) paths in the network
+shown in Figure \ref{fig:network2}, then the throughput of user
+$r$ is a concave function of its strategy vector
+$\mathbf{n}_r=(n_{r1}, n_{r2}, ..., n_{rM})$. \label{lem:lem2}
+\end{lemma}
+
+
+
+\begin{comment}
+In the star topology, each user r has multiple paths to transfer
+data to itself. Each path has two links. One link is the private
+download link of user r, and the other link is the public upload
+link of another peer. The private download link is shared by all
+paths of user r. For example, in Figure \ref{fig:network2}, user
+r's data receiving node is node A, its private link is link $B\to
+A$. All paths, e.g., $C\to B\to A$ or $D\to B \to A$, share a
+common link $B\to A$. Other than this common link, no any two
+paths share any other common link.
+\end{comment}
+
+Based on Lemma \ref{lem:lem2}, we can show in the following
+theorem the existence of NE on a star network.
+%See \cite{zhang06tcpgame_general} for more details of the proof.
+One
+example of such star network is shown in Figure
+\ref{fig:network3}.
+%In this network, each user has two
+%links connecting to the Internet. Out of these two links, one link
+%is a upload link and the other link is download link. We assume
+%that the download link of a user is a private link, that is, this
+%download link can be used only by this user itself. On the other
+%hand, the upload link of user $r$ are shared among all other users
+%who are transferring data from user $r$.
+
+\begin{theorem}
+There exists a Nash equilibrium of unstructured overlay game on a
+star network (shown in Figure \ref{fig:network3}).
+\label{them:star}
+\end{theorem}
+
+%\begin{comment}
+
+\begin{proof}
+According to Lemma \ref{lem:lem2}, each user $r$'s total
+throughput is a concave function of the vector of number of
+connections $\mathbf{n_r}$. Then it is easy to show that user
+$r$'s benefit or payoff function $B_r$ is a concave function of
+$\mathbf{n_r}$. In addition, $B_r$ is continuous in $\mathbf{n}$.
+Thus we have a multi-player \textit{concave} game. Based on the
+result in \cite{rosen65}, we conclude that Nash equilibrium exists
+in this game.
+\end{proof}
+
+%\end{comment}
+
+\bigskip
+\noindent \textbf{An illustrative example.} We use a simple star
+network shown in Figure \ref{fig:star.simple.br} to illustrate the
+existence of NE proved in Theorem \ref{them:star}. On this star
+network, there are $6$ links $AD, DA, BD, DB, CD$, and $DC$. The
+capacities of all links are $C_{AD}=10, C_{DA}=20, C_{BD}=30,
+C_{DB}=40, C_{CD}=50$, and $C_{DC}=60$. There are three users
+associated with nodes $A,B$ and $C$ respectively. For convenience,
+we refer to the user at node $A$ as user $A$. Note that each user
+has two download paths with each path consisting of two links. For
+example, user $A$ has two download paths $B\to D \to A$ and $C\to
+D \to A$. For any given download path, one link is shared with
+other users, and the other link is a private link. For example,
+for user $A$, path $B\to D \to A$ has two links: $B D$ and $DA$.
+Link $BD$ is a link shared with user $C$.
+%who has $n_{BC}$ number of connections to get data from
+%$B$.
+Link $DA$ is a private link of user $A$, which is shared by both
+of its paths $B\to D \to A$ and $C\to D \to A$.
+
+User $A$'s strategy is a vector of number of connections on two
+available paths, i.e., $\mathbf{n}_A=(n_{BA}, n_{CA})$. Similarly,
+strategies of user $B$ and $C$ are: $\mathbf{n}_B=(n_{AB},
+n_{CB})$ and $\mathbf{n}_C=(n_{AC}, n_{BC})$.
+
+
+
+Consider the unstructured file sharing game played by users $A,
+B$, and $C$. Each user tries to maximize its benefit $B_r$
+($r=A,B,C$). We use best response dynamics to demonstrate the
+existence of a NE in this game. At the first step, each user opens
+a random number of connections on two available paths. In the
+following steps, only one player is randomly chosen to compute its
+best response at each step. As shown in Figure
+\ref{fig:star.simple.br}, the best response dynamics converges to
+a NE, which can be verified by checking the optimality of benefits
+of all three users.
+
+\begin{figure}[htb!]
+\centerline{
+    \begin{minipage}{1.6in}
+     \begin{center}
+        \setlength{\epsfxsize}{1.6in}
+        \epsffile{eps_BT_research/network6.eps}
+    \end{center}
+    \end{minipage}
+    \begin{minipage}{1.6in}
+      \begin{center}
+        \setlength{\epsfxsize}{1.6in}
+        \epsffile{eps_BT_research/star_simple_br_1.eps}
+      \end{center}
+    \end{minipage}
+    }
+\caption{The left figure shows a
+       simple star topology with three users A, B, and C.
+The right figure shows the best response dynamics. All three
+users' benefits converge to the
+        Nash equilibrium.}
+        \label{fig:star.simple.br}
+\end{figure}
+
+
+%\noindent \textbf{
+
+\subsection{Loss of Efficiency}
+
+Consider the case where all downstream links have higher capacity
+than upstream links and users are homogeneous. We can show that in
+this case, the loss of efficiency of any NE in the game is
+bounded. However, if users are aggressive in the sense that their
+benefit functions do not contain cost terms, then a unique NE is a
+point where all users open their maximum allowable number of
+connections. Clearly, the loss of efficiency of the NE is
+unbounded if users can open arbitrarily large numbers of
+connections. In order to show these results, we need to do a
+simple transformation as described below.
+
+%For more information, please refer to our technical report
+%\cite{zhang06tcpgame_general}.
+
+In the star topology shown in Figure \ref{fig:network3}, if all
+users' private downstream links have much higher capacities than
+the upstream links of those other peers, then this game can be
+thought of a variant of the game on a parallel link network. For
+example, we can transform the simple star network in the left
+sub-figure of Figure \ref{fig:star.simple.br} into Figure
+\ref{fig:network8_2}. Center node $D$ in Figure
+\ref{fig:star.simple.br} is decomposed into six interconnected
+virtual nodes $D_{Ad},D_{Au},D_{Bd},D_{Bu},D_{Cd},D_{Cu}$. Links
+between these six virtual nodes have infinite capacity. Node $A$
+is decomposed into nodes $A_{down}$ and $A_{up}$. Link
+$D_{Ad}A_{down}$ represents the downstream link of node $A$. Link
+$A_{up}D_{Au}$ represents the upstream link of node $A$. Other
+links have similar interpretations.
+
+
+\begin{figure}[htb!]
+    \begin{center}
+    %%\includegraphics[width=0.5\textwidth, height=0.25\textheight]{./network1_2.eps}
+    \includegraphics[scale=0.3]{eps_BT_research/network8_2.eps}
+       \caption{Transformation of star network into equivalent parallel link network.}
+\label{fig:network8_2}
+    \end{center}
+\end{figure}
+
+
+Based on the transformation illustrated in Figure
+\ref{fig:network8_2}, the result for the loss of efficiency at NE
+on a parallel link network can be applied to a star network. That
+is, the loss of efficiency at NE of the unstructured file sharing
+game can be arbitrarily large if the number of users becomes large
+in this special case.
+%Thus, the price of anarchy (the worst case
+%efficiency loss) is infinite for unstructured file sharing game.
+
+
+%\begin{comment}
+
+%\subsection{Price of Anarchy}
+
+
+%\noindent \textbf{Benefit Including Throughput Only.}
+We also consider another special case where users are aggressive
+in the sense that users do not have cost constraint and only care
+about their throughputs \cite{zhang05tcpgame_icnp}. That is,
+user's benefit function is represented as: $
+B_r(\mathbf{n_r})=G_r(\mathbf{n_r}). $ In this special case, there
+exist a unique Nash equilibrium where all users open their maximum
+allowable number of connections, and the price of anarchy can be
+unbounded when users can open arbitrary large number of
+connections.
+
+%More details about the loss of efficiency on star network can be
+%found in \cite{zhang06tcpgame_general}.
+
+%\end{comment}
+\bigskip
+\noindent \textbf{Network Resource Utilization.} Suppose that all
+downstream links have higher capacities than upstream links. Then
+the capacities of all upstream links will be fully utilized at the
+NE. This is a good situation in terms of the network resource
+utilization because the total throughput can be supported by the
+network is just the aggregate capacity of these upstream links.
+Note that this is not always true for general network topologies,
+%For counter examples, please see \cite{zhang06tcpgame_general}.
+which is demonstrated in an example in Appendix
+\ref{appd:resource.util}. A similar example is given in
+\cite{key05fluid}.
+
+
+
+
+%\subsection{Efficiency Loss of Nash Equilibrium}
+%(...to be filled...)
+
+%\section{Efficiency loss of un-coordinated congestion
+%controllers}\label{sec:un-coord} (...to be filled...)
+
+
+
+\section{Overlay Formation Game
+% for BitTorrent-like P2P applications
+} \label{sec:topo}
+
+%\bigskip
+%(... Giovanni's writeup...)
+%\bigskip
+
+%\input{giovanni_game}
+\input{giovanni_network_game_new_2}
+%\input{giovanni_network_game_new}
+
+%\input{tcpgame-general-conclusion}
+
+%\parskip=-10pt
+
+\section{Conclusions}
+\label{sec:con}
+
+%\parskip=0pt
+
+Motivated by unstructured file sharing networks such as BitTorrent
+\cite{bt}, we introduced an unstructured file sharing game and an
+overlay formation game to model the interaction among
+self-interested users who can open multiple connections on
+multiple paths to accelerate data transfer. Users are modelled as
+players, and each user adjusts its numbers of connections on its
+available paths to maximize its benefit.
+%A user's benefit is a
+%combination of utility (concave and nondecreasing function of a
+%user's total throughput) and cost (proportional to the total
+%number of connections of the user).
+%The
+%total throughput received by a user is the solution of the network
+%optimization problem proposed by Kelly \cite{kelly98rate} and Mo
+%and Walrand \cite{mo00fair}.
+%So a user's benefit is a function of
+%its numbers of connections on all paths.
+
+%We first found that in order to find the maximum benefit
+%%given
+%%that all other users' numbers of connections are fixed,
+%a user has to solve a Bi-level Programming problem, which is
+%NP-hard on general networks. Then
+We demonstrated by examples that there exist multiple stable
+network states, so called Nash equilibria (NE), in the
+unstructured file sharing game on general networks.
+%, in order
+%to make our models tractable,
+We further restrict our attention to parallel link networks and
+star networks which are used to model unstructured file sharing
+networks. We proved the existence of NE in several variants of the
+game on both networks. We found that the loss of efficiency of NE
+can be arbitrarily large if users have no cost constraints.
+However, when there are cost constraints, the loss of efficiency
+is bounded. In addition, we proved the global stability of NE in
+some variants of the game.
+%We first investigated the unstructured file sharing game on
+%parallel link networks, and proved the existence of Nash
+%equilibrium. In order to quantify how bad a Nash equilibrium can
+%be, we investigated the loss of efficiency of a Nash equilibrium,
+%which is defined as the ratio of the maximum total benefit from
+%all users over the total benefit at the Nash equilibrium.
+Furthermore, we studied the Tit-for-Tat strategy (built in
+BitTorrent \cite{bt})
+%into the
+%unstructured file sharing game to construct
+through an overlay formation game.
+%, in which a connection or
+%virtual link between two users can be setup only when both users
+%find this link beneficial.
+%We used this game to model the built-in
+%Tit-for-Tat mechanism in BitTorrent \cite{bt} applications.
+We proved the existence of equilibrium overlays, and demonstrated
+the convergence of the dynamical game-playing process. Although
+the general belief is that the Tit-for-Tat can prevent selfish
+behavior, we showed that it can still lead to an unbounded loss of
+efficiency.
+
+
+
+%\begin{comment}
+%\parskip=-5pt
+\section*{Acknowledgment}
+%\parskip=0pt
+
+The authors would like to thank Jim Kurose, Arun Venkataramani,
+and Chun Zhang for their helps. This research has been supported
+in part by NSF under grant awards ANI-0085848, CNS-0519998,
+CNS-0519922, and EIA-0080119, and by Italian MIUR project Famous.
+Any opinions, findings, and conclusions or recommendations
+expressed in this material are those of the authors and do not
+necessarily reflect the views of the National Science Foundation.
+
+%\end{comment}
+
+%\parskip=-5pt
+
+%\bibliographystyle{abbrv}
+\bibliographystyle{IEEEtran}
+\bibliography{tcpgame-general-tech}
+
+%\section{Appendix}
+\appendices
+
+\bigskip
+\section{An example for the simple rate allocation mechanism}\label{appd:simple}
+
+This example is to show that the simple rate allocation mechanism
+in Section \ref{sec:rate.alloc} cannot be extended to a general
+network.
+
+Suppose that there are two paths $p_1$ and $p_2$ which belong to
+two user $r1$ and $r2$ respectively. These two paths share a
+single common link $l$. Let user $r1$ open $n_{1p_1}$ number of
+connections on $p_1$ and user 2 open $n_{2p_2}$ number of
+connections on $p_2$.
+
+Suppose that
+$$\forall m\in p_1 , m\ne l,
+C_m n_{1p_1}/\sum_{w\in \mathbf{R}} n_{wm} > C_l
+n_{1p_1}/(n_{1p_1}+n_{2p_2}).$$
+%Here, we have $n^1_l=n^1_m=n^1$.
+Here, $n_{wm}$ represents the number of connections opened by user
+$w$ on link $m$.
+
+If we conclude that
+$$y_{1p_1}=C_l n_{1p_1}/(n_{1p_1}+n_{2p_2}),$$ then we might be wrong.
+The reason is as follows.
+
+It is possible that there is
+\begin{comment}
+$$
+\forall m\in p_2, m\ne l,
+ C_k n^2/\sum_{w\in \mathbf{R}} n^w_k < C_l
+n^2/\sum_{w\in \mathbf{R}} n^w_l.
+$$
+\end{comment}
+a link $k$ on $p_2$ satisfying
+$$
+ k\in p_2, k\ne l,
+ C_k n_{2p_2}/\sum_{w\in \mathbf{R}} n_{wk} \le C_j
+n_{2p_2}/\sum_{w\in \mathbf{R}} n_{wj}, \forall j\in p_2,
+$$
+then user $r2$'s obtained rate is
+$$
+C_k n_{2p_2}/\sum_{w\in \mathbf{R}} n_{wk},
+$$
+and the actual allocated rate of user $r2$ on link $l$ is $C_k
+n_{2p_2}/\sum_{w\in \mathbf{R}} n_{wk}$.
+
+If we have
+\begin{eqnarray}
+C_m n_{1p_1}/\sum_{w\in \mathbf{R}} n_{wm} &>& C_l - C_k
+n_{2p_2}/\sum_{w\in \mathbf{R}}n_{wk} \nonumber \\
+&>& C_l n_{1p_1}/(n_{1p_1}+n_{2p_2}) \nonumber
+\end{eqnarray}
+then, the actual rate obtained by user 1 is
+$$
+C_l - C_k n_{2p_2}/\sum_{w\in \mathbf{R}} n_{wk},
+$$
+not $$C_l n_{1p_1}/(n_{1p_1}+n_{2p_2}).$$
+
+\bigskip
+\section{Proof of Theorem \ref{them:con}}\label{appd:con}
+
+
+Consider the Lagrangian of the constrained optimization problem of
+any given user $r$.
+$$
+L(\mathbf{n}_r)=B_r(\mathbf{n}_r) + \lambda (n_r - \sum_{j=1}^L
+n_{rj}).
+$$
+
+The optimal solution can be obtained by solving the following
+equations.
+\begin{eqnarray}
+\partial{L}/\partial{n_{rj}} &=&0, \forall j \\
+\partial{L}/\partial{\lambda} &=& 0
+\end{eqnarray}
+That is,
+\begin{eqnarray}
+\partial{L}/\partial{n_{rj}} &=& \frac{\sum_{k\ne r}^R n_{kj}}{
+(n_{rj}+\sum_{k\ne r}^R n_{kj})^2} C_j - \beta - \lambda=0 \\
+\partial{L}/\partial{\lambda} &=& n_r -
+\sum_{j=1}^L n_{rj}=0
+\end{eqnarray}
+
+We consider a symmetric Nash equilibrium where all users have the
+same number of connections on each path/link. Then, we get
+$$
+C_i/n^*_{ri} = C_j/n^*_{rj}, \forall i, j
+$$
+Combined with $\sum_{j=1}^L n^*_{rj}=n_r$, we can get the vector
+of number of flows at Nash equilibrium. Specifically, for a given
+user $r$, its number of connections at link $j$ at Nash
+equilibrium is given by $n^*_{rj}=n_r C_j/\sum_{k=1}^L C_k.$
+
+\bigskip
+\section{An example for under-utilized network resources
+due to selfish behavior of users.  } \label{appd:resource.util}
+
+In the triangle network shown in Figure \ref{fig:triangle_bw},
+consider that all links are bi-directional and all links have the
+same capacity $C$. We have
+$C_{AB}=C_{BA}=C_{AC}=C_{CA}=C_{BC}=C_{CB}=C$. There are six
+users:
+\begin{itemize}
+\item User $AB$ wants to transfer data from node $A$ to node $B$.
+\item User $BA$ wants to transfer data from node $B$ to node $A$.
+\item User $BC$ wants to transfer data from node $B$ to node $C$.
+\item User $CB$ wants to transfer data from node $C$ to node $B$.
+\item User $AC$ wants to transfer data from node $A$ to node $C$.
+\item User $CA$ wants to transfer data from node $C$ to node $A$.
+\end{itemize}
+
+Consider that each user has two paths to transfer data and it can
+only open at most one connection on each path. For clarity, in
+Figure \ref{fig:triangle_bw}, we only show connections opened by
+user $AB$ and user $BA$. Assume that all users try to maximize its
+total throughput, then at the NE, every user opens one connection
+on each of its two paths. Each user gets a total throughput of
+$2C/3(=C/3+C/3)$. Then, the total throughput from all six users is
+$4C$. However, the total capacity provided by the network is $6C$.
+Thus, the network resource is not fully utilized in this example.
+A similar example is given in \cite{key05fluid}.
+
+
+\begin{figure}[htb!]
+    \begin{center}
+    %%\includegraphics[width=0.5\textwidth, height=0.25\textheight]{./network1_2.eps}
+    \includegraphics[scale=0.6]{eps_BT_research/triangle_bw.eps}
+       \caption{Triangle Network.}
+\label{fig:triangle_bw}
+    \end{center}
+\end{figure}
+
+
+
+\input{appendix-giovanni}
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% references section
+% NOTE: BibTeX documentation can be easily obtained at:
+% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% standard IEEE bibliography style from:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/bibtex
+%\bibliographystyle{IEEEtran.bst}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{IEEEabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+
+
+% that's all folks
+\end{document}

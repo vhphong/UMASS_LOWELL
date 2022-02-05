@@ -1,0 +1,137 @@
+<html>
+
+<head>
+<title>CS 91.404: General Information (Section 201)</title>
+</head>
+
+<body>
+
+<table width="100%" cellpadding=2>
+  <tr>
+    <td rowspan=3>
+    </td>
+    <td valign="bottom">
+      <h2 align="center">CS 91.404 (Section 201)</h2>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <h2 align="center">Analysis of Algorithms</h2>
+    </td>
+  </tr> </table> <hr> <h2 align="center">General Information</h2>
+
+<b>Level</b>:
+Advanced Undergraduate<br>
+ <b>Category</b>: Required for Computer
+Science Majors<br> <b>Credits</b>: 3<br> <b>Location: </b> Olsen 402
+<br>
+ <b>Time</b>: Tu,Th 2:00-3:15pm <br><table align="LEFT"width="100%" border=1> 
+<br><b>Acknowledgement: Courtesy of Prof. Karen Daniels. Many of the materials used in this course are adapted from Prof. Daniels's previous courses. 
+
+  <tr>
+    <td width="50%">
+      <b>Instructor</b>: <a href = "http://www.cs.uml.edu/~bliu/"> Prof. Benyuan Liu</a><br>
+      <b>Email</b>: <a href = "mailto:bliu@cs.uml.edu"> bliu@cs.uml.edu</a><br>
+      <b>Office Hours</b>: Tu 10:30am-12:00pm, Th 10:30am-12:00pm <br> or by appointment; in Olsen Hall 210<br>
+    </td>
+    <td width="50%">
+      <b>TA</b>: Jingwen Wang <br>
+      <b>Email</b>: jwang4@cs.uml.edu  <br>
+      <b>Office Hour</b>: Thursday 9-11am, Olsen 212 <br>
+    </td>
+  </tr colspan=2>
+</table>
+<table cellpadding=8>
+<tr>
+<td> 
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<br>
+</td>
+</tr>
+</table>
+
+<br>
+<p><b>General Description</b>:</p>
+<p class="MsoNormal" align="justify">This is a required course for Computer Science majors.
+It builds on the introduction to data types and data structures that students receive in Computing II (91.102).</p>
+
+<p class="MsoNormal" align="justify">Learning Outcomes:  <a href = "ALG_404_Learning_Outcomes.doc"> in Word format.</a><br>
+ 
+<p class="MsoNormal" align="justify">In this course (91.404) we distinguish between an 
+abstract data type (such as a list, stack, queue, tree, or hash table) and a data structure 
+that represents how the abstract data type is represented and stored in the computer's 
+memory.  We learn about algorithms for manipulating information in a variety of fundamental 
+abstract data types and data structures.</p>  
+
+<p class="MsoNormal" align="justify">Information tasks such as searching, retrieving, 
+inserting, updating, sorting and deleting arise frequently in Computer Science problems 
+that are central to many computer applications.  We focus on algorithms to correctly and efficiently 
+accomplish these types of core tasks.</p>
+
+<p class="MsoNormal" align="justify">What do we mean by "efficiently?"  We measure 
+efficiency in terms of speed and space (storage) usage.  We use techniques from theoretical 
+computer science and discrete mathematics for our analyses.<p> 
+
+<p class="MsoNormal" align="justify">Why does efficiency matter in computing environments 
+in which processors are very fast and storage space is abundant?  Here are two reasons that 
+have significant practical impact:
+<br>- The amount of information continues to explode quickly, and for large amounts of information 
+the differences in speed and storage requirements across different algorithm/data structure combinations can be huge.
+<br>- Some types of problems are inherently difficult and we cannot expect to solve them as efficiently 
+as we can solve easier ones.  It is important to learn to recognize such problems and be 
+familiar with ways to tackle them.</p>  
+
+<p class="MsoNormal" align="justify">The algorithms we study represent a variety of 
+important Computer Science problem-solving strategies, or algorithmic paradigms.  We 
+examine major characteristics of several algorithmic paradigms.</p>
+<hr>
+
+<b>Topics</b>: Algorithms, Data Structures, Time and Space Complexity Analysis<br>
+
+<p><b>Prerequisites</b>: Computing III (91.201), Discrete Math I & II (92.321, 92.322), 
+Statistics for Scientists and Engineers (92.386), Calculus I-II (92.131-231).</p>
+
+<p><b> Required Textbook </b>: 
+
+<UL>
+<LI><i>Introduction to Algorithms</i>
+    by T.H. Cormen, C.E. Leiserson, R.L. Rivest, Clifford Stein, The MIT Press, 3rd edition, 2009. ISBN 978-0-262-53305-8.<br></LI>
+<LI><i>Optional Supplement 1: The Algorithm Design Manual</i>
+    by Steven Skiena, 2nd edition, Springer-Verlag, 1998. ISBN 978-1-84996-720-4.<br></LI>
+<LI><i>Optional Supplement 2: Fundamentals of Algorithmics</i>
+    by Brassard and Bratley, Prentice-Hall, 1996. ISBN 0-13-335068-1.<br></LI>
+<LI><i>Optional Supplement 3: How to Think about Algorithms </i>
+    by Jeff Edmonds, Cambridge University Press, 2008. ISBN 978-0-521-61410-8.<br></LI>
+</UL>
+
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal">Grading:<span style="mso-spacerun: yes">&nbsp;
+</span></b>The course will have 2 exams: one midterm exam and one final exam (see syllabus for expected dates).<span style="mso-spacerun: yes">&nbsp;
+</span>Each exam is cumulative and open book.<span style="mso-spacerun: yes">&nbsp; </span>Grades will be calculated approximately as follows:</p>
+
+<p>Homework 30%
+<br>Quiz 10%
+<br> Midterm Exam 25%
+<br>Final Exam 25%
+<br> Discretionary 10%(attendance, participation)<br>
+
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal">Homework</b>: This is primarily a "paper-and-pencil" course whose homework and exams involve writing algorithms using "pseudo-code", establishing their correctness and analyzing their efficiency.  Although programming will not be required, programs will be provided whenever possible to illustrate and reinforce concepts. Students are also encouraged to implement their algorithms.</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

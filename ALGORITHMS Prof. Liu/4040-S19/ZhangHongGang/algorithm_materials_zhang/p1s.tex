@@ -1,0 +1,206 @@
+\documentclass[11pt]{article}
+
+\setlength {\oddsidemargin}{0.5in} \setlength
+{\evensidemargin}{0.5in} \setlength {\textwidth}{5.5in}
+
+
+\setlength{\parindent}{0.0in} \setlength{\parskip}{12pt}
+\setlength{\topmargin}{-0.35in} \setlength{\textheight}{8.5in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{0pt} \setlength{\textwidth}{6.5in}
+\def\singlespace{\baselineskip=1em}
+\def\doublespace{\baselineskip=2em}
+
+\def\blank#1{$\underline{\hbox to #1{\hfil}}$}
+
+\begin{document}
+%\begin{flushright}
+%\today
+%\end{flushright}
+
+\begin{center}
+{\bf CMPSC 623 Problem Set 1} \\
+{\bf by Prof. Honggang Zhang} \\
+\end{center}
+
+
+\begin{description}
+
+\item[Problem 1.]
+ Exercise 1.2-2 on page 13. In addition, how might one
+rewrite the merge sort pseudocode to make it even faster on small
+inputs?
+
+\noindent \textbf{Solution:}
+
+Insertion sort beats merge sort when $8n^2<64n\lg n$, so we know
+that $n< 8 \lg n$, and $2^{n/8} < n$, which is true when $2\le n
+\le 43$.
+
+Merge sort can be rewritten so that it does insertion sort on
+inputs of size 43 or less. The modified merge sort now takes fewer
+steps than the straight merge sort.
+
+\item[Problem 2.] Rank the following functions by order of growth; that is,
+find an arrangement $g_1, g_2, ..., g_{23}$ of the functions
+satisfying $g_1=\Omega, g_2=\Omega(g_3), ...,
+g_{22}=\Omega(g_{23})$. Partition your list into equivalent
+classes such that $f(n)$ and $g(n)$ are in the same class if and
+only if $f(n)=\Theta(g(n))$.
+$$(3/2)^n, (\sqrt{2})^{\lg n}, \lg^*n, n^2, n^3, \lg^2n,
+\lg (n!), 2^{2^n}, n^{1/\lg n}, \lg \lg n, n\cdot 2^n, n^{\lg \lg
+n}
+$$
+$$
+\ln n, 2^n, 2^{\lg n}, (\lg n)^{\lg n}, 4^{\lg n}, (n+1)!,
+\sqrt{\lg n}, n!,  n, n\lg n, 1
+$$
+
+\noindent \textbf{Solution:}
+
+$$
+2^{2^n} \quad (n+1)! \quad n! \quad n\cdot 2^n \quad 2^n \quad
+(3/2)^n \quad (\lg n)^{\lg n}=n^{\lg \lg n} \quad n^3 \quad
+n^2=4^{\lg n} \quad
+$$
+$$
+n\lg n =\Theta(\lg (n!)) \quad n=2^{\lg n} \quad (\sqrt{2})^{\lg
+n} \quad \lg^2n \quad \ln n \quad \sqrt{\lg n} \quad \lg \lg n
+\quad \lg^*n \quad n^{1/\lg n}= \Theta(1)
+$$
+
+Note, $(\lg n)^{\lg n}=n^{\lg \lg n}$. $n^{1/\lg n}=2$ because
+$2^{\lg n}=n$.
+
+\item[Problem 3.] Problem 2-1 on page 37.
+
+\noindent \textbf{Solution:}
+
+a)\\
+Insertion sort takes $\Theta(k^2)$ time per k-element list in the
+worst case. Therefore, sorting $n/k$ such k-element lists takes
+$\Theta(k^2n/k)=\Theta(nk)$ worst-case time.
+
+b)\\
+%Just extending the 2-list merge to merge all the lists at once
+%would take $\Theta(n(n/k))$ times (n from copying each element
+%once into the result list, $n/k$ from examining $n/k$ lists at
+%each step to select next item for result list).
+
+The key idea is to merge the lists pairwise, then merge the
+resulting lists pairwise, and so on, until there is just one list.
+The pairwise merging requires $\Theta(n)$ work at each level,
+since we are sill working on n elements, even if they are
+partitioned among sublists. The number of levels, staring with
+$n/k$ k-element lists and finishing with 1 n-element list, is
+$\lceil \lg(n/k) \rceil$. Therefore, the total running time for
+the merging is $\Theta(n\lg (n/k))$.
+
+c)\\
+The modified algorithm has the same asymptotic running time as
+standard merge sort when
+$$
+\Theta(nk+n\lg(n/k))=\Theta(n\lg n).
+$$
+The largest asymptotic value of k as a function of n that
+satisfies this is $k=\Theta(\lg n)$.
+
+k can't be more than $\Theta(\lg n)$  or the left-hand expression
+would not be $\Theta(n\lg n)$ (because it would have a
+higher-order term than $n\lg n$). So all we need to do is verify
+that $k=\Theta(\lg n)$ works, which we can do by plugging $ k=\lg
+n$ into
+$$
+\Theta(nk+n\lg (n/k))=\Theta(nk+n\lg n - n\lg k)
+$$
+to get
+$$
+\Theta(n\lg n + n\lg n - n\lg \lg n)=\Theta(2n\lg n - n\lg \lg n)
+$$
+Then by taking just the high-order term and ignoring the constant
+we can get $\Theta(n\lg n)$.
+
+d)\\
+In practice, k should be the largest list length on which
+insertion sort is faster than merge sort.
+
+\item[Problem 4.] Exercise 3.1-1 on page 50.
+
+\noindent \textbf{Solution:}
+
+Let $h(n)=\max\{f(n), g(n)\}$. Then
+$$
+h(n) = \left\{ \begin{array}{ll}
+f(n) & \textrm{if $f(n)\ge g(n)$}\\
+g(n) & \textrm{if $f(n)< g(n)$}
+\end{array} \right.
+$$
+As $f(n)$ and $g(n)$ are asymptotically non-negative, there exists
+$n_0$ such that $f(n)\ge 0$ and $g(n)\ge 0, \forall n\ge n_0$.
+Thus, for $n\ge n_0, f(n)+g(n) \ge f(n) \ge 0,  f(n)+g(n) \ge g(n)
+\ge 0$. Because $h(n)$ is either $f(n)$ or $g(n)$, we have
+$$
+f(n) + g(n) \ge h(n) \ge 0
+$$
+which shows that
+$$
+h(n)=\max (f(n), g(n))= O(f(n) +g(n)).
+$$
+
+Similarly, since $h(n)$ is the larger of $f(n)$ and $g(n)$, we
+have $\forall n\ge n_0, 0\le f(n)\le h(n)$ and $0 \le g(n) \le
+h(n)$. Thus, we have
+$$
+0\le f(n) + g(n) \le 2h(n)
+$$
+or
+$$
+0\le 1/2 \cdot(f(n) + g(n)) \le h(n)
+$$
+This means that $h(n)=\Omega(f(n)+g(n))$, with constant $c=1/2$ in
+the definition of $\Omega$.
+
+$h(n)=\Omega(f(n)+g(n))$ and $h(n)=O(f(n)+g(n))$ indicates that
+$h(n)=\Theta(f(n)+g(n))$.
+
+Proved.
+
+
+%\item[Problem 4.] Exercise 3.1-2  on page 50.
+\item[Problem 5.] Exercise 3.1-3  on page 50.
+
+\noindent \textbf{Solution:}
+
+Let the running time be $T(n)$. $T(n)\ge O(n^2)$ means that
+$T(n)\ge f(n)$ for some function $f(n)$ in the set $O(n^2)$. This
+is true for any $T(n)$ since the function $g(n)=0, \forall n$ is
+in $O(n^2)$ and $T(n)$ is always larger than 0. So this statement
+tells us nothing about the running time.
+
+%\item[Problem 6.]Exercise 3.1-4  on page 50.
+\item[Problem 6.]Exercise 3.1-8  on page 50.
+
+\noindent \textbf{Solution:}
+
+\begin{eqnarray}
+\Omega(g(n,m))=\{ f(n,m) &: \mbox{there exist positive
+constants}\quad c, n_0, \quad \mbox{and} \quad m_0 \nonumber \\
+&\mbox{such that}\quad 0\le cg(n,m) \le f(n,m) \quad \nonumber \\
+&\mbox{for all} \quad n\ge n_0 \quad \mbox{and}\quad m\ge
+m_0.\}\nonumber
+\end{eqnarray}
+
+\begin{eqnarray}
+\Theta(g(n,m))=\{ f(n,m) &: \mbox{there exist positive
+constants}\quad c_1, c_2, n_0, \quad \mbox{and} \quad m_0 \nonumber \\
+&\mbox{such that}\quad 0\le c_1 g(n,m)\le f(n,m) \le c_2 g(n,m) \nonumber \\
+&\mbox{ for all} \quad n\ge n_0 \quad\mbox{ and }\quad m\ge m_0.\}
+\nonumber
+\end{eqnarray}
+
+%\item[Problem 8.] Exercise 3.2-4 on page 57.
+
+
+\end{description}
+
+\end{document}

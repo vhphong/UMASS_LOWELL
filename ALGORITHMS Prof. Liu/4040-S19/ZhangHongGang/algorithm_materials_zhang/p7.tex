@@ -1,0 +1,63 @@
+\documentclass[11pt]{article}
+
+
+\setlength {\oddsidemargin}{0.5in} \setlength
+{\evensidemargin}{0.5in} \setlength {\textwidth}{5.5in}
+
+
+\setlength{\parindent}{0.0in} \setlength{\parskip}{12pt}
+\setlength{\topmargin}{-0.35in} \setlength{\textheight}{8.5in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{0pt} \setlength{\textwidth}{6.5in}
+\def\singlespace{\baselineskip=1em}
+\def\doublespace{\baselineskip=2em}
+
+\def\blank#1{$\underline{\hbox to #1{\hfil}}$}
+
+\begin{document}
+%\begin{flushright}
+%\today
+%\end{flushright}
+
+\begin{center}
+{\bf CMPSC 623 Problem Set 7. } \\
+{\bf by Prof. Honggang Zhang} \\
+\end{center}
+\begin{center}
+{\bf Out: November 30, 2006} \\
+{\bf Due: December 7, 2006, before class.} \\
+
+\end{center}
+
+
+\begin{description}
+
+\item[Problem.]
+
+In this problem, we consider some generalizations of the knapsack problem.
+
+\begin{enumerate}
+\item Describe how to change the knapsack algorithm described in class to deal with the case where
+the value of an item can be different from its weight.
+
+\item Consider a knapsack problem where each item, in addition to having a weight $w_i$ and a
+value $v_i$, also has a size $s_i$. The knapsack has a weight capacity $W$ and also a size capacity
+$S$. Give an algorithm that runs in time $O(nWS)$ for determining the maximum value subsets of the
+items that can be placed in the knapsack without violating the weight capacity or the size
+capacity.
+
+\item Consider a scenario where the items to be stolen by the thief are partitioned into types
+(i.e., stereos, computers, necklaces... ). Every item belongs to exactly one type. In addition to
+the weight capacity of the knapsack, the thief is further constrained to be able to steal at most
+one item of each type. Give an algorithm, that runs in time $O(nW)$, that determines the optimal
+subset of items that the thief is able to steal. You can assume that each item comes with an
+indication of which type it belongs to, and that the items start off sorted by item type. For this
+subproblem, there is no longer the size consideration introduced in part (b).
+
+
+\end{enumerate}
+
+
+\end{description}
+
+\end{document}

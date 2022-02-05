@@ -1,0 +1,89 @@
+\documentclass[11pt]{article}
+
+
+\setlength {\oddsidemargin}{0.5in} \setlength
+{\evensidemargin}{0.5in} \setlength {\textwidth}{5.5in}
+
+
+\setlength{\parindent}{0.0in} \setlength{\parskip}{12pt}
+\setlength{\topmargin}{-0.35in} \setlength{\textheight}{8.5in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{0pt} \setlength{\textwidth}{6.5in}
+\def\singlespace{\baselineskip=1em}
+\def\doublespace{\baselineskip=2em}
+
+\def\blank#1{$\underline{\hbox to #1{\hfil}}$}
+
+\begin{document}
+%\begin{flushright}
+%\today
+%\end{flushright}
+
+\begin{center}
+{\bf CMPSC 623 Problem Set 6. Solution.} \\
+{\bf by Prof. Honggang Zhang} \\
+\end{center}
+\begin{center}
+{\bf Out: November 9, 2006} \\
+{\bf Due: November 16, 2006, before class.} \\
+
+\end{center}
+
+
+\begin{description}
+
+\item[Problem 1.]
+Page 398, Exercise 16.4-1. Show it is closed under inclusion, and then show it
+satisfies exchange property.
+
+Closed under inclusion, because any subset of a set in $L_k$ is a subset of S
+and its size cannot be larger than k, i.e., it is still in $L_k$.
+
+$(S,L_k)$ also satisfies exchange property, because take any two sets $i,i'$ in
+$L_k$ and $|i|<|i'|$, it must be true that $i+e\subseteq L_k$ for any $e\in
+i'-i$.
+
+
+\item[Problem 2.]
+Read the description of activity-selection problem on page 371. Define a valid
+subset $S'$ of $S$ to be a set in which all activities are mutually compatible.
+For example, $S'=\{a_3, a_9, a_{11}\}$ is a valid subset. Define $I$ as the
+collection of all those valid subsets of $S$. Is $(S,I)$ a subset system that
+is closed under inclusion? Is it a matroid? Justify your answer.
+
+Yes, $(S,I)$ a subset system that is closed under inclusion because any subset
+of a set in $I$ will only include compatible activities.
+
+No, it is not a matriod. For example, consider valid subsets $S_1=\{a_3, a_9,
+a_{11}\}$ and $S_2=\{ a_1, a_4, a_8, a_{11} \}$. $|S_2|>|S_1|$. Take $a_1\in
+S_2-S_1$, and we find that $a_1 + S_1$ is not a valid subset, thus, exchange
+property cannot be satisfied.
+
+
+\item[Problem 3.]
+Page 398, Exercise 16.4-4. Show it is closed under inclusion, and then show it
+satisfies exchange property.
+
+First we note that $S$ is a finite nonempty set and $I \subseteq
+2^S$. Consider $i\in I$ and suppose that $j\subset i$. As $j\cap
+S_n\subset i \cap S_n$ for $n=1,2,...,k$, and $|j\cap S_n| \le
+|i\cap S_n|\le 1$ for all $n=1,2,...,k$. So $I$ is closed under
+inclusion. It follows that $(S,I)$ is a subset system.
+
+For a valid set $i$, define $i_n=i\cap S_n$, for $n=1,2,...,k$.
+For each $i_n$, $|i_n|\le 1$; $i_n \subset i$, so $i_n\in I$, but
+$i_n\subset S_n$, so $|i_n \cap S_j|=0$ for $j\ne n$. Thus, for
+each valid set $i$ there are indices $n_1, n_2, ..., n_r$ such
+that $i=\cup^{r}_{j=1} i_{n_j}$, with $i_{n_j}\ne \emptyset$.
+These $i_{n_k}$s are disjoint and $|i_{n_k}|=1; 0<|i_{n_k}|\le 1
+$. It follows that $r=|i|$.
+
+Now suppose that $i,j\in I$ and $|i|<|j|$. Then $i=\cup^q_{k=1}
+i_{n_k}$ and $j=\cup^r_{k=1}j_{m_k}$, with $q<r$. So there is an
+$m_l$ such that $i_{m_l}=\emptyset$ and $j_{m_l}\subset j\cap
+i^c$. Thus, $i\cup j_{m_l} \in I$. The exchange property follows.
+$j_{m_l}$ contains only one element.
+
+\end{description}
+
+\end{document}

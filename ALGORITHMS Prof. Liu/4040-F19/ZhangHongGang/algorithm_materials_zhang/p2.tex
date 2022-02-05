@@ -1,0 +1,92 @@
+\documentclass[11pt]{article}
+
+\setlength {\oddsidemargin}{0.5in} \setlength
+{\evensidemargin}{0.5in} \setlength {\textwidth}{5.5in}
+
+
+\setlength{\parindent}{0.0in} \setlength{\parskip}{12pt}
+\setlength{\topmargin}{-0.35in} \setlength{\textheight}{8.5in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{0pt} \setlength{\textwidth}{6.5in}
+\def\singlespace{\baselineskip=1em}
+\def\doublespace{\baselineskip=2em}
+
+\def\blank#1{$\underline{\hbox to #1{\hfil}}$}
+
+\begin{document}
+%\begin{flushright}
+%\today
+%\end{flushright}
+
+\begin{center}
+{\bf CMPSC 623 Problem Set 2} \\
+{\bf by Honggang Zhang} \\
+\end{center}
+\begin{center}
+{\bf Out: September 20, 2007} \\
+{\bf Due: September 27, 2007, before class.} \\
+
+\end{center}
+
+\begin{description}
+
+\item[Problem 1.] Solve the following recurrences:
+\begin{enumerate}
+\item $T(n)=T(n-2)+n$
+\item $T(n)=T(n-1) + n$
+\item $T(n)=2T(n/2)+n^3$
+\item $T(n)=16T(n/4)+n^3$
+\item $T(n)=2T(n/16)+\sqrt{n}$
+\end{enumerate}
+
+\item[Problem 2.] A sorting algorithm is thought of as stable if all
+equal elements are in the same relative order in the sorted sequence as in the original sequence.
+Which of insertion sort, quick sort, and merge sort are stable, and which are unstable? Give a
+simple fix to make the unstable sorts stable.
+
+\item[Problem 3.] Use the version of the master theorem stated in
+Exercise 4.4-2 (page 84) to solve the recurrence $T(n)=2T(n/2)+n\lg n$. (You need not prove
+Exercise 4.4-2.)
+
+\item[Problem 4.] Suppose we run QuickSort (not randomized version) on an array of size $n$.
+Assume that each recursive partition function call divides its input array of size $k$ into two
+sub-arrays, one with size $\lfloor \frac{k}{20} \rfloor$ and the other one with size
+$\lceil\frac{19k}{20}\rceil-1$. What is the running time (as a function of $n$) of this QuickSort?
+Why?
+
+\item[Problem 5.]Problem 28.2-6 on page 741.
+
+\item[Problem 6.](Divide-and-Conquer) Suppose that you can multiply two $4\times 4$ matrices using $k$
+multiplications, then do the following:
+\begin{enumerate}
+\item Design a divide-and-conquer algorithm to multiply two $n\times n$ matrices.
+\item In addition, suppose that you want to beat Strassen's algorithm by showing that your
+algorithm's running time $T(n)$ is $o(n^{lg 7})$, then what is the largest $k$ you can choose?
+Recall that, as we discussed in class, the larger $k$ is, the longer time your algorithm will take.
+\end{enumerate}
+
+\item[Problem 7.] (Probabilistic Analysis) Use indicator random variables to compute the expected
+value of the sum of $n$ dice.
+
+\item[Problem 8.] (Probabilistic Analysis) Page 118, Problem 5-2. Only do part (a), (b), (c).
+
+\item[Problem 9.] Give a $\Theta(n)$-time, randomized procedure
+that takes as input an array $A[1...n]$ and performs a random permutation on the array elements.
+You need to write pseudo code.
+
+\item[Problem 10.] Page 160, Problem 7-2. Only do part (a), (b), (c), and (e). Note, you need to
+use substitution method for (e), and you can use the result in part (d) without proof.
+
+%1 edition, 8.4-1
+%\item[Problem 9.] exercise 7.4-2 on page 159.
+
+%1 edition, P169 8-4
+%\item[Problem 10.] Problem 7-4 on page 162.
+
+%8.3-1 in 1st edition
+%\item[Problem 6.] Exercise 7.3-1 on page 154.
+
+
+\end{description}
+
+\end{document}

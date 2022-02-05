@@ -1,0 +1,1041 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+
+
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;
+	font-style:italic;}
+h2
+	{margin:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h3
+	{margin:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;
+	font-style:italic;}
+h4
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h5
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;}
+h6
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Times New Roman";}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	font-style:italic;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;
+	font-style:italic;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+ /* Page Definitions */
+ @page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=Section1>
+
+<p class=MsoTitle><span style='font-size:14.0pt'>Analysis of Algorithms</span></p>
+
+<p class=MsoTitle><span style='font-size:14.0pt'>91.404 (Section 201)</span></p>
+
+
+
+<P>Reading assignments are in the required text and supporting materials.
+The following table shows the planned reading schedule. The schedule may be revised slightly as the semester progresses.
+
+
+<ul>
+
+
+<li> Sept 4, Overview
+<li> Sept 9, Selection Sort, Chapter 2
+<li> Sept 11, Merge Sort, Divide-and-Conquer, Chapter 2
+<li> Sept 16, Growth of Functions, Chapter 3
+<li> Sept 18, Growth of Functions, Chapter 3
+<li> Sept 23, Growth of Functions, Chapter 3
+
+<li> Sept 25, Divide and Conquer, Chapter 4
+<li> Sept 30, Divide and Conquer, Chapter 4
+<li> Oct 2, Divide and Conquer, Chapter 4
+<li> Oct 7, Probabilistic Analysis and Randomized Algorithms, Chapter 5
+<li> Oct 9, Heapsort, Chapter 6
+<li> Oct 14, quiz 1
+<li> Oct 16, Heapsort, Chapter 6
+<li> Oct 21, Quicksort, Chapter 7
+<li> Oct 23, Quicksort, Chapter 7
+<li> Oct 30, midterm exam
+<li> Nov 4, Sorting in Linear Time, Chapter 8
+<li> Nov 6, Sorting in Linear Time, Chapter 8
+<li> Nov 13, Medians and Order Statistics, Chapter 9
+<li> Nov 18, Hash Tables, Chapter 11
+<li> Nov 20, Hash Tables, Chapter 11
+<!----
+<li> Nov 21, Binary Search Trees, Chapter 12
+<li> Nov 26, Binary Search Trees, Chapter 12
+<li> Dec 3, Elementary Graph Algorithms, Chapter 22
+<li> Dec 5, Elementary Graph Algorithms, Chapter 22
+
+--->
+
+<!----
+<li> Sept 5, Overview, Chapter 1
+<li> Sept 7, Selection Sort, Chapter 2
+<li> Sept 10, Merge Sort, Divide-and-Conquer, Chapter 2
+<li> Sept 14, Growth of Functions, Chapter 3
+<li> Sept 17, Growth of Functions, Chapter 3
+<li> Sept 19, Growth of Functions, Chapter 3
+<li> Sept 21, Divide and Conquer, Chapter 4
+<li> Sept 24, Divide and Conquer, Chapter 4
+<li> Sept 26, Divide and Conquer, Chapter 4
+<li> Sept 28, Probabilistic Analysis and Randomized Algorithms, Chapter 5
+<li> Oct 1, Probabilistic Analysis and Randomized Algorithms, Chapter 5
+<li> Oct 3, quiz 1
+<li> Oct 5, Heapsort, Chapter 6
+<li> Oct 10, Heapsort, Chapter 6
+<li> Oct 12, Heapsort, Chapter 6
+<li> Oct 15, midterm review
+<li> Oct 17, midterm part I
+<li> Oct 19, midterm part II
+<li> Oct 22, Quicksort, Chapter 7
+<li> Oct 24, Quicksort, Chapter 7
+<li> Oct 26, Sorting in Linear Time, Chapter 8
+<li> Oct 31, Sorting in Linear Time, Chapter 8
+<li> Nov 2, Sorting in Linear Time, Chapter 8
+<li> Nov 5, Medians and Order Statistics, Chapter 9
+<li> Nov 7, Elementary Data Structures, Chapter 10
+<li> Nov 9, Hash Tables, Chapter 11
+<li> Nov 14, Hash Tables, Chapter 11
+<li> Nov 16, quiz
+--->
+
+</ul>
+
+<!-----
+
+<p class=MsoSubtitle align=left style='text-align:left'></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='margin-left:.9pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border:solid black 1.0pt;
+  border-left:solid black 1.5pt;background:#FFFFCA;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoSubtitle>Lecture Date</p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:solid black 1.0pt;
+  border-left:none;background:#FFFFCA;padding:0in 5.4pt 0in 5.4pt'>
+  <h1><b><span style='font-style:normal'>Topic</span></b></h1>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:solid black 1.0pt;
+  border-left:none;background:#FFFFCA;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoHeader align=center style='text-align:center'><b>Reading</b></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border-top:solid black 1.0pt;
+  border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 1.5pt;
+  background:#FFFFCA;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoHeader align=center style='text-align:center'><b>Homework</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoSubtitle><span style='font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h2 align=center style='text-align:center'><span style='font-size:10.0pt'>&nbsp;</span></h2>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h2 align=center style='text-align:center'><span style='font-size:10.0pt'>&nbsp;</span></h2>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoHeader align=center style='text-align:center'>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoSubtitle><span style='font-weight:normal'>&nbsp;</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h2 align=center style='text-align:center'><span style='font-size:10.0pt'>Foundations</span></h2>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h2 align=center style='text-align:center'><span style='font-size:10.0pt'> Chapters
+  1-5</span></h2>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoHeader align=center style='text-align:center'>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoHeader align=center style='text-align:center'><i><span
+  style='font-size:8.0pt'> Sept 4</span></i></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h1><span style='font-size:10.0pt'>Introduction/Overview</span></h1>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoHeader align=center style='text-align:center'><i><span
+  style='font-size:10.0pt'> Chapter 1</span></i></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoHeader align=center style='text-align:center'><span
+  style='font-size:8.0pt'>assign #1 (Ch 1, 2)<i> </i></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoHeader align=center style='text-align:center'><span
+  style='font-size:8.0pt'> Sept 9, 11</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h1><span style='font-size:10.0pt;font-style:normal'>Analyzing &amp; Designing Algorithms</span></h1>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoHeader align=center style='text-align:center'><span
+  style='font-size:10.0pt'>Chapter 2</span></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoHeader align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoHeader><span style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h1><span style='font-size:10.0pt;font-style:normal'>&nbsp;</span></h1>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoHeader align=center style='text-align:center'><span
+  style='font-size:10.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoHeader align=center style='text-align:center'><span  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+
+
+ 
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoHeader align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h1><b><span style='font-size:10.0pt'>&nbsp;</span></b></h1>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoHeader align=center style='text-align:center'><i><span
+  style='font-size:10.0pt'>&nbsp;</span></i></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoHeader align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>Sept 16, 18, 22 </span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h2 align=center style='text-align:center'><span style='font-size:10.0pt;
+  font-weight:normal'>Growth of Functions</span></h2>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h2 align=center style='text-align:center'><span style='font-size:10.0pt;
+  font-weight:normal'>Chapter 3</span></h2>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h2 align=center style='text-align:center'><span style='font-size:8.0pt;
+  font-weight:normal'>assign #2 (Ch 3)</span></h2>
+  </td>
+ </tr>
+
+
+
+
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'> Sept 25, Oct 2 </span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h2 align=center style='text-align:center'><span style='font-size:10.0pt;
+  font-weight:normal'>Recurrences</span></h2>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h2 align=center style='text-align:center'><span style='font-size:10.0pt;
+  font-weight:normal'>Chapter 4</span></h2>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h2 align=center style='text-align:center'><span style='font-size:8.0pt;
+  font-weight:normal'> assign #3 (Ch 4)</span></h2>
+  </td>
+ </tr>
+
+
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>Oct 7</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'> Probability &amp; Randomized Algorithms</span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>Chapter 5</span></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoHeading7><span style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3 align=center style='text-align:center'><span style='font-size:10.0pt'>&nbsp;</span></h3>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><i><span
+  style='font-size:10.0pt'>&nbsp;</span></i></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoHeading8> Sorting</p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h2 align=center style='text-align:center'><span style='font-size:10.0pt;
+  font-weight:normal'> </span><span style='font-size:10.0pt'>Chapters 6-8</span></h2>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h2 align=center style='text-align:center'><span style='font-size:8.0pt;
+  font-weight:normal'>&nbsp;</span></h2>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>Oct 9, 14</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'> Heapsort/ Priority Queues</span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'> Chapter 6</span></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+
+
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>Oct 16, 21</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'> Quicksort</span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'> Chapter 7</span></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>  assign #4 (Ch 6)</span></p>
+  </td>
+ </tr>
+
+
+
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>Oct 23, Nov 6</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>Sorting in Linear Time</span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>Chapter 8</span></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>assign #5 (Ch 7) </span></p>
+  </td>
+ </tr>
+
+<tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><i><span
+  style='font-size:8.0pt'>Oct 28</span></i></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoHeading7><b>Review</b></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><i><span
+  style='font-size:10.0pt'>Chapters 1-6</span></i></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'> </span></p>
+  </td>
+ </tr>
+<tr>  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoHeading7><span style='font-size:8.0pt'>Oct 30 </span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3 align=center style='text-align:center'><b><span style='font-size:10.0pt'>Midterm
+  Exam  </span></b></h3>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><i><span
+  style='font-size:10.0pt'>Chapters 1-6</span></i></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'> </span></p>
+  </td>
+ </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ 
+ 
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoHeading7><span style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3 align=center style='text-align:center'><b><span style='font-size:10.0pt'>&nbsp;</span></b></h3>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><i><span
+  style='font-size:10.0pt'>&nbsp;</span></i></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h1><b><span style='font-size:10.0pt;font-style:normal'>Data Structures</span></b></h1>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h4><span style='font-size:10.0pt'>Chapters 10-13</span></h4>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h4><span style='font-size:8.0pt;font-weight:normal'>&nbsp;</span></h4>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'> </span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>W 3/26, F 3/28, M 3/31 </span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>Stacks, Queues, Linked Lists, Trees</span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>Chapter 10</span></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>3/28: #6 due; assign #7 (Ch 10-11)  </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>W 4/2, F 4/4, M 4/7</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>Hash Tables</span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>Chapter 11</span></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>W 4/9, F 4/11, M 4/14</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>Binary Search Trees</span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>Chapter 12</span></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:8.0pt'> 4/11: #7 due; assign #8 (Ch
+  12-13)</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>W 4/16, F 4/18, W 4/23</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h1><span style='font-size:10.0pt;font-style:normal'>Balancing Trees:
+  Red-Black Trees</span></h1>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>Chapter 13</span></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3 align=center style='text-align:center'><span style='font-size:10.0pt;
+  font-style:normal'>&nbsp;</span></h3>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h4><span style='font-size:10.0pt'>Advanced Techniques</span></h4>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h6><span style='font-size:10.0pt'>Chapters 15-16</span></h6>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>M 4/28 </span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>Dynamic Programming</span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>Chapter 15</span></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>W 4/30</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>Greedy Algorithms</span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>Chapter 16</span></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>4/28: #8 due; assign #9 (Ch 15-16)</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <h5><span style='font-size:8.0pt'>&nbsp;</span></h5>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h4><span style='font-size:10.0pt'>Graph Algorithms</span></h4>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-size:10.0pt'>Chapters 22-24</span></b></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>F 5/2,  M 5/5, W 5/7 </span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>Elementary Graph Algorithms</span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>Chapter 22</span></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>5/5: #9 due;</span></p>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>assign #10 (Ch 22-24)</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>F 5/9</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoHeader align=center style='text-align:center'><span
+  style='font-size:10.0pt'>Minimum Spanning Trees</span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>Chapter 23</span></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>M 5/12  </span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>Shortest Paths</span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>Chapter 24</span></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>&nbsp;</span></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:8.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:none;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><i><span
+  style='font-size:8.0pt'>W 5/14</span></i></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h1><b><span style='font-size:10.0pt'>Review</span></b></h1>
+  </td>
+  <td width=120 valign=top style='width:1.25in;border:none;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><i><span
+  style='font-size:10.0pt'> 1-8, 10-13, 15-16, 22-24</span></i></p>
+  </td>
+  <td width=175 valign=top style='width:131.4pt;border:none;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><i><span
+  style='font-size:8.0pt'>5/14: #10  due</span></i></p>
+  </td>
+ </tr>
+
+ <tr>
+  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:solid black 1.5pt;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><i><span
+  style='font-size:10.0pt'>To Be Determined</span></i></p>
+  </td>
+  <td width=150 valign=top style='width:112.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h3 align=center style='text-align:center'><span style='font-size:10.0pt'>Final
+  Exam</span></h3>
+  </td>
+
+ <td width=120 valign=top style='width:1.25in;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><i><span
+  style='font-size:10.0pt'>1-8, 10-13, 15-16, 22-24</span></i></p>
+  </td>
+
+  <td width=175 valign=top style='width:131.4pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+ 
+
+
+ <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-size:10.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+
+
+</table>
+
+<p class=MsoNormal><i><span style='font-size:8.0pt'>Revised for Fall, 2001 in
+accordance with ACM Computer Science Computing Curricula 2001, Steelman Draft,
+August, 2001.</span></i></p>
+
+<p class=MsoNormal><i><span style='font-size:8.0pt'>&nbsp;</span></i></p>
+
+
+
+<p class=MsoHeading9>&nbsp;</p>
+
+
+</div>
+
+--->
+
+</body>
+
+</html>

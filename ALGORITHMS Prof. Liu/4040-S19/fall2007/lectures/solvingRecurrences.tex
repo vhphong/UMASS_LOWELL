@@ -1,0 +1,227 @@
+\documentclass{seminar}
+%\usepackage{doublespace}
+\usepackage{times}
+%\usepackage{smallheadings}
+\usepackage{subfigure}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{listings}
+\input{epsf}
+
+\usepackage{graphics}
+
+\begin{document}
+
+\begin{slide}
+{\bf Recurrences}
+\begin{itemize}
+\item The substitution method
+\item The recursion tree method
+\item The master method
+\end{itemize}
+\end{slide}
+\begin{slide}
+{\bf The substitution method}
+\begin{itemize}
+\item Guessing the form of the solution
+\item Using the mathematical induction to show that the solution works
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+{\bf The substitution method: an example} \\
+We'd like to solve $T(n)=3T(\lfloor n/4 \rfloor)+n$. \\
+We guess $T(n) \in O(n)$. \\
+We prove by induction that there exists a constant $c$ such that $T(n)
+\le cn $ for sufficiently large $n$.
+
+\begin{eqnarray*}
+T(n) & = & n + 3T(\lfloor n/4 \rfloor) \\ 
+     & \le & n + 3*c*\lfloor n/4 \rfloor \\
+     & \le & (1+3c/4)n  \\
+     & \le & cn, \; when \; c \ge 4 \\
+\end{eqnarray*}
+\end{slide}
+
+
+\begin{slide}
+{\bf The substitution method: subtleties} \\
+We'd like to solve $T(n)=T(\lfloor n/2 \rfloor)+ T(\lceil n/2 \rceil) + 1$. \\
+We guess $T(n) \in O(n)$. \\
+We try to prove by induction that there exists a constant $c$ such that $T(n)
+\le cn $ for sufficiently large $n$.
+
+\begin{eqnarray*}
+T(n) & = & T(\lfloor n/2 \rfloor)+ T(\lceil n/2 \rceil) + 1 \\ 
+     & \le & c*\lfloor n/2 \rfloor + c*\lceil n/2 \rceil + 1\\
+     & = & cn + 1  \\
+\end{eqnarray*}
+We really need to show that $T(n) \le cn$.
+\end{slide}
+
+\begin{slide}
+{\bf The trick} \\
+We'd like to solve $T(n)=T(\lfloor n/2 \rfloor)+ T(\lceil n/2 \rceil) + 1$. \\
+We guess $T(n) \in O(n)$. \\
+We  prove by induction that there exists a constant $c,b$ such that $T(n)
+\le cn-b$ for sufficiently large $n$.
+
+\begin{eqnarray*}
+T(n) & = & T(\lfloor n/2 \rfloor)+ T(\lceil n/2 \rceil) + 1 \\
+     & \le & c*\lfloor n/2 \rfloor-b + c*\lceil n/2 \rceil -b + 1\\
+     & = & cn - b - (b-1)  \\
+     & < & cn-b \; when \; b>1
+\end{eqnarray*}
+\end{slide}
+
+
+\begin{slide}
+{\bf The  recursion-tree method}
+\begin{itemize}
+\item The method
+  \begin{itemize}
+  \item Draw a recursion tree where each node represents the cost of a single
+    subproblem
+  \item Sum the cost of each level to get per-level cost
+  \item Sum all per-level costs to get the total cost
+  \end{itemize}
+
+\item Applications
+\begin{itemize}
+\item Can be used to find a good guess. Complete by using the substitution
+  method. Can be a bit sloppy when constructing the tree. 
+\item Can serve as a direct proof. Need to be strict when draw the tree.
+\end{itemize}
+\end{itemize}
+\end{slide}
+
+
+\begin{slide}
+{\bf The recursion-tree method: an example} \\
+We'd like to solve $T(n)=3T(\lfloor n/4 \rfloor)+ \Theta(n^2)$. \\
+We instead draw a tree for $T(n)=3T(n/4)+ cn^2$. \\
+Some sloppiness we use here
+\begin{itemize}
+\item assume $n$ is an exact power of 4 to remove the floor function
+\item replace $\Theta(n^2)$ by $cn^2$ 
+\end{itemize}
+\end{slide}
+
+\begin{slide}
+The sum of per-level costs results below:
+
+\begin{eqnarray*}
+T(n) &=& cn^2 + {3 \over 16}cn^2 + ({3 \over 16})^2cn^2+...+  ({3 \over
+  16})^{log_{4}n-1}cn^2 + 3^{log_{4}{n}}\Theta(1) \\
+     &=& \sum_{i=0}^{log_{4}n-1}{(\frac{3}{16})^i}cn^2 +
+\Theta(n^{log_{4}{3}}) \\
+      &<& \sum_{i=0}^{\infty}{(\frac{3}{16})^i}cn^2 +
+\Theta(n^{log_{4}{3}}) \\
+     &=& \frac{1}{1-3/16}cn^2+\Theta(n^{log_{4}{3}})\\
+     &=& O(n^2) 
+\end{eqnarray*}
+\end{slide}
+
+
+\begin{slide}
+{\bf Master Theorem: a simple version} \\
+Let $T: N \rightarrow R^+$ be an eventually non-decreasing function such that
+$$ T(n) = lT(n/b)+cn^k, n>n_0$$ when $n/n_0$ is an exact power of $b$.
+The constants $n_0, l \ge 1, b \ge 2$, and $k \ge 0$ are all integers. $c$ is a
+positive real number.
+
+We have 
+\[
+T(n) \in \left\{
+  \begin{array}{lll}
+  \Theta(n^k) &if&  k > log_bl \\
+  \Theta(n^k logn) &if& k = log_bl \\
+  \Theta(n^{log_{b}{l}}) &if&  k < log_bl \\
+  \end{array}
+  \right.
+\]
+\end{slide}
+
+\begin{slide}
+{\bf Asymptotic recurrences} \\
+Consider a function $T: N \rightarrow R^+$ such that
+$$T(n) = lT(n/b) + f(n)$$
+for all sufficiently large n, where $l \ge 1$ and $b \ge 2$ are constants, and 
+$f(n) \in \Theta(n^k)$ for some $k \ge 0$. We conclude that 
+
+\[
+T(n) \in \left\{
+ \begin{array}{lll}
+       \Theta(n^k)& if & k > log_bl \\
+       \Theta(n^k\log{n})& if & k = log_bl \\
+       \Theta(n^{\log_{b}{l}}) & if & k < log_bl \\
+ \end{array}
+ \right.
+\] 
+ 
+\end{slide}
+
+\begin{slide}
+{\bf Master Theorem} \\
+Let $l \ge 1$ and $b>1$ be constants, let $f(n)$ be a function, and $T(n)$ be
+defined on the non-negative integers $n$ by the recurrence
+$$T(n) = lT(n/b)+f(n),$$
+where we interpret $n/b$ be either $\lfloor n/b \rfloor$ or $\lceil n/b
+\rceil$. The $T(n)$ can be bound asymptotically as follows.
+
+\begin{enumerate}
+\item If $f(n) = O(n^{log_{b}{l} - \epsilon})$ for some constant $\epsilon > 0$,
+  then $T(n) = \Theta(n^{log_{b}{l}})$.
+
+\item If $f(n) = \Theta(n^{log_{b}{l}})$,
+  then $T(n) = \Theta(n^{log_{b}{l}} lg n)$.
+
+\item If $f(n) = \Omega(n^{log_{b}{l}  + \epsilon})$ for some constant $\epsilon > 0$,
+and if $lf(n/b) \le cf(n)$ for some constant $c < 1$ and all sufficiently
+large $n$, then $T(n) = \Theta(f(n))$.
+\end{enumerate}
+\end{slide}
+
+\begin{slide}
+{\bf Examples}
+$$T(n) = T(n/3)+1.$$
+
+$$T(n) = T(n/3)+n. $$
+
+$$T(n) = 9T(n/3)+n.$$
+
+$$T(n) = 3T(n/4) + nlg n.$$
+\end{slide} 
+
+\begin{slide}
+{\bf Change variables}\\
+Consider the recurrence $T(n)=2T(\sqrt{n})+ lgn$. \\
+Let $ n =2^m$, then $T(2^m) = 2T(2^{m/2})+m$ \\
+Let $S(m)$ denote $T(2^m)$, then $S(m) = 2 S(m/2) + m$\\
+
+Using the master method, $S(m) \in \Theta(m lg m)$
+So $T(n) \in \Theta(lg n lg lg n) $.
+\end{slide}
+
+\begin{slide}
+{\bf Range transformations} \\
+Consider the following recurrence where n is a power of 2.
+\[
+T(n) = \left\{
+ \begin{array}{ll}
+       1/3, & n=1 \\
+       nT^2(n/2) & otherwise \\
+ \end{array}
+ \right.
+\] 
+
+Let $t_i$ denote $T(2^i)$.
+$$t_i=T(2^i)=2^iT^2(2^{i-1})=2^it^2_{i-1}$$
+
+Let $u_i$ denote $lg t_i$.
+$$u_i = lg t_i = lg(2^it^2_{i-1}) = i + 2 lgt_{i-1} = i+ 2u_{i-1}$$
+We solve this equation using recursion tree.
+\end{slide}
+
+\end{document}

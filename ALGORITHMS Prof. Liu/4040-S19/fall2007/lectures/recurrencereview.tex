@@ -1,0 +1,137 @@
+\documentclass{seminar}
+\usepackage{doublespace}
+\usepackage{times}
+\usepackage{smallheadings}
+\usepackage{subfigure}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{listings}
+\input{epsf}
+
+\usepackage{graphics}
+
+\begin{document}
+
+
+
+\begin{slide}
+{\bf Solving  homogeneous recurrences} \\
+Given $a_0t_n+a_1t_{n-1}+...+a_kt_{n-k}=0$. Guess $t_n=x^n$ for an unknown
+constant $x$.\\
+We have  $a_0x^n+a_1x^{n-1}+...+a_kx^{n-k}=0$ \\
+Ignoring solution $x=0$, the equation is satisfied if and only if \\
+$p(x)=a_0x^k+a_1x^{k-1}+...+a_k=0$
+It is called the \em{characteristic equation} of the recurrence. \\
+
+Let $r_1, r_2,..., r_k$ be the $k$ roots of $p(x)$. We conclude that
+$t_n=\sum_{i=1}^{k}{c_ir_i^n}$ for any constants $c_i$.
+
+This is the only solution when the $k$ roots are distinct.
+\end{slide}
+
+\begin{slide}
+{\bf Example} \\
+\[f_n = \left \{
+         \begin{array}{ll}
+         n, & n=0,1\\
+         f_{n-1} + f_{n-2}, & otherwise\\
+	 \end{array}
+        \right.
+\]
+
+We have $f_n - f_{n-1} - f_{n-2} =0$.
+The characteristic equation is $x^2 -  x -1 =0$ \\
+
+whose roots are
+$r_1=\frac{1+\sqrt{5}}{2}$ and $r_2=\frac{1-\sqrt{5}}{2}$.
+
+So $f_n = c_1*(\frac{1+\sqrt{5}}{2})^n + c_2(\frac{1-\sqrt{5}}{2})^n$.
+
+We know $f_0=0=c_1+c_2$ and
+$f_1=1=c_1*\frac{1+\sqrt{5}}{2}+c_2\frac{1-\sqrt{5}}{2}$
+
+We have $c_1=1/\sqrt{5}$ and $c_2=-1/\sqrt{5}$.
+\end{slide}
+
+\begin{slide}
+{\bf Multiple roots} \\
+In general, if $r_1, r_2, ...,r_l$ are the $l$ distinct roots of the
+characteristic polynomial and their multiplicities are $m_1,m_2,...,m_l$, 
+then $$t_n = \sum_{i=1}^{l}\sum_{j=0}^{m_i-1}c_{ij} n^j r_i^n$$.
+\end{slide}
+
+\begin{slide}
+{\bf Example: multiple roots}
+\[ 
+t_n = \left\{ 
+  \begin{array}{ll}
+     n, & n=0,1,or \; 2 \\
+     5t_{n-1}-8t_{n-2}+4t_{n-3} & \\
+   \end{array}
+\right.
+\]
+
+The characteristic polynomial is $$x^3-5x^2+8x-4=(x-1)(x-2)^2$$.
+
+So $t_n=c_1 1^n + c_2 2^n + c_3 n 2^n$.
+Applying the initial conditions, we obtain $c_1=-2, c_2=2$ and $c_3=-1/2$. 
+Therefore $t_n=2^{n+1}-n 2^{n-1}-2$.
+\end{slide}
+
+\begin{slide}
+{\bf Inhomogeneous recurrences: a general form}\\
+Consider the following generalization
+$$a_0t_n+a_1t_{n-1}+...+a_kt_{n-k}=b_1^n p_1(n)+b_2^n p_2(n)+...,$$
+where $b_i$ is a constant and $p_i(n)$ is a polynomial in $n$ of degree $d_i$.
+
+The characteristic polynomial is 
+$$(a_0x^k+a_1x^{k-1}+...+a_k)\Pi_{i}(x-b_i)^{d_i+1}.$$
+\end{slide}
+
+\begin{slide}
+{\bf Inhomogeneous recurrences: an example}\\
+\[
+t_n = \left\{
+ \begin{array}{ll}
+       0, & n=0 \\
+       2t_{n-1}+n+2^n & otherwise \\
+ \end{array}
+ \right.
+\]
+Rewrite the recurrence as $$t_n-2t_{n-1}=1^nn^1+2^nn^0$$
+So $b_1=1, p_1(n)=n, b_2=2,$ and $p_2(n)=1$.
+The characteristic polynomial is
+$$(x-2)(x-1)^2(x-2)=(x-1)^2(x-2)^2,$$
+All solutions to the recurrence has the form\\
+$$t_n=c_11^n+c_2n1^n+c_32^n+c_4n2^n$$
+Substitute it into the original recurrence, which gives
+$$n+2^n=(2c_2-c_1)-c_2n+c_42^n$$.
+We obtain $c_4=1$, and thus $t_n=\Theta(n2^n)$.
+\end{slide}
+
+\begin{slide}
+{\bf Master Theorem: a simple version} \\
+Let $T: N \rightarrow R^+$ be an eventually nondecreasing function such that
+$$ T(n) = lT(n/b)+cn^k, n>n_0$$ when $n/n_0$ is an exact power of $b$.
+The constants $n_0, l \ge 1, b \ge 2$, and $k \ge 0$ are all integers. $c$ is a
+positive real number.
+
+We have 
+\[
+T(n) \in \left\{
+  \begin{array}{lll}
+  \Theta(n^k) &if&  l<b^k \\
+  \Theta(n^k logn) &if&  l=b^k \\
+  \Theta(n^{log_{b}{l}}) &if&  l>b^k \\
+  \end{array}
+  \right.
+\]
+\end{slide}
+
+\begin{slide}
+{\bf Examples}
+$$T(n) = 9T(n/3)+n.$$
+\end{slide} 
+
+\end{document}

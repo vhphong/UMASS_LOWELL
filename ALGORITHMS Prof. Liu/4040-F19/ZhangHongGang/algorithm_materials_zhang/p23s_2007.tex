@@ -1,0 +1,169 @@
+\documentclass[11pt]{article}
+
+\setlength {\oddsidemargin}{0.5in} \setlength
+{\evensidemargin}{0.5in} \setlength {\textwidth}{5.5in}
+
+
+\setlength{\parindent}{0.0in} \setlength{\parskip}{12pt}
+\setlength{\topmargin}{-0.35in} \setlength{\textheight}{8.5in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{0pt} \setlength{\textwidth}{6.5in}
+\def\singlespace{\baselineskip=1em}
+\def\doublespace{\baselineskip=2em}
+
+\def\blank#1{$\underline{\hbox to #1{\hfil}}$}
+
+\begin{document}
+%\begin{flushright}
+%\today
+%\end{flushright}
+
+\begin{center}
+{\bf CMPSC 623 Problem Set 2 and 3} \\
+{\bf Solutions to problems not discussed in class.}\\
+{\bf by Prof. Honggang Zhang} \\
+\end{center}
+
+
+\begin{description}
+
+%\item[Problem 1.]
+%Solve (find an asymptotic upper bound for) the recurrence
+%$$
+%T(n)=T(n-a)+T(a)+n
+%$$
+%where $a\ge 1$ is constant, by using iteration to generate a guess
+%and then using substitution method to verify it.
+
+
+\item[HW-2 Problem 8.]
+(Probabilistic Analysis) Page 118, Problem 5-2. Only do part (a), (b), (c).
+
+Part (a). Simply transfer the description into code. Need to keep
+an array for recording if a particular item is checked. Also need
+a counter to record the number of distinct elements that have been
+checked.
+
+Part (b). Suppose we want to search for $x$ whose index is $i$,
+that is, $A[i]=x$. We are doing a random search, so at each probe,
+any element is equally likely to be picked up. Then, the
+probability that we find the target $x$ at the first pick or probe
+is simply $1/n$. The prob. that we find it at the second pick is
+$(n-1)/n * 1/n$ (this means, we are not successful at the first
+probe but successful at the second probe). Let $X$ denote the
+number of probes until we find the target. Then it is easy to see
+that $X$ is a geometric random variable. Then $E[X]=1/(1/n)=n$.
+
+Part (c). Element $x$ now has $k$ replicas in the total $n$
+elements. Again, we assume that each elem. is equally likely to be
+picked up at a probe. Then at the first probe, we can find x with
+probability $k/n$. Similar to Part (b), the probability of being
+successful at the second probe is $(n-k)/n * k/n$, so on so forth.
+$X$ is now a geometric random variable with $p=k/n$. Then
+$E[X]=n/k$.
+
+\item[Hw-2 Problem 10.] Page 160, Problem 7-2. Only do part (a), (b), (c), and (e). Note, you need to
+use substitution method for (e), and you can use the result in
+part (d) without proof.
+
+We have discussed Part a,b,c in class.
+
+Part (e) is a little tricky. Different prints of the 2nd edition
+of the textbook give you different problem descriptions and hints!
+So I didn't grade it. One hint is a tricky way to handle
+substitution method. I don't recall that I discussed it in class
+when I was discussing substitution method. So I didn't grade it.
+In any case, here is the idea:
+
+For inductive step, you assume that $ET(n)\le an\log n - bn, a>0,
+b>0, \forall n<k$. Then you want to prove that $ET(n)\le an\log n
+- bn$.
+
+\begin{eqnarray}
+ET(n) &=& 2/n \sum_{q=2}^{n-1} ET(n) + \Theta(n) \qquad \mbox{(from part (c))}\\
+&\le& 2/n \sum (aq\log q - bq) + \Theta(n)  \qquad\mbox{(from our inductive hypothesis)}\\
+&\le& 2/n (1/2 an^2\log n - a/8 n^2 - b(n-1)n/2) + \Theta(n) \qquad\mbox{(from part (d))}\\
+&\le& an\log n - bn + b + \Theta(n)\\
+&\le& an\log n - bn - (a/4 n - cn - b)
+\end{eqnarray}
+In the above, we let $\Theta(n)=cn$. Then, one can find $a\ge 4 c
++ 4b/n$. One also needs to check base case.
+
+
+
+
+
+
+
+
+\item[HW-3 Problem 5.] Problem 7-4 on page 162.
+
+a). discussed in class.
+
+b).
+
+The stack depth of $QUICKSORT'$ will be $\Theta(n)$ on an n-element input array if there are
+$\Theta(n)$ recursive calls to $QUICKSORT'$. This happens if every call to $PARTITION(A,p,r)$
+returns $q=r$. The sequence of recursive calls in this scenario is:
+$$
+QUICKSORT' (A,1,n), QUICKSORT' (A,1,n-1), QUICKSORT' (A,1,n-2),
+$$
+$$
+ ... QUICKSORT' (A,1,1).
+$$
+
+As we discussed in class, applying the partition procedure
+discussed in class to a sorted list will always produce the worst
+stack depth.
+
+ c).
+
+The problem demonstrated by the scenario in (b) is that each call
+of $QUICKSORT'$ calls $QUICKSORT'$ again with almost the same
+range (size only reduced by one). To avoid such behavior, we must
+change $QUICKSORT'$ so that recursive call is on a smaller
+interval of the array. The following variation of $QUICKSORT'$
+checks which of the two sub-arrays returned from $PARTITION$ is
+smaller and recurses on the smaller sub-array, which is at most
+half the size of the current array. Since the array size is
+reduced by at least half on each recursive call, the number of
+recursive calls, and hence the stack depth, is $\Theta(\lg n)$ in
+the worst case. Note that this works no matter what PARTITION
+algorithms we use.
+
+Note that a rough even split at each step produces the worst case
+stack depth. Compare this with the regular quicksort which has the
+best case running time when each split is a even split.
+
+
+\begin{figure}[|htb]
+\begin{center}
+\begin{tabular}{|l|}\hline
+$QUICKSORT''(A,p,r)$\\
+\makebox[.6cm][l]{\hspace*{.2em}1. } while $p<r$\\
+\makebox[.6cm][l]{\hspace*{.2em}2. } \hspace{.1in} do // Partition and sort the
+smaller subarray first\\
+\makebox[.6cm][l]{\hspace*{.2em}3. }\hspace{.5in}$q\gets$
+$PARTITION(A,p,r)$\\
+\makebox[.6cm][l]{\hspace*{.2em}4. }\hspace{.5in}if $q-p <
+r-q$ \\
+\makebox[.6cm][l]{\hspace*{.2em}5. }\hspace{.7in} then
+$QUICKSORT''(A,p,q-1)$\\
+\makebox[.6cm][l]{\hspace*{.2em}6. }\hspace{.9in}$p\gets q+1$\\
+\makebox[.6cm][l]{\hspace*{.2em}7. }\hspace{.7in}else
+$QUICKSORT''(A,q+1, r)$\\
+\makebox[.6cm][l]{\hspace*{.2em}8. }\hspace{.9in} $r\gets q-1$\\
+\hline
+\end{tabular}
+\end{center}
+\end{figure}
+
+The expected running time is not affected, because exactly the
+same work is done as before: The same partitions are produced, and
+the same sub-arrays are sorted.
+
+
+
+\end{description}
+
+\end{document}

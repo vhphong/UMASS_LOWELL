@@ -1,0 +1,161 @@
+\documentclass[11pt]{article}
+
+%\include{amsmath}
+
+\setlength {\oddsidemargin}{0.5in} \setlength
+{\evensidemargin}{0.5in} \setlength {\textwidth}{5.5in}
+
+
+\setlength{\parindent}{0.0in} \setlength{\parskip}{12pt}
+\setlength{\topmargin}{-0.35in} \setlength{\textheight}{8.5in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{0pt} \setlength{\textwidth}{6.5in}
+\def\singlespace{\baselineskip=1em}
+\def\doublespace{\baselineskip=2em}
+
+\def\blank#1{$\underline{\hbox to #1{\hfil}}$}
+
+\begin{document}
+%\begin{flushright}
+%\today
+%\end{flushright}
+
+\begin{center}
+{\bf CMPSC 623 Problem Set 5, Solution.} \\
+{\bf by Prof. Honggang Zhang} \\
+\end{center}
+\begin{center}
+{\bf Out: November 2, 2006} \\
+{\bf Due: November 9, 2006, before class.} \\
+
+\end{center}
+
+
+\begin{description}
+
+\item[Problem 1.]
+Suppose we use quadratic probing
+$$
+h(k,i)=(h'(k) + c i^2) \quad \mbox{mod} \quad m.
+$$
+Show that if the table size $m$ is a prime number, the first $\lfloor m/2
+\rfloor$ probes are distinct.
+
+\noindent \textbf{Solution:}
+
+Proof by contradiction. Assume the claim is false, then there exists $i\ne j$
+such that $0\le i < j < \lfloor m/2 \rfloor$ and $i$-th and $j$-th probe will
+probe the same slot.
+
+Then, we have:
+\begin{eqnarray}
+h(x, i) = h(x,j) &\Rightarrow& h'(x)+i^2 = h'(x) + j^2 (mod \quad m) \\
+&\Rightarrow& i^2 = j^2 (mod \quad m) \\
+&\Rightarrow& i^2 - j^2 =0 (mod \quad m) \\
+&\Rightarrow& (i - j)(i + j) =0 (mod \quad m)
+\end{eqnarray}
+
+As $m$ is a prime number, we must have either $(i - j)=0 (mod \quad m)$ or $(i
++ j) = 0 (mod \quad m)$. However, either case cannot be true, thus, our
+assumption is false. Therefore, the claim is correct.
+
+\item[Problem 2.]
+Page 244, Exercise 11.4-1. Only do double hashing (Page 240).
+
+\noindent \textbf{Solution:}
+
+
+((10 mod 11) + 0*(1+ (10 mod 10))) mode 11 = 10
+
+((22 mod 11) + 0*(1+ (22 mod 10))) mode 11 = 0
+
+((31 mod 11) + 0*(1+ (31 mod 10))) mode 11 = 9
+
+((4 mod 11) + 0*(1+ (4 mod 10))) mode 11 = 4
+
+((15 mod 11) + 0*(1+ (15 mod 10))) mode 11 = 4, collision
+
+((15 mod 11) + 1*(1+ (15 mod 10))) mode 11 = 10, collision
+
+((15 mod 11) + 2*(1+ (15 mod 10))) mode 11 = 5
+
+((28 mod 11) + 0*(1+ (28 mod 10))) mode 11 = 6
+
+((17 mod 11) + 0*(1+ (17 mod 10))) mode 11 = 6, collision
+
+((17 mod 11) + 1*(1+ (17 mod 10))) mode 11 = 3
+
+((88 mod 11) + 0*(1+ (88 mod 10))) mode 11 = 0, collision
+
+((88 mod 11) + 1*(1+ (88 mod 10))) mode 11 = 9, collision
+
+((88 mod 11) + 2*(1+ (88 mod 10))) mode 11 = 7
+
+((59 mod 11) + 0*(1+ (59 mod 10))) mode 11 = 4, collision
+
+((59 mod 11) + 1*(1+ (59 mod 10))) mode 11 = 3, collision
+
+((59 mod 11) + 2*(1+ (59 mod 10))) mode 11 = 2
+
+
+
+
+
+
+\item[Problem 3.]
+Page 250, Problem 11-2 (a) (b). Only do (b) if you did (a) in the previous
+homework.
+
+\noindent \textbf{Solution:}
+
+(a). Note that here the table size is $n$. A given key is hashed to a chosen
+slot with probability $1/n$. For a given slot, if we choose $k$ keys, then the
+probability that all of them are hashed into that slot and all other other keys
+are hashed to other slots is: $(1/n)^k(1-1/n)^{(n-k)}$. As there are
+$C^{n}_{k}$ possibilities, thus, we get:
+$$
+C^{n}_{k} (1/n)^k(1-1/n)^{(n-k)}.
+$$
+
+
+(b). Let $x_i$ be the number of keys in slot $i$. Then, we have:
+\begin{eqnarray}
+P_k &=& P\{M=k\} \\
+&=& P\{(\max_i \quad x_i)=k\} \\
+&=& P\{(\exists i \quad \mbox{such that}\quad x_i=k) \quad \mbox{and} \quad
+(\forall i, x_i \le k)\} \\
+&\le& P\{(\exists i \quad \mbox{such that}\quad x_i=k)\} \\
+&=& P\{ (x_1=k) \quad \mbox{or} \quad (x_2=k) \quad \mbox{or} \quad (x_3=k)
+\quad \mbox{or} \quad ... \quad \mbox{or} \quad  (x_n=k) \} \\
+&\le& \sum_{i} P\{ x_i=k \} \\
+&=& nQ_k
+\end{eqnarray}
+
+
+\item[Problem 4.]
+Suppose that a hash table has $m$ slots, and we resolve collisions by chaining.
+There are $n$ keys. Assume that our hashing is simple uniform hashing. If you
+randomly pick up a slot from the table, what is the probability that you find
+that slot is not empty? What is the probability that you find at least two keys
+in that slot? If you pick up a key and identify the slot where this key is in,
+then what is the probability that some other key(s) will be in this slot?
+
+\noindent \textbf{Solution:}
+
+Probability that a key is in a randomly picked slot is $q=\frac{1}{m}$, and the
+probability that a key is in other remaining slots is $1-q$.
+
+Probability that a randomly picked slot is not empty is:
+$1-(1-q)^n=1-(\frac{m-1}{m})^n$.
+
+Probability that a randomly picked slot has at least two keys:
+\begin{eqnarray}
+&1-(1-q)^n-n*q*(1-q)^{(n-1)} \nonumber \\
+&=1-(\frac{m-1}{m})^n- n*(1/m)*(\frac{m-1}{m})^{(n-1)} \nonumber
+\end{eqnarray}
+
+If you identify the slot where a given key is in, then the probability that
+some other key(s) will be in this slot is $1-((m-1)/m)^{n-1}$.
+\end{description}
+
+\end{document}

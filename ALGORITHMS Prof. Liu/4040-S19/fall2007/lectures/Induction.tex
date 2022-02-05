@@ -1,0 +1,111 @@
+\documentclass {article}
+
+\title{Examples for Mathematical Induction}
+\pagestyle{empty}
+                                                                                       
+\begin{document}
+\maketitle
+                                                                                      
+
+Mathematical Induction is an important proof technique which we will
+frequently use in this course. A typical induction proof consists of
+two steps, induction basis and induction step. We can also split
+the induction step into an induction hypothesis and a direct proof.
+
+\section{The First Principle of Induction}
+
+To show that $\forall n \ge a, P(n)$, we can show that $P(a)$ and $\forall k \ge
+a, (P(k) \rightarrow P(k+1))$ using the first principle of induction. \\
+
+{\bf Example 1} Prove that $\sum_{i=1}^{n}i= \frac{n(n+1)}{2}$.
+
+We want to prove $\forall n \ge 1, P(n): \sum_{i=1}^{n}i= \frac{n(n+1)}{2}$.
+
+Induction basis:  when n=1, the equation trivially holds, i.e., $P(1)$ is true.
+
+Induction hypothesis: assume that $P(k)$ holds for $k \ge 1$. In other words,
+we assume $\sum_{i=1}^{k}i= \frac{k(k+1)}{2}$.
+
+Induction step: we want to show $P(k+1)$, i.e., $\sum_{i=1}^{k+1}i=
+\frac{(k+1)(k+2)}{2}$.
+
+\begin{eqnarray*}
+\sum_{i=1}^{k+1}i &=& \sum_{i=1}^{k}i + (k+1) \\
+&=&  \frac{k(k+1)}{2} +(k+1) \quad (induction \; hypothesis)  \\
+&=&  \frac{(k+1)(k+2)}{2}
+\end{eqnarray*}
+
+
+\section {The Second Principle of Induction}
+
+To show that $\forall n \ge a, P(n)$, we show that $P(a), P(a+1),..., P(b)$
+for a constant $b \ge a$ and $\forall k \ge
+b (\forall a \le j \le k, P(j) \rightarrow P(k+1))$, using the second principle .
+
+{\bf Example 2} The Fibonacci sequence is defines as follows,
+
+\[
+  f_n = \left\{ 
+  \begin{array}{ll}
+    n & n =0,1 \\
+   f_{n-1} + f_{n-2} & n \ge 2
+   \end{array}
+\right.
+\]
+
+We can prove that
+$$ f_n = \frac{1}{\sqrt{5}}{(\phi^n - (-\phi)^{-n})}, \phi =
+\frac{1+\sqrt{5}}{2}, $$ 
+using the second principle of mathematical induction.
+
+Induction basis:
+
+$f_0 = 0$ follows $\frac{1}{\sqrt{5}}{(\phi^0 - (-\phi)^{-0})} = 0$.
+
+\begin{eqnarray*}
+\frac{1}{\sqrt{5}}(\phi^1 - (-\phi)^{-1}) 
+&=& \frac{1}{\sqrt{5}}(\frac{1+\sqrt{5}}{2} -(-\frac{1+\sqrt{5}}{2})^{-1})\\
+&=& \frac{1}{\sqrt{5}}(\frac{1+\sqrt{5}}{2} + \frac{2}{1+\sqrt{5}})\\
+&=& \frac{1}{\sqrt{5}}\frac{10+2\sqrt{5}}{2(1+\sqrt{5})}\\
+&=& \frac{10+2\sqrt{5}}{10+2\sqrt{5}} \\
+&=& 1 \\
+&=& f_1 \\
+\end{eqnarray*}
+
+Induction hypothesis:
+Assume that $ f_n = \frac{1}{\sqrt{5}}{(\phi^n - (-\phi)^{-n})}$ for $0 \le
+n \le k$, and $k \ge 1$.
+
+Induction step: We need to show that  $ f_{k+1} =
+\frac{1}{\sqrt{5}}(\phi^{k+1} - (-\phi)^{-(k+1)})$.
+
+\begin{eqnarray*}
+f_{k+1} &=& f_k + f_{k-1} \quad (definition \; of \; Fibonacci \; sequence)\\
+&=&  \frac{1}{\sqrt{5}}{(\phi^k - (-\phi)^{-k})} +
+\frac{1}{\sqrt{5}}{(\phi^{k-1} - (-\phi)^{-(k-1)})} \quad (induction \; hypothesis)\\
+&=& \frac{1}{\sqrt{5}}(\phi^{k-1}(\phi+1) - (-\phi)^{-k}(1-\phi)) \\
+&=& \frac{1}{\sqrt{5}}(\phi^{k-1} \phi^2 -  (-\phi)^{-k}(-\phi)^{-1}) \quad
+  (\mbox {we prove later that} \; \phi+1 = \phi^2 \; and \; 1-\phi = (-\phi)^{-1})\\
+&=& \frac{1}{\sqrt{5}}(\phi^{k+1} - (-\phi)^{-(k+1)})
+\end{eqnarray*}
+
+
+It is easy to show $\phi+1 = \phi^2$.\\
+$\phi+1 = \frac{1 + \sqrt{5}}{2} + 1 = \frac{3 + \sqrt{5}}{2}$. \\
+$\phi^2 = (\frac{1 + \sqrt{5}}{2})^2 = \frac{(1+\sqrt{5})^2}{2^2} =
+\frac{6+2\sqrt{5}}{4} = \frac{3 + \sqrt{5}}{2} = \phi+1 $. \\
+
+Similarly, \\
+$1-\phi = 1 - \frac{1 + \sqrt{5}}{2} = \frac{1 - \sqrt{5}}{2}$ 
+
+$(-\phi)^{-1} 
+= (-\frac{1 + \sqrt{5}}{2})^{-1} 
+= - \frac{2}{1 + \sqrt{5}}
+= - \frac{2(1-\sqrt{5})}{(1 + \sqrt{5})(1 - \sqrt{5})}
+= - \frac{2(1-\sqrt{5})}{1-5}
+= - \frac{2(1-\sqrt{5})}{-4}
+= \frac{1-\sqrt{5}}{2} 
+= 1-\phi$ \\
+
+\end{document}
+
