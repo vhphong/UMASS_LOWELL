@@ -1,0 +1,4 @@
+1) For each bar that serve both 'heineken' and 'bud' count the number of drinkers that frequent that bar.
+2) For each bar that serve 'heineken' count the number of drinkers that frequent that bar and that like 'bud'.
+3) Find all drinkers that frequent only bars that serve some beer that they like.
+4) Find all drinkers that frequent bars that serve only beer that they like.

@@ -1,0 +1,22 @@
+username: phongvo
+password: L...2
+
+PS C:\Program Files\MySQL\MySQL Server 8.0\bin> .\mysql.exe -u root -p -h 127.0.0.1
+
+or
+
+PS C:\Program Files\MySQL\MySQL Server 8.0\bin> .\mysql.exe -u root -p
+Enter password: **************
+
+To show databases:
+sql> show databases;
+
+To use a database:
+sql> use database_name;
+
+To show tables in a database:
+sql> show tables;
+
+To exit:
+sql> exit
+Bye

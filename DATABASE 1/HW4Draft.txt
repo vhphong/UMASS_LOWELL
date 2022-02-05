@@ -1,0 +1,15 @@
+6.3.1 page 279
+a) Find the makers of PC's with a speed of at least 3.0.
+SELECT	DISTINCT maker
+FROM	product
+WHERE	model IN (SELECT model FROM pc WHERE speed >= 3.0);
+
+b) Find the printers with the highest price.
+SELECT	model 
+FROM	printer
+WHERE	price >= ALL(SELECT price FROM printer);
+
+e) Find the maker of the color printer with the lowest price.
+SELECT	model
+FROM	product
+WHERE	model IN (SELECT model FROM printer WHERE color=true);

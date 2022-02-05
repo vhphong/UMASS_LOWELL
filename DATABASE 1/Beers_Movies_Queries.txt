@@ -1,0 +1,39 @@
+ANSWERS:
+
+B-1. Find the manufacture of the beers sold at Joe’s bar
+		SELECT distinct manf FROM beers, sells WHERE name=beer and bar='Joe';
+B-2. Find the name and price of the most expensive beer sold at Joe’s bar
+		SELECT beer, price FROM sells WHERE bar='Joe' and price>=ALL(SELECT price FROM sells WHERE bar='Sue’);
+B-3. Find the name and price of the beer that Joe’s bar is selling it at a price lower than Sue’s bar
+		SELECT
+B-4. Find the name of the beer is sold at both Joe’s bar and Sue’s bar
+B-5. Find the name of the bar that sells all kinds of beer
+		SELECT name FROM bars b WHERE NOT EXISTS (SELECT name FROM beers WHERE name NOT IN (SELECT beer FROM sells s WHERE s.bar=b.name));
+			=> Sue
+
+
+M-1. Find the title and year of movies if there are two movies with the same title
+		SELECT DISTINCT m1m1.title, m1.year FROM Movies m1, Movies m2 WHERE m1.title = m2.title AND m1.year <> m2.year;
+
+M-2. Find the title of the longest movies
+		SELECT title FROM Movies WHERE length >=ALL(SELECT length FROM Movies);
+
+M-3. Find the name of stars who have stared in the same movie as Harrison Ford
+		SELECT distinct name FROM starsin WHERE title IN (SELECT title FROM stars IN WHERE name='Harrison Ford') and name <> 'Harrison Ford';
+
+M-4. Find the name of stars who have stared in both comedy and drama
+		(SELECT DISTINCT name FROM starsin s, Movies m WHERE s.title=m.title AND s.year=m.year and genre='Comedy') intersect
+		(SELECT DISTINCT name FROM starsin s, Movies m WHERE s.title=m.title AND s.year=m.year and genre='Drama');
+
+M-5. Find name of stars who have stared in every genre of movies
+		SELECT distinct name
+		FROM starsin as star
+		WHERE not exists
+			(SELECT genre FROM Movies WHERE genre not IN
+				(SELECT genre FROM Movies as m, starsin as s WHERE m.title=s.title and star.name=s.name));
+
+
+SELECT beer FROM sells WHERE bar='Joe' and ] IN (SELECT beer FROM sells WHERE bar='Sue’);
+SELECT beer FROM sells WHERE bar='Joe' and bar='Sue’;    
+		=> no rows selected
+SELECT beer FROM sells WHERE bar='Joe' or bar='Sue’;

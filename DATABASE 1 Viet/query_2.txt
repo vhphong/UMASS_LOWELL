@@ -1,0 +1,10 @@
+SQL> @query_2.sql
+
+TITLE                                                                           
+------------------------------------------------------------                    
+Greek Tragedy                                                                   
+Greek Tragedy                                                                   
+Geology                                                                         
+Graph Theory                                                                    
+
+SQL> spool off

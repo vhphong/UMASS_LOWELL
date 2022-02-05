@@ -1,0 +1,29 @@
+xammp MariaDB:
+1) Open xampp-control
+2) Start MySQL
+3) Go to "PS C:\xampp\mysql\bin>", shift right click to open Shell windows
+4) PS C:\xampp\mysql\bin>  .\mysql.exe -u root -p -h 127.0.0.1
+5) Enter passwordL -> just hit enter
+
+
+To show databases:
+MariaDB [(none)]> show databases;
+
+To use the computers database:
+MariaDB [(none)]> use computers;
+
+To exit:
+MariaDB [computers]> exit
+Bye
+
+XAMPP Control Panel:
+Start Apache
+Start MySQL
+then page http://localhost/phpmyadmin/ will be loaded
+If not:
+	- XAMPP Control Panel => Config => Services and Ports Settings => Main Port 8080, SSL Port 4433 => Save => Save
+	- Apache config: Apache httpd.conf => Ctrl + F to find 80, then replace 80 by 8080
+					 Apache httpd-ssl.conf => Ctrl + F to find 44, then replace 443 by 4433
+Restart Apache and MySQL
+(link: https://www.youtube.com/watch?v=9ATN8-HI6RY)
+					 

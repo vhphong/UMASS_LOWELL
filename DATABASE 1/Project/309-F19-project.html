@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>COMP.3090 Project</title>
+</head>
+<body>
+ <center>
+   <h1><u>COMP.3090 Database I Project</u></h1>
+   <h2>DESIGNING MICROSOFT ACCESS PROJECT<br>
+       Defining and Querying Database in SQL
+   </h2>
+   <h3>
+     <font color="red">Due: 11:59PM, Tuesday, December 10th, 2019</font>
+   </h3>
+ </center>
+ <hr>
+ <h3>
+ <u>Project Description:</u>
+ </h3>
+ <p>In this project, you will work on a Hospital Database which contains information of doctors, patients, nurses and tests.
+   There are many doctors in the hospital; we’d like to record their identification (ID), name, gender, age, phone
+   number, address, years of experience and specialization. We also have patients, who have identifier (ID), name,
+   gender, age, phone number, address, and disease information. Clearly, each doctor has a number of patients, and
+   vice versa. A doctor is assisted by a number of nurses, for whom we record ID, name, address. Doctors perform tests over certain patients. A tests table stores information of patient on whom test
+   is performed, the doctor who performed the test, and details of the test like the date of the test, its result
+   (positive or negative).
+    Download the database <q>Hostpital.accdb</q> from google group.
+    Write SQL queries using MS Access and execute them.
+ </p>
+ <h4>Database tables:</h4>
+<em>
+   DOCTORS (<u>D_ID</u>, D_NAME, D_GENDER, D_AGE, D_SPECIALIZATION,
+        D_YEARS_OF_EXPERIENCE, D_CONTACT, D_STREET, D_CITY)</br>
+  PATIENTS (<u>P_ID</u>, P_NAME, P_GENDER, P_AGE, P_DISEASE, P_CONTACT, P_STREET, P_CITY)</br>
+  NURSES (<u>N_ID</u>, N_NAME, N_SPECIALIZATION, N_SHIFT, N_STREET, N_CITY)</br>
+  P_ASSIGNMENT (<u>P_ID, D_ID</u>)</br>
+  N_ASSISTS (<u>N_ID, D_ID</u>)</br>
+  TESTS (<u>T_ID</u>, T_NAME, P_ID, D_ID, T_DATE, T_RESULT)</br>
+</em>
+<h4>Queries</h4>
+<ol>
+  <li>
+    List all doctors' name whose contact number starts with "978".</br>
+  </li>
+  <p></p>
+  <li>
+    List all the doctors who are consulted by a patient names "RICHARD MILLER".</br>
+    (Your result should display doctor's name.)<br>
+  </li>
+  <p></p>
+  <li>
+    List the nurse(s) who assist at least two doctors.</br>
+    (Your result should display nurse(s)'s name.)<br>
+  </li>
+  <p></p>
+  <li>
+    List the average years of experience of the doctors.</br>
+  </li>
+  <p></p>
+  <li>
+    Find the patients who had assignments with every doctor with specialization "Neurology".</br>
+    (Your result should display patient's name.)<br>
+  </li>
+  <p></p>
+  <li>
+    List the doctors and the number of nurses they have, display in the descending order of the number.</br>
+    (Your result should display doctor's name and the number of their nurses.)<br>
+  </li>
+  <p></p>
+  <li>
+    Find the doctor whose patients have the most different type of diseases.</br>
+    (Your result should display the doctor's name.)<br>
+  </li>
+  <p></p>
+  <li>
+  List the city where the most number of doctors and nurses live in.</br>
+  (Your result should display the city and the number.)<br>
+  </li>
+  <p></p>
+  <li>
+    Increment years of experience of all the doctors by 1.<br>
+  </li>
+  <p></p>
+  <li>
+     Delete all the tests whose result is negative.<br>
+  </li>
+  <p></p>
+</ol>
+<hr>
+<h2>Materials to Turn In</h2>
+   <p>
+   Submit both MS Access file that contains the original database and
+the queries and MS Word document that contains the queries and their
+results by <font color="red">11:59PM, December 10th, 2019.</font><br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -- On <i>cs.uml.edu</i>, use the submit command: <i>submit yli2 3090 Yourname_Hospital.accdb Yourname_Hospital.docx</i> (one submission per group)
+
+   </p>
+   <hr>
+<h2>Things to remember</h2>
+    <p>
+    Your project must run correctly in the department's computer lab to receive credits.
+    </p><p>All queries must be written using SQL interface in Microsoft access.
+    </p><p>All queries should be implemented in the given order.
+    </p><p>Late submissions will be taken off 50% and will not be accepted after 48 hours of original deadline.
+    </p><p>Queries will be graded on correctness. Few points may be
+deducted for bad style like use of complicated queries which are
+difficult to understand.
+    </p><p><b>Plagiarism is prohibited. If found, all the students involved will get zero credit for the project.</b>
+<br><br>
+
+
+</p></body></html>

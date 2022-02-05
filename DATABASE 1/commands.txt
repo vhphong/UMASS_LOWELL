@@ -1,0 +1,17 @@
+xammp MariaDB:
+1) Open xampp-control
+2) Start MySQL
+3) Go to "PS C:\xampp\mysql\bin>", shift right click to open Shell windows
+4) PS C:\xampp\mysql\bin>  .\mysql.exe -u root -p -h 127.0.0.1
+5) Enter passwordL -> just hit enter
+
+To show databases:
+MariaDB [(none)]> show databases;
+
+To use the computers database:
+MariaDB [(none)]> use computers;
+
+To exit:
+MariaDB [computers]> exit
+Bye
+
