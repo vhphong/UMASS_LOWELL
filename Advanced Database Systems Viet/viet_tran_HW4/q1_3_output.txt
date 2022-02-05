@@ -1,0 +1,6 @@
+Erdos
+80
+Preferential
+72
+Actor
+83
