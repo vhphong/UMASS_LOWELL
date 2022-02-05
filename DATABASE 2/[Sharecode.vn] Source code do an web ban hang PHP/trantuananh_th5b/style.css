@@ -1,0 +1,77 @@
+/* CSS Document */
+
+body {
+
+font-family:verdana,sans-serif;
+
+background:url(http://anhphp/theme8.jpg) repeat !important;
+
+}
+
+ 
+
+.mod { 
+
+border:3px solid #fafdff !important;
+
+}
+
+ 
+
+.mod .x1 {
+
+background:#fafdff !important;
+
+opacity:0.6;
+
+filter:alpha(opacity=60);
+
+display:block !important;
+
+}
+
+ 
+
+.hd {
+
+color:#004f83;
+
+font-family:arial,sans-serif;
+
+font-size:20px;
+
+}
+
+ 
+
+a:link,
+
+a:visited {
+
+color:#004f83;
+
+}
+
+ 
+
+.mod-content {
+
+color:#5c879c;
+
+}
+
+ 
+
+#ypf-coreid .user-card .user-info .user-name h1 span.nickname {
+
+color:#004f83;
+
+}
+
+ 
+
+ul.about div.hover, .inline-replace.hover {
+
+background-color: #fff;
+
+}
