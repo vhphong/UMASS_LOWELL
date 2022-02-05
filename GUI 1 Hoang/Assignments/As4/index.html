@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+        Name: Hoang Do
+        Email: Hoang_Do@student.uml.edu
+        Major:Computer Science, School : UMass Lowell, Class:   91.61 GUI Programming I
+        Date created: Oct 1,2019
+        A4: Styling Your First Web Page With CSS
+        Description: Made several changes in CSS and add a button to go to other Assignments
+        Copyright [2019] by Hoang Do. All rights reserved. May be freely copied or excerpted for educational purposes with credit to the author. -->
+<html lang="en">
+
+<head>
+    <!-- Tittle text-->
+    <title>Hoang's Page</title>
+    <!--  Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="My_background">
+        <h1>Hoang Do</h1>
+        <!--My picture-->
+        <div class="imgBox">
+            <img src="./images/my_pic.jpg" alt="Hoang Picture">
+        </div>
+    </div>
+
+    <!-- two inline button-->
+    <ul class="btn-group">
+        <!-- My store button-->
+        <li><a href="https://weon-store.com" class="button">My store</a></li>
+        <li>
+            <div class="dropdown">
+            <!-- GUI Assignment button -->
+                <button class="dropbtn button">GUI1</button>
+                <!--dropdown menu-->
+                <div class="dropdown-content">
+                    <a href="Assignments/As2/index.html">Assignment 2</a>
+                    <a href="Assignments/As3/index.html">Assignment 3</a>
+                    <a href="index.html">Assignment 4</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <!-- div box for about me section -->
+    <div class="box">
+        <div class="content">
+            <h2>about me</h2>
+            <br>
+            <ul>
+            <li>From a bustling city called  <span class="city_color">Ho Chi Minh</span>, <span class="country_color">Vietnam</span>.</li>
+            <li>A senior student at <span class="university_color"> University of Massachusetts, Lowell</span>. Majoring in Computer Science.</li>
+            <li>Like to play sports such as: soccer, badminton, swimming...</li>
+            <li>Currently developing an eCommerce website for my family: <a href="http://weon-store.com">WEON Store</a> to sell perfumes for body, home and baby
+            </ul>
+        </div>
+    </div>
+
+    <!-- Copyright section -->
+    <footer id="copyright">
+        Copyright 2019 by Hoang Do.
+    </footer>
+
+</body>
+
+</html>

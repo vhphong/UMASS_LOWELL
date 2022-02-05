@@ -1,0 +1,100 @@
+/*
+        Name: Hoang Do
+        Email: Hoang_Do@student.uml.edu
+        Major:Computer Science, School : UMass Lowell, Class:   91.61 GUI Programming I
+        Date created: Sep 18,2019
+        A2: Create your first web page
+        Description: My first web page with some simple features introduce myself
+        Copyright [2019] by Hoang Do. All rights reserved. May be freely copied or excerpted for educational purposes with credit to the author. */
+
+.header {
+    padding: 5px;
+    text-align: center;
+    background: black;
+    background-image: url(../images/header_bg.jpg);
+    color: white;
+    font-size: 20px;
+    font-family: fantasy;
+}
+
+.h1_color {
+    color: blue;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: lightgreen;
+}
+
+.box {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba (0,0,0,.5);
+    display: flex;
+    transition: 5s;
+}
+
+.box .imgBox {
+    height: 90px;
+    width: 200px;
+    padding-top: 100px;
+    flex: 0 0 200px;
+}
+
+.box .imgBox img {
+    max-width: 100%;
+    display: none;
+}
+
+.box .imgBox {
+    height: 90px;
+    background-image: url("../images/my_pic.jpg");
+}
+.box .imgBox:hover {
+    height: 90px;
+    background-image: url("../images/my_pic2.jpg");
+}
+
+.box .content {
+    padding-left: 20px;
+}
+
+.box .content h2 {
+    margin: 0;
+    padding-left: 0;
+    color: red;
+    font-family: fantasy;
+}
+
+.box .content p {
+    margin: 0;
+    padding-left: 10px;
+    text-align: justify;
+}
+
+.country_color {
+    color: #D63A3B;
+}
+
+.city_color {
+    color: #c8ce17;
+}
+
+.university_color{
+    color: #1375d1;
+}
+
+#copyright {
+    font-size: 12px;
+    font-family: sans-serif;
+    color: black;
+    text-align: right;
+}

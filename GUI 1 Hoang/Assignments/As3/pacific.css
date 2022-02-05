@@ -1,0 +1,89 @@
+/*
+Name: Hoang Do
+Student ID: 01521888
+Assignment 3
+*/
+header{
+	background-color:#000032;
+	color: #FFFFFF;
+	background-image: url("sunset.jpg");
+	background-position: right;
+  background-repeat: no-repeat
+}
+
+body {
+	background-color: #00569f;
+	background-image: url("ptrbackground.jpg");
+	color: #666666;
+	font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+	float:left;
+	width:160px;
+}
+
+nav a {
+  text-decoration: none;
+  color:#010015;
+}
+nav ul {
+	font-size: 1.2em;
+	list-style: none;
+	font-weight: bold;
+  padding-left: 20px;
+
+}
+nav a:visited {
+	color: #344873;
+}
+nav a:hover {
+	color: #FFFFFF;
+}
+h1 {
+	margin-bottom: 0;
+	padding: 10px;
+}
+h2 {
+	color: #3399CC;
+}
+h1,
+h2 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+#wrapper {
+  background-color: #90c8e3;
+  width:80%;
+  min-width: 600px;
+  margin: auto;
+}
+#content {
+  background-color: #FFFFFF;
+  margin-left: 200px;
+  padding: 1px 30px 1px 30px;
+}
+#content img {
+  float:left;
+  max-width: 100%;
+  padding-right: 20px;
+}
+.resort {
+  color: #596e83;
+  font-weight:bold;
+}
+#content ul {
+  list-style-image: url("marker.gif");
+  list-style-position: inside;
+}
+#contact {
+	font-size: 90%;
+}
+dt {
+	color: #000033;
+}
+footer {
+	font-family: Georgia, "Times New Roman", serif;
+  background-color: white;
+  font-style: italic;
+  margin-left: 200px;;
+  padding: 30px 20px 20px 30px;
+}

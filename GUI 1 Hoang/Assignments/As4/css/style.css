@@ -1,0 +1,201 @@
+/*
+        Name: Hoang Do
+        Email: Hoang_Do@student.uml.edu
+        Major:Computer Science, School : UMass Lowell, Class:   91.61 GUI Programming I
+        Date created: Oct 1,2019
+        A4: Styling Your First Web Page With CSS
+        Description: Made several changes in CSS and add a button to go to other Assignments
+        Copyright [2019] by Hoang Do. All rights reserved. May be freely copied or excerpted for educational purposes with credit to the author. */
+
+
+/* header 1 properties */
+h1 {
+    color: red;
+    text-align: center;
+    font-size: 60px;
+    font-family: cursive;
+    margin: auto;
+}
+
+/* header 1 properties */
+body {
+    margin: 0;
+    padding: 0;
+    background: LavenderBlush;
+    height: 100%;
+}
+
+/*set up header background */
+.My_background {
+    background: url("../images/My_Picture.jpg") top right no-repeat;
+    background-size: cover;
+    background-position: 100%;
+    padding: 30px 20px 100px 30px;
+    margin: auto;
+    position: relative;
+    min-height: 100%;
+}
+
+/* Set up image box's height and width to the center */
+.My_background .imgBox {
+    height: 90px;
+    width: 200px;
+    padding-top: 100px;
+    flex: 0 0 200px;
+    border-radius: 30px;
+    position: relative;
+    margin: auto;
+}
+
+/* Set up the image picture, none display for changing the background of the image box*/
+.My_background .imgBox img {
+    max-width: 100%;
+    display: none;
+}
+
+/* Set the image box background */
+.My_background .imgBox {
+    height: 90px;
+    background-image: url("../images/my_pic.jpg");
+}
+
+/*Change the image box background when hover */
+.My_background .imgBox:hover {
+    height: 90px;
+    background-image: url("../images/my_pic2.jpg");
+}
+
+/* Set up box for the about section and animation to the page */
+.box {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 5px 15px 0px;
+    display: flex;
+    transition: 5s;
+}
+
+/* set up box content properties */
+.box .content {
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+/* Set up header 2 in box content */
+.box .content h2 {
+    margin: 0;
+    padding-left: 0;
+    color: red;
+    font-family: fantasy;
+    text-align: center;
+
+}
+
+/* Set up paragraph in box content */
+.box .content p {
+    margin: 0;
+    padding-left: 10px;
+    text-align: justify;
+}
+
+/* Color for contries */
+.country_color {
+    color: #D63A3B;
+}
+
+/* Color for cities */
+.city_color {
+    color: #c8ce17;
+}
+
+/* Color for universities */
+.university_color{
+    color: #1375d1;
+}
+
+/*copyright set up */
+#copyright {
+    font-size: 12px;
+    font-family: sans-serif;
+    color: black;
+    bottom: 3%;
+    position: fixed;
+}
+
+/*http://www.w3schools.com/css/css_dropdowns.asp*/
+/*set up two buttons inline */
+.button {
+    width: 160px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: SpringGreen;
+    border: 2px solid black;
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+}
+
+a.button {
+    text-decoration: none;
+}
+
+a.button:hover {
+    background: Orchid;
+}
+
+ul.btn-group{
+    text-align: center;
+}
+
+ul.btn-group li {
+    display: inline-block;
+}
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: SpringGreen;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+}
+
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: Orchid
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: Orchid;
+}

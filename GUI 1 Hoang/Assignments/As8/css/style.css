@@ -1,0 +1,178 @@
+/*
+Name: Hoang Do
+Email: Hoang_Do@student.uml.edu
+Major:Computer Science, School : UMass Lowell, Class:   91.61 GUI Programming I
+Date created: Dec 6,2019
+A8: Creating an Interactive Dynamic Table with slider and tabs
+Description: create a multiplication table dynamically given user input
+for width and length
+Copyright [2019] by Hoang Do. All rights reserved. May be freely copied or excerpted for educational purposes with credit to the author.
+*/
+
+
+/* body*/
+body {
+    background-color: lightgreen;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 2;
+    display: block;
+}
+
+/* headings */
+h1 {
+    text-align: center;
+    color: red;
+}
+
+
+/* box container */
+#box-container {
+    width: 750px;
+    position: relative;
+    margin: 15px auto;
+    padding: 10px 30px 15px 30px;
+    background: hsla(182, 53%, 85%, 0.83);
+    border: 2px solid #988;
+    text-align: left;
+}
+
+
+/* input box */
+input[type=text] {
+    transition: background-color .25s ease-in-out;
+    border: 1px solid #d2d7dc;
+    border-radius: 1em;
+    width: 150px;
+    padding: .75em;
+    margin: 10px 15px 5px 0px;
+}
+
+/* submit button */
+input[type=submit] {
+    transition: color .25s ease-in-out, border-color .25s ease-in-out, background-color .25s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 1em;
+    padding: .75em;
+    cursor: grab;
+    font-weight: bold;
+    background-color: lightgreen;
+    margin-left: 75px;
+}
+input[type=submit]:hover {
+    background-color: lightblue;
+}
+
+/*unordered list*/
+ul {
+    list-style: none;
+    margin: 15px 0px 15px 0px;
+    font-weight: bold;
+}
+
+/*field set to section off the form*/
+fieldset {
+    border: solid 2px hsla(182, 53%, 85%, 0.83);
+    width: inherit;
+}
+
+/* paragraph */
+
+p {
+    padding: 0;
+    overflow: auto;
+}
+
+/* footer */
+
+footer {
+    font-size: 15px;
+    font-family: sans-serif;
+    color: brown;
+    text-align: center;
+}
+
+
+/* table */
+
+table {
+    margin: auto;
+    position: relative;
+    border-spacing: 1px;
+    text-align: center;
+    font-size: 12px;
+    empty-cells: hide;
+}
+
+
+/*padding for row and cells*/
+tr, td {
+    padding: 5px;
+}
+
+/* scrolling for large table */
+#tableout {
+  max-width: 750px;
+  overflow: auto;
+}
+
+/*setting for header row and col*/
+
+tr td:first-child,
+td.header {
+    color: white;
+    background-color: blue;
+    border: white 1px thin;
+}
+
+
+/*color for cells*/
+td.both_even_or_odd {
+    color: red;
+    background-color: white;
+}
+
+td.either_even_or_odd {
+    color: white;
+    background-color: red;
+}
+
+/*error text */
+.error {
+    color: red;
+    font-style: italic;
+    padding: 5px 6px 5px 6px;
+    font-weight: bold;
+}
+
+/*slider setting*/
+#slider_row_start,
+#slider_row_end,
+#slider_col_start,
+#slider_col_end {
+    margin: 5px 15px 5px 0px;
+    background: lightblue;
+}
+
+.ui-slider-horizontal {
+    height: 8px;
+    width: 235px;
+}
+
+.ui-slider-handle {
+    width: 30px;
+    margin-left: -15px;
+}
+
+.ui-tabs-nav {
+    background: lightblue;
+    /* Silver color */
+    color: black;
+}
+
+ul.tabs li.current {
+    background: black;
+    color: black;
+}

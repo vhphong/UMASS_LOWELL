@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+        Name: Hoang Do
+        Email: Hoang_Do@student.uml.edu
+        Major:Computer Science, School : UMass Lowell, Class:   91.61 GUI Programming I
+        Date created: Dec 18,2019
+        A9: Scrabble
+        Description: Implementing a Bit of Scrabble with Drag-and-Drop
+        Copyright [2019] by Hoang Do. All rights reserved. May be freely copied or excerpted for educational purposes with credit to the author. -->
+
+<!-- Define english language-->
+<html lang="en">
+
+<head>
+    <!--  Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tittle text-->
+    <title>Scrabble</title>
+    <!-- CSS for jqueryui-->
+    <link href="https://code.jquery.com/ui/jquery-ui-git.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- scripts jquery and jqueryui
+  -->
+      <script
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+      <script
+      src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+      integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+      crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="box-container">
+        <!--overall wrapper,middle of page-->
+        <!--heading 1: what the page is about -->
+        <h1 class="title">A Bit of Scrabble with Drag-and-Drop</h1>
+        <hr>
+        <!--  Divider line -->
+        <!-- brief description and instructions-->
+        <p> Drag the letters from the rack to the Scrabble strip to make an English word. At least 2 or more letters. </p>
+
+        <!-- Score panel, including Word in the board, score, total score and remaining tiles-->
+        <div class="ScoreBoard">
+            Word: <span id="word">____</span>
+            <div class="divider"></div>
+            Score: <span id="score">0</span>
+            <div class="divider"></div>
+            Total Score: <span id="tScore">0</span>
+          </br>
+            Remain tiles: <span id="remainingTiles">0</span>
+        </div>
+
+        <hr>
+        <!--  Display the message before user submit the word -->
+        <span id="messages"></span>
+
+        <hr>
+        <!--  Scrabble board container -->
+        <div id="ScarbbleBoard"></div>
+
+        <!--  Rack of ScarbbleBoard contains 7 tiles -->
+        <div id="rack"></div>
+
+        <!-- Buttons to submit or reset game -->
+        <div class="buttonBox">
+          <button id="submitWord" onclick="submit()">Submit Word</button>
+
+          <button id="restartGame" onclick="restart()">Restart Game</button>
+        </div>
+
+    </div>
+    <script src="js/As9.js"></script>
+
+    <!-- Copyright section -->
+    <footer>
+        <br>Copyright 2019 by Hoang Do.
+    </footer>
+
+</body>
+</html>

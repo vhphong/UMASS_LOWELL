@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+        Name: Hoang Do
+        Email: Hoang_Do@student.uml.edu
+        Major:Computer Science, School : UMass Lowell, Class:   91.61 GUI Programming I
+        Date created: Nov 30,2019
+        A6: Creating an Interactive Dynamic Table using Jquery
+        Description: create a multiplication table dynamically given user input
+        for width and length, using Jquery for validation
+        Copyright [2019] by Hoang Do. All rights reserved. May be freely copied or excerpted for educational purposes with credit to the author. -->
+
+<!-- Define english language-->
+<html lang="en">
+
+<head>
+    <!--  Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tittle text-->
+    <title> Dynamic Multiplication Table</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- scripts-->
+      <script
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="box-container">
+        <!--overall wrapper,middle of page-->
+        <!--heading 1: what the page is about -->
+        <h1 class="title">Dynamic Multiplication Table Using Jquery</h1>
+        <hr>
+        <!--  Divider line -->
+        <!-- brief description and instructions-->
+        <p> Enter the starting number and ending number to the input box to draw the multiplication table. </p>
+        <p> Starting number must be smaller than ending number and the range of them is within 100 units.  </p>
+        <p> The number should be greater or equal than -1,000,000 and less or equal than 1,000,000. </p>
+
+            <form name="input_form" id="input_form" autocomplete="off">
+                <fieldset>
+                    <ul>
+                        <!-- using ul and li to keep things ordered-->
+                        <li>Row numbers:<br>
+                            <!-- starting number row input box ,which ever input box has error will be focus-->
+                            <input type="text" id="row_start" name="row_start" placeholder="Starting value" > <span class = "error", id="row_start_error"></span>
+                        </li>
+                        <li>
+                            <!-- ending number row input box -->
+                            <input type="text" id="row_end" name="row_end" placeholder="Ending value"> <span class = "error" id="row_end_error"></span>
+                        </li>
+                        <li> Column numbers:<br>
+                            <!-- starting number col input box -->
+                            <input type="text" id="col_start" name="col_start" placeholder="Starting value">  <span class = "error" id="col_start_error"></span>
+                        </li>
+                        </li>
+                        <li>
+                            <!-- ending number col input box -->
+                            <input type="text" id="col_end"  name="col_end" placeholder="Ending value"> <span class = "error" id="col_end_error"></span>
+                        </li>
+                    </ul>
+                    <!-- submit buttons which triggers the js function upon user click it-->
+                    <input type="submit" id="submit_button" value="Create Table">
+                </fieldset>
+            </form>
+
+            <!-- multiplication table -->
+            <div id="tableout">
+            </div>
+    </div>
+    <script src="js/As7.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <!-- Copyright section -->
+    <footer>
+        <br>Copyright 2019 by Hoang Do.
+    </footer>
+
+
+</body>
+</html>

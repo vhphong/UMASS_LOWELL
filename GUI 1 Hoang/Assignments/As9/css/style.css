@@ -1,0 +1,154 @@
+/*
+    Name: Hoang Do
+    Email: Hoang_Do@student.uml.edu
+    Major:Computer Science, School : UMass Lowell, Class:   91.61 GUI Programming I
+    Date created: Dec 18,2019
+    A9: Scrabble
+    Description: Implementing a Bit of Scrabble with Drag-and-Drop
+    Copyright [2019] by Hoang Do. All rights reserved. May be freely copied or excerpted for educational purposes with credit to the author.
+*/
+
+
+/* body*/
+body {
+    background-color: lightgreen;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 2;
+    display: block;
+}
+
+/* headings */
+h1 {
+    text-align: center;
+    color: red;
+}
+
+/* box container */
+#box-container {
+    width: 750px;
+    position: relative;
+    margin: 15px auto;
+    padding: 10px 30px 15px 30px;
+    background: hsla(182, 53%, 85%, 0.83);
+    border: 2px solid #988;
+    text-align: left;
+}
+
+/* paragraph */
+p {
+    padding: 0;
+    overflow: auto;
+}
+
+/* footer */
+footer {
+    font-size: 15px;
+    font-family: sans-serif;
+    color: brown;
+    text-align: center;
+}
+
+/* score board setting */
+.ScoreBoard {
+  color: Red;
+  font-size: 200%;
+  font-weight: 900;
+}
+
+/* score board devider to seperate words */
+.divider {
+  width: 15px;
+  height: auto;
+  display: inline-block;
+}
+
+/* two buttons setting*/
+button {
+    width: 160px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: SpringGreen;
+    border: 2px solid black;
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* button when hover*/
+button:hover {
+    background: Orchid;
+}
+
+/* Scrabble setting to fix the tiles and inside the box*/
+#ScarbbleBoard {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 81px;
+    height: 87px;
+    margin: 1px;
+    border-width: 1px;
+    padding-bottom: 20px;
+}
+
+/* Each section of the board for drag and drop the tile */
+.boardSlot {
+    border-style: solid;
+    border-color: black;
+    float: left;
+}
+
+/*rach setup for containing 7 tiles*/
+#rack {
+    width: 720px;
+    height: 177px;
+    text-align: center;
+    background-image: url("../img/rack.png");
+    background-repeat: no-repeat;
+    padding-bottom: 20px;
+}
+
+/* message appear when user drop the tile to the board*/
+#messages{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* make the tile look more real*/
+.lTile {
+    border-radius: 4px;
+    margin: 0px;
+}
+
+/* Make the tile fixed to the rack */
+.tileRack  {
+    margin: 27px 5px 0px 5px;
+}
+
+/* Make the tile fixed to the scrabbleBoard */
+.tileBoard {
+    top: 3px;
+}
+
+/* Make the tile for the blank tile */
+.tileBox {
+    width: 40px;
+    height: 44px;
+    margin: 1px;
+    float: left;
+}
+.tileBox:hover {
+    box-shadow: 0px 0px 5px blue;
+}
+
+/* Highlight drop targets when dragging a tile and hovering over a specific board slot. */
+.dragh {
+    box-shadow: 0px 0px 15px green;
+}
+
+.hovertile {
+    box-shadow: 0px 0px 15px blue;
+}
