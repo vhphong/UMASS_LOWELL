@@ -1,0 +1,1143 @@
+desc: (none)
+cmd: ./main
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=1709953
+mem_heap_B=26
+mem_heap_extra_B=14
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=1710262
+mem_heap_B=53
+mem_heap_extra_B=27
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=1712030
+mem_heap_B=53
+mem_heap_extra_B=27
+mem_stacks_B=0
+heap_tree=detailed
+n1: 53 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 53 0x50EFFB7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.19)
+  n1: 53 0x50F0B79: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+   n1: 53 0x50F0C12: std::string::reserve(unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+    n1: 53 0x50ABCB5: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/libstdc++.so.6.0.19)
+     n0: 53 0x401545: main (main.cpp:24)
+#-----------
+snapshot=4
+#-----------
+time=1712030
+mem_heap_B=27
+mem_heap_extra_B=13
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=1712313
+mem_heap_B=56
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=1713837
+mem_heap_B=29
+mem_heap_extra_B=11
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=1714321
+mem_heap_B=62
+mem_heap_extra_B=34
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=1714420
+mem_heap_B=62
+mem_heap_extra_B=34
+mem_stacks_B=0
+heap_tree=detailed
+n1: 62 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 62 0x50EFFB7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.19)
+  n1: 62 0x50F0B79: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+   n1: 62 0x50F0C12: std::string::reserve(unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+    n1: 62 0x50ABCB5: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/libstdc++.so.6.0.19)
+     n0: 62 0x401545: main (main.cpp:24)
+#-----------
+snapshot=9
+#-----------
+time=1714420
+mem_heap_B=33
+mem_heap_extra_B=23
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=1715926
+mem_heap_B=59
+mem_heap_extra_B=37
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=1716235
+mem_heap_B=86
+mem_heap_extra_B=50
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=1716315
+mem_heap_B=86
+mem_heap_extra_B=50
+mem_stacks_B=0
+heap_tree=detailed
+n1: 86 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 86 0x50EFFB7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.19)
+  n1: 86 0x50F0B79: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+   n1: 86 0x50F0C12: std::string::reserve(unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+    n2: 86 0x50ABCB5: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/libstdc++.so.6.0.19)
+     n0: 53 0x401556: main (main.cpp:25)
+     n0: 33 0x401545: main (main.cpp:24)
+#-----------
+snapshot=13
+#-----------
+time=1716315
+mem_heap_B=60
+mem_heap_extra_B=36
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=1716598
+mem_heap_B=89
+mem_heap_extra_B=47
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=1716701
+mem_heap_B=62
+mem_heap_extra_B=34
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=1717185
+mem_heap_B=95
+mem_heap_extra_B=57
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=1717284
+mem_heap_B=95
+mem_heap_extra_B=57
+mem_stacks_B=0
+heap_tree=detailed
+n1: 95 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 95 0x50EFFB7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.19)
+  n1: 95 0x50F0B79: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+   n1: 95 0x50F0C12: std::string::reserve(unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+    n2: 95 0x50ABCB5: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/libstdc++.so.6.0.19)
+     n0: 62 0x401556: main (main.cpp:25)
+     n0: 33 0x401545: main (main.cpp:24)
+#-----------
+snapshot=18
+#-----------
+time=1717284
+mem_heap_B=66
+mem_heap_extra_B=46
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=1722255
+mem_heap_B=98
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=1725865
+mem_heap_B=105
+mem_heap_extra_B=71
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=1728829
+mem_heap_B=137
+mem_heap_extra_B=79
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=1729156
+mem_heap_B=144
+mem_heap_extra_B=96
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=1730781
+mem_heap_B=176
+mem_heap_extra_B=104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=1731156
+mem_heap_B=368
+mem_heap_extra_B=112
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=1731531
+mem_heap_B=400
+mem_heap_extra_B=120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=1732195
+mem_heap_B=432
+mem_heap_extra_B=128
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=1732859
+mem_heap_B=464
+mem_heap_extra_B=136
+mem_stacks_B=0
+heap_tree=detailed
+n4: 464 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 192 0x40362F: __gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 192 0x403489: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 192 0x40328D: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_create_storage(unsigned long) (stl_vector.h:181)
+    n1: 192 0x403011: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_Vector_base(unsigned long, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:136)
+     n1: 192 0x402C72: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:283)
+      n1: 192 0x401DEA: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+       n0: 192 0x401596: main (main.cpp:26)
+ n2: 130 0x50EFFB7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.19)
+  n1: 66 0x50F0B79: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+   n1: 66 0x50F0C12: std::string::reserve(unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+    n2: 66 0x50ABCB5: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/libstdc++.so.6.0.19)
+     n0: 33 0x401545: main (main.cpp:24)
+     n0: 33 0x401556: main (main.cpp:25)
+  n1: 64 0x50F0144: std::string::_M_mutate(unsigned long, unsigned long, unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+   n1: 64 0x50F02B4: std::string::_M_leak_hard() (in /usr/lib/libstdc++.so.6.0.19)
+    n2: 64 0x50F0351: std::string::end() (in /usr/lib/libstdc++.so.6.0.19)
+     n1: 32 0x401CFB: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+      n0: 32 0x401596: main (main.cpp:26)
+     n1: 32 0x401D47: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+      n0: 32 0x401596: main (main.cpp:26)
+ n1: 128 0x40350E: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 128 0x40334F: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 128 0x4030EB: std::_Vector_base<int, std::allocator<int> >::_M_create_storage(unsigned long) (stl_vector.h:181)
+    n2: 128 0x402EFB: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (stl_vector.h:136)
+     n1: 96 0x403917: std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&) (stl_vector.h:312)
+      n1: 96 0x4037E8: void std::_Construct<std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> >*, std::vector<int, std::allocator<int> > const&) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+       n1: 96 0x40366B: void std::__uninitialized_fill_n<false>::__uninit_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) (stl_uninitialized.h:187)
+        n1: 96 0x4034BD: void std::uninitialized_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) (stl_uninitialized.h:223)
+         n1: 96 0x4032F8: void std::__uninitialized_fill_n_a<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > >&) (stl_uninitialized.h:334)
+          n1: 96 0x40306E: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_fill_initialize(unsigned long, std::vector<int, std::allocator<int> > const&) (stl_vector.h:1214)
+           n1: 96 0x402C89: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:284)
+            n1: 96 0x401DEA: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+             n0: 96 0x401596: main (main.cpp:26)
+     n1: 32 0x402B84: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (stl_vector.h:283)
+      n1: 32 0x401DBF: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+       n0: 32 0x401596: main (main.cpp:26)
+ n1: 14 0x4035A8: __gnu_cxx::new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 14 0x4033F9: std::_Vector_base<char, std::allocator<char> >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 14 0x4031D4: void std::vector<char, std::allocator<char> >::_M_range_initialize<__gnu_cxx::__normal_iterator<char*, std::string> >(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::forward_iterator_tag) (stl_vector.h:1201)
+    n1: 14 0x402FBF: void std::vector<char, std::allocator<char> >::_M_initialize_dispatch<__gnu_cxx::__normal_iterator<char*, std::string> >(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::__false_type) (stl_vector.h:1177)
+     n2: 14 0x402C04: std::vector<char, std::allocator<char> >::vector<__gnu_cxx::__normal_iterator<char*, std::string>, void>(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::allocator<char> const&) (stl_vector.h:395)
+      n1: 7 0x401D23: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+       n0: 7 0x401596: main (main.cpp:26)
+      n1: 7 0x401D70: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+       n0: 7 0x401596: main (main.cpp:26)
+#-----------
+snapshot=28
+#-----------
+time=1733523
+mem_heap_B=496
+mem_heap_extra_B=144
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=1734187
+mem_heap_B=528
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=1734851
+mem_heap_B=560
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=1735515
+mem_heap_B=592
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=1736179
+mem_heap_B=624
+mem_heap_extra_B=176
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=1737778
+mem_heap_B=624
+mem_heap_extra_B=176
+mem_stacks_B=0
+heap_tree=detailed
+n4: 624 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 288 0x40350E: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 288 0x40334F: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 288 0x4030EB: std::_Vector_base<int, std::allocator<int> >::_M_create_storage(unsigned long) (stl_vector.h:181)
+    n2: 288 0x402EFB: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (stl_vector.h:136)
+     n1: 256 0x403917: std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&) (stl_vector.h:312)
+      n1: 256 0x4037E8: void std::_Construct<std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> >*, std::vector<int, std::allocator<int> > const&) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+       n1: 256 0x40366B: void std::__uninitialized_fill_n<false>::__uninit_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) (stl_uninitialized.h:187)
+        n1: 256 0x4034BD: void std::uninitialized_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) (stl_uninitialized.h:223)
+         n1: 256 0x4032F8: void std::__uninitialized_fill_n_a<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > >&) (stl_uninitialized.h:334)
+          n1: 256 0x40306E: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_fill_initialize(unsigned long, std::vector<int, std::allocator<int> > const&) (stl_vector.h:1214)
+           n1: 256 0x402C89: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:284)
+            n1: 256 0x401DEA: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+             n0: 256 0x401596: main (main.cpp:26)
+     n1: 32 0x402B84: std::vector<int, std::allocator<int> >::vector(unsigned long, int const&, std::allocator<int> const&) (stl_vector.h:283)
+      n1: 32 0x401DBF: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+       n0: 32 0x401596: main (main.cpp:26)
+ n1: 192 0x40362F: __gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 192 0x403489: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 192 0x40328D: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_create_storage(unsigned long) (stl_vector.h:181)
+    n1: 192 0x403011: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_Vector_base(unsigned long, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:136)
+     n1: 192 0x402C72: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:283)
+      n1: 192 0x401DEA: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+       n0: 192 0x401596: main (main.cpp:26)
+ n2: 130 0x50EFFB7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.19)
+  n1: 66 0x50F0B79: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+   n1: 66 0x50F0C12: std::string::reserve(unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+    n2: 66 0x50ABCB5: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/libstdc++.so.6.0.19)
+     n0: 33 0x401545: main (main.cpp:24)
+     n0: 33 0x401556: main (main.cpp:25)
+  n1: 64 0x50F0144: std::string::_M_mutate(unsigned long, unsigned long, unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+   n1: 64 0x50F02B4: std::string::_M_leak_hard() (in /usr/lib/libstdc++.so.6.0.19)
+    n2: 64 0x50F0351: std::string::end() (in /usr/lib/libstdc++.so.6.0.19)
+     n1: 32 0x401CFB: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+      n0: 32 0x401596: main (main.cpp:26)
+     n1: 32 0x401D47: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+      n0: 32 0x401596: main (main.cpp:26)
+ n1: 14 0x4035A8: __gnu_cxx::new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 14 0x4033F9: std::_Vector_base<char, std::allocator<char> >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 14 0x4031D4: void std::vector<char, std::allocator<char> >::_M_range_initialize<__gnu_cxx::__normal_iterator<char*, std::string> >(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::forward_iterator_tag) (stl_vector.h:1201)
+    n1: 14 0x402FBF: void std::vector<char, std::allocator<char> >::_M_initialize_dispatch<__gnu_cxx::__normal_iterator<char*, std::string> >(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::__false_type) (stl_vector.h:1177)
+     n1: 14 0x402C04: std::vector<char, std::allocator<char> >::vector<__gnu_cxx::__normal_iterator<char*, std::string>, void>(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::allocator<char> const&) (stl_vector.h:395)
+      n0: 14 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=34
+#-----------
+time=1737778
+mem_heap_B=592
+mem_heap_extra_B=168
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=1738975
+mem_heap_B=560
+mem_heap_extra_B=160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=1739029
+mem_heap_B=528
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=1778213
+mem_heap_B=554
+mem_heap_extra_B=166
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=1778388
+mem_heap_B=581
+mem_heap_extra_B=179
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=1778468
+mem_heap_B=555
+mem_heap_extra_B=165
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=1779757
+mem_heap_B=584
+mem_heap_extra_B=176
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=1779860
+mem_heap_B=557
+mem_heap_extra_B=163
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=1780111
+mem_heap_B=590
+mem_heap_extra_B=186
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=1780210
+mem_heap_B=561
+mem_heap_extra_B=175
+mem_stacks_B=0
+heap_tree=detailed
+n4: 561 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 256 0x40350E: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 256 0x40334F: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 256 0x4030EB: std::_Vector_base<int, std::allocator<int> >::_M_create_storage(unsigned long) (stl_vector.h:181)
+    n2: 256 0x402EFB: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (stl_vector.h:136)
+     n1: 256 0x403917: std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&) (stl_vector.h:312)
+      n1: 256 0x4037E8: void std::_Construct<std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> >*, std::vector<int, std::allocator<int> > const&) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+       n1: 256 0x40366B: void std::__uninitialized_fill_n<false>::__uninit_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) (stl_uninitialized.h:187)
+        n1: 256 0x4034BD: void std::uninitialized_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) (stl_uninitialized.h:223)
+         n1: 256 0x4032F8: void std::__uninitialized_fill_n_a<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > >&) (stl_uninitialized.h:334)
+          n1: 256 0x40306E: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_fill_initialize(unsigned long, std::vector<int, std::allocator<int> > const&) (stl_vector.h:1214)
+           n1: 256 0x402C89: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:284)
+            n1: 256 0x401DEA: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+             n0: 256 0x401596: main (main.cpp:26)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 192 0x40362F: __gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 192 0x403489: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 192 0x40328D: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_create_storage(unsigned long) (stl_vector.h:181)
+    n1: 192 0x403011: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_Vector_base(unsigned long, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:136)
+     n1: 192 0x402C72: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:283)
+      n1: 192 0x401DEA: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+       n0: 192 0x401596: main (main.cpp:26)
+ n2: 99 0x50EFFB7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.19)
+  n1: 99 0x50F0B79: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+   n2: 99 0x50F0C12: std::string::reserve(unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+    n2: 66 0x50ABCB5: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/libstdc++.so.6.0.19)
+     n0: 33 0x401545: main (main.cpp:24)
+     n0: 33 0x401556: main (main.cpp:25)
+    n2: 33 0x50F0FD4: std::string::append(unsigned long, char) (in /usr/lib/libstdc++.so.6.0.19)
+     n2: 33 0x402E5D: std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, char) (basic_string.h:2474)
+      n1: 33 0x40235B: EditDistance::Alignment() (EditDistance.cpp:58)
+       n0: 33 0x401617: main (main.cpp:36)
+      n0: 0 in 2 places, all below massif's threshold (01.00%)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 14 0x4035A8: __gnu_cxx::new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 14 0x4033F9: std::_Vector_base<char, std::allocator<char> >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 14 0x4031D4: void std::vector<char, std::allocator<char> >::_M_range_initialize<__gnu_cxx::__normal_iterator<char*, std::string> >(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::forward_iterator_tag) (stl_vector.h:1201)
+    n1: 14 0x402FBF: void std::vector<char, std::allocator<char> >::_M_initialize_dispatch<__gnu_cxx::__normal_iterator<char*, std::string> >(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::__false_type) (stl_vector.h:1177)
+     n2: 14 0x402C04: std::vector<char, std::allocator<char> >::vector<__gnu_cxx::__normal_iterator<char*, std::string>, void>(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::allocator<char> const&) (stl_vector.h:395)
+      n1: 7 0x401D23: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+       n0: 7 0x401596: main (main.cpp:26)
+      n1: 7 0x401D70: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+       n0: 7 0x401596: main (main.cpp:26)
+#-----------
+snapshot=44
+#-----------
+time=1782805
+mem_heap_B=593
+mem_heap_extra_B=183
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=1783022
+mem_heap_B=632
+mem_heap_extra_B=200
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=1783121
+mem_heap_B=632
+mem_heap_extra_B=200
+mem_stacks_B=0
+heap_tree=detailed
+n4: 632 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 256 0x40350E: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 256 0x40334F: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 256 0x4030EB: std::_Vector_base<int, std::allocator<int> >::_M_create_storage(unsigned long) (stl_vector.h:181)
+    n2: 256 0x402EFB: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (stl_vector.h:136)
+     n1: 256 0x403917: std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&) (stl_vector.h:312)
+      n1: 256 0x4037E8: void std::_Construct<std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> >*, std::vector<int, std::allocator<int> > const&) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+       n1: 256 0x40366B: void std::__uninitialized_fill_n<false>::__uninit_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) (stl_uninitialized.h:187)
+        n1: 256 0x4034BD: void std::uninitialized_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) (stl_uninitialized.h:223)
+         n1: 256 0x4032F8: void std::__uninitialized_fill_n_a<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > >&) (stl_uninitialized.h:334)
+          n1: 256 0x40306E: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_fill_initialize(unsigned long, std::vector<int, std::allocator<int> > const&) (stl_vector.h:1214)
+           n1: 256 0x402C89: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:284)
+            n1: 256 0x401DEA: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+             n0: 256 0x401596: main (main.cpp:26)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 192 0x40362F: __gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 192 0x403489: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 192 0x40328D: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_create_storage(unsigned long) (stl_vector.h:181)
+    n1: 192 0x403011: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_Vector_base(unsigned long, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:136)
+     n1: 192 0x402C72: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:283)
+      n1: 192 0x401DEA: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+       n0: 192 0x401596: main (main.cpp:26)
+ n2: 170 0x50EFFB7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.19)
+  n1: 170 0x50F0B79: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+   n2: 170 0x50F0C12: std::string::reserve(unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+    n2: 104 0x50F0FD4: std::string::append(unsigned long, char) (in /usr/lib/libstdc++.so.6.0.19)
+     n3: 72 0x402E5D: std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, char) (basic_string.h:2474)
+      n1: 39 0x4024AE: EditDistance::Alignment() (EditDistance.cpp:63)
+       n0: 39 0x401617: main (main.cpp:36)
+      n1: 33 0x40235B: EditDistance::Alignment() (EditDistance.cpp:58)
+       n0: 33 0x401617: main (main.cpp:36)
+      n0: 0 in 2 places, all below massif's threshold (01.00%)
+     n2: 32 0x402DFE: std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char) (basic_string.h:2423)
+      n1: 32 0x402496: EditDistance::Alignment() (EditDistance.cpp:63)
+       n0: 32 0x401617: main (main.cpp:36)
+      n0: 0 in 1 place, below massif's threshold (01.00%)
+    n2: 66 0x50ABCB5: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/libstdc++.so.6.0.19)
+     n0: 33 0x401545: main (main.cpp:24)
+     n0: 33 0x401556: main (main.cpp:25)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 14 0x4035A8: __gnu_cxx::new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 14 0x4033F9: std::_Vector_base<char, std::allocator<char> >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 14 0x4031D4: void std::vector<char, std::allocator<char> >::_M_range_initialize<__gnu_cxx::__normal_iterator<char*, std::string> >(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::forward_iterator_tag) (stl_vector.h:1201)
+    n1: 14 0x402FBF: void std::vector<char, std::allocator<char> >::_M_initialize_dispatch<__gnu_cxx::__normal_iterator<char*, std::string> >(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::__false_type) (stl_vector.h:1177)
+     n1: 14 0x402C04: std::vector<char, std::allocator<char> >::vector<__gnu_cxx::__normal_iterator<char*, std::string>, void>(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::allocator<char> const&) (stl_vector.h:395)
+      n0: 14 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=47
+#-----------
+time=1783121
+mem_heap_B=600
+mem_heap_extra_B=192
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=1783589
+mem_heap_B=567
+mem_heap_extra_B=169
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=1784095
+mem_heap_B=605
+mem_heap_extra_B=187
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=1784310
+mem_heap_B=656
+mem_heap_extra_B=208
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=1784407
+mem_heap_B=656
+mem_heap_extra_B=208
+mem_stacks_B=0
+heap_tree=detailed
+n4: 656 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 256 0x40350E: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 256 0x40334F: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 256 0x4030EB: std::_Vector_base<int, std::allocator<int> >::_M_create_storage(unsigned long) (stl_vector.h:181)
+    n2: 256 0x402EFB: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (stl_vector.h:136)
+     n1: 256 0x403917: std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&) (stl_vector.h:312)
+      n1: 256 0x4037E8: void std::_Construct<std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> >*, std::vector<int, std::allocator<int> > const&) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+       n1: 256 0x40366B: void std::__uninitialized_fill_n<false>::__uninit_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) (stl_uninitialized.h:187)
+        n1: 256 0x4034BD: void std::uninitialized_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) (stl_uninitialized.h:223)
+         n1: 256 0x4032F8: void std::__uninitialized_fill_n_a<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > >&) (stl_uninitialized.h:334)
+          n1: 256 0x40306E: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_fill_initialize(unsigned long, std::vector<int, std::allocator<int> > const&) (stl_vector.h:1214)
+           n1: 256 0x402C89: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:284)
+            n1: 256 0x401DEA: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+             n0: 256 0x401596: main (main.cpp:26)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+ n2: 194 0x50EFFB7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.19)
+  n1: 194 0x50F0B79: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+   n2: 194 0x50F0C12: std::string::reserve(unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+    n2: 128 0x50F0FD4: std::string::append(unsigned long, char) (in /usr/lib/libstdc++.so.6.0.19)
+     n2: 90 0x402E5D: std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, char) (basic_string.h:2474)
+      n1: 90 0x4024AE: EditDistance::Alignment() (EditDistance.cpp:63)
+       n0: 90 0x401617: main (main.cpp:36)
+      n0: 0 in 3 places, all below massif's threshold (01.00%)
+     n2: 38 0x402DFE: std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char) (basic_string.h:2423)
+      n1: 38 0x402496: EditDistance::Alignment() (EditDistance.cpp:63)
+       n0: 38 0x401617: main (main.cpp:36)
+      n0: 0 in 1 place, below massif's threshold (01.00%)
+    n2: 66 0x50ABCB5: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/libstdc++.so.6.0.19)
+     n0: 33 0x401545: main (main.cpp:24)
+     n0: 33 0x401556: main (main.cpp:25)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 192 0x40362F: __gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 192 0x403489: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 192 0x40328D: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_create_storage(unsigned long) (stl_vector.h:181)
+    n1: 192 0x403011: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_Vector_base(unsigned long, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:136)
+     n1: 192 0x402C72: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:283)
+      n1: 192 0x401DEA: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+       n0: 192 0x401596: main (main.cpp:26)
+ n1: 14 0x4035A8: __gnu_cxx::new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 14 0x4033F9: std::_Vector_base<char, std::allocator<char> >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 14 0x4031D4: void std::vector<char, std::allocator<char> >::_M_range_initialize<__gnu_cxx::__normal_iterator<char*, std::string> >(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::forward_iterator_tag) (stl_vector.h:1201)
+    n1: 14 0x402FBF: void std::vector<char, std::allocator<char> >::_M_initialize_dispatch<__gnu_cxx::__normal_iterator<char*, std::string> >(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::__false_type) (stl_vector.h:1177)
+     n1: 14 0x402C04: std::vector<char, std::allocator<char> >::vector<__gnu_cxx::__normal_iterator<char*, std::string>, void>(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::allocator<char> const&) (stl_vector.h:395)
+      n0: 14 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=52
+#-----------
+time=1784407
+mem_heap_B=618
+mem_heap_extra_B=190
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=1784875
+mem_heap_B=579
+mem_heap_extra_B=173
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=1785381
+mem_heap_B=623
+mem_heap_extra_B=185
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=1785595
+mem_heap_B=686
+mem_heap_extra_B=194
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=1785691
+mem_heap_B=686
+mem_heap_extra_B=194
+mem_stacks_B=0
+heap_tree=detailed
+n4: 686 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 256 0x40350E: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 256 0x40334F: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 256 0x4030EB: std::_Vector_base<int, std::allocator<int> >::_M_create_storage(unsigned long) (stl_vector.h:181)
+    n2: 256 0x402EFB: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (stl_vector.h:136)
+     n1: 256 0x403917: std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&) (stl_vector.h:312)
+      n1: 256 0x4037E8: void std::_Construct<std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> >*, std::vector<int, std::allocator<int> > const&) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+       n1: 256 0x40366B: void std::__uninitialized_fill_n<false>::__uninit_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) (stl_uninitialized.h:187)
+        n1: 256 0x4034BD: void std::uninitialized_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) (stl_uninitialized.h:223)
+         n1: 256 0x4032F8: void std::__uninitialized_fill_n_a<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > >&) (stl_uninitialized.h:334)
+          n1: 256 0x40306E: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_fill_initialize(unsigned long, std::vector<int, std::allocator<int> > const&) (stl_vector.h:1214)
+           n1: 256 0x402C89: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:284)
+            n1: 256 0x401DEA: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+             n0: 256 0x401596: main (main.cpp:26)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+ n2: 224 0x50EFFB7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.19)
+  n1: 224 0x50F0B79: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+   n2: 224 0x50F0C12: std::string::reserve(unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+    n2: 158 0x50F0FD4: std::string::append(unsigned long, char) (in /usr/lib/libstdc++.so.6.0.19)
+     n2: 114 0x402E5D: std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, char) (basic_string.h:2474)
+      n1: 114 0x4024AE: EditDistance::Alignment() (EditDistance.cpp:63)
+       n0: 114 0x401617: main (main.cpp:36)
+      n0: 0 in 3 places, all below massif's threshold (01.00%)
+     n2: 44 0x402DFE: std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char) (basic_string.h:2423)
+      n1: 44 0x402496: EditDistance::Alignment() (EditDistance.cpp:63)
+       n0: 44 0x401617: main (main.cpp:36)
+      n0: 0 in 1 place, below massif's threshold (01.00%)
+    n2: 66 0x50ABCB5: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/libstdc++.so.6.0.19)
+     n0: 33 0x401545: main (main.cpp:24)
+     n0: 33 0x401556: main (main.cpp:25)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 192 0x40362F: __gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 192 0x403489: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 192 0x40328D: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_create_storage(unsigned long) (stl_vector.h:181)
+    n1: 192 0x403011: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_Vector_base(unsigned long, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:136)
+     n1: 192 0x402C72: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:283)
+      n1: 192 0x401DEA: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+       n0: 192 0x401596: main (main.cpp:26)
+ n1: 14 0x4035A8: __gnu_cxx::new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 14 0x4033F9: std::_Vector_base<char, std::allocator<char> >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 14 0x4031D4: void std::vector<char, std::allocator<char> >::_M_range_initialize<__gnu_cxx::__normal_iterator<char*, std::string> >(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::forward_iterator_tag) (stl_vector.h:1201)
+    n1: 14 0x402FBF: void std::vector<char, std::allocator<char> >::_M_initialize_dispatch<__gnu_cxx::__normal_iterator<char*, std::string> >(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::__false_type) (stl_vector.h:1177)
+     n1: 14 0x402C04: std::vector<char, std::allocator<char> >::vector<__gnu_cxx::__normal_iterator<char*, std::string>, void>(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::allocator<char> const&) (stl_vector.h:395)
+      n0: 14 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=57
+#-----------
+time=1785691
+mem_heap_B=642
+mem_heap_extra_B=182
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=1786159
+mem_heap_B=591
+mem_heap_extra_B=161
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=1786665
+mem_heap_B=641
+mem_heap_extra_B=183
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=1786879
+mem_heap_B=716
+mem_heap_extra_B=196
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=1786975
+mem_heap_B=716
+mem_heap_extra_B=196
+mem_stacks_B=0
+heap_tree=detailed
+n4: 716 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 256 0x40350E: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 256 0x40334F: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 256 0x4030EB: std::_Vector_base<int, std::allocator<int> >::_M_create_storage(unsigned long) (stl_vector.h:181)
+    n2: 256 0x402EFB: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (stl_vector.h:136)
+     n1: 256 0x403917: std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&) (stl_vector.h:312)
+      n1: 256 0x4037E8: void std::_Construct<std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> >*, std::vector<int, std::allocator<int> > const&) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+       n1: 256 0x40366B: void std::__uninitialized_fill_n<false>::__uninit_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) (stl_uninitialized.h:187)
+        n1: 256 0x4034BD: void std::uninitialized_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) (stl_uninitialized.h:223)
+         n1: 256 0x4032F8: void std::__uninitialized_fill_n_a<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > >&) (stl_uninitialized.h:334)
+          n1: 256 0x40306E: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_fill_initialize(unsigned long, std::vector<int, std::allocator<int> > const&) (stl_vector.h:1214)
+           n1: 256 0x402C89: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:284)
+            n1: 256 0x401DEA: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+             n0: 256 0x401596: main (main.cpp:26)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+ n2: 254 0x50EFFB7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.19)
+  n1: 254 0x50F0B79: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+   n2: 254 0x50F0C12: std::string::reserve(unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+    n2: 188 0x50F0FD4: std::string::append(unsigned long, char) (in /usr/lib/libstdc++.so.6.0.19)
+     n2: 138 0x402E5D: std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, char) (basic_string.h:2474)
+      n1: 138 0x4024AE: EditDistance::Alignment() (EditDistance.cpp:63)
+       n0: 138 0x401617: main (main.cpp:36)
+      n0: 0 in 3 places, all below massif's threshold (01.00%)
+     n2: 50 0x402DFE: std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char) (basic_string.h:2423)
+      n1: 50 0x402496: EditDistance::Alignment() (EditDistance.cpp:63)
+       n0: 50 0x401617: main (main.cpp:36)
+      n0: 0 in 1 place, below massif's threshold (01.00%)
+    n2: 66 0x50ABCB5: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/libstdc++.so.6.0.19)
+     n0: 33 0x401545: main (main.cpp:24)
+     n0: 33 0x401556: main (main.cpp:25)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 192 0x40362F: __gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 192 0x403489: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 192 0x40328D: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_create_storage(unsigned long) (stl_vector.h:181)
+    n1: 192 0x403011: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_Vector_base(unsigned long, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:136)
+     n1: 192 0x402C72: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:283)
+      n1: 192 0x401DEA: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+       n0: 192 0x401596: main (main.cpp:26)
+ n1: 14 0x4035A8: __gnu_cxx::new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 14 0x4033F9: std::_Vector_base<char, std::allocator<char> >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 14 0x4031D4: void std::vector<char, std::allocator<char> >::_M_range_initialize<__gnu_cxx::__normal_iterator<char*, std::string> >(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::forward_iterator_tag) (stl_vector.h:1201)
+    n1: 14 0x402FBF: void std::vector<char, std::allocator<char> >::_M_initialize_dispatch<__gnu_cxx::__normal_iterator<char*, std::string> >(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::__false_type) (stl_vector.h:1177)
+     n1: 14 0x402C04: std::vector<char, std::allocator<char> >::vector<__gnu_cxx::__normal_iterator<char*, std::string>, void>(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::allocator<char> const&) (stl_vector.h:395)
+      n0: 14 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=62
+#-----------
+time=1786975
+mem_heap_B=666
+mem_heap_extra_B=174
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=1787443
+mem_heap_B=603
+mem_heap_extra_B=165
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=1787949
+mem_heap_B=659
+mem_heap_extra_B=181
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=1788163
+mem_heap_B=746
+mem_heap_extra_B=198
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=1788259
+mem_heap_B=746
+mem_heap_extra_B=198
+mem_stacks_B=0
+heap_tree=detailed
+n4: 746 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 284 0x50EFFB7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.19)
+  n1: 284 0x50F0B79: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+   n2: 284 0x50F0C12: std::string::reserve(unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+    n2: 218 0x50F0FD4: std::string::append(unsigned long, char) (in /usr/lib/libstdc++.so.6.0.19)
+     n2: 162 0x402E5D: std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, char) (basic_string.h:2474)
+      n1: 162 0x4024AE: EditDistance::Alignment() (EditDistance.cpp:63)
+       n0: 162 0x401617: main (main.cpp:36)
+      n0: 0 in 3 places, all below massif's threshold (01.00%)
+     n2: 56 0x402DFE: std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char) (basic_string.h:2423)
+      n1: 56 0x402496: EditDistance::Alignment() (EditDistance.cpp:63)
+       n0: 56 0x401617: main (main.cpp:36)
+      n0: 0 in 1 place, below massif's threshold (01.00%)
+    n2: 66 0x50ABCB5: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/libstdc++.so.6.0.19)
+     n0: 33 0x401545: main (main.cpp:24)
+     n0: 33 0x401556: main (main.cpp:25)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 256 0x40350E: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 256 0x40334F: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 256 0x4030EB: std::_Vector_base<int, std::allocator<int> >::_M_create_storage(unsigned long) (stl_vector.h:181)
+    n2: 256 0x402EFB: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (stl_vector.h:136)
+     n1: 256 0x403917: std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&) (stl_vector.h:312)
+      n1: 256 0x4037E8: void std::_Construct<std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> >*, std::vector<int, std::allocator<int> > const&) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+       n1: 256 0x40366B: void std::__uninitialized_fill_n<false>::__uninit_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) (stl_uninitialized.h:187)
+        n1: 256 0x4034BD: void std::uninitialized_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) (stl_uninitialized.h:223)
+         n1: 256 0x4032F8: void std::__uninitialized_fill_n_a<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > >&) (stl_uninitialized.h:334)
+          n1: 256 0x40306E: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_fill_initialize(unsigned long, std::vector<int, std::allocator<int> > const&) (stl_vector.h:1214)
+           n1: 256 0x402C89: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:284)
+            n1: 256 0x401DEA: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+             n0: 256 0x401596: main (main.cpp:26)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 192 0x40362F: __gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 192 0x403489: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 192 0x40328D: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_create_storage(unsigned long) (stl_vector.h:181)
+    n1: 192 0x403011: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_Vector_base(unsigned long, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:136)
+     n1: 192 0x402C72: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:283)
+      n1: 192 0x401DEA: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+       n0: 192 0x401596: main (main.cpp:26)
+ n1: 14 0x4035A8: __gnu_cxx::new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 14 0x4033F9: std::_Vector_base<char, std::allocator<char> >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 14 0x4031D4: void std::vector<char, std::allocator<char> >::_M_range_initialize<__gnu_cxx::__normal_iterator<char*, std::string> >(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::forward_iterator_tag) (stl_vector.h:1201)
+    n1: 14 0x402FBF: void std::vector<char, std::allocator<char> >::_M_initialize_dispatch<__gnu_cxx::__normal_iterator<char*, std::string> >(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::__false_type) (stl_vector.h:1177)
+     n1: 14 0x402C04: std::vector<char, std::allocator<char> >::vector<__gnu_cxx::__normal_iterator<char*, std::string>, void>(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::allocator<char> const&) (stl_vector.h:395)
+      n0: 14 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=67
+#-----------
+time=1788259
+mem_heap_B=690
+mem_heap_extra_B=182
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=1788727
+mem_heap_B=615
+mem_heap_extra_B=169
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=1789233
+mem_heap_B=677
+mem_heap_extra_B=179
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=1789453
+mem_heap_B=776
+mem_heap_extra_B=200
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=1789555
+mem_heap_B=776
+mem_heap_extra_B=200
+mem_stacks_B=0
+heap_tree=detailed
+n4: 776 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 314 0x50EFFB7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.19)
+  n1: 314 0x50F0B79: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+   n2: 314 0x50F0C12: std::string::reserve(unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+    n2: 248 0x50F0FD4: std::string::append(unsigned long, char) (in /usr/lib/libstdc++.so.6.0.19)
+     n2: 186 0x402E5D: std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, char) (basic_string.h:2474)
+      n1: 186 0x4024AE: EditDistance::Alignment() (EditDistance.cpp:63)
+       n0: 186 0x401617: main (main.cpp:36)
+      n0: 0 in 3 places, all below massif's threshold (01.00%)
+     n2: 62 0x402DFE: std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char) (basic_string.h:2423)
+      n1: 62 0x402496: EditDistance::Alignment() (EditDistance.cpp:63)
+       n0: 62 0x401617: main (main.cpp:36)
+      n0: 0 in 1 place, below massif's threshold (01.00%)
+    n2: 66 0x50ABCB5: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/libstdc++.so.6.0.19)
+     n0: 33 0x401545: main (main.cpp:24)
+     n0: 33 0x401556: main (main.cpp:25)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 256 0x40350E: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 256 0x40334F: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 256 0x4030EB: std::_Vector_base<int, std::allocator<int> >::_M_create_storage(unsigned long) (stl_vector.h:181)
+    n2: 256 0x402EFB: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (stl_vector.h:136)
+     n1: 256 0x403917: std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&) (stl_vector.h:312)
+      n1: 256 0x4037E8: void std::_Construct<std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> >*, std::vector<int, std::allocator<int> > const&) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+       n1: 256 0x40366B: void std::__uninitialized_fill_n<false>::__uninit_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) (stl_uninitialized.h:187)
+        n1: 256 0x4034BD: void std::uninitialized_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) (stl_uninitialized.h:223)
+         n1: 256 0x4032F8: void std::__uninitialized_fill_n_a<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > >&) (stl_uninitialized.h:334)
+          n1: 256 0x40306E: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_fill_initialize(unsigned long, std::vector<int, std::allocator<int> > const&) (stl_vector.h:1214)
+           n1: 256 0x402C89: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:284)
+            n1: 256 0x401DEA: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+             n0: 256 0x401596: main (main.cpp:26)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 192 0x40362F: __gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 192 0x403489: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 192 0x40328D: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_create_storage(unsigned long) (stl_vector.h:181)
+    n1: 192 0x403011: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_Vector_base(unsigned long, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:136)
+     n1: 192 0x402C72: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:283)
+      n1: 192 0x401DEA: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+       n0: 192 0x401596: main (main.cpp:26)
+ n1: 14 0x4035A8: __gnu_cxx::new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 14 0x4033F9: std::_Vector_base<char, std::allocator<char> >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 14 0x4031D4: void std::vector<char, std::allocator<char> >::_M_range_initialize<__gnu_cxx::__normal_iterator<char*, std::string> >(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::forward_iterator_tag) (stl_vector.h:1201)
+    n1: 14 0x402FBF: void std::vector<char, std::allocator<char> >::_M_initialize_dispatch<__gnu_cxx::__normal_iterator<char*, std::string> >(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::__false_type) (stl_vector.h:1177)
+     n1: 14 0x402C04: std::vector<char, std::allocator<char> >::vector<__gnu_cxx::__normal_iterator<char*, std::string>, void>(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::allocator<char> const&) (stl_vector.h:395)
+      n0: 14 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=72
+#-----------
+time=1789555
+mem_heap_B=714
+mem_heap_extra_B=190
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=1790023
+mem_heap_B=627
+mem_heap_extra_B=173
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=1790356
+mem_heap_B=695
+mem_heap_extra_B=193
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=1790576
+mem_heap_B=806
+mem_heap_extra_B=202
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=1790678
+mem_heap_B=806
+mem_heap_extra_B=202
+mem_stacks_B=0
+heap_tree=peak
+n4: 806 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 344 0x50EFFB7: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/libstdc++.so.6.0.19)
+  n1: 344 0x50F0B79: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+   n2: 344 0x50F0C12: std::string::reserve(unsigned long) (in /usr/lib/libstdc++.so.6.0.19)
+    n2: 278 0x50F0FD4: std::string::append(unsigned long, char) (in /usr/lib/libstdc++.so.6.0.19)
+     n3: 210 0x402E5D: std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, char) (basic_string.h:2474)
+      n1: 111 0x402128: EditDistance::Alignment() (EditDistance.cpp:53)
+       n0: 111 0x401617: main (main.cpp:36)
+      n1: 99 0x4024AE: EditDistance::Alignment() (EditDistance.cpp:63)
+       n0: 99 0x401617: main (main.cpp:36)
+      n0: 0 in 3 places, all below massif's threshold (01.00%)
+     n2: 68 0x402DFE: std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char) (basic_string.h:2423)
+      n1: 68 0x40210A: EditDistance::Alignment() (EditDistance.cpp:53)
+       n0: 68 0x401617: main (main.cpp:36)
+      n0: 0 in 2 places, all below massif's threshold (01.00%)
+    n2: 66 0x50ABCB5: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&) (in /usr/lib/libstdc++.so.6.0.19)
+     n0: 33 0x401545: main (main.cpp:24)
+     n0: 33 0x401556: main (main.cpp:25)
+  n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 256 0x40350E: __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 256 0x40334F: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 256 0x4030EB: std::_Vector_base<int, std::allocator<int> >::_M_create_storage(unsigned long) (stl_vector.h:181)
+    n2: 256 0x402EFB: std::_Vector_base<int, std::allocator<int> >::_Vector_base(unsigned long, std::allocator<int> const&) (stl_vector.h:136)
+     n1: 256 0x403917: std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&) (stl_vector.h:312)
+      n1: 256 0x4037E8: void std::_Construct<std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> >*, std::vector<int, std::allocator<int> > const&) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+       n1: 256 0x40366B: void std::__uninitialized_fill_n<false>::__uninit_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) (stl_uninitialized.h:187)
+        n1: 256 0x4034BD: void std::uninitialized_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) (stl_uninitialized.h:223)
+         n1: 256 0x4032F8: void std::__uninitialized_fill_n_a<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > >&) (stl_uninitialized.h:334)
+          n1: 256 0x40306E: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_fill_initialize(unsigned long, std::vector<int, std::allocator<int> > const&) (stl_vector.h:1214)
+           n1: 256 0x402C89: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:284)
+            n1: 256 0x401DEA: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+             n0: 256 0x401596: main (main.cpp:26)
+     n0: 0 in 1 place, below massif's threshold (01.00%)
+ n1: 192 0x40362F: __gnu_cxx::new_allocator<std::vector<int, std::allocator<int> > >::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 192 0x403489: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 192 0x40328D: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_create_storage(unsigned long) (stl_vector.h:181)
+    n1: 192 0x403011: std::_Vector_base<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_Vector_base(unsigned long, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:136)
+     n1: 192 0x402C72: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) (stl_vector.h:283)
+      n1: 192 0x401DEA: EditDistance::EditDistance(std::string, std::string) (EditDistance.cpp:15)
+       n0: 192 0x401596: main (main.cpp:26)
+ n1: 14 0x4035A8: __gnu_cxx::new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:104)
+  n1: 14 0x4033F9: std::_Vector_base<char, std::allocator<char> >::_M_allocate(unsigned long) (in /home/ycha/Documents/schoolwork/204/DNA Sequence/main)
+   n1: 14 0x4031D4: void std::vector<char, std::allocator<char> >::_M_range_initialize<__gnu_cxx::__normal_iterator<char*, std::string> >(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::forward_iterator_tag) (stl_vector.h:1201)
+    n1: 14 0x402FBF: void std::vector<char, std::allocator<char> >::_M_initialize_dispatch<__gnu_cxx::__normal_iterator<char*, std::string> >(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::__false_type) (stl_vector.h:1177)
+     n1: 14 0x402C04: std::vector<char, std::allocator<char> >::vector<__gnu_cxx::__normal_iterator<char*, std::string>, void>(__gnu_cxx::__normal_iterator<char*, std::string>, __gnu_cxx::__normal_iterator<char*, std::string>, std::allocator<char> const&) (stl_vector.h:395)
+      n0: 14 in 2 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=77
+#-----------
+time=1790678
+mem_heap_B=738
+mem_heap_extra_B=182
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=1791146
+mem_heap_B=639
+mem_heap_extra_B=161
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=1794088
+mem_heap_B=528
+mem_heap_extra_B=152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=1808647
+mem_heap_B=496
+mem_heap_extra_B=144
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=1808831
+mem_heap_B=464
+mem_heap_extra_B=136
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=1809015
+mem_heap_B=432
+mem_heap_extra_B=128
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=1809199
+me

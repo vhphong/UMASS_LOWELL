@@ -1,0 +1,2 @@
+all:
+	g++ main.cpp EditDistance.cpp --std=c++0x -lsfml-system -o main 

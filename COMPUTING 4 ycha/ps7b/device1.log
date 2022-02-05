@@ -1,0 +1,595 @@
+Parsed Log 
+------------------------------------------
+
+Line 435369:Initial boot(2014-Mar-25 19:11:59)
+
+2014-Mar-25 19:12:42 Starting Service.  Logging 1.0
+
+2014-Mar-25 19:12:42 Service started successfully.  Logging 1.0 (346 ms)
+
+2014-Mar-25 19:12:42 Starting Service.  DatabaseInitialize 1.1.0
+
+2014-Mar-25 19:12:42 Service started successfully.  DatabaseInitialize 1.1.0 (33139 ms)
+
+2014-Mar-25 19:12:42 Starting Service.  MessagingService 1.0
+
+2014-Mar-25 19:12:42 Service started successfully.  MessagingService 1.0 (8663 ms)
+
+2014-Mar-25 19:12:42 Starting Service.  HealthMonitorService 1.0
+
+2014-Mar-25 19:12:42 Service started successfully.  HealthMonitorService 1.0 (239 ms)
+
+2014-Mar-25 19:12:42 Starting Service.  Persistence 1.0
+
+2014-Mar-25 19:12:42 Service started successfully.  Persistence 1.0 (23466 ms)
+
+2014-Mar-25 19:12:42 Starting Service.  ConfigurationService 1.0
+
+2014-Mar-25 19:12:42 Service started successfully.  ConfigurationService 1.0 (0 ms)
+
+2014-Mar-25 19:12:42 Starting Service.  PortConfigurationService 1.0
+
+2014-Mar-25 19:12:42 Service started successfully.  PortConfigurationService 1.0 (100 ms)
+
+2014-Mar-25 19:12:42 Starting Service.  DeviceIOService 1.0
+
+2014-Mar-25 19:12:42 Service started successfully.  DeviceIOService 1.0 (48 ms)
+
+2014-Mar-25 19:12:42 Starting Service.  ThemingService 1.0
+
+2014-Mar-25 19:12:42 Service started successfully.  ThemingService 1.0 (1 ms)
+
+2014-Mar-25 19:12:42 Starting Service.  LandingPadService 1.0
+
+2014-Mar-25 19:12:42 Service started successfully.  LandingPadService 1.0 (2 ms)
+
+2014-Mar-25 19:12:42 Starting Service.  CacheService 1.0
+
+2014-Mar-25 19:12:42 Service started successfully.  CacheService 1.0 (1413 ms)
+
+2014-Mar-25 19:12:42 Starting Service.  StagingService 1.0
+
+2014-Mar-25 19:12:42 Service started successfully.  StagingService 1.0 (8816 ms)
+
+2014-Mar-25 19:12:42 Starting Service.  BiometricService 1.0
+
+2014-Mar-25 19:12:42 Service started successfully.  BiometricService 1.0 (269 ms)
+
+2014-Mar-25 19:12:42 Starting Service.  ReaderDataService 1.0
+
+2014-Mar-25 19:12:42 Service started successfully.  ReaderDataService 1.0 (4 ms)
+
+2014-Mar-25 19:12:42 Starting Service.  StateManager 1.0
+
+2014-Mar-25 19:12:42 Service started successfully.  StateManager 1.0 (2468 ms)
+
+2014-Mar-25 19:12:42 Starting Service.  AVFeedbackService 1.0
+
+2014-Mar-25 19:12:42 Service started successfully.  AVFeedbackService 1.0 (123 ms)
+
+2014-Mar-25 19:12:42 Starting Service.  BellService 1.0
+
+2014-Mar-25 19:12:42 Service started successfully.  BellService 1.0 (207 ms)
+
+2014-Mar-25 19:12:42 Starting Service.  OfflineSmartviewService 1.0
+
+2014-Mar-25 19:12:42 Service started successfully.  OfflineSmartviewService 1.0 (16 ms)
+
+2014-Mar-25 19:12:42 Starting Service.  GateService 1.0
+
+2014-Mar-25 19:12:42 Service started successfully.  GateService 1.0 (5 ms)
+
+2014-Mar-25 19:12:42 Starting Service.  DatabaseThreads 1.1.0
+
+2014-Mar-25 19:12:42 Starting Service.  ProtocolService 1.0
+
+2014-Mar-25 19:12:42 Starting Service.  SoftLoadService 1.0
+
+2014-Mar-25 19:12:42 Starting Service.  WATCHDOG 1.0
+
+2014-Mar-25 19:12:42 Starting Service.  DiagnosticsService 1.0
+
+2014-Mar-25 19:12:42 Service started successfully.  DiagnosticsService 1.0 (218 ms)
+
+2014-Mar-25 19:12:42 Service started successfully.  WATCHDOG 1.0 (526 ms)
+
+2014-Mar-25 19:12:42 Service started successfully.  SoftLoadService 1.0 (3319 ms)
+
+2014-Mar-25 19:12:42 Service started successfully.  DatabaseThreads 1.1.0 (3596 ms)
+
+Line 435759:Boot sequence ended(2014-Mar-25 19:15:02)
+
+Boot successful! Elapsed time(00:03:03)
+
+
+2014-Mar-25 19:15:02 Service started successfully.  ProtocolService 1.0 (21462 ms)
+
+2014-Mar-25 19:06:08 Install started
+
+New Version: 2.0.2-146
+
+Previous Version: 2.0.0-uix.64
+
+2014-Mar-25 19:06:08 ExitValue from install command : 0
+
+Line 436500:Initial boot(2014-Mar-25 19:29:59)
+
+2014-Mar-25 19:30:42 Starting Service.  Logging 1.0
+
+2014-Mar-25 19:30:42 Service started successfully.  Logging 1.0 (317 ms)
+
+2014-Mar-25 19:30:42 Starting Service.  DatabaseInitialize 1.1.0
+
+2014-Mar-25 19:30:42 Service started successfully.  DatabaseInitialize 1.1.0 (27895 ms)
+
+2014-Mar-25 19:30:42 Starting Service.  MessagingService 1.0
+
+2014-Mar-25 19:30:42 Service started successfully.  MessagingService 1.0 (8228 ms)
+
+2014-Mar-25 19:30:42 Starting Service.  HealthMonitorService 1.0
+
+2014-Mar-25 19:30:42 Service started successfully.  HealthMonitorService 1.0 (179 ms)
+
+2014-Mar-25 19:30:42 Starting Service.  Persistence 1.0
+
+2014-Mar-25 19:30:42 Service started successfully.  Persistence 1.0 (21279 ms)
+
+2014-Mar-25 19:30:42 Starting Service.  ConfigurationService 1.0
+
+2014-Mar-25 19:30:42 Service started successfully.  ConfigurationService 1.0 (0 ms)
+
+2014-Mar-25 19:30:42 Starting Service.  ThemingService 1.0
+
+2014-Mar-25 19:30:42 Service started successfully.  ThemingService 1.0 (0 ms)
+
+2014-Mar-25 19:30:42 Starting Service.  LandingPadService 1.0
+
+2014-Mar-25 19:30:42 Service started successfully.  LandingPadService 1.0 (2 ms)
+
+2014-Mar-25 19:30:42 Starting Service.  PortConfigurationService 1.0
+
+2014-Mar-25 19:30:42 Service started successfully.  PortConfigurationService 1.0 (72 ms)
+
+2014-Mar-25 19:30:42 Starting Service.  DeviceIOService 1.0
+
+2014-Mar-25 19:30:42 Service started successfully.  DeviceIOService 1.0 (30 ms)
+
+2014-Mar-25 19:30:42 Starting Service.  GateService 1.0
+
+2014-Mar-25 19:30:42 Service started successfully.  GateService 1.0 (8 ms)
+
+2014-Mar-25 19:30:42 Starting Service.  CacheService 1.0
+
+2014-Mar-25 19:30:42 Service started successfully.  CacheService 1.0 (818 ms)
+
+2014-Mar-25 19:30:42 Starting Service.  StagingService 1.0
+
+2014-Mar-25 19:30:42 Service started successfully.  StagingService 1.0 (7311 ms)
+
+2014-Mar-25 19:30:42 Starting Service.  ReaderDataService 1.0
+
+2014-Mar-25 19:30:42 Service started successfully.  ReaderDataService 1.0 (3 ms)
+
+2014-Mar-25 19:30:42 Starting Service.  BellService 1.0
+
+2014-Mar-25 19:30:42 Service started successfully.  BellService 1.0 (4 ms)
+
+2014-Mar-25 19:30:42 Starting Service.  AVFeedbackService 1.0
+
+2014-Mar-25 19:30:42 Service started successfully.  AVFeedbackService 1.0 (29 ms)
+
+2014-Mar-25 19:30:42 Starting Service.  StateManager 1.0
+
+2014-Mar-25 19:30:42 Service started successfully.  StateManager 1.0 (2500 ms)
+
+2014-Mar-25 19:30:42 Starting Service.  OfflineSmartviewService 1.0
+
+2014-Mar-25 19:30:42 Service started successfully.  OfflineSmartviewService 1.0 (11 ms)
+
+2014-Mar-25 19:30:42 Starting Service.  DatabaseThreads 1.1.0
+
+2014-Mar-25 19:30:42 Starting Service.  DiagnosticsService 1.0
+
+2014-Mar-25 19:30:42 Starting Service.  SoftLoadService 1.0
+
+2014-Mar-25 19:30:42 Starting Service.  WATCHDOG 1.0
+
+2014-Mar-25 19:30:42 Starting Service.  ProtocolService 1.0
+
+2014-Mar-25 19:30:42 Service started successfully.  DiagnosticsService 1.0 (130 ms)
+
+2014-Mar-25 19:30:42 Service started successfully.  WATCHDOG 1.0 (304 ms)
+
+2014-Mar-25 19:30:42 Service started successfully.  DatabaseThreads 1.1.0 (2878 ms)
+
+2014-Mar-25 19:32:42 Service started successfully.  SoftLoadService 1.0 (3931 ms)
+
+Line 436859:Boot sequence ended(2014-Mar-25 19:32:44)
+
+Boot successful! Elapsed time(00:02:45)
+
+
+2014-Mar-25 19:32:44 Service started successfully.  ProtocolService 1.0 (16441 ms)
+
+2014-Mar-25 19:32:44 Starting Service.  BiometricService 1.0
+
+2014-Mar-25 19:32:44 Service started successfully.  BiometricService 1.0 (1106 ms)
+
+2014-Mar-25 21:40:24 Install started
+
+New Version: 2.1.0-udm.12
+
+Previous Version: 2.0.2-146
+
+2014-Mar-25 21:40:24 ExitValue from install command : 0
+
+Line 440719:Initial boot(2014-Mar-25 22:01:46)
+
+2014-Mar-25 22:02:28 Starting Service.  Logging 1.0
+
+2014-Mar-25 22:02:28 Service started successfully.  Logging 1.0 (290 ms)
+
+2014-Mar-25 22:02:28 Starting Service.  DatabaseInitialize 1.1.0
+
+2014-Mar-25 22:02:28 Service started successfully.  DatabaseInitialize 1.1.0 (28599 ms)
+
+2014-Mar-25 22:02:28 Starting Service.  MessagingService 1.0
+
+2014-Mar-25 22:02:28 Service started successfully.  MessagingService 1.0 (7334 ms)
+
+2014-Mar-25 22:02:28 Starting Service.  HealthMonitorService 1.0
+
+2014-Mar-25 22:02:28 Service started successfully.  HealthMonitorService 1.0 (173 ms)
+
+2014-Mar-25 22:02:28 Starting Service.  Persistence 1.0
+
+2014-Mar-25 22:02:28 Service started successfully.  Persistence 1.0 (21237 ms)
+
+2014-Mar-25 22:02:28 Starting Service.  ConfigurationService 1.0
+
+2014-Mar-25 22:02:28 Service started successfully.  ConfigurationService 1.0 (0 ms)
+
+2014-Mar-25 22:02:28 Starting Service.  PortConfigurationService 1.0
+
+2014-Mar-25 22:02:28 Service started successfully.  PortConfigurationService 1.0 (74 ms)
+
+2014-Mar-25 22:02:28 Starting Service.  DeviceIOService 1.0
+
+2014-Mar-25 22:02:28 Service started successfully.  DeviceIOService 1.0 (27 ms)
+
+2014-Mar-25 22:02:28 Starting Service.  CacheService 1.0
+
+2014-Mar-25 22:02:28 Service started successfully.  CacheService 1.0 (773 ms)
+
+2014-Mar-25 22:02:28 Starting Service.  AVFeedbackService 1.0
+
+2014-Mar-25 22:02:28 Service started successfully.  AVFeedbackService 1.0 (26 ms)
+
+2014-Mar-25 22:02:28 Starting Service.  LandingPadService 1.0
+
+2014-Mar-25 22:02:28 Service started successfully.  LandingPadService 1.0 (2 ms)
+
+2014-Mar-25 22:02:28 Starting Service.  ThemingService 1.0
+
+2014-Mar-25 22:02:28 Service started successfully.  ThemingService 1.0 (0 ms)
+
+2014-Mar-25 22:02:28 Starting Service.  StagingService 1.0
+
+2014-Mar-25 22:02:28 Service started successfully.  StagingService 1.0 (7159 ms)
+
+2014-Mar-25 22:02:28 Starting Service.  BellService 1.0
+
+2014-Mar-25 22:02:28 Service started successfully.  BellService 1.0 (5 ms)
+
+2014-Mar-25 22:02:28 Starting Service.  ReaderDataService 1.0
+
+2014-Mar-25 22:02:28 Service started successfully.  ReaderDataService 1.0 (82 ms)
+
+2014-Mar-25 22:02:28 Starting Service.  BiometricService 1.0
+
+2014-Mar-25 22:02:28 Service started successfully.  BiometricService 1.0 (224 ms)
+
+2014-Mar-25 22:02:28 Starting Service.  StateManager 1.0
+
+2014-Mar-25 22:02:28 Service started successfully.  StateManager 1.0 (2637 ms)
+
+2014-Mar-25 22:02:28 Starting Service.  OfflineSmartviewService 1.0
+
+2014-Mar-25 22:02:28 Service started successfully.  OfflineSmartviewService 1.0 (12 ms)
+
+2014-Mar-25 22:02:28 Starting Service.  GateService 1.0
+
+2014-Mar-25 22:02:28 Service started successfully.  GateService 1.0 (3 ms)
+
+2014-Mar-25 22:02:28 Starting Service.  DatabaseThreads 1.1.0
+
+2014-Mar-25 22:02:28 Starting Service.  SoftLoadService 1.0
+
+2014-Mar-25 22:02:28 Starting Service.  ProtocolService 1.0
+
+2014-Mar-25 22:02:28 Starting Service.  WATCHDOG 1.0
+
+2014-Mar-25 22:02:28 Starting Service.  DiagnosticsService 1.0
+
+2014-Mar-25 22:02:28 Service started successfully.  DiagnosticsService 1.0 (405 ms)
+
+2014-Mar-25 22:02:28 Service started successfully.  WATCHDOG 1.0 (608 ms)
+
+2014-Mar-25 22:02:28 Service started successfully.  DatabaseThreads 1.1.0 (3302 ms)
+
+2014-Mar-25 22:04:26 Service started successfully.  SoftLoadService 1.0 (4172 ms)
+
+Line 440791:Boot sequence ended(2014-Mar-25 22:04:27)
+
+Boot successful! Elapsed time(00:02:41)
+
+
+2014-Mar-25 22:04:27 Service started successfully.  ProtocolService 1.0 (9991 ms)
+
+Line 440866:Initial boot(2014-Mar-26 12:47:42)
+
+2014-Mar-26 12:48:25 Starting Service.  Logging 1.0
+
+2014-Mar-26 12:48:25 Service started successfully.  Logging 1.0 (271 ms)
+
+2014-Mar-26 12:48:25 Starting Service.  DatabaseInitialize 1.1.0
+
+2014-Mar-26 12:48:25 Service started successfully.  DatabaseInitialize 1.1.0 (29021 ms)
+
+2014-Mar-26 12:48:25 Starting Service.  MessagingService 1.0
+
+2014-Mar-26 12:48:25 Service started successfully.  MessagingService 1.0 (7315 ms)
+
+2014-Mar-26 12:48:25 Starting Service.  HealthMonitorService 1.0
+
+2014-Mar-26 12:48:25 Service started successfully.  HealthMonitorService 1.0 (182 ms)
+
+2014-Mar-26 12:48:25 Starting Service.  Persistence 1.0
+
+2014-Mar-26 12:48:25 Service started successfully.  Persistence 1.0 (19915 ms)
+
+2014-Mar-26 12:48:25 Starting Service.  ConfigurationService 1.0
+
+2014-Mar-26 12:48:25 Service started successfully.  ConfigurationService 1.0 (0 ms)
+
+2014-Mar-26 12:48:25 Starting Service.  LandingPadService 1.0
+
+2014-Mar-26 12:48:25 Service started successfully.  LandingPadService 1.0 (2 ms)
+
+2014-Mar-26 12:48:25 Starting Service.  PortConfigurationService 1.0
+
+2014-Mar-26 12:48:25 Service started successfully.  PortConfigurationService 1.0 (67 ms)
+
+2014-Mar-26 12:48:25 Starting Service.  ThemingService 1.0
+
+2014-Mar-26 12:48:25 Service started successfully.  ThemingService 1.0 (0 ms)
+
+2014-Mar-26 12:48:25 Starting Service.  CacheService 1.0
+
+2014-Mar-26 12:48:25 Service started successfully.  CacheService 1.0 (1224 ms)
+
+2014-Mar-26 12:48:25 Starting Service.  StagingService 1.0
+
+2014-Mar-26 12:48:25 Service started successfully.  StagingService 1.0 (7815 ms)
+
+2014-Mar-26 12:48:25 Starting Service.  DeviceIOService 1.0
+
+2014-Mar-26 12:48:25 Service started successfully.  DeviceIOService 1.0 (31 ms)
+
+2014-Mar-26 12:48:25 Starting Service.  BellService 1.0
+
+2014-Mar-26 12:48:25 Service started successfully.  BellService 1.0 (8 ms)
+
+2014-Mar-26 12:48:25 Starting Service.  AVFeedbackService 1.0
+
+2014-Mar-26 12:48:25 Service started successfully.  AVFeedbackService 1.0 (41 ms)
+
+2014-Mar-26 12:48:25 Starting Service.  BiometricService 1.0
+
+2014-Mar-26 12:48:25 Service started successfully.  BiometricService 1.0 (234 ms)
+
+2014-Mar-26 12:48:25 Starting Service.  StateManager 1.0
+
+2014-Mar-26 12:48:25 Service started successfully.  StateManager 1.0 (2187 ms)
+
+2014-Mar-26 12:48:25 Starting Service.  OfflineSmartviewService 1.0
+
+2014-Mar-26 12:48:25 Service started successfully.  OfflineSmartviewService 1.0 (15 ms)
+
+2014-Mar-26 12:48:25 Starting Service.  GateService 1.0
+
+2014-Mar-26 12:48:25 Service started successfully.  GateService 1.0 (5 ms)
+
+2014-Mar-26 12:48:25 Starting Service.  ReaderDataService 1.0
+
+2014-Mar-26 12:48:25 Service started successfully.  ReaderDataService 1.0 (18 ms)
+
+2014-Mar-26 12:48:25 Starting Service.  DatabaseThreads 1.1.0
+
+2014-Mar-26 12:48:25 Starting Service.  SoftLoadService 1.0
+
+2014-Mar-26 12:48:25 Starting Service.  DiagnosticsService 1.0
+
+2014-Mar-26 12:48:25 Starting Service.  WATCHDOG 1.0
+
+2014-Mar-26 12:48:25 Starting Service.  ProtocolService 1.0
+
+2014-Mar-26 12:48:25 Service started successfully.  DiagnosticsService 1.0 (260 ms)
+
+2014-Mar-26 12:48:25 Service started successfully.  WATCHDOG 1.0 (390 ms)
+
+2014-Mar-26 12:48:25 Service started successfully.  SoftLoadService 1.0 (3225 ms)
+
+2014-Mar-26 12:48:25 Service started successfully.  DatabaseThreads 1.1.0 (3373 ms)
+
+Line 441216:Boot sequence ended(2014-Mar-26 12:50:29)
+
+Boot successful! Elapsed time(00:02:47)
+
+
+2014-Mar-26 12:50:29 Service started successfully.  ProtocolService 1.0 (10753 ms)
+
+Line 442094:Initial boot(2014-Mar-26 20:41:34)
+
+2014-Mar-26 20:42:18 Starting Service.  Logging 1.0
+
+2014-Mar-26 20:42:18 Service started successfully.  Logging 1.0 (268 ms)
+
+2014-Mar-26 20:42:18 Starting Service.  DatabaseInitialize 1.1.0
+
+2014-Mar-26 20:42:18 Service started successfully.  DatabaseInitialize 1.1.0 (29079 ms)
+
+2014-Mar-26 20:42:18 Starting Service.  MessagingService 1.0
+
+2014-Mar-26 20:42:18 Service started successfully.  MessagingService 1.0 (7741 ms)
+
+2014-Mar-26 20:42:18 Starting Service.  HealthMonitorService 1.0
+
+2014-Mar-26 20:42:18 Service started successfully.  HealthMonitorService 1.0 (160 ms)
+
+2014-Mar-26 20:42:18 Starting Service.  Persistence 1.0
+
+2014-Mar-26 20:42:18 Service started successfully.  Persistence 1.0 (18119 ms)
+
+2014-Mar-26 20:42:18 Starting Service.  ConfigurationService 1.0
+
+2014-Mar-26 20:42:18 Service started successfully.  ConfigurationService 1.0 (0 ms)
+
+2014-Mar-26 20:42:18 Starting Service.  ThemingService 1.0
+
+2014-Mar-26 20:42:18 Service started successfully.  ThemingService 1.0 (0 ms)
+
+2014-Mar-26 20:42:18 Starting Service.  CacheService 1.0
+
+2014-Mar-26 20:42:18 Service started successfully.  CacheService 1.0 (800 ms)
+
+2014-Mar-26 20:42:18 Starting Service.  PortConfigurationService 1.0
+
+2014-Mar-26 20:42:18 Service started successfully.  PortConfigurationService 1.0 (67 ms)
+
+2014-Mar-26 20:42:18 Starting Service.  LandingPadService 1.0
+
+2014-Mar-26 20:42:18 Service started successfully.  LandingPadService 1.0 (2 ms)
+
+2014-Mar-26 20:42:18 Starting Service.  StagingService 1.0
+
+2014-Mar-26 20:42:18 Service started successfully.  StagingService 1.0 (7068 ms)
+
+2014-Mar-26 20:42:18 Starting Service.  DeviceIOService 1.0
+
+2014-Mar-26 20:42:18 Service started successfully.  DeviceIOService 1.0 (35 ms)
+
+2014-Mar-26 20:42:18 Starting Service.  AVFeedbackService 1.0
+
+2014-Mar-26 20:42:18 Service started successfully.  AVFeedbackService 1.0 (36 ms)
+
+2014-Mar-26 20:42:18 Starting Service.  BellService 1.0
+
+2014-Mar-26 20:42:18 Service started successfully.  BellService 1.0 (4 ms)
+
+2014-Mar-26 20:42:18 Starting Service.  GateService 1.0
+
+2014-Mar-26 20:42:18 Service started successfully.  GateService 1.0 (4 ms)
+
+2014-Mar-26 20:42:18 Starting Service.  BiometricService 1.0
+
+2014-Mar-26 20:42:18 Service started successfully.  BiometricService 1.0 (242 ms)
+
+2014-Mar-26 20:42:18 Starting Service.  StateManager 1.0
+
+2014-Mar-26 20:42:18 Service started successfully.  StateManager 1.0 (1902 ms)
+
+2014-Mar-26 20:42:18 Starting Service.  OfflineSmartviewService 1.0
+
+2014-Mar-26 20:42:18 Service started successfully.  OfflineSmartviewService 1.0 (12 ms)
+
+2014-Mar-26 20:42:18 Starting Service.  ReaderDataService 1.0
+
+2014-Mar-26 20:42:18 Service started successfully.  ReaderDataService 1.0 (4 ms)
+
+2014-Mar-26 20:42:18 Starting Service.  DatabaseThreads 1.1.0
+
+2014-Mar-26 20:42:18 Starting Service.  DiagnosticsService 1.0
+
+2014-Mar-26 20:42:18 Starting Service.  WATCHDOG 1.0
+
+2014-Mar-26 20:42:18 Starting Service.  SoftLoadService 1.0
+
+2014-Mar-26 20:42:18 Starting Service.  ProtocolService 1.0
+
+2014-Mar-26 20:42:18 Service started successfully.  DiagnosticsService 1.0 (182 ms)
+
+2014-Mar-26 20:42:18 Service started successfully.  WATCHDOG 1.0 (378 ms)
+
+2014-Mar-26 20:42:18 Service started successfully.  SoftLoadService 1.0 (2932 ms)
+
+2014-Mar-26 20:42:18 Service started successfully.  DatabaseThreads 1.1.0 (3063 ms)
+
+Line 442432:Boot sequence ended(2014-Mar-26 20:44:13)
+
+Boot successful! Elapsed time(00:02:39)
+
+
+2014-Mar-26 20:44:13 Service started successfully.  ProtocolService 1.0 (10397 ms)
+
+Line 443073:Initial boot(2014-Mar-27 14:09:01)
+
+2014-Mar-27 14:09:46 Starting Service.  Logging 1.0
+
+2014-Mar-27 14:09:46 Service started successfully.  Logging 1.0 (270 ms)
+
+2014-Mar-27 14:09:46 Starting Service.  DatabaseInitialize 1.1.0
+
+2014-Mar-27 14:09:46 Service started successfully.  DatabaseInitialize 1.1.0 (28777 ms)
+
+2014-Mar-27 14:09:46 Starting Service.  MessagingService 1.0
+
+2014-Mar-27 14:09:46 Service started successfully.  MessagingService 1.0 (7909 ms)
+
+2014-Mar-27 14:09:46 Starting Service.  HealthMonitorService 1.0
+
+2014-Mar-27 14:09:46 Service started successfully.  HealthMonitorService 1.0 (211 ms)
+
+2014-Mar-27 14:09:46 Starting Service.  Persistence 1.0
+
+2014-Mar-27 14:09:46 Service started successfully.  Persistence 1.0 (17609 ms)
+
+2014-Mar-27 14:09:46 Starting Service.  ConfigurationService 1.0
+
+2014-Mar-27 14:09:46 Service started successfully.  ConfigurationService 1.0 (0 ms)
+
+2014-Mar-27 14:09:46 Starting Service.  LandingPadService 1.0
+
+2014-Mar-27 14:09:46 Service started successfully.  LandingPadService 1.0 (2 ms)
+
+2014-Mar-27 14:09:46 Starting Service.  ThemingService 1.0
+
+2014-Mar-27 14:09:46 Service started successfully.  ThemingService 1.0 (0 ms)
+
+2014-Mar-27 14:09:46 Starting Service.  DeviceIOService 1.0
+
+2014-Mar-27 14:09:46 Service started successfully.  DeviceIOService 1.0 (34 ms)
+
+2014-Mar-27 14:09:46 Starting Service.  GateService 1.0
+
+2014-Mar-27 14:09:46 Service started successfully.  GateService 1.0 (6 ms)
+
+2014-Mar-27 14:09:46 Starting Service.  PortConfigurationService 1.0
+
+2014-Mar-27 14:09:46 Service started successfully.  PortConfigurationService 1.0 (73 ms)
+
+2014-Mar-27 14:09:46 Starting Service.  CacheService 1.0
+
+2014-Mar-27 14:09:46 Service started successfully.  CacheService 1.0 (890 ms)
+
+2014-Mar-27 14:09:46 Starting Service.  StagingService 1.0
+
+2014-Mar-27 14:09:46 Service started successfully.  StagingService 1.0 (7186 ms)
+
+2014-Mar-27 14:09:46 Starting Service.  BellService 1.0
+
+2014-Mar-27 14:09:46 Service started successfully.  BellService 1.0 (2 ms)
+
+2014-Mar-27 14:09:46 Starting Service.  ReaderDataService 1.0
+
+2014-Mar-27 14:09:46 Service started succes
