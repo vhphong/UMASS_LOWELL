@@ -1,0 +1,6 @@
+﻿  stdafx.cpp
+  main.c
+d:\download\generic vector\main.c : fatal error C1853: 'Debug\GenericVector.pch' precompiled header file is from a previous version of the compiler, or the precompiled header is C++ and you are using it from C (or vice versa)
+  g_vector.c
+d:\download\generic vector\g_vector.c : fatal error C1853: 'Debug\GenericVector.pch' precompiled header file is from a previous version of the compiler, or the precompiled header is C++ and you are using it from C (or vice versa)
+  Generating Code...

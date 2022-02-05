@@ -1,0 +1,97 @@
+4. Write a C declaration for a stack of floating point numbers stored in an array.
+
+typedef struct
+{
+   float a[50];
+   int top;
+}stack;
+stack* myStack = malloc(sizeof(stack)); //Declares a stack of elements.
+myStack->top = -1; // indicates 
+
+
+
+5. Using the above stack declaration, write a C function that implements the pop operation including a message and exiting if stack underflow occurs. You may assume the existence of an empty() function that takes a pointer to a stack as an argument.
+
+typedef struct
+{
+   float array[];
+}stack;
+stack* myStack = malloc(sizeof(stack));
+myStack = -1;
+
+void pop(stack* myStack)
+{
+   if (empty(myStack) == -1)
+   {
+      printf("ERROR\n");
+   } // end if
+   else
+   {
+      printf("The popped out element is: %f \n", myStack->array[myStack->top]);
+      myStack->top--;
+   }
+
+
+6. Linked list
+
+Given the following:
+
+typedef node Node;
+struct node{
+   int data;
+   Node* next;
+};
+----------------------
+a. Write a function called destroy that takes a Node pointer to the head of a list and will free up the memory associated with each node in the entire list.
+
+void destroy(struct node** head)
+{
+   struct node *temp;
+   while(head != NULL)
+   {
+      temp = head;
+      head = head->next;
+      free(temp);
+   }
+   printf("All nodes are successfully deleted");
+}
+----------------------
+
+b. Write a recursive function called sum that given a Node pointer to the head of a list will return the sum of all data in the linked list.
+   int sum(struct node* head)
+   {
+      if (head != NULL)
+         return (head->data) + sum(head->next)
+      else   
+         return 0;
+   }
+
+----------------------
+
+c. Write a function called copy_list that, given a Node pointer to the head of a list will return a Node pointer containing the address of the head node of a new list that is an exact copy of the original list. Your copy should be independent of the first list and not share any nodes. You may write an iterative or recursive version of your function.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

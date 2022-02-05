@@ -1,0 +1,20 @@
+CC = gcc 
+CFLAGS = -Wall
+DBGFLAG = -DEBUG 
+OBJECTS = hangman.o my_string.o vector_string.o binary_search_tree.o
+HEADER = my_string.h vector_string.h binary_search_tree.h
+all : $(OBJECTS)
+	$(CC) $(CFLAGS) $(OBJECTS) -o hangman
+hangman.o : hangman.c $(HEADER)
+	$(CC) -c hangman.c
+my_string.o : my_string.c
+	$(CC) -c my_string.c
+vector_string.o : vector_string.c
+	$(CC) -c vector_string.c
+binary_search_tree.o : binary_search_tree.c
+	$(CC) -c binary_search_tree.c
+debug : $(OBJECTS)
+	$(CC) $(DBGFLAG) $(OBJECTS) -o hangman
+clean :
+	rm *.o hangman
+

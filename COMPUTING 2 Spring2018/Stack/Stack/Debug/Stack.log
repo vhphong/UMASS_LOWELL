@@ -1,0 +1,10 @@
+﻿  stack_linked.c
+c:\users\vhpho\desktop\computing ii\stack code\stack_linked.c(22): warning C4013: 'malloc' undefined; assuming extern returning int
+c:\users\vhpho\desktop\computing ii\stack code\stack_linked.c(54): warning C4013: 'free' undefined; assuming extern returning int
+  stack_array.c
+c:\users\vhpho\desktop\computing ii\stack code\stack_array.c(15): warning C4013: 'malloc' undefined; assuming extern returning int
+c:\users\vhpho\desktop\computing ii\stack code\stack_array.c(23): warning C4013: 'free' undefined; assuming extern returning int
+c:\users\vhpho\desktop\computing ii\stack code\stack_array.c(77): error C2065: 'INT_MIN': undeclared identifier
+  main.c
+c:\users\vhpho\desktop\computing ii\stack code\main.c(12): warning C4013: 'exit' undefined; assuming extern returning int
+  Generating Code...

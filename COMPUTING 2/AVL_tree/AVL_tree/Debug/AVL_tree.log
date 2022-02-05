@@ -1,0 +1,6 @@
+﻿  stdafx.cpp
+  AVL_tree.cpp
+  Generating Code...
+  main.c
+main.obj : error LNK2005: _main already defined in AVL_tree.obj
+C:\Users\vhpho\Desktop\COMPUTING II\AVL_tree\Debug\AVL_tree.exe : fatal error LNK1169: one or more multiply defined symbols found

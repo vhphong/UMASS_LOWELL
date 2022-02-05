@@ -1,0 +1,36 @@
+The longest word is 29 characters long and 
+the shortest one is 2 characters long.
+Enter a number for the word length:4
+Enter a positive number for the number of guesses you need:3 
+Do you want the answer displayed while playing the game?
+Enter y(yes) or n(no):n 
+Please enter a letter: a
+Node key: ---- Size: 2489
+Node key: ---a Size: 140
+Node key: --a- Size: 310
+Node key: -a-- Size: 691
+Node key: -a-a Size: 34
+Node key: -aa- Size: 6
+Node key: a--- Size: 151
+Node key: a--a Size: 20
+Node key: a-a- Size: 19
+Node key: aa-- Size: 2
+Word: ----
+I'm sorry,there is no a
+You entered: a 
+You have 2 attempts left
+
+Please enter a letter from the English alphabet: 
+Word: ----
+I'm sorry,there is no b
+You entered: a b 
+You have 1 attempts left
+
+Please enter a letter from the English alphabet: 
+Word: ----
+I'm sorry,there is no c
+You entered: a b c 
+You lost!
+The word I'm thinking about is deed
+
+Do you want to continue? Enter y(yes) or n(no)n

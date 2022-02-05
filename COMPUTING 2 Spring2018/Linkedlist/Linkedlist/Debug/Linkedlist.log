@@ -1,0 +1,5 @@
+﻿  main.c
+c:\users\vhpho\desktop\linked list\main.c(36): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'Node *'
+  stdafx.cpp
+  Linkedlist.vcxproj -> C:\Users\vhpho\Desktop\COMP II\Linkedlist\Debug\Linkedlist.exe
+  Linkedlist.vcxproj -> C:\Users\vhpho\Desktop\COMP II\Linkedlist\Debug\Linkedlist.pdb (Full PDB)

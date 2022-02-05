@@ -1,0 +1,6 @@
+﻿  main.c
+  FunctionPointer.c
+  Generating Code...
+  stdafx.cpp
+main.obj : error LNK2005: _main already defined in FunctionPointer.obj
+C:\Users\vhpho\Desktop\COMPUTING II\FunctionPointer\Debug\FunctionPointer.exe : fatal error LNK1169: one or more multiply defined symbols found

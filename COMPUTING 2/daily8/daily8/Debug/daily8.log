@@ -1,0 +1,11 @@
+﻿  priority_queue.c
+  main.c
+c:\users\vhpho\desktop\computing ii\daily8\daily8\main.c(15): warning C4013: 'q_insert' undefined; assuming extern returning int
+c:\users\vhpho\desktop\computing ii\daily8\daily8\main.c(20): warning C4013: 'q_del' undefined; assuming extern returning int
+c:\users\vhpho\desktop\computing ii\daily8\daily8\main.c(25): warning C4013: 'q_show' undefined; assuming extern returning int
+c:\users\vhpho\desktop\computing ii\daily8\daily8\main.c(10): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: see declaration of 'scanf'
+  Generating Code...
+  stdafx.cpp
+  daily8.vcxproj -> C:\Users\vhpho\Desktop\COMPUTING II\daily8\Debug\daily8.exe
+  daily8.vcxproj -> C:\Users\vhpho\Desktop\COMPUTING II\daily8\Debug\daily8.pdb (Full PDB)
