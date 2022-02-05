@@ -1,0 +1,24 @@
+DangNhi Ngoc Ngo
+DangNhi_Ngo@student.uml.edu
+
+Command lines:
+python3 main.py -d 1_6b.dfa 
+python3 main.py -d 1_6b.dfa -v
+python3 main.py -d 1_6b.dfa -v < 1_6b.in 
+python3 main.py -d 1_6c.dfa -v < 1_6c.in
+python3 main.py -d 1_6f.dfa -v < 1_6f.in
+python3 main.py -d a*_c.dfa -v < a*_c.in
+python3 main.py -d 1_6b.dfa < 1_6b.in > 1_6b.out
+python3 main.py -d 1_6c.dfa < 1_6c.in > 1_6c.out
+python3 main.py -d 1_6f.dfa < 1_6f.in > 1_6f.out
+python3 main.py -d test.dfa < test.in > test.out
+python3 main.py -d 1_6b.dfa -v < 1_6b.in > 1_6b.out && cat 1_6b.out
+cat 1_6b.in | python3 main.py -d 1_6b.dfa
+
+The .dfa file must be in the following format:
+states:  <Set of states>
+alphabet: <Set of input alphabet>
+startstate: <Start state>
+finalstate: <Set of final state(s)>
+transition: <currentState inputSymbol targetState>
+

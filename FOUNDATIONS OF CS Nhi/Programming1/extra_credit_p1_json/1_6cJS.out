@@ -1,0 +1,59 @@
+1_6cJS.json
+Exercise 1.6.c DFA accepts strings that contain the substring 0101.
+States: q1, q2, q3, q4, q5
+Alphabet: 0, 1
+StartState: q1
+FinalState: q5
+
+INPUT: 0101100
+--Current State: q1 Symbol: 0 --> New State: q2
+--Current State: q2 Symbol: 1 --> New State: q3
+--Current State: q3 Symbol: 0 --> New State: q4
+--Current State: q4 Symbol: 1 --> New State: q5
+--Current State: q5 Symbol: 1 --> New State: q5
+--Current State: q5 Symbol: 0 --> New State: q5
+--Current State: q5 Symbol: 0 --> New State: q5
+0101100  -->  ACCEPT
+
+INPUT: 0100101010
+--Current State: q1 Symbol: 0 --> New State: q2
+--Current State: q2 Symbol: 1 --> New State: q3
+--Current State: q3 Symbol: 0 --> New State: q4
+--Current State: q4 Symbol: 0 --> New State: q1
+--Current State: q1 Symbol: 1 --> New State: q1
+--Current State: q1 Symbol: 0 --> New State: q2
+--Current State: q2 Symbol: 1 --> New State: q3
+--Current State: q3 Symbol: 0 --> New State: q4
+--Current State: q4 Symbol: 1 --> New State: q5
+--Current State: q5 Symbol: 0 --> New State: q5
+0100101010  -->  ACCEPT
+
+INPUT: 1111111
+--Current State: q1 Symbol: 1 --> New State: q1
+--Current State: q1 Symbol: 1 --> New State: q1
+--Current State: q1 Symbol: 1 --> New State: q1
+--Current State: q1 Symbol: 1 --> New State: q1
+--Current State: q1 Symbol: 1 --> New State: q1
+--Current State: q1 Symbol: 1 --> New State: q1
+--Current State: q1 Symbol: 1 --> New State: q1
+1111111  -->  NOT ACCEPT
+
+INPUT: 01111010
+--Current State: q1 Symbol: 0 --> New State: q2
+--Current State: q2 Symbol: 1 --> New State: q3
+--Current State: q3 Symbol: 1 --> New State: q1
+--Current State: q1 Symbol: 1 --> New State: q1
+--Current State: q1 Symbol: 1 --> New State: q1
+--Current State: q1 Symbol: 0 --> New State: q2
+--Current State: q2 Symbol: 1 --> New State: q3
+--Current State: q3 Symbol: 0 --> New State: q4
+01111010  -->  NOT ACCEPT
+
+INPUT: 00000
+--Current State: q1 Symbol: 0 --> New State: q2
+--Current State: q2 Symbol: 0 --> New State: q1
+--Current State: q1 Symbol: 0 --> New State: q2
+--Current State: q2 Symbol: 0 --> New State: q1
+--Current State: q1 Symbol: 0 --> New State: q2
+00000  -->  NOT ACCEPT
+

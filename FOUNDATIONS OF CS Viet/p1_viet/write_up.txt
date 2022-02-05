@@ -1,0 +1,20 @@
+Viet Tran
+Oct 22 2017
+Foundations of Computer Science
+DFA Implementation
+	Overall, I think I completed 100% of this assignment. I decided to program this in Python. 
+	This is a new language to learn for me because I have no experience with Python. 
+	However, I found that Python is easier to implement this program rather than C or C++.
+	It was really a hard program for me especially where we have to check possible errors 
+	such as command line argument parsing, valid definition file, valid input string etc. 
+	That was the hardest part for me, and it was a real challenge. Running in Python is easier, 
+	but it is more difficult to debug the program. When I ran it, it only shows us the line number 
+	but it doesn’t really tell us what the errors are. 
+	I found it to be a challenge to implement in Python and import JSON file as input. 
+	I was having difficulty understanding when I looked the simple output in the pdf file. 
+	However, as I keep working on it, I understood the objective.
+	I finished implementing the “Interactive Run” feature and the “Use of Pipe and Redirection” feature.
+	Even though the python commands is quite different from 
+	“./dfa –d m1.dfa <m1.in”, “./dfa –d m1.dfa <m1.in >m1.out”, and “cat m1.in | ./dfa –d m1.dfa”
+	 please reference the readme.txt located inside each folder.
+

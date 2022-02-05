@@ -1,0 +1,6 @@
+DangNhi Ngoc Ngo
+
+Command lines:
+python3 p1_json.py -d 1_6bJS.json > 1_6bJS.out
+python3 p1_json.py -d 1_6cJS.json > 1_6cJS.out
+python3 p1_json.py -d 1_6fJS.json > 1_6fJS.out

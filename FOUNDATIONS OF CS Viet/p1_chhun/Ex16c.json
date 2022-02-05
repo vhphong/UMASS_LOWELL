@@ -1,0 +1,29 @@
+{
+    "description":"Exercise 1.6.c DFA accepts strings that contain the substring 0101.",
+    "states": ["q1","q2","q3","q4","q5"],
+    "alphabet": ["0","1"],
+    "transitions": {
+	"q1": {
+	    "1": "q1",
+	    "0": "q2"
+	},
+	"q2": {
+	    "0": "q1",
+	    "1": "q3"
+	},
+	"q3": {
+	    "1": "q1",
+	    "0": "q4"
+	},
+	"q4": {
+	    "0": "q1",
+	    "1": "q5"
+	},
+	"q5": {
+	    "0": "q5",
+	    "1": "q5"
+	},
+    "start": "q1",
+    "accept": ["q5"],
+    "inputs": ["0101010", "0100101010", "011100", "1111111"]
+} 

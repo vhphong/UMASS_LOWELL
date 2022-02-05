@@ -1,0 +1,39 @@
+1_6fJS.json
+Exercise 1.6.f DFA accepts strings that does not contain the substring 110.
+States: q1, q2, q3, q4
+Alphabet: 0, 1
+StartState: q1
+FinalState: q1, q2, q3
+
+INPUT: 10010
+--Current State: q1 Symbol: 1 --> New State: q2
+--Current State: q2 Symbol: 0 --> New State: q1
+--Current State: q1 Symbol: 0 --> New State: q1
+--Current State: q1 Symbol: 1 --> New State: q2
+--Current State: q2 Symbol: 0 --> New State: q1
+10010  -->  ACCEPT
+
+INPUT: 10101
+--Current State: q1 Symbol: 1 --> New State: q2
+--Current State: q2 Symbol: 0 --> New State: q1
+--Current State: q1 Symbol: 1 --> New State: q2
+--Current State: q2 Symbol: 0 --> New State: q1
+--Current State: q1 Symbol: 1 --> New State: q2
+10101  -->  ACCEPT
+
+INPUT: 00110
+--Current State: q1 Symbol: 0 --> New State: q1
+--Current State: q1 Symbol: 0 --> New State: q1
+--Current State: q1 Symbol: 1 --> New State: q2
+--Current State: q2 Symbol: 1 --> New State: q3
+--Current State: q3 Symbol: 0 --> New State: q4
+00110  -->  NOT ACCEPT
+
+INPUT: 11000
+--Current State: q1 Symbol: 1 --> New State: q2
+--Current State: q2 Symbol: 1 --> New State: q3
+--Current State: q3 Symbol: 0 --> New State: q4
+--Current State: q4 Symbol: 0 --> New State: q4
+--Current State: q4 Symbol: 0 --> New State: q4
+11000  -->  NOT ACCEPT
+

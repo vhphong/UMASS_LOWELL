@@ -1,0 +1,78 @@
+
+
+---Input DFA's definition---
+
+States: 
+['q1', 'q2', 'q3', 'q4', 'q5']
+
+Alphabet: 
+['0', '1']
+
+Start State: 
+q1
+
+Final State: 
+['q5']
+
+Transitions: 
+['q1', '1', 'q1']
+['q1', '0', 'q2']
+['q2', '0', 'q2']
+['q2', '1', 'q3']
+['q3', '1', 'q1']
+['q3', '0', 'q4']
+['q4', '0', 'q2']
+['q4', '1', 'q5']
+['q5', '1', 'q5']
+['q5', '0', 'q5']
+
+---End DFA Definition---
+
+Input: 01010
+Current State: q1  Symbol: 0  --> New State: q2
+Current State: q2  Symbol: 1  --> New State: q3
+Current State: q3  Symbol: 0  --> New State: q4
+Current State: q4  Symbol: 1  --> New State: q5
+Current State: q5  Symbol: 0  --> New State: q5
+01010 --> ACCEPTED
+
+Input: 00101
+Current State: q1  Symbol: 0  --> New State: q2
+Current State: q2  Symbol: 0  --> New State: q2
+Current State: q2  Symbol: 1  --> New State: q3
+Current State: q3  Symbol: 0  --> New State: q4
+Current State: q4  Symbol: 1  --> New State: q5
+00101 --> ACCEPTED
+
+Input: 10101
+Current State: q1  Symbol: 1  --> New State: q1
+Current State: q1  Symbol: 0  --> New State: q2
+Current State: q2  Symbol: 1  --> New State: q3
+Current State: q3  Symbol: 0  --> New State: q4
+Current State: q4  Symbol: 1  --> New State: q5
+10101 --> ACCEPTED
+
+Input: 01001
+Current State: q1  Symbol: 0  --> New State: q2
+Current State: q2  Symbol: 1  --> New State: q3
+Current State: q3  Symbol: 0  --> New State: q4
+Current State: q4  Symbol: 0  --> New State: q2
+Current State: q2  Symbol: 1  --> New State: q3
+01001 --> NOT ACCEPTED
+
+Input: 00110
+Current State: q1  Symbol: 0  --> New State: q2
+Current State: q2  Symbol: 0  --> New State: q2
+Current State: q2  Symbol: 1  --> New State: q3
+Current State: q3  Symbol: 1  --> New State: q1
+Current State: q1  Symbol: 0  --> New State: q2
+00110 --> NOT ACCEPTED
+
+Input: 11101
+Current State: q1  Symbol: 1  --> New State: q1
+Current State: q1  Symbol: 1  --> New State: q1
+Current State: q1  Symbol: 1  --> New State: q1
+Current State: q1  Symbol: 0  --> New State: q2
+Current State: q2  Symbol: 1  --> New State: q3
+11101 --> NOT ACCEPTED
+

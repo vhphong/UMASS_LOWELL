@@ -1,0 +1,307 @@
+\documentclass[11pt]{article}
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+%\usepackage{amsfonts}
+\usetikzlibrary{automata, arrows, positioning}
+
+\title{Homework \#4}
+\author{Kyle White}
+\date{March 18, 2017}
+
+\begin{document}
+\maketitle
+
+\noindent3.1a)\\
+string: 0\\
+$q_1$0\\
+$\sqcup q_2 \sqcup$\\
+$\sqcup \sqcup q_{accept}$\\ \\
+
+%TODO: 3.1b (extra credit)
+
+\noindent3.1c)\\
+string: 000\\
+$q_1 000$\\
+$\sqcup q_2 00$\\
+$\sqcup x q_3 0$\\
+$\sqcup x 0 q_4$\\
+$\sqcup x 0 \sqcup q_{reject}$\\ \\
+
+\noindent3.1d)\\
+string: 000000\\
+$q_1 000000$\\
+$\sqcup q_2 00000$\\
+$\sqcup x q_3 0000$\\
+$\sqcup x 0 q_4 000$\\
+$\sqcup x 0 x q_3 00$\\
+$\sqcup x 0 x 0 q_4 0$\\
+$\sqcup x 0 x 0 x q_3 \sqcup$\\
+$\sqcup x 0 x 0 q_5 x \sqcup$\\
+$\sqcup x 0 x q_5 0 x \sqcup$\\
+$\sqcup x 0 q_5 x o x \sqcup$\\
+$\sqcup x q_5 0 x 0 x \sqcup$\\
+$\sqcup q_5 x 0 x 0 x \sqcup$\\
+$q_5 \sqcup x 0 x 0 x \sqcup$\\
+$\sqcup q_2 x 0 x 0 x \sqcup$\\
+$\sqcup x q_2 0 x 0 x \sqcup$\\
+$\sqcup x x q_3 x 0 x \sqcup$\\
+$\sqcup x x x q_3 0 x \sqcup$\\
+$\sqcup x x x 0 q_4 x \sqcup$\\
+$\sqcup x x x 0 x q_4 \sqcup$\\
+$\sqcup x x x 0 x \sqcup q_{reject}$\\ \\
+
+\noindent3.1extra)\\
+string: 00000000\\
+$q_1 00000000$\\
+$\sqcup q_2 0000000$\\
+$\sqcup x q_3 000000$\\
+$\sqcup x 0 q_4 00000$\\
+$\sqcup x 0 x q_3 0000$\\
+$\sqcup x 0 x 0 q_4 000$\\
+$\sqcup x 0 x 0 x q_3 00$\\
+$\sqcup x 0 x 0 x 0 q_4 0$\\
+$\sqcup x 0 x 0 x 0 x q_3 \sqcup$\\
+$\sqcup x 0 x 0 x 0 q_5 x \sqcup$\\
+$\sqcup x 0 x 0 x q_5 0 x \sqcup$\\
+$\sqcup x 0 x 0 q_5 x 0 x \sqcup$\\
+$\sqcup x 0 x q_5 0 x 0 x \sqcup$\\
+$\sqcup x 0 q_5 x 0 x 0 x \sqcup$\\
+$\sqcup x q_5 0 x 0 x 0 x \sqcup$\\
+$\sqcup q_5 x 0 x 0 x 0 x \sqcup$\\
+$q_5 \sqcup x 0 x 0 x 0 x \sqcup$\\
+$\sqcup q_2 x 0 x 0 x 0 x \sqcup$\\
+$\sqcup x q_2 0 x 0 x 0 x \sqcup$\\
+$\sqcup x x q_3 x 0 x 0 x \sqcup$\\
+$\sqcup x x x q_3 0 x 0 x \sqcup$\\
+$\sqcup x x x 0 q_4 x 0 x \sqcup$\\
+$\sqcup x x x 0 x q_4 0 x \sqcup$\\
+$\sqcup x x x 0 x x q_3 x \sqcup$\\
+$\sqcup x x x 0 x x x q_3 \sqcup$\\
+$\sqcup x x x 0 x x q_5 x \sqcup$\\
+$\sqcup x x x 0 x q_5 x x \sqcup$\\
+$\sqcup x x x 0 q_5 x x x \sqcup$\\
+$\sqcup x x x q_5 0 x x x \sqcup$\\
+$\sqcup x x q_5 x 0 x x x \sqcup$\\
+$\sqcup x q_5 x x 0 x x x \sqcup$\\
+$\sqcup q_5 x x x 0 x x x \sqcup$\\
+$q_5 \sqcup x x x 0 x x x \sqcup$\\
+$\sqcup q_2 x x x 0 x x x \sqcup$\\
+$\sqcup x q_2 x x 0 x x x \sqcup$\\
+$\sqcup x x q_2 x 0 x x x \sqcup$\\
+$\sqcup x x x q_2 0 x x x \sqcup$\\
+$\sqcup x x x x q_3 x x x \sqcup$\\
+$\sqcup x x x x x q_3 x x \sqcup$\\
+$\sqcup x x x x x x q_3 x \sqcup$\\
+$\sqcup x x x x x x x q_3 \sqcup$\\
+$\sqcup x x x x x x q_5 x \sqcup$\\
+$\sqcup x x x x x q_5 x x \sqcup$\\
+$\sqcup x x x x q_5 x x x \sqcup$\\
+$\sqcup x x x q_5 x x x x \sqcup$\\
+$\sqcup x x q_5 x x x x x \sqcup$\\
+$\sqcup x q_5 x x x x x x \sqcup$\\
+$\sqcup q_5 x x x x x x x \sqcup$\\
+$q_5 \sqcup x x x x x x x \sqcup$\\
+$\sqcup q_2 x x x x x x x \sqcup$\\
+$\sqcup x q_2 x x x x x x \sqcup$\\
+$\sqcup x x q_2 x x x x x \sqcup$\\
+$\sqcup x x x q_2 x x x x \sqcup$\\
+$\sqcup x x x x q_2 x x x \sqcup$\\
+$\sqcup x x x x x q_2 x x \sqcup$\\
+$\sqcup x x x x x x q_2 x \sqcup$\\
+$\sqcup x x x x x x x q_2 \sqcup$\\
+$\sqcup x x x x x x x \sqcup q_{accept}$\\
+
+%TODO: 3.2a
+
+\noindent3.2b)\\
+string: 1\#1\\
+$q_1 1\#1$\\
+$x q_3 \# 1$\\
+$x \# q_5 1$\\
+$x q_6 \# x$\\
+$q_7 x \# x$\\
+$x q_1 \# x$\\
+$x \# q_8 x$\\
+$x \# x q_8$\\
+$x \# x q_8 \sqcup$\\
+$x \# x \sqcup q_{accept}$\\ \\
+
+\noindent3.2c)\\
+string: 1\#\#1\\
+$q_1 1 \# \# 1$\\
+$x q_3 \# \# 1$\\
+$x \# q_5 \# 1$\\
+$x \# \# q_{reject} 1$\\ \\
+
+\noindent3.2d)\\
+string: 10\#11\\
+$q_1 1 0 \# 1 1$\\
+$x q_3 0 \# 1 1$\\
+$x 0 q_3 \# 1 1$\\
+$x 0 \# q_5 1 1$\\
+$x 0 q_6 \# x 1$\\
+$x q_7 0 \# x 1$\\
+$q_7 x 0 \# x 1$\\
+$x q_1 0 \# x 1$\\
+$x x q_2 \# x 1$\\
+$x x \# q_4 x 1$\\
+$x x \# x q_4 1$\\
+$x x \# x 1 q_{reject}$\\ \\
+
+%TODO: Fix these next two
+
+\noindent3.2extra1)\\
+string: 01100\#01100\\
+$q_1 0 1 1 0 0 \# 0 1 1 0 0$\\
+$x q_2 1 1 0 0 \# 0 1 1 0 0$\\
+$x 1 q_2 1 0 0 \# 0 1 1 0 0$\\
+$x 1 1 q_2 0 0 \# 0 1 1 0 0$\\
+$x 1 1 0 q_2 0 \# 0 1 1 0 0$\\
+$x 1 1 0 0 q_2 \# 0 1 1 0 0$\\
+$x 1 1 0 0 \# q_4 0 1 1 0 0$\\
+$x 1 1 0 0 q_6 \# x 1 1 0 0$\\
+$x 1 1 0 q_7 0 \# x 1 1 0 0$\\
+$x 1 1 q_7 0 0 \# x 1 1 0 0$\\
+$x 1 q_7 1 0 0 \# x 1 1 0 0$\\
+$x q_7 1 1 0 0 \# x 1 1 0 0$\\
+$q_7 x 1 1 0 0 \# x 1 1 0 0$\\
+$x q_1 1 1 0 0 \# x 1 1 0 0$\\
+$x x q_3 1 0 0 \# x 1 1 0 0$\\
+$x x 1 q_3 0 0 \# x 1 1 0 0$\\
+$x x 1 0 q_3 0 \# x 1 1 0 0$\\
+$x x 1 0 0 q_3 \# x 1 1 0 0$\\
+$x x 1 0 0 \# q_5 x 1 1 0 0$\\
+$x x 1 0 0 \# x q_5 1 1 0 0$\\
+$x x 1 0 0 \# q_6 x x 1 0 0$\\
+$x x 1 0 0 q_6 \# x x 1 0 0$\\
+$x x 1 0 q_7 0 \# x x 1 0 0$\\
+$x x 1 q_7 0 0 \# x x 1 0 0$\\
+$x x q_7 1 0 0 \# x x 1 0 0$\\
+$x q_7 x 1 0 0 \# x x 1 0 0$\\
+$x x q_1 1 0 0 \# x x 1 0 0$\\
+$x x x q_3 0 0 \# x x 1 0 0$\\
+$x x x 0 q_3 0 \# x x 1 0 0$\\
+$x x x 0 0 q_3 \# x x 1 0 0$\\
+$x x x 0 0 \# q_5 x x 1 0 0$\\
+$x x x 0 0 \# x q_5 x 1 0 0$\\
+$x x x 0 0 \# x x q_5 1 0 0$\\
+$x x x 0 0 \# x q_6 x x 0 0$\\
+$x x x 0 0 \# q_6 x x x 0 0$\\
+$x x x 0 0 q_6 \# x x x 0 0$\\
+$x x x 0 q_7 0 \# x x x 0 0$\\
+$x x x q_7 0 0 \# x x x 0 0$\\
+$x x q_7 x 0 0 \# x x x 0 0$\\
+$x x x q_1 0 0 \# x x x 0 0$\\
+$x x x x q_2 0 \# x x x 0 0$\\
+$x x x x 0 q_2 \# x x x 0 0$\\
+$x x x x 0 \# q_4 x x x 0 0$\\
+$x x x x 0 \# x q_4 x x 0 0$\\
+$x x x x 0 \# x x q_4 x 0 0$\\
+$x x x x 0 \# x x x q_4 0 0$\\
+$x x x x 0 \# x x q_6 x x 0$\\
+$x x x x 0 \# x q_6 x x x 0$\\
+$x x x x 0 \# q_6 x x x x 0$\\
+$x x x x 0 q_6 \# x x x x 0$\\
+$x x x x q_7 0 \# x x x x 0$\\
+$x x x q_7 x 0 \# x x x x 0$\\
+$x x x x q_1 0 \# x x x x 0$\\
+$x x x x x q_2 \# x x x x 0$\\
+$x x x x x \# q_4 x x x x 0$\\
+$x x x x x \# x q_4 x x x 0$\\
+$x x x x x \# x x q_4 x x 0$\\
+$x x x x x \# x x x q_4 x 0$\\
+$x x x x x \# x x x x q_4 0$\\
+$x x x x x \# x x x q_6 x x$\\
+$x x x x x \# x x q_6 x x x$\\
+$x x x x x \# x q_6 x x x x$\\
+$x x x x x \# q_6 x x x x x$\\
+$x x x x x q_6 \# x x x x x$\\
+$x x x x q_7 x \# x x x x x$\\
+$x x x x x q_1 \# x x x x x$\\
+$x x x x x \# q_8 x x x x x$\\
+$x x x x x \# x q_8 x x x x$\\
+$x x x x x \# x x q_8 x x x$\\
+$x x x x x \# x x x q_8 x x$\\
+$x x x x x \# x x x x q_8 x$\\
+$x x x x x \# x x x x x q_8$\\
+$x x x x x \# x x x x x q_8 \sqcup$\\
+$x x x x x \# x x x x x \sqcup q_{accept}$\\
+
+\noindent3.2extra2)\\
+string: 01101\#01100\\
+$q_1 0 1 1 0 1 \# 0 1 1 0 0$\\
+$x q_2 1 1 0 1 \# 0 1 1 0 0$\\
+$x 1 q_2 1 0 1 \# 0 1 1 0 0$\\
+$x 1 1 q_2 0 1 \# 0 1 1 0 0$\\
+$x 1 1 0 q_2 1 \# 0 1 1 0 0$\\
+$x 1 1 0 1 q_2 \# 0 1 1 0 0$\\
+$x 1 1 0 1 \# q_4 0 1 1 0 0$\\
+$x 1 1 0 1 q_6 \# x 1 1 0 0$\\
+$x 1 1 0 q_7 1 \# x 1 1 0 0$\\
+$x 1 1 q_7 0 1 \# x 1 1 0 0$\\
+$x 1 q_7 1 0 1 \# x 1 1 0 0$\\
+$x q_7 1 1 0 1 \# x 1 1 0 0$\\
+$q_7 x 1 1 0 1 \# x 1 1 0 0$\\
+$x q_1 1 1 0 1 \# x 1 1 0 0$\\
+$x x q_3 1 0 1 \# x 1 1 0 0$\\
+$x x 1 q_3 0 1 \# x 1 1 0 0$\\
+$x x 1 0 q_3 1 \# x 1 1 0 0$\\
+$x x 1 0 1 q_3 \# x 1 1 0 0$\\
+$x x 1 0 1 \# q_5 x 1 1 0 0$\\
+$x x 1 0 1 \# x q_5 1 1 0 0$\\
+$x x 1 0 1 \# q_6 x x 1 0 0$\\
+$x x 1 0 1 q_6 \# x x 1 0 0$\\
+$x x 1 0 q_7 1 \# x x 1 0 0$\\
+$x x 1 q_7 0 1 \# x x 1 0 0$\\
+$x x q_7 1 0 1 \# x x 1 0 0$\\
+$x q_7 x 1 0 1 \# x x 1 0 0$\\
+$x x q_1 1 0 1 \# x x 1 0 0$\\
+$x x x q_3 0 1 \# x x 1 0 0$\\
+$x x x 0 q_3 1 \# x x 1 0 0$\\
+$x x x 0 1 q_3 \# x x 1 0 0$\\
+$x x x 0 1 \# q_5 x x 1 0 0$\\
+$x x x 0 1 \# x q_5 x 1 0 0$\\
+$x x x 0 1 \# x x q_5 1 0 0$\\
+$x x x 0 1 \# x q_6 x x 0 0$\\
+$x x x 0 1 \# q_6 x x x 0 0$\\
+$x x x 0 1 q_6 \# x x x 0 0$\\
+$x x x 0 q_7 1 \# x x x 0 0$\\
+$x x x q_7 0 1 \# x x x 0 0$\\
+$x x q_7 x 0 1 \# x x x 0 0$\\
+$x x x q_1 0 1 \# x x x 0 0$\\
+$x x x x q_2 1 \# x x x 0 0$\\
+$x x x x 1 q_2 \# x x x 0 0$\\
+$x x x x 1 \# q_4 x x x 0 0$\\
+$x x x x 1 \# x q_4 x x 0 0$\\
+$x x x x 1 \# x x q_4 x 0 0$\\
+$x x x x 1 \# x x q_6 x x 0$\\
+$x x x x 1 \# x q_6 x x x 0$\\
+$x x x x 1 \# q_6 x x x x 0$\\
+$x x x x 1 q_6 \# x x x x 0$\\
+$x x x x q_7 1 \# x x x x 0$\\
+$x x x q_7 x 1 \# x x x x 0$\\
+$x x x x q_1 1 \# x x x x 0$\\
+$x x x x x q_3 \# x x x x 0$\\
+$x x x x x \# q_5 x x x x 0$\\
+$x x x x x \# x q_5 x x x 0$\\
+$x x x x x \# x x q_5 x x 0$\\
+$x x x x x \# x x x q_5 x 0$\\
+$x x x x x \# x x x x q_5 0$\\
+$x x x x x \# x x x x q_{reject} 0$\\ \\
+
+\noindent3.8b)\\
+1. Read the tape for a '1' and mark it.  If there are no 1's, go to step 5.  Otherwise, the head is at the start of the tape. \\
+2. Read the tape for a '0' and mark it.  If there are no 0's, reject. \\
+3. Read the tape for a '0' again and mark it.  If there are no 0's, reject. \\
+4. Loop back to the front of the tape and repeat stage 1. \\
+5. Loop back to the front of the tape and read it for a '0'.  If there are not any, accept.  Otherwise, reject. \\ \\
+
+\noindent 3.8c)\\
+1. Read the tape for a '1' and mark it.  If there are no 1's, go to step 5.  Otherwise, the head is at the start of the tape. \\
+2. Read the tape for a '0' and mark it.  If there are no 0's, accept.  Otherwise, reject. \\
+3. Read the tape for a '0' and mark it.  If there are no 0's, accept.  Otherwise, reject. \\
+4. Loop back to the front of the tape and repeat stage 1. \\
+5. Loop back to the front of the tape and read it for a '0'.  If there are not any, reject.  Otherwise, accept. \\ \\
+
+
+\end{document}

@@ -1,0 +1,20 @@
+Foundations of Computer Science
+DangNhi Ngoc Ngo
+01553277
+DangNhi_Ngo@student.uml.edu
+Programming Assignment 1
+
+I used Python programming language to write this program assignment.
+It is a challenge for me to write it in this programming language, especially writing the dfa file
+and input file with valid and invalid input strings.
+I have faced with some errors when debugging the program, for example determining which version of
+python I should use (version 2 or 3) and Python normally displays the line of causing errors but not
+specific error. 
+
+The input string is read from stdin, and the assignment works with these following commands:
+    ./dfa -d m1.dfa < m1.in
+    ./dfa -d m1.dfa < m1.in > m1.out
+    cat m1.in | ./dfa -d m1.dfa
+
+Also, I tried to work on extra credit for supporting json definition for machine, reading machine
+defined in json and output json for machine definition in verbose mode

@@ -1,0 +1,5 @@
+states: q1 q2
+alphabet: 0 1
+startstate: q1
+finalstate: q2
+transition: q1 1 q2

@@ -1,0 +1,19 @@
+Please enter tape input: 
+11100 --> ACCEPTED
+
+Please enter tape input (CTRL+C to quit): 
+00111 --> ACCEPTED
+
+Please enter tape input (CTRL+C to quit): 
+10101 --> ACCEPTED
+
+Please enter tape input (CTRL+C to quit): 
+01010 --> NOT ACCEPTED
+
+Please enter tape input (CTRL+C to quit): 
+00011 --> NOT ACCEPTED
+
+Please enter tape input (CTRL+C to quit): 
+00000 --> NOT ACCEPTED
+
+Please enter tape input (CTRL+C to quit): 

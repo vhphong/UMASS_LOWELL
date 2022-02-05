@@ -1,0 +1,18 @@
+Hello everyone,
+My name is Venkatesh. I’ll be your grader for Comp.3040 Foundations of Computer Science for this semester.
+Here are the submit codes.
+
+For homeworks:
+   submit vbingi hw[homework_number] your_files
+   
+   for example home work 3 code would be
+    submit vbingi hw3 ans.pdf
+
+For programming assignment:
+Submit vbingi program your_files
+Ex:
+submit vbingi program code.zip
+if have any questions, please don’t hesitate to email me.
+Note: you need to have a cs account to submit your assignments.
+Thanks,
+Venkatesh Bingi.

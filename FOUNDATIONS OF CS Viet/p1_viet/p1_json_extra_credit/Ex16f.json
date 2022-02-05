@@ -1,0 +1,26 @@
+{
+  "description":"Exercise 1.6.f DFA accepts strings that contain the substring 110.",
+  "states": ["q1","q2","q3","q4"],
+  "alphabet": ["0","1"],
+  "transitions": {
+    "q1": {
+			"0": "q1",
+      "1": "q2"
+    },
+    "q2": {
+      "0": "q1",
+      "1": "q3"
+    },
+    "q3": {
+      "1": "q2",
+      "0": "q4"
+    },
+    "q4": {
+      "0": "q4",
+      "1": "q4"
+    }
+  },
+  "start": "q1",
+  "accept": ["q1", "q2", "q3", "q4"],
+  "inputs": ["0101010", "00000000", "011100", "1111111"]
+} 

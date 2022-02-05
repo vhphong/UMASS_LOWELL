@@ -1,0 +1,27 @@
+['q1', '0', 'q1']
+['q1', '1', 'q2']
+['q2', '0', 'q1']
+['q2', '1', 'q3']
+['q3', '1', 'q1']
+['q3', '0', 'q4']
+['q4', '1', 'q4']
+['q4', '0', 'q4']
+Please enter input strings: 
+10010 --> ACCEPTED
+
+Please enter input strings (CTRL+C to quit): 
+10101 --> ACCEPTED
+
+Please enter input strings (CTRL+C to quit): 
+11111 --> ACCEPTED
+
+Please enter input strings (CTRL+C to quit): 
+01101 --> NOT ACCEPTED
+
+Please enter input strings (CTRL+C to quit): 
+00110 --> NOT ACCEPTED
+
+Please enter input strings (CTRL+C to quit): 
+11000 --> NOT ACCEPTED
+
+Please enter input strings (CTRL+C to quit): 
