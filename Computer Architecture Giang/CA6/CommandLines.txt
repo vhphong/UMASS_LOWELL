@@ -1,0 +1,15 @@
+Command lines to build linker executable:
+gcc -ansi -Wall linker.c -o linker
+./masm_mrd -o < main.asm > main.obj
+./masm_mrd -o < xbsywt.asm > xbsywt.obj
+./masm_mrd -o < rbsywt.asm > rbsywt.obj
+./masm_mrd -o < readint.asm > readint.obj
+./masm_mrd -o < writeint.asm > writeint.obj
+./masm_mrd -o < addints.asm > addints.obj
+./masm_mrd -o < writestr.asm > writestr.obj
+./linker main.obj xbsywt.obj rbsywt.obj readint.obj writeint.obj addints.obj writestr.obj > main.exe
+./mic1 prom_mrd.dat main.exe 0 2048
+
+Additional command lines:
+./linker -o main.obj xbsywt.obj rbsywt.obj readint.obj writeint.obj addints.obj writestr.obj
+cat main.exe

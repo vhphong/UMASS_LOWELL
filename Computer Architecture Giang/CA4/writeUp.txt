@@ -1,0 +1,21 @@
+COMP3050-202 Computer Architecture
+Name: Dangnhi Ngoc Ngo
+Email: Nhi_Ngo@student.uml.edu
+
+ASSIGNMENT 4
+
+Degree of Success: 100%
+
+I have utilized the support from provided files in "bill" directory to do this assignment. 
+I have used the file named "mic1symasm_nand_rshift.c" to create my masm C source file "hw4symasm.c"
+with adding more three definitions of MULT, DIV, RSHIFT and three different cases for masm assembler.
+I did the same with the flex source file "hw4symasm.ll" based on the provided code from mic1symasm.ll
+and added more definitions for MULT, DIV and RSHIFT.
+
+The microcode source file "hw4symasm.mc" needed to work harder with adding the microcode for MULT, 
+RSHIFT and DIV; however, the majority are written in the provided files "microcode_nand_rshift.c" and
+"mult_ucode.txt" in "bill" directory.
+
+Also, I have created my own Makefile to compile all required files to run the program.
+I have used 3 files a4_div_test.asm, a4_mult_test.asm and a4_rshift_test.asm to test the program.
+

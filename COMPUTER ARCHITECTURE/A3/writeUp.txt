@@ -1,0 +1,10 @@
+COMP3050-201 Computer Architecture
+Name: Phong Vo
+Email: Phong_Vo@student.uml.edu
+
+ASSIGNMENT 3
+
+Degree of Success: 100%
+
+I made two arrays for arguments of Fibonacci and Fibonacci numbers. Those arguments are pushed into stack and then decremented. The recursion function recursively computes the Fibinacci values then stores the result into the accumulator (ac).
+I have difficult experience with this assignment, with the mic1 code and instructions set.

@@ -1,0 +1,11 @@
+Univeristy of Massachusetts in Lowell
+COMP.3050 Computer Architecture
+Name: Phong Vo
+Email: Phong_Vo@student.uml.edu
+
+ASSIGNMENT 7 - WriteUp
+Degree of Success: 100%
+
+My assignment created based on the file named "COMP3050_Assignment7_starter.txt" which was provided by Professor.
+The Makefile was created to compile the program.
+In the "pipe.c" file, the function named sprintf() is called to yield the result.

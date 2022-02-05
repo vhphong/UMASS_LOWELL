@@ -1,0 +1,70 @@
+I. Command lines:
+./mcc hw4symasm.mc > prom_new.dat //translate microcode source file into a 32 bit microcode .dat
+make                              // build masm program  
+./hw4symasm_all <a4_div_test.asm> div.obj        //create object file of the a4_div_test file
+./hw4symasm_all <a4_mult_test.asm> mult.obj	 //create object file of the a4_mult_test file
+./hw4symasm_all <a4_rshift_test.asm> rshift.obj //create object file of the a4_rshift_test file
+./mic1 prom_new.dat div.obj			//mic1 execution
+./mic1 prom_new.dat mult.obj			//mic1 execution
+./mic1 prom_new.dat rshift.obj			//mic1 execution
+	
+II. The output for each test file:
+1/ ./mic1 prom_new.dat div.obj
+Read in 158 micro instructions
+Read in 52 machine instructions
+
+ProgramCounter : 0000000000000110  base 10:       6
+Accumulator    : 0000000000000000  base 10:       0
+InstructionReg : 1111111111000000  base 10:   65472
+TempInstr      : 1000000000000000  base 10:   32768
+StackPointer   : 0000111101111110  base 10:    3966
+ARegister      : 1111111100101111  base 10:   65327
+BRegister      : 1110101111100000  base 10:   60384
+CRegister      : 0000000000000000  base 10:       0
+DRegister      : 1111111111111111  base 10:   65535
+ERegister      : 0001001101001111  base 10:    4943
+FRegister      : 0000111101111100  base 10:    3964
+
+Total cycles   : 101
+
+Type decimal address to view memory,  q  to quit or  c  to continue:
+
+2/ ./mic1 prom_new.dat mult.obj
+Read in 158 micro instructions
+Read in 36 machine instructions
+
+ProgramCounter : 0000000000000100  base 10:       4
+Accumulator    : 0000000000000000  base 10:       0
+InstructionReg : 1111111111000000  base 10:   65472
+TempInstr      : 1000000000000000  base 10:   32768
+StackPointer   : 0000111101111111  base 10:    3967
+ARegister      : 0000100111101110  base 10:    2542
+BRegister      : 1111111111111111  base 10:   65535
+CRegister      : 0000000000000000  base 10:       0
+DRegister      : 0000000000000000  base 10:       0
+ERegister      : 0000000000000000  base 10:       0
+FRegister      : 0000000000000000  base 10:       0
+
+Total cycles   : 64
+
+Type decimal address to view memory,  q  to quit or  c  to continue:
+
+3/ ./mic1 prom_new.dat rshift.obj
+Read in 158 micro instructions
+Read in 25 machine instructions
+
+ProgramCounter : 0000000000000011  base 10:       3
+Accumulator    : 0000110101111011  base 10:    3451
+InstructionReg : 1111111111000000  base 10:   65472
+TempInstr      : 1000000000000000  base 10:   32768
+StackPointer   : 0000111110000000  base 10:    3968
+ARegister      : 0000000000001111  base 10:      15
+BRegister      : 1111111111111111  base 10:   65535
+CRegister      : 0000000000000000  base 10:       0
+DRegister      : 0000000000000000  base 10:       0
+ERegister      : 0000000000000000  base 10:       0
+FRegister      : 0000000000000000  base 10:       0
+
+Total cycles   : 40
+
+Type decimal address to view memory,  q  to quit or  c  to continue: 

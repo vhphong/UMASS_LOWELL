@@ -1,0 +1,9 @@
+Availability of prom file and assembler for RSHIFT, MUL, DIV
+
+There is now a working version of the microcode that implements the 
+3 new operations required for Assignment 4 (RSHIFT, MUL, DIV)
+
+You can find these objects at:
+
+~bill/cs305/masm_mrd       (the assembler executable for mercury)
+~bill/cs305/prom_mrd.dat   (the microcode needed for RSHIFT, MUL, DIV)

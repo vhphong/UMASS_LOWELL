@@ -1,0 +1,16 @@
+COMP3050-202 Computer Architecture
+Name: Dangnhi Ngoc Ngo
+Email: Nhi_Ngo@student.uml.edu
+
+ASSIGNMENT 3
+
+Degree of Success: 100%
+
+I have created 2 arrays to store arguments to Fib and Fibonacci numbers of the argument 
+values. The argument is pushed into the stack, and then decremented. For example, 
+(arg-1) is decremented one to be (arg-2). The recursion calculates the Fib values and 
+the values are stored in the accumulator (ac) to return
+
+I have experienced the difficulty during doing this assignment. That was I did not know 
+how to run the .asm file and where to download necessary tools. Eventually, based on the 
+guides from Prof., the problem was solved.

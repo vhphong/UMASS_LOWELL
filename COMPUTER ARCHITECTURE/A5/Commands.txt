@@ -1,0 +1,13 @@
+Univeristy of Massachusetts in Lowell
+Computer Architecture
+Name: Phong Vo
+Email: Phong_Vo@student.uml.edu
+
+ASSIGNMENT 5 - Commands
+
+
+Command lines to run the program:
+./masm_mrd <hw5.asm> hw5.obj
+./mic1 prom_mrd.dat hw5.obj
+
+Note: masm_mrd, mic1 and prom_mrd.dat are coppied from ~bill/cs305

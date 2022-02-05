@@ -1,0 +1,16 @@
+COMP3050-202 Computer Architecture
+Name: Dangnhi Ngoc Ngo
+Email: Nhi_Ngo@student.uml.edu
+
+ASSIGNMENT 5
+
+Degree of Success: 90%
+
+I have coppied 3 supported files from ~bill/cs305: masm_mrd, prom_mrd.dat, mic1 to run the program.
+Simultaneously, I have used the IO_scan_two_numbers_asm.txt for reference.
+Although I got the perfect result for in both cases of adding two integers and overflow, 
+my program gets the infinite loop after printing out the correct results.
+I have used the ASCII charts with the numoff(48) to convert the input numbers, sum of two numbers 
+and print out the result. Besides, in order to get the accurate integer the user input, I keep
+multiplying it by 10, and dividing the result by 10 to be able to print out the correct addition
+of two numbers.

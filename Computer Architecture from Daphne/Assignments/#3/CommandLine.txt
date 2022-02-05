@@ -1,0 +1,2 @@
+[dngo@mercury Assignment3]$  ./masm <rfib.asm>rfib.obj
+[dngo@mercury Assignment3]$  ./mic1 prom.dat rfib.obj 0 2048

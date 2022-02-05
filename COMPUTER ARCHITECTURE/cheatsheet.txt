@@ -1,0 +1,113 @@
+op1:                       max: LODL 1; op2
+op2:                            SUBL 2; op2-op1
+opres: 0                        JNEG op1big:
+    .LOC 50                     LODL 1
+main: LODD op1:                 RETN  ; op2
+      PUSH              op1big: LODL 2
+      LODD op2:                 RETN  ; op1
+      PUSH
+      CALL max:
+      INSP 2
+      STOD opres:
+      HALT
+
+2/ main: LODD index
+DESP 2;sp:=sp-2;
+LOCO 0; ac:=0
+STOL 0; m[sp+0]:=ac (sum:=0)
+STOL 1; m[sp+1]:=ac (i:=0)
+5: SUBL 2; ac:=ac-m[sp+3](i-N)
+JZER 15; jump if i==N
+JPOS 15; jump if (i>N)
+LODL 0; ac:=m[sp+0] (sum)
+ADDL 1; ac:=ac+m[sp+1] (sum+i)
+STOL 0; m[sp+0]:=ac (sum=sum+i)
+LOCO 1; ac:=1
+ADDL 1; ac:=ac+m[sp+1](1+i)
+STOL 1; m[sp+1]:=ac (i=1+i)
+JUMP 5; 
+15: LODL 0; ac:=m[sp+0] (sum)
+INSI 2; sp:=sp+2 move stack pointer down 2 places
+STOL 1; m[sp+1]:=sum(return sum)
+RETN  ; return to caller
+3/ STOD result: ; store ac to result location
+4/ adder: LODL 1; GET 1st arg from stack into ac (data count)
+          STOD mycnt; store count at location mycnt:
+          LODL 2; get 2nd arg from stack into ac (data addr)
+          PSHI ; push indirect 1st data to stack
+          ADDD myc1:; add 1 (value at myc1:) to addr in ac
+          STOD myptr:; store new addr to location myptr:
+5/ MySub: LODL 2; ac:=topNum
+          SUBL 3; ac:=ac-bottomNum
+          PUSH
+          JNEG neg:
+          LODL 2; ac:=result
+          POPI  ; m[ac]=m[sp]
+          sp is at local var (value of subtraction), 
+          gan gia tri subtraction into result
+          LOCO 0; ac:=0
+          RETN
+   neg:   LODL 2
+          POPI
+          LODD cn1:; ac:=m(x); x: address of cn1 and value=-1
+          RETN
+   cn1:   -1
+6/ Recursion
+LOOP: LODD PasCnt; num of fibs to to in PasCnt
+      JZER DONE: ; no more passes, go to DONE
+      SUBD c1:
+      STOD PasCnt:;--pass remaining
+P1:   LODD daddr:; load a pointer to fib arg
+      PSHI       ; push arg for fib on stack
+      ADDD c1:
+      STOD daddr ; inc, store pointer for next d[n]
+      CALL FIB:  ; call fib (arg on stack)
+      INSP 1     ; clear stack on fib return
+P2:   PUSH       ; put return AC(fib(n)) on stack
+      LODD faddr:; load a pointer to result f[n]
+      POPI       ; pop result off stack into f[n]
+      ADDD c1:
+      STOD faddr:;inc, store pointer for next f[n]
+      JUMP LOOP: ; go to top for next pass
+FIB:  LODL 1     ; fib func loads arg from stack
+      JZER FIBZER: ; if fib(0) go to FIBZER
+      SUBD c1:   ; dec arg value in AC (arg-1)
+  ;;;;Iterative;;;
+      STOD LpCnt:; num of iterations in LpCnt
+      LODD c0:   ; load a 0 into AC
+      STOD fm2:  ; store 0 in fib(n-2)
+      LODD c1:   ; load a 1 into AC
+      STOD fm1:  ; store 1 in fib(n-1)
+ITER: LODD LpCnt:; LpCnt arg-1 iterations needed
+      JZER RTN:  ; when LpCnt==0 go to RTN:
+      SUBD c1:   ; dec arg value in AC (LpCnt-1)
+      STOD LpCnt:; store LpCnt for next iteration
+      LODD fm2:  ; arg must be >= 2, fm2 initially fin(0)
+      ADDD fm1:  ; fm1 initially fib(1), AC=fm2+fm1
+      STOD tmp:  ; store AC to tmp:
+      LODD fm1:  ; now load AC with fib(n-1)
+      STOD fm2:  ; replace old fib(n-2) with AC
+      LODD tmp:  ; load AC with tmp: becomes fib(n-1)
+      STOD fm1:  ; store AC as next fib(n-1) to fm1
+      JUMP ITER:
+RTN:  LODD tmp:  ; load AC with tmp: final result
+      RETN
+;;;;Recursion;;;
+      PUSH       ; pushing (arg-1)
+      CALL FIB:  ; fib(arg-1)
+      PUSH
+      LODL 1     ; load value(arg-1) to AC
+      SUBD c1:   ; arg-1 is decremented
+      PUSH       ; push(arg-2)
+      CALL FIB:  ; call fib(arg-2)
+      INSP 1     ; remove (arg-2) from stack
+      ADDL 0     ; ac=f1+fm2
+      INSP 2     ; remove f1 & (arg-1) from stack
+      RETN
+;;;;
+FIBZER: LODD CO:
+        RETN     ; ac=0 for fib(0)
+FIBONE: LODD c1:
+        RETN     ; ac=1 for fib(1)
+
+

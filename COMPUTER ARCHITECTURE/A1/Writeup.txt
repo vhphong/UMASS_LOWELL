@@ -1,0 +1,17 @@
+COMP3050-201 Computer Architecture
+Name: Phong Vo
+Email: Phong_Vo@student.uml.edu
+Spring 2019
+
+ASSIGNMENT 1
+
+Degree of Success: 100%
+
+I have two arrays, mantissa and exponent, created in my assignment. 
+  Mantissa array with size of 23 stores the bit values of the mantissa starts at index 12 ends at index 39.
+  Exponent array with size of 8 stores the bit values of exponent starts at index 2 ends at index 10.
+  Sign bit is located at index 0. It is 0 if positive and 1 if negative.
+I use 0x%x to print out the floating-point in hex value.
+I use %.6f to print out the floating-point with 6 decimals.
+
+I spent 6 hours to finish this assignement with no hassle.

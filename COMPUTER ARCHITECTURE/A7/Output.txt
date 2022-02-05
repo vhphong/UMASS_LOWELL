@@ -1,0 +1,36 @@
+[pvo@mercury1 hw7]$ make
+gcc -g -Wall -pedantic -o pipe pipe.c
+[pvo@mercury1 hw7]$ gcc -g -Wall -pedantic -o pipe pipe.c
+[pvo@mercury1 hw7]$ ./pipe
+
+This is the Parent process report:
+
+PARENT PROG:  Process ID is:            5949
+PARENT PROC:  Process parent ID is:     4420
+PARENT PROC:  Real UID is:              34721
+PARENT PROC:  Real GID is:              2020
+PARENT PROC:  Effective UID is:         34721
+PARENT PROC:  Effective GID is:         2020
+PARENT PROC:  Process priority is:      0
+
+PARENT PROC: will now create child, write pipe,
+ and do a normal termination
+
+PARENT PROC: created child with 5950 PID.
+
+This is the Child process report:
+
+CHILD PROC:  Process ID is:             5950
+CHILD PROC:  Process parent ID is:      1
+CHILD PROC:  Real UID is:               34721
+CHILD PROC:  Real GID is:               2020
+CHILD PROC:  Effective UID is:          34721
+CHILD PROC:  Effective GID is:          2020
+CHILD PROC:  Process priority is:       0
+
+CHILD PROG: about to read pipe and report parent message:
+CHILD PROC: parent's msg is:
+        This is the pipe message from the parent with PID 5949
+
+CHILD PROC: Process parent ID now is: 1
+CHILD PROC: ### Goodbye ###

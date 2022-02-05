@@ -1,0 +1,13 @@
+COMP3050-202 Computer Architecture
+Name: Dangnhi Ngoc Ngo
+Email: Nhi_Ngo@student.uml.edu
+
+ASSIGNMENT 1
+
+Degree of Success: 100%
+
+I have created two arrays to hold the mantissa and exponent. Exponent part is in the bits from the index 2 to 10, total 8 bits. Mantissa part is in the bits from the index 12 to 39, total 23 bits. The sign is at the index 0, displayed by 0 if positive and 1 if negative. The results for the floating-point number will be printed out in hex numbers and binary numbers for mantissa, exponent and sign parts.
+
+Besides, I have used %f for printing out the floating-point number the user enters.
+
+Currently, I have not experienced any problems with this assignment so far.

@@ -1,0 +1,13 @@
+Univeristy of Massachusetts in Lowell
+Computer Architecture
+Name: Phong Vo
+Email: Phong_Vo@student.uml.edu
+
+ASSIGNMENT 5 - WriteUp
+Degree of Success: 100%
+
+I downloaded three supported files from ~bill directory: masm_mrd, prom_mrd.dat, mic1. 
+The downloading commands were the similar ways to the ones I did in Assignment 4.
+My program is written base on the file COMP3050_Assignment5_IO_scan_two_numbers.txt for referencing.
+I got five accurate results as running the code. The program yielded the results at no errors.
+I use the ASCII table with numoff(48) for converting two numerical inputs before adding up.

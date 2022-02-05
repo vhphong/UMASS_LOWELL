@@ -1,0 +1,13 @@
+COMP3050-201 Computer Architecture
+Name: Phong Vo
+Email: Phong_Vo@student.uml.edu
+
+Assignment 2
+
+I found this assignment is really helpful in helping me to computerize of adding two floating point numbers as it mentally is. In mental way, two numbers must be transformed into same exponent prior to adding mantissas.
+
+First step, I check if the number is normalized to slam the hiddent bit. Then, I compare two exponents to determine the the bigger and smaller mantissa (named Smaller and Greater).
+Second step, I shift the mantissa of the Smaller to the right by number of bits which equals to the difference of two exponents.
+Third step, I add two mantissas. I also calculate the hidden bit carried out to determine to add it to the common exponent or not.
+
+The most interesting thing of this lecture and assignment is the hidden bit which can be appeared in the mantissa(s).

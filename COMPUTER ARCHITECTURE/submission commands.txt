@@ -1,0 +1,19 @@
+pvo@cs3:~/COMP_ARCHITECTURE$ submit lleung hw1 Vo_Phong_01790283_hw1
+
+pvo@cs3:~/COMP_ARCHITECTURE$ submit lleung hw2 Vo_Phong_01790283_hw2
+
+pvo@cs3:~/COMP_ARCHITECTURE$ submit lleung hw3 Vo_Phong_01790283_hw3
+
+pvo@cs3:~/COMP_ARCHITECTURE$ submit lleung hw4 Vo_Phong_01790283_hw4
+
+pvo@cs3:~/COMP_ARCHITECTURE$ submit lleung hw5 Vo_Phong_01790283_hw5
+
+pvo@cs3:~/COMP_ARCHITECTURE$ submit lleung hw6 Vo_Phong_01790283_hw6
+
+pvo@cs3:~/COMP_ARCHITECTURE$ submit lleung hw7 Vo_Phong_01790283_hw7
+
+pvo@cs3:~/COMP_ARCHITECTURE$ submit lleung hw8 Vo_Phong_01790283_hw8
+
+
+
+Use WinSCP to compress the folder prior to submitting

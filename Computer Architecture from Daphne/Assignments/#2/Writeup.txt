@@ -1,0 +1,13 @@
+COMP3050-202 Computer Architecture
+Name: Dangnhi Ngoc Ngo
+Email: Nhi_Ngo@student.uml.edu
+
+ASSIGNMENT 2
+
+Degree of Success: 100%
+
+I have followed the instructions from Professor to solve this assignment. I found that it is very helpful and makes me understand clearly how to add two floating point numbers step by step. 
+
+At first, I have checked whether the number is normalized to slam the hidden bit, and then compare exponents of 2 numbers to find the bigger exponent and smaller mantissa. I have divided into 3 different case: the exponent of number 1 is bigger than number 2, two equal exponents and the exponent of number 1 is smaller. I shifted the mantissa to the right with the number of bits based on the difference between two exponents; after that, compute the addition of two mantissas. Simultaneously, I had to calculate the hidden bit carried out to determine to add it to the common exponent or not. 
+
+To this assignment, I have a little confusion about the result printed out: emulated floating result and hardware floating result. Then, I have figured out that the hardware result should be the way we add two floating numbers as normal, and emulated result is taken from the result we computed above.

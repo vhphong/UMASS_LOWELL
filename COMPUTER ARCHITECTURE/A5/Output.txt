@@ -1,0 +1,163 @@
+Univeristy of Massachusetts in Lowell
+Computer Architecture
+Name: Phong Vo
+Email: Phong_Vo@student.uml.edu
+
+ASSIGNMENT 5 - Output
+
+Commands were used:
+cp ~bill/cs305/masm_mrd .		// download masm_mrd from ~bill/cs305
+cp ~bill/cs305/prom_mrd.dat . 	// download prom_mrd from ~bill/cs305
+./masm_mrd <hw5.asm> hw5.obj	// compile hw5.asm into hw5.obj
+./mic1 prom_mrd.dat hw5.obj	
+
+
+Degree of Success: 100%
+
+1/
+./mic1 prom_mrd.dat hw5.obj
+
+Read in 152 micro instructions
+Read in 193 machine instructions
+Please enter an integer between 1 and 32767.
+235
+Please enter an integer between 1 and 32767.
+0
+The sum of these integers is:
+235
+
+ProgramCounter : 0000000000011000  base 10:      24
+Accumulator    : 0000000000000000  base 10:       0
+InstructionReg : 1111111111000000  base 10:   65472
+TempInstr      : 1000000000000000  base 10:   32768
+StackPointer   : 0000111110000000  base 10:    3968
+ARegister      : 1111111111110101  base 10:   65525
+BRegister      : 1111111111110110  base 10:   65526
+CRegister      : 0000000000000000  base 10:       0
+DRegister      : 0000000000000010  base 10:       2
+ERegister      : 0000000000000000  base 10:       0
+FRegister      : 0000000000000000  base 10:       0
+
+Total cycles   : 1285198
+
+Type decimal address to view memory,  q  to quit or  c  to continue: q
+MIC-1 emulator finishing, goodbye
+
+
+2/
+./mic1 prom_mrd.dat hw5.obj
+
+Read in 152 micro instructions
+Read in 193 machine instructions
+Please enter an integer between 1 and 32767.
+16341
+Please enter an integer between 1 and 32767.
+957
+The sum of these integers is:
+17298
+
+ProgramCounter : 0000000000011000  base 10:      24
+Accumulator    : 0000000000000000  base 10:       0
+InstructionReg : 1111111111000000  base 10:   65472
+TempInstr      : 1000000000000000  base 10:   32768
+StackPointer   : 0000111110000000  base 10:    3968
+ARegister      : 1111111111110101  base 10:   65525
+BRegister      : 1111111111110110  base 10:   65526
+CRegister      : 0000000000000000  base 10:       0
+DRegister      : 0000000000000001  base 10:       1
+ERegister      : 0000000000000000  base 10:       0
+FRegister      : 0000000000000000  base 10:       0
+
+Total cycles   : 3551982
+
+Type decimal address to view memory,  q  to quit or  c  to continue: q
+MIC-1 emulator finishing, goodbye
+
+
+3/
+./mic1 prom_mrd.dat hw5.obj
+
+Read in 152 micro instructions
+Read in 193 machine instructions
+Please enter an integer between 1 and 32767.
+23786
+Please enter an integer between 1 and 32767.
+12400
+Overflow no sum possible
+
+ProgramCounter : 0000000000011100  base 10:      28
+Accumulator    : 1111111111111111  base 10:   65535
+InstructionReg : 1111111111000000  base 10:   65472
+TempInstr      : 1000000000000000  base 10:   32768
+StackPointer   : 0000111110000000  base 10:    3968
+ARegister      : 1111111111110101  base 10:   65525
+BRegister      : 1111111111111111  base 10:   65535
+CRegister      : 0000000000000000  base 10:       0
+DRegister      : 0011000001110000  base 10:   12400
+ERegister      : 0000000000000000  base 10:       0
+FRegister      : 0000000000000000  base 10:       0
+
+Total cycles   : 4130044
+
+Type decimal address to view memory,  q  to quit or  c  to continue: q
+MIC-1 emulator finishing, goodbye
+
+
+4/
+./mic1 prom_mrd.dat hw5.obj
+
+Read in 152 micro instructions
+Read in 193 machine instructions
+Please enter an integer between 1 and 32767.
+12
+Please enter an integer between 1 and 32767.
+23
+The sum of these integers is:
+35
+
+ProgramCounter : 0000000000011000  base 10:      24
+Accumulator    : 0000000000000000  base 10:       0
+InstructionReg : 1111111111000000  base 10:   65472
+TempInstr      : 1000000000000000  base 10:   32768
+StackPointer   : 0000111110000000  base 10:    3968
+ARegister      : 1111111111110101  base 10:   65525
+BRegister      : 1111111111110110  base 10:   65526
+CRegister      : 0000000000000000  base 10:       0
+DRegister      : 0000000000000011  base 10:       3
+ERegister      : 0000000000000000  base 10:       0
+FRegister      : 0000000000000000  base 10:       0
+
+Total cycles   : 2574589
+
+Type decimal address to view memory,  q  to quit or  c  to continue: q
+MIC-1 emulator finishing, goodbye
+
+
+5/
+./mic1 prom_mrd.dat hw5.obj
+
+Read in 152 micro instructions
+Read in 193 machine instructions
+Please enter an integer between 1 and 32767.
+1
+Please enter an integer between 1 and 32767.
+1343
+The sum of these integers is:
+1344
+
+ProgramCounter : 0000000000011000  base 10:      24
+Accumulator    : 0000000000000000  base 10:       0
+InstructionReg : 1111111111000000  base 10:   65472
+TempInstr      : 1000000000000000  base 10:   32768
+StackPointer   : 0000111110000000  base 10:    3968
+ARegister      : 1111111111110101  base 10:   65525
+BRegister      : 1111111111110110  base 10:   65526
+CRegister      : 0000000000000000  base 10:       0
+DRegister      : 0000000000000001  base 10:       1
+ERegister      : 0000000000000000  base 10:       0
+FRegister      : 0000000000000000  base 10:       0
+
+Total cycles   : 1642866
+
+Type decimal address to view memory,  q  to quit or  c  to continue: q
+MIC-1 emulator finishing, goodbye

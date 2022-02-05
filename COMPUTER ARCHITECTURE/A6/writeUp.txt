@@ -1,0 +1,16 @@
+Univeristy of Massachusetts in Lowell
+Computer Architecture
+Name: Phong Vo
+Email: Phong_Vo@student.uml.edu
+
+ASSIGNMENT 6 - WriteUp
+Degree of Success: 100%
+
+I edited file "linker.c" from the provided file "COMP3050_Assignment6_linker_partial.c"
+I used individually 7 .asm files from Assignment 5 such as main.asm, xbsywt.asm, rbsywt.asm, readint.asm, 
+writeint.asm, addints.asm, writestr.asm.
+I downloaded files masm_mrd, mic1 and prom_mrd.dat from path ~bill/cs305.
+I built and compiled the linker program successfully.
+All of commands that I used in this assignment are listed in "CommandLines.txt" attached in this submission.
+Object files which were built with -o option by using masm_mrd assembler.
+Finally, I used mic1 to execute emulator to make the executable file.
