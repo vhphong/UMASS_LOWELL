@@ -1,0 +1,43 @@
+#  Sierpinski's Triangle
+
+link graphics
+
+$define Width  400
+$define Height 400
+
+$define X1 0			# lower-left vertex
+$define Y1 Height
+
+$define X2 (Width / 2)		# top vertex
+$define Y2 0
+
+$define X3 Width		# lower-right vertex
+$define Y3 Height
+
+procedure main()
+   local x, y
+
+   WOpen("size=" || Width || "," || Height) | stop("*** cannot open window")
+
+   x := Width / 2		# current point
+   y := Height / 2
+
+   until WQuit() do {		# loop until interrupted
+      case ?3 of {		# pick corner randomly
+         1:  {
+            x := (x + X1) / 2	# move halfway to corner
+            y := (y + Y1) / 2
+            }
+         2:  {
+            x := (x + X2) / 2	# move halfway to corner
+            y := (y + Y2) / 2
+            }
+         3:  {
+            x := (x + X3) / 2	# move halfway to corner
+            y := (y + Y3) / 2
+            }
+         }
+      DrawPoint(x, y)		# mark new location
+      }
+
+end

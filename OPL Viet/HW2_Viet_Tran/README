@@ -1,0 +1,14 @@
+Name : Viet Tran Quoc Hoang
+SID : 01607460
+
+Commands: 
+make all
+make test --> will pipe text file to executable
+make test_scanner --> run test cases for scanner
+make clean
+I implement some elementary test units for the scanner 
+class. I tried to write some test cases for parser but
+I was not quite sure what the goal is.
+
+I think I completed  all 4 objective set out by the professor
+Removed debugging "predict" cout statement.

@@ -1,0 +1,7 @@
+read n
+cp := +
+do check n > 0
+    found := 2
+    if a < 2
+        a := 4
+od

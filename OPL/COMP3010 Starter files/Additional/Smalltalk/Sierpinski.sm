@@ -1,0 +1,19 @@
+Number>>sierpinski
+	"280 sierpinski"
+	| form pen |
+	form := Form extent: 300 @ 300 depth: Display depth.
+	form fillColor: Color white.
+	pen := Pen newOnForm: form.
+	pen roundNib: 1;
+	    color: Color black.
+		
+	pen place: 20 @ 290.
+	self sierp: pen.
+	form asMorph openInWorld
+
+Number>>sierp: pen
+   self < 2
+	ifFalse: [3
+		  timesRepeat: [self / 2 sierp: pen.
+		     pen go: self;
+		         turn: 120]]

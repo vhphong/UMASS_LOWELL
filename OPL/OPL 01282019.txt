@@ -1,0 +1,6 @@
+gcd function at wiki
+cpp.sh for c++ shell
+
+osboxes
+cat gcd.pr
+prolog

@@ -1,0 +1,19 @@
+Name :Hoang Do
+Student ID: 01521888
+My partner: David Huynh
+Assignment 2
+
+Commands needed: 
+make
+./parse < input.txt
+make clean
+
+I completed  all 4 objectives required by this assignment and removed debugging "predict" cout statement.
+
+In the first part of the assignment, I translate the code provided by Professor from C into C++. The code compiles without errors under g++.
+
+In the second part of the assignment, I extend the caculator language with if and do/check statements in the pdf file. we optimize the code by using switch statement instead of if statement. 
+
+In the third part of the assignment, I implemented exception-based syntax error recovery by initialize 2 classes SyntaxErrorException and Syntax_error to catch any error for every functions.
+
+In the last part of the assignment, I print the syntax tree using cout statments. The indent of few line are incorrect. 
