@@ -1,0 +1,29 @@
+﻿The University of Massachusetts in Lowell
+COMP4200 – Artificial Intelligence
+Authors: Phong Vo (SID #01790283) – Giang Tran (SID #01670778)
+Final Project Checkpoint
+The Ant’s Nest
+---------------------------------------------------------------------------
+AStar.cs
+    Showing the principle of the A* algorithm to be built-in the project.
+
+Cons.cs
+    Constructs the map with programmable coordinates can be used for the path control of the objects such as the ant, bricks, and leaves.
+
+Coordinate.cs
+    Calculates the distance of two any points related to the project. Mainly used for computing the distance that the ant has to travel.
+        
+MapManager.cs
+    Considered as the core class and function of the project. It contains those functions:
+    MapManager(): 	Computes the path of the ant, which consisted of many of cells considered as nodes.
+					Therefore, the path is a stack of nodes, which can create a MoveList for the ant follows.
+                    The nodes (cells) which are used (passed) can be deleted based on stack technique.
+                    Establishes the initial and the final points of the path. Then calculates the optimal way to travel.
+
+Node.cs
+	Function MakeLink(ref Node node) makes a linked list of nodes to create a path.
+	
+Project link:
+	https://drive.google.com/file/d/1y0ypcF9csdT_-dHB0x99KWiNN_CYfq07/view?usp=sharing
+	
+	(~15MB)
