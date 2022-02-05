@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "Restricted Files"
+AuthUserFile /home/faculty/bliu/public_html/csc41200/hwpa/solutions/passwd
+Require user csc41200
+
