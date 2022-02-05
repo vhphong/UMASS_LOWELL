@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="Author" content="Benyuan Liu">
+  <meta name="GENERATOR"
+ content="Mozilla/4.72 [en] (X11; U; Linux 2.2.14-12 i686) [Netscape]">
+  <title>Datacom I: Programming Assignment 1</title>
+</head>
+<body link="#0000ef" alink="#ff0000" bgcolor="#ffffff" text="#000000"
+ vlink="#51188e">
+<center>
+<h2>Programming Assignment 1: Programming with Sockets</h2>
+</center>
+In this assignment you will be asked to implement an HTTP client and
+server
+running a pared down version of HTTP/1.0. You will have to extend the
+client
+and server to make use of some of the application level headers we have
+studied in class. For those of you who already have socket programming
+experience, the basic part of this assignment will be fairly easy. I am
+therefore adding an extra credit component for those students who want
+a more challenging assignment. This project can be completed in either
+C/C++ or Java.
+<br>
+&nbsp;
+<h3>What to Turn In</h3>
+When you hand in your programming assignment, you should include:
+<ul>
+  <li>
+A program listing containing in-line documentation. Uncommented code
+will
+be heavily penalized.</li>
+  <li>
+A separate (typed) document of a page or so describing the overall
+program
+design, a verbal description of ``how it works'', and design tradeoffs
+considered and made. Also describe possible improvements and extensions
+to your program (and sketch how they might be made).</li>
+  <li>
+A separate description of the test cases you ran on your program to
+convince
+yourself (and me) that it is indeed correct, and execution traces
+showing
+these test being run.&nbsp; Also describe any&nbsp; cases for which
+your
+program is known not to work correctly.&nbsp; The test cases&nbsp; you
+should hand are described below.</li>
+</ul>
+<!---------------------
+<ul>
+<li>
+You may not borrow code written by a fellow student in this class. That would be cheating.</li>
+
+<li>
+You must acknowledge the source of any borrowed code. This means providing
+a reference to a book or URL where the code appears.</li>
+
+<li>
+In your design document, you must identify which portions of your code
+were borrowed and which were written by yourself. This means explaining
+any modifications and extension you made to the code you borrowed. You
+should also use comments in your source code to distinguish borrowed code
+from code you wrote yourself.</li>
+
+<li>
+You should only use code that is freely available in the public domain.
+Samples from text books are fine, for example. Proprietary code that belongs
+to your employer is not fine unless your employer has explicitly released
+the code into the public domain.</li>
+</ul>
+------------------------>
+<h3>The HTTP Client</h3>
+Your client should take command line arguments specifying a server name
+or IP address, the port on which to contact the server, the method you
+use, and the path of the requested object on the server. You are going
+to implement
+two methods of HTTP: <tt> GET </tt> and <tt> PUT </tt>.
+<ul>
+  <li> <tt> GET</tt> <br>
+The format of the command line is
+    <blockquote><tt>myclient host port_number GET filename </tt></blockquote>
+    <p>The basic client action should proceed as follows:
+    </p>
+    <ol>
+      <li>
+Connect to the server via a connection-orieted socket.</li>
+      <li>
+Submit a valid HTTP/1.0 GET request for the supplied URL.
+        <p>GET /index.html HTTP/1.0 <br>
+        <br>
+(end with extra CR/LF) <br>
+        </p>
+      </li>
+      <li>Read (from the socket) the server's response and display it
+as program output.</li>
+    </ol>
+Once you have this part of the client working, you should demonstrate
+it with the following
+two test cases:
+    <ol>
+      <li>
+Use it to get a file of your choosing from a "real" web server on the
+internet. For example,
+        <blockquote><tt>myclient www.cnn.com 80 GET index.html </tt></blockquote>
+      </li>
+      <li>
+Use it to get a file from your own server program. For example, your
+server is running on pc1.cs.uml.edu, port number 5678.
+        <blockquote><tt>myclient pc1.cs.uml.edu 5678 GET index.html </tt></blockquote>
+This command would result in an HTTP GET request to pc1.cs.uml.edu for
+index.html on port 5678, and get the file index.html back to the
+client.
+      </li>
+    </ol>
+  </li>
+  <li><tt> PUT </tt>
+    <p>The format of the command line is
+    </p>
+    <blockquote><tt>myclient host port_number PUT filename </tt></blockquote>
+    <p>The basic client action should proceed as follows:
+    </p>
+    <ol>
+      <li>
+Connect to the server via a connection-orieted socket.</li>
+      <li>
+Submit a PUT request for the supplied file:
+        <p>PUT filename <br>
+extra CR/LF.
+        </p>
+        <p>(Once your server program receives such a request, it should
+expect to receive the file and save it to disk.)
+        </p>
+      </li>
+      <li>Send the file to the server.</li>
+      <li>
+Wait for server's reply. </li>
+    </ol>
+Once you have this part of the client working, you should test it with
+your own server: send out a file to your server, the server should save
+the file and sends back a reponse.
+    <ol>
+    </ol>
+  </li>
+</ul>
+<h3>
+The HTTP Server</h3>
+Your server should take command line arguments specifying a port
+number. For example,
+<blockquote><tt>myserver 5678 </tt></blockquote>
+The basic server action should proceed as follows
+<ol>
+  <li>
+Initialize the server.</li>
+  <li>
+Wait for a client connection on the port number specified by command
+line
+argument.</li>
+  <li>
+When a client connection is accepted, read the HTTP request. </li>
+  <li>
+Construct a valid HTTP response including status line, any headers you
+feel are appropriate, and, of course, the requested file in the
+response
+body.
+    <p> For <tt> GET </tt>, if the server receives the "GET
+index.html HTTP/1.0" request, it sends out "200 OK" to the client,
+followed by the file index.html. If the requested file doesn't exist,
+the server sends out "404 Not Found" response to the client.
+    </p>
+    <p> For <tt> PUT </tt>, if the server receives the "PUT test.txt"
+request, it will save the file as test.txt. If the received file from
+client is successfully created, the server sends back a "200 OK File
+Created" response to the client. </p>
+  </li>
+  <li>Close the client connection and loop back to wait for the next
+client connection to arrive.</li>
+</ol>
+Notice that your server will be structured around an infinite loop.
+That
+means that you must interrupt your server with a termination signal to
+stop it. Make sure your server code shuts down gracefully when
+terminated.
+That means closing any open sockets, freeing allocated memory, etc.
+<p>Once you get your server working, demonstrate it with the following
+two test cases:
+<br>
+First, use an ordinary browser such as Netscape or Internet Explorer
+to get a html file from your server. For example, your server is
+running at
+host pc1.cs.uml.edu on port number 5678, and there is a file index.html
+in the current directory. In the URL box of the web browser, type in
+pc1.cs.uml.edu:5678/index.html, the browser should fetch the file and
+display it.
+<br>
+Second, use your own client to get a file.
+<br>
+Third, use your own client to put a file.
+</p>
+<h3><b>Programming the assignment in JAVA</b></h3>
+<ul>
+  <li>
+Recall from our discussions in class that Java encapsulates the concept
+of a client-side connection-oriented (TCP) socket with the class, <i>Socket</i>.&nbsp;
+Details about the socket class can be found at <a
+ href="http://java.sun.com/products/jdk/1.1/docs/api/java.net.Socket.html">http://java.sun.com/products/jdk/1.1/docs/api/java.net.Socket.html</a></li>
+  <li>
+Java encapsulates the concept of a server-side connection-oriented
+socket
+with the class, <i>ServerSocket</i>.&nbsp; Details about this class
+can
+be found at&nbsp;<a
+ href="http://java.sun.com/products/jdk/1.1/docs/api/java.net.ServerSocket.html">
+http://java.sun.com/products/jdk/1.1/docs/api/java.net.ServerSocket.html.
+    </a>You'll
+need to use the <i>accept() </i>and <i>close(0)</i> methods of this
+class,
+which are also document at this URL.</li>
+  <li>
+If you're interested in a quick Java tutorial targeted specifically at
+socket programming, check out "Socket Programming in Java: a tutorial,"
+by Q. Mahmoud,&nbsp; Javaworld, Dec. 1996, <a
+ href="http://www.javaworld.com/javaworld/jw-12-1996/jw-12-sockets_p.html">http://www.javaworld.com/javaworld/jw-12-1996/jw-12-sockets_p.html</a>.
+Sun's socket tutorial is at <a
+ href="http://java.sun.com/docs/books/tutorial/networking/sockets/index.html">http://java.sun.com/docs/books/tutorial/networking/sockets/index.html.&nbsp;</a></li>
+</ul>
+<h3>
+<b>Programming the assignment in C</b></h3>
+<p><br>
+If you choose to write your programs in C, you'll need to master
+the C system calls needed for socket programming.&nbsp; These include <i>socket(),
+bind(), listen(), accept(), connect(), </i>and<i> close()</i>. You are
+welcome to do this assignment using the WINSOCK API, rather than
+the Unix API, if you have a Windows machine and a C compiler.
+<br>
+&nbsp;
+<br>
+&nbsp;
+</p>
+<h3><b>Programming notes</b></h3>
+<p><br>
+Here are a few tips/thoughts to help you with the assignment:
+</p>
+<ul>
+  <li>
+You must chose a server port number great that 1023 (to be safe, choose
+a server port number larger than 5000).</li>
+  <li>
+I would strongly suggest that everyone begin by writing a client and
+getting
+its test cases to work. Then write a sequential server and test it
+with your client. Finally, write a concurrent server, if you want to do
+the extra credit portion of the assignment.</li>
+  <li>
+In writing your code, make sure to check for an error return from your
+system calls or method invocations, and display an appropriate message.
+In Java, this means using <i>IOException()</i>; in C this means
+checking
+and handling error return codes from your system calls. See the
+documentation
+noted above.</li>
+  <li>
+Most of you will be running both the client and server on the same
+machine
+(e.g., by starting up the server and running it in the background, and
+then starting the client) under Unix. Recall the use of
+the ampersand to start a process in the background. If you need to kill
+your server after you have started it, you can use the UNIX <i>kill
+    </i>command. Use the UNIX <i>ps </i>command to find the process
+id of your server</li>
+  <li>
+Make sure you close every socket that you use in your program. If you
+abort
+your program, the socket may still hang around and the next time you
+try
+and bind a new socket to the port ID you previously used (but never
+closed),
+you may get an error. Also, please be aware that port ID's,
+when bound to sockets, are system-wide values and thus other students
+may
+be using the port number you are trying to use. On UNIX systems,
+you can run the command "netstat" to see which port numbers are
+currently
+assigned.</li>
+</ul>
+<h3>
+Extra Credit: Concurrent Server [+ 10%]</h3>
+Rewrite your server to be a concurrent server - that is a server that
+waits
+on the welcoming socket and then creates a new thread or process to
+handle
+the incoming request. If you are doing the assignment in C, you'll need
+to learn about the fork() system call.
+If you're doing the assignment in Java, see the section "Supporting
+Multiple
+Clients" in Sun's socket programming tutorial,
+<br>
+<a
+ href="http://java.sun.com/docs/books/tutorial/networking/sockets/clientServer.html">http://java.sun.com/docs/books/tutorial/networking/sockets/clientServer.html.</a>
+<br>
+&nbsp;
+</body>
+</html>
