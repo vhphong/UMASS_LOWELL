@@ -1,0 +1,129 @@
+#lang racket
+
+;;+++++++++++++++ Required for auto grading +++++++++++++
+(define (square x) (* x x))
+(define (identity x) x) 
+(define (next x) (+ x 1)) 
+;;++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+;; 1. exercise 1.9 (pp. 36). In this problem, you will study two implementations of addition in terms of 
+;;    increment and decrement, and analyze whether the implementations are iterative or recursive.
+;; Write the required steps for each procedure using comment line and then change #f to #t
+(define add #f)
+
+;;***************************************************************************************************
+
+;; 2. exercise 1.11 (pp. 42). In this problem, you implement a recursive mathematical function using 
+;;    both recursive and iterative processes.
+;; fill in the below procedures
+
+;f(n) as a recursive process
+(define (f-recursive n)
+     4)
+
+; f(n) as an iterative process
+(define (f-iterative n)
+    11)
+
+
+;;***************************************************************************************************
+
+;; 3. When implementing an iterative process in Scheme, the Scheme interpreter uses tail-recursion. 
+;;    Explain what this means.
+;; Answer this question using comment line and change #f to #t
+(define tail-recursion #f)
+
+;;***************************************************************************************************
+
+;; 4. SICP exercise 1.16 (pp. 46).
+;; fill in the below procedures
+
+(define (fast-expt b n) 
+   1)
+
+;;***************************************************************************************************
+
+;; 5. More iteration: SICP exercise 1.30 (pp. 60).
+;; Un-comment and fill in the below procedure
+
+;(define (sum term a next b)
+  ;(define (iter a result)
+    ;(if <??>
+    ;    <??>
+    ;    (iter <??> <??>)))
+  ;(iter <??> <??>))
+
+
+;;***************************************************************************************************
+
+;; 6. Working towards higher-order procedures: Do SICP exercise 1.31 (a) and (b) (pp. 60–61).
+;; fill in the below procedures
+
+;a)Recursive product procedure
+(define (product1 term a next b) 
+     1) 
+
+; factorial procedure in terms of product
+(define (factorial n) 
+   1) 
+
+;Approximations to pi using john wallis' formula
+(define (pi-term n) 
+    1)
+
+;b) Iterative product procedure
+(define (product2 term a next b) 
+   1 )
+
+;;***************************************************************************************************
+
+;; 7. SICP exercise 1.32 (a only): Implement accumulate and show how sum and product can be defined with calls to accumulate. Specify whether you have built the iterative or recursive version.
+;; fill in the below procedures
+
+;a) Recursive process
+(define (accumulate combiner null-value term a next b)
+  1 )
+
+(define (sum1 term a next b)
+  1 )
+
+(define (product term a next b)
+  1 )
+
+;b) Iterative process
+(define (accumulate1 combiner null-value term a next b)
+  1 )
+
+;;***************************************************************************************************
+
+;; 8. SICP exercise 1.41 (pp. 77): Procedures that return procedures.
+;; fill in the below procedure
+
+ (define (double f) 
+      21)
+
+;;***************************************************************************************************
+
+;; 9. SICP exercise 1.42 (pp. 77): More procedures that return procedures.
+;; fill in the below procedure
+
+ (define (compose f g) 
+    1) 
+
+;;***************************************************************************************************
+
+;; 10. Here is an implementation of expnt, a procedure that generates a procedure for raising its input to its argument. 
+;;     E.g., (expnt 2) generates a procedure for squaring a number. The provided implementation of expnt generates 
+;;     a recursive process. Re-implement it as an iterative process (probably using a helper procedure).
+;; generates a procedure that raises its argument to the nth power
+;; Recursive process
+(define (expnt n)
+  (if (= n 1)
+      (lambda (x) x)
+      (lambda (x) (* x ((expnt (- n 1)) x)))))
+
+;; fill in the below procedure
+;Iterative process 
+(define (expnt-iter n)
+  9) 

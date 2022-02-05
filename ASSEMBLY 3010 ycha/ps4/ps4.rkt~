@@ -1,0 +1,130 @@
+#lang racket
+
+;; +++++++++++++++ Required for auto grading ++++++++++++++++++++++++++++
+(define nil '())
+
+(define (map proc items)
+  (if (null? items)
+      nil
+      (cons (proc (car items))
+            (map proc (cdr items)))))
+
+(define (filter predicate sequence)
+  (cond ((null? sequence) nil)
+        ((predicate (car sequence))
+         (cons (car sequence)
+               (filter predicate (cdr sequence))))
+        (else (filter predicate (cdr sequence)))))
+
+(define (accumulate op initial sequence)
+  (if (null? sequence)
+      initial
+      (op (car sequence)
+          (accumulate op initial (cdr sequence)))))
+
+(define (fold-left op initial sequence)
+  (define (iter result rest)
+    (if (null? rest)
+        result
+        (iter (op result (car rest))
+              (cdr rest))))
+  (iter initial sequence))
+
+;; ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+;; **********************************************************************
+;;
+;; 1. Assume that we want to develop an inventory database for an
+;; online CD store.  
+;;
+;; For each CD, the database stores its title, artist, price, how many
+;; copies are in stock, and its category of music (such as rock,
+;; blues, or country).  
+;;
+;; Write a data definition for CD inventories. When completing the
+;; following exercises, please make sure to use map, filter, and
+;; accumulate (aka, reduce) as much as reasonable.  
+;; 
+;; 1a. Create a constructor procedure with parameters, title, artist,
+;; price, category, and units-in-stock, and corresponding accessors to
+;; retrieve these fields.  
+;; 
+;; 1b. Populate an inventory (i.e., a list) with 10 or so records
+;; created from your constructor.  
+;;
+;; 1c. Write a procedure all-titles that consumes an inventory and
+;; produces a list of all titles in the inventory.  
+;; 
+;; 1d. Write a procedure titles-in-stock that consumes an inventory
+;; and produces a list of all titles in the inventory with at least 1
+;; copy in stock.  
+;;
+;; 1e. Write a procedure restock that consumes a CD title, number of
+;; new copies of that CD and an inventory and produces an inventory in
+;; which the named CD has the given number of additional copies (and
+;; all other CDs remain the same).  
+;; 
+;; 1f. Write a procedure titles-by that consumes an artist name and
+;; inventory and produces a list of titles of CDs by that artist.
+;; 
+;; 1g. Write a procedure copies-in-stock that consumes a CD title,
+;; artist name and an inventory and produces the number of copies of
+;; that item that are in stock.  Return 0 if the named CD isn't in the
+;; inventory.
+;; 
+;; 1h. Write a procedure blues-sale that consumes an
+;; inventory and produces an inventory in which all blues CDs are
+;; discounted by 10%.
+;; 
+;; 1i. Write a procedure carry-cd? that consumes a
+;; title and artist name and produces a boolean indicating whether
+;; that item is in the inventory (whether in or out of stock).
+;;
+;; This problem is courtesy of a lab exercise from WPI's Scheme
+;; course.
+
+; Answer:
+;;;;;;;;;;1a.
+;Constructors
+; model the db as a list of records.
+(define cdDB '() )
+
+;Each record is a list of (title artist price category units-in-stock)
+(define (make-record title artist price category units-in-stock)
+  'foo)
+
+; Insert one record into the database, by rebinding the global symbol
+; cdDB to a new list with the new record appended.
+(define (insert-record rec)
+  (set! cdDB (append cdDB (list rec))))
+
+; Accessors
+; these should retrieve the appropriate item from the record-list.
+; remember these are procedures.
+(define title 
+  (lambda (rec) 'foo))
+(define artist
+  (lambda (rec) 'bar))
+(define price
+  (lambda (rec) 18.99))
+(define category
+  (lambda (rec) 'disco))
+(define units-in-stock
+  (lambda (rec) 2384))
+
+;;;;;;;1b.
+
+;insert a bunch of records.
+;see examples in file "freds-db.rkt"
+;make sure to submit that file back for autograding.
+;but you should put your own here!!
+(insert-record (make-record "Facelift" "Alice in Chains" 12.98 'rock 7))
+
+;;;;;;;1c.
+; all-titles
+; map the title operator over the db.
+(define (all-titles db)
+  'foo)
+
+;;;;;;1d.
+; titles

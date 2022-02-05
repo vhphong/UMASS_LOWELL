@@ -1,0 +1,258 @@
+#lang racket
+
+;;; +++++++++ Required for auto grading (from streams.rkt) ++++++++++++
+
+;; Allow name nil to be used for the empty list.
+(define nil '()) 			
+
+;; Some other constants with non-traditional names:
+(define true #t)
+(define false #f)
+
+;; For stream programming section 3.5
+;; We use a force and delay which are slightly
+;; different from the force and delay defined in the book:
+;; delay (aka make-promise) handles recursive forcing.
+
+(define the-empty-stream '())
+(define stream-null? null?)
+(define stream-car car)
+(define (stream-cdr s)
+  (force (cdr s)))
+
+(define-syntax cons-stream
+  (syntax-rules ()
+    ((_ head tail)
+     (cons head (delay tail)))))
+
+(define (stream-ref a n)
+  (if (= n 0)
+      (stream-car a)
+      (stream-ref (stream-cdr a) (- n 1))))
+
+(define (stream-map proc s)
+  (if (stream-null? s)
+      the-empty-stream
+      (cons-stream (proc (stream-car s))
+                   (stream-map proc (stream-cdr s)))))
+
+(define (stream-for-each proc s)
+  (if (stream-null? s)
+      the-empty-stream
+      (begin (proc (stream-car s))
+             (stream-for-each proc (stream-cdr s)))))
+
+(define (stream-filter pred stream)
+  (cond ((stream-null? stream) the-empty-stream)
+        ((pred (stream-car stream))
+         (cons-stream (stream-car stream)
+                      (stream-filter pred
+                                     (stream-cdr stream))))
+        (else (stream-filter pred (stream-cdr stream)))))
+
+(define (display-stream s)
+  (stream-for-each display-line s))
+
+(define (display-line x)
+  (newline)
+  (display x))
+
+(define (stream-enumerate-interval low high)
+  (if (> low high)
+      the-empty-stream
+      (cons-stream
+       low
+       (stream-enumerate-interval (+ low 1) high))))
+
+(define (integers-starting-from n)
+  (cons-stream n (integers-starting-from (+ n 1))))
+
+(define integers (integers-starting-from 1))
+
+(define (add-streams s1 s2)
+  (stream-map + s1 s2))
+
+(define (stream->list stream)
+            (if (stream-null? stream)
+                '()
+                (cons (stream-car stream)
+                      (stream->list (stream-cdr stream)))))
+
+;;; +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+;;; *******************************************************************
+;;; Problem 1:
+;;; 
+;;; Use stream-map (pp. 320 of textbook) to define a procedure called
+;;; convert-temps that takes a stream of temperatures in Fahrenheit
+;;; and returns a stream of converted temperatures in Celsius. Recall
+;;; that to convert Fahrenheit to Celsius, the equation is C = 5/9 *
+;;; (F-32).
+
+(define (convert-temps fahrenheit-stream)
+  fahrenheit-stream)
+
+
+;;; ******************************************************************
+;;; Problem 2:
+;;; 
+;;; Use stream-filter (pp. 322 of textbook) to define the stream of
+;;; all integers that are evenly divisible by 2, 3, or 5.
+;;;
+
+
+(define (divisible? x y)
+  (= (remainder x y) 0))
+
+(define (divisible-by-2-3-5 int-stream)
+  int-stream)
+
+
+
+;;; ******************************************************************
+;;; Problem 3:
+;;; 
+;;; Replace the lambda function to complete the following alternative
+;;; definition of the integers stream:
+;;;
+;;; (define my-integers (cons-stream 1 (stream-map <??> my-integers)))
+;;;
+
+(define my-integers
+  (cons-stream 1 (stream-map (lambda (x) x) my-integers)))
+
+ 
+;;; ******************************************************************
+;;; Problem 4:
+;;; 
+;;; Complete Exercise 3.51 on pp. 325 (see link below).
+;;; http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-24.html#%_thm_3.51
+;;;
+;;; In order to take a closer look at delayed evaluation, we will use
+;;; the following procedure, which simply returns its argument after
+;;; printing it:
+;;;
+;;; (define (show x)
+;;;   (display-line x)
+;;;   x)
+;;;
+;;; What does the interpreter print in response to evaluating each
+;;; expression in the following sequence?
+;;;
+;;; Put your answer in comments and change the symbol #f to #t after
+;;; answering.
+
+(define p4_1 #f)
+;;; (define x (stream-map show (stream-enumerate-interval 0 10)))
+
+(define p4_2 #f)
+;;; (stream-ref x 5)
+
+(define p4_3 #f)
+;;; (stream-ref x 7)
+
+
+;;; ******************************************************************
+;;; Problem 5:
+;;;
+;;; Complete Exercise 3.52 on pp. 325–326 (see link below).
+;;; http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-24.html#%_thm_3.52
+;;;
+;;; Consider the sequence of expressions
+;;;
+;;; (define sum 0)
+;;; (define (accum x)
+;;;   (set! sum (+ x sum))
+;;;   sum)
+;;; (define seq (stream-map accum (stream-enumerate-interval 1 20)))
+;;; (define y (stream-filter even? seq))
+;;; (define z (stream-filter (lambda (x) (= (remainder x 5) 0))
+;;;                          seq))
+;;; (stream-ref y 7)
+;;; (display-stream z)
+;;;
+;;; What is the value of sum after each of the above expressions is
+;;; evaluated? What is the printed response to evaluating the
+;;; stream-ref and display-stream expressions? Would these responses
+;;; differ if we had implemented (delay <exp>) simply as (lambda ()
+;;; <exp>) without using the optimization provided by memo-proc ?
+;;; Explain.
+;;;
+;;; Put your answers in comments, and change the value of p5 from
+;;; #f to #t after answering.
+(define p5 #f)
+
+
+
+;;; ******************************************************************
+;;; Problem 6:
+;;; 
+;;; Complete Exercise 3.53 on pp. 330 (see link below).
+;;; http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-24.html#%_thm_3.53
+;;;
+;;; Without running the program, describe the elements of the stream
+;;; defined by
+;;;
+;;; (define s (cons-stream 1 (add-streams s s)))
+;;;
+;;; Put your answers in comments, and change the value of p6 from
+;;; #f to #t after answering.
+(define p6 #f)
+
+
+
+
+;;; ******************************************************************
+;;; Problem 7:
+;;; 
+;;; Complete Exercise 3.54 on pp. 331 (see link below).
+;;; http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-24.html#%_thm_3.54
+;;;
+;;; Define a procedure mul-streams, analogous to add-streams, that
+;;; produces the elementwise product of its two input streams. Use
+;;; this together with the stream of integers to complete the
+;;; following definition of the stream whose nth element (counting
+;;; from 0) is n + 1 factorial:
+;;;
+;;; (define factorials (cons-stream 1 (mul-streams <??> <??>)))
+
+(define (mul-streams s1 s2)
+  s1)
+
+(define factorials 
+  (cons-stream 1 (mul-streams integers integers)))
+
+
+
+;;; ******************************************************************
+;;; Problem 8:
+;;;
+;;; Complete Exercise 3.57 on pp. 332 (see link below).
+;;; http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-24.html#%_thm_3.57
+;;;
+;;; Given this implementation of Fibonacci:
+;;;
+;;; (define fibs
+;;;   (cons-stream 0
+;;; 	       (cons-stream 1
+;;; 			    (add-streams (stream-cdr fibs)
+;;; 					 fibs))))
+;;;
+;;; 
+
+(define p8_1 #f)
+;;; How many additions are performed when we compute the nth Fibonacci
+;;; number using the definition of fibs based on the add-streams
+;;; procedure?
+
+(define p8_2 #f)
+;;;  Show that the number of additions would be exponentially greater
+;;;  if we had implemented (delay <exp>) simply as (lambda () <exp>),
+;;;  without using the optimization provided by the memo-proc
+;;;  procedure described in section 3.5.1.
+;;;
+;;; Put your answers in comments, and change the values of p8_1 and
+;;; p8_2 from #f to #t after answering.
+
+;;; ************************ END OF FILE *****************************
