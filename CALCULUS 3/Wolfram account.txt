@@ -1,0 +1,15 @@
+Your Activation Key Has Been Created
+Thank you! Your activation key is below, and a copy has also been sent to phong_vo@student.uml.edu.
+
+This key will allow you to use the product until February 08, 2018. If your request is approved by your Site Administrator, this activation key will automatically be extended.
+
+To download the installer(s) for this product, continue to the Product Summary page.
+
+Activation Key:	3165-4200-7PY2VT
+Product:	Mathematica for Sites
+Version:	11.2.0
+Configuration:	Single Machine
+Platform:	All
+First Name:	Phong
+Last Name:	Vo
+Email:	phong_vo@student.uml.edu
