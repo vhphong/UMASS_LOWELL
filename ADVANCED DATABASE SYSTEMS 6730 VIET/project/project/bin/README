@@ -1,0 +1,43 @@
+Viet Tran Quoc Hoang
+vtran1@cs.uml.edu
+SID : 01607460
+
+I have successfully completed al objectives set out in the project description file. 
+I have split the project into two files. The first part can be run like this:
+
+python project_part1.py
+
+Running the first part should not take long(around 2-3 minutes at most)
+
+For the 2nd portion of the project
+There are 2 versions that I have for the CELF portion of the project. 
+
+One has the progress bar output and one does not.I included the progress bar dependency 
+because it was taking so long to run and I needed to see the progress on each part 
+of the code
+
+To run the script without progress bar, use the command:
+python celf_no_progress_bar.py
+
+Running the 2nd part should not take long either, around 3 minutes on the CS server
+was my last benchmark
+
+To run the script with the progress bar, virtualenv needed to be installed first
+!!You cannot do this on CS server since it requires root to install virtualenv!!
+Please follow the following commands:
+
+pip install virtualenv(CS server won't allow this!!!)
+virtualenv . --system-site-packages(create a local environment within current folder inheriting global python packages)
+source ./bin/activate(activate the enviroment)
+pip install -r requirements.txt(install dependencies listed in the txt file)
+python celf_progress_bar.py
+deactivate(go back to regular shell)
+
+I could have zip up my entire virtualenv folder but I find that very invasive.
+You might not be as interested in finding out what is the deal with progress bar
+so I leave the choice to you!
+Thanks for reading and grading my work. 
+I hope you have a great summer!
+
+Viet 
+
