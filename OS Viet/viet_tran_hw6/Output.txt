@@ -1,0 +1,66 @@
+[vtran1@mercury assignment6]$ ./assignment6
+FILENAME:                       assignment6
+FILE TYPE:                      ordinary
+PERMISSIONS:                    rwx------
+OWNER_NAME:                     dtruong
+GROUP_NAME:                     cs2018
+DATE_OF_LAST_MODIFICATION:      Wed Apr 26 19:49:04 2017
+LINK COUNT:                     1
+FILE SIZE:                      10761
+INUM  SIZE:                     8 bytes
+INODE NUMBER:                   11356404350001930416
+
+FILENAME:                       main.c
+FILE TYPE:                      ordinary
+PERMISSIONS:                    rw-r--r--
+OWNER_NAME:                     dtruong
+GROUP_NAME:                     cs2018
+DATE_OF_LAST_MODIFICATION:      Wed Apr 26 19:47:52 2017
+LINK COUNT:                     1
+FILE SIZE:                      3149
+INUM  SIZE:                     8 bytes
+INODE NUMBER:                   9851449366401812150
+
+FILENAME:                       main.o
+FILE TYPE:                      ordinary
+PERMISSIONS:                    rw-------
+OWNER_NAME:                     dtruong
+GROUP_NAME:                     cs2018
+DATE_OF_LAST_MODIFICATION:      Wed Apr 26 19:49:03 2017
+LINK COUNT:                     1
+FILE SIZE:                      7564
+INUM  SIZE:                     8 bytes
+INODE NUMBER:                   13498869671623946918
+
+FILENAME:                       Makefile
+FILE TYPE:                      ordinary
+PERMISSIONS:                    rw-r--r--
+OWNER_NAME:                     dtruong
+GROUP_NAME:                     cs2018
+DATE_OF_LAST_MODIFICATION:      Wed Apr 26 19:48:38 2017
+LINK COUNT:                     1
+FILE SIZE:                      134
+INUM  SIZE:                     8 bytes
+INODE NUMBER:                   12207927361781413134
+
+FILENAME:                       ..
+FILE TYPE:                      directory
+PERMISSIONS:                    rwxr-xr-x
+OWNER_NAME:                     dtruong
+GROUP_NAME:                     cs2018
+DATE_OF_LAST_MODIFICATION:      Wed Apr 26 16:50:52 2017
+LINK COUNT:                     14
+FILE SIZE:                      4096
+INUM  SIZE:                     8 bytes
+INODE NUMBER:                   10196382048856293990
+
+FILENAME:                       .
+FILE TYPE:                      directory
+PERMISSIONS:                    rwxr-xr-x
+OWNER_NAME:                     dtruong
+GROUP_NAME:                     cs2018
+DATE_OF_LAST_MODIFICATION:      Wed Apr 26 19:49:03 2017
+LINK COUNT:                     2
+FILE SIZE:                      4096
+INUM  SIZE:                     8 bytes
+INODE NUMBER:                   9714992371715166258

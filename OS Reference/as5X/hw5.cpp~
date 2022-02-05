@@ -1,0 +1,64 @@
+#include "hw5.h"
+
+int main( int argc, char *argv[] )
+{
+  int seq_num;
+  char req_type[20];
+  int type_value;
+  FILE *fp;
+
+  policy = atoi( argv[1] );
+  if ( policy != 3 || policy != 4 || policy != 5 ){
+    printf("Must enter argument with number of the policy you wish to implement.\n");
+    return 0;
+  }
+
+  total_free_space = ( atoi(argv[2]) * 1024 );
+  largest_available = total_free_space;
+  
+  used_list = allocate_node();
+  used_list -> start_addr = 0;
+  used_list -> adj_addr = -1;
+  used_list -> size = total_free_space;
+  
+  fp = fopen( argv[3], "r" );
+
+  while ( fscanf(fp, "%d %s %d", &seq_num, req_type, &type_value) != EOF ){
+    if ( strcmp(req_type, "alloc" ) == 0 ){
+      req_array[seq_num].serial_number = seq_num;
+      req_array[seq_num].sizeof_request = type_value;
+      req_array[seq_num].request_type = ALLOC;
+
+      if (policy == 3 || policy == 4){
+	allocate_memory( seq_num );
+      }
+      if(policy == 5){
+	buddy_system(seq_num);
+      }
+    }
+    else{
+      req_array[seq_num].serial_number = seq_num;
+      req_array[seq_num].request_type = FREE;
+      free_node( seq_num, type_value );
+    }
+  }
+  print_req_array();
+  fclose(fp);
+  
+  return 0;
+}
+
+void print_req_array( void )
+{
+  int i = 1;
+  
+  for( ; i < NUMBER_ENTRIES; i++ ){
+    if ( req_array[i].failed ){
+      printf("Failed Req %d is size %d\n", req_array[i].serial_number, req_array[i].sizeof_request );
+    }
+  }
+
+  printf ("\n\nTotal Allocations: %d\n", total_allocations);
+  for (i = 1; i < NUMBER_ENTRIES; i++){
+    printf ("Serial
+

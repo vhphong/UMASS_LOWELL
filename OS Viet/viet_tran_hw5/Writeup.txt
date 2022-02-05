@@ -1,0 +1,32 @@
+Viet Tran
+viet_tran1@student.uml.edu
+Homework 5
+
+I finish 100% for this Homework.
+
+In this Homework, based on the file assignment5_struct_data.txt, 
+I created the file Ultility.h and implemented the actual Utility.c. 
+
+Base on that i impliment 3 type of memory allocation :bestfit, firstfit and buddysys.
+
+This is the command I used to run the executables: 
+
+./p5 object size proj_data5 > output
+
+where 
+object can be:
+first : firstfit
+buddy : buddysys
+best : bestfit
+
+size:
+1024 
+512
+
+Here are the output that I got, which is similar to the one provided in the pdf assignment5.pdf
+
+algorithm		1MB		512KB
+first fit		490		374
+best fit		492		377
+buddy system		465		328
+

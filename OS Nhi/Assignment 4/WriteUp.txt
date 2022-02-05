@@ -1,0 +1,35 @@
+Class: 		CS308 - Operating Systems
+Name: 		DangNhi Ngoc Ngo
+Student ID: 	01553277
+Email: 		DangNhi_Ngo@student.uml.edu
+Homework 4
+
+DEGREE OF SUCCESS: 100%
+
+Command lines:
+[dngo@mercury1 Ngo_DangNhi_01553277_hw4]$ make
+gcc -o pc_threads pc_threads.c -lpthread
+[dngo@mercury1 Ngo_DangNhi_01553277_hw4]$ ./A4_donut_loop.sh 5 > Output.txt
+
+
+WriteUp:
+I have finished this assignment with 100% success.
+I have utilized all the codes from the call_help_assign4.txt for references from Professor.
+
+I have divided the codes into 2 files: pc_threads.h and pc_threads.c.
+The Makefile used to run and clean the project.
+
+I have written modify loop in producer function to pthread_cond_signal and pthread_mutex_unlock to unlock producer
+and lock consumer. Then, I have created codes in consumer function to determine deadlock, terminate somaphores and
+print out the value of PID as well as other related values as types of donuts.
+
+First test: Queue Size vs Percentage of deadlock
+I ran the shell script with the header file set to 50 consumers and 30 producers with a hard coded value of 200 donuts.
+Then, I have varied the Queue Size setting for testing. I have figured out that the 50% Queue Size is set between
+26700 and 26800.
+
+Second test: Donutes Created vs Percentage of deadlock
+I ran the shell script with the 50% queue size. Then, I have varied the amount of donut dozens, starting with 100
+and then going up to 300. As the result, the higher amount of donuts, the higher percentage of deadlocks.
+
+The results excel files and graphs are also attached with the assignment.

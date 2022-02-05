@@ -1,0 +1,24 @@
+Name: Viet Tran
+SID: 01607460
+Email: viet_tran1@student.uml.edu
+
+
+Sort output
+-bash-4.1$ ./Sort 
+Area code: 103 | Number of people :    87 
+Area code: 215 | Number of people :   107 
+Area code: 220 | Number of people :   114 
+Area code: 316 | Number of people :    96 
+Area code: 403 | Number of people :   100 
+Area code: 508 | Number of people :   101 
+Area code: 579 | Number of people :   103 
+Area code: 604 | Number of people :    86 
+Area code: 617 | Number of people :    88 
+Area code: 783 | Number of people :    77 
+
+
+
+Grep output
+-bash-4.1$ ./Grep1
+This Grep had 28 lines with given string.
+-bash-4.1$ ./Grep2

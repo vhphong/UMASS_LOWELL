@@ -1,0 +1,7 @@
+all:
+	gcc sort.c -o sort
+	gcc grep.c -o grep
+
+clean:
+	rm -rf grep
+	rm -rf sort

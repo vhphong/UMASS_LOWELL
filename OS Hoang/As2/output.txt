@@ -1,0 +1,20 @@
+hdo@cs4:~/Desktop/A2$ make all
+gcc grep.c -o Grep
+gcc sort.c -o Sort
+hdo@cs4:~/Desktop/A2$ ./Sort cs308a2_sort_data
+Area code: 103: Number of people : 87
+Area code: 215: Number of people : 107
+Area code: 220: Number of people : 114
+Area code: 316: Number of people : 96
+Area code: 403: Number of people : 100
+Area code: 508: Number of people : 101
+Area code: 579: Number of people : 103
+Area code: 604: Number of people : 86
+Area code: 617: Number of people : 88
+Area code: 783: Number of people : 77
+hdo@cs4:~/Desktop/A2$ ./Grep cs308a2_grep_data_1
+The Grep returns 28 lines.
+hdo@cs4:~/Desktop/A2$ ./Grep cs308a2_grep_data_2
+^Z
+[5]+  Stopped                 ./Grep cs308a2_grep_data_2
+

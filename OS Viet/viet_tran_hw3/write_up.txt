@@ -1,0 +1,8 @@
+Viet Tran
+viet_tran1@student.uml.edu
+
+I believe I completed 100% of the assignment. Output generated normally without errors when I compiled my code and after running the shell file.
+As seen from my pdf graph Queue Deep vs Deadlock. The probability of me getting a deadlock of 40% is around queue size 50 . 
+This is because the lower the queue size, the higher chance of getting deadlock.
+For the fixed queue size part, I am getting around 5 or 6 consumer that is generating about 46.67% deadlock. 
+The more consumer there are the higher the chance of getting deadlock since there is only one single producer.

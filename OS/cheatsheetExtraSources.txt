@@ -1,0 +1,40 @@
+https://quizlet.com/253509236/os-ch-7-flash-cards/
+A deadlocked state occurs whenever every process in a set is waiting for an event that can only be caused by another process in the set
+One necessary condition for deadlock is mutual exclusion, which states that at least one resource must be held in a nonsharable mode.
+One necessary condition for deadlock is hold and wait, which states that a process must be holding one resource and waiting to acquire additional resources.
+One necessary condition for deadlock is no preemption, which states that a resource can be released only voluntarily by the process holding the resource.
+One necessary condition for deadlock is circular wait, which states that there is a chain of waiting processes whereby P0 is waiting for a resource held by P1, P1 is waiting for a resource held by P2, and Pn is waiting for a resource held by P0.
+The witness software product is a lock-order verifier that uses mutual-exclusion locks to protect critical sections.
+In a system resource-allocation graph, a directed edge from a process to a resource is called a request edge.
+A cycle in a resource-allocation graph is a necessary and sufficient condition for a deadlock in the case that each resource has exactly one instance.
+To handle deadlocks, operating systems most often pretend that deadlocks never occur.
+_T_ An unsafe state may lead to a deadlocked state.
+Which of the following data structures in the banker's algorithm is a vector of length m, where m is the number of resource types? Available
+Assume there are three resources, R1, R2, and R3, that are each assigned unique integer values 15, 10, and 25, respectively. What is a resource ordering which prevents a circular wait? R2, R1, R3
+A CPU could be preempted from a process.
+Explain what has to happen for a set of processes to achieve a deadlocked state? For a set of processes to exist in a deadlocked state, every process in the set must be waiting for an event that can be caused only be another process in the set. Thus, the processes cannot ever exit this state without manual intervention.
+Describe the four conditions that must hold simultaneously in a system if a deadlock is to occur? For a set of processes to be deadlocked: at least one resource must remain in a nonsharable mode, a process must hold at least one resource and be waiting to acquire additional resources held by other processes, resources in the system cannot be preempted, and a circular wait has to exist between processes.
+What are the three general ways that a deadlock can be handled? A deadlock can be prevented by using protocols to ensure that a deadlock will never occur. A system may allow a deadlock to occur, detect it, and recover from it. Lastly, an operating system may just ignore the problem and pretend that deadlocks can never occur.
+What is the difference between deadlock prevention and deadlock avoidance? Deadlock prevention is a set of methods for ensuring that at least one of the necessary conditions for deadlock cannot hold. Deadlock avoidance requires that the operating system be given, in advance, additional information concerning which resources a process will request and use during its lifetime.
+Describe two protocols to ensure that the hold-and-wait condition never occurs in a system? One protocol requires each process to request and be allocated all its resources before it begins execution. We can implement this provision by requiring that system calls requesting resources for a process precede all other system calls. An alternative protocol allows a process to request resources only when it has none. A process may request some resources and use them.
+Before it can request any additional resources, however, it must release all the resources that it is currently allocated.
+What is one way to ensure that a circular-wait condition does not occur? One way to ensure that this condition never holds is to impose a total ordering of all resource types, and to require that each process requests resources in an increasing order of enumeration. This can be accomplished by assigning each resource type a unique integer number to determine whether one precedes another in the ordering.
+What does a claim edge signify in a resource-allocation graph? A claim edge indicates that a process may request a resource at some time in the future. This edge resembles a request edge in direction, but is represented in the graph by a dashed line.
+Describe a wait-for graph and how it detects deadlock? If all resources have only a single instance, then we can define a deadlock-detection algorithm that uses a variant of the resource-allocation graph, called a wait-for graph. We obtain this graph from the resource-allocation graph by removing the resource nodes and collapsing the appropriate edges. To detect deadlocks, the system needs to maintain the wait-for graph and periodically invoke an algorithm that searches for a cycle in the graph.
+What factors influence the decision of when to invoke a detection algorithm? The first factor is how often a deadlock is likely to occur; if deadlocks occur frequently, the detection algorithm should be invoked frequently. The second factor is how many processes will be affected by deadlock when it happens; if the deadlock-detection algorithm is invoked for every resource request, a considerable overhead in computation time will be incurred.
+Describe two methods for eliminating processes by aborting a process? The first method is to abort all deadlocked processes. Aborting all deadlocked processes will clearly break the deadlock cycle; however, the deadlocked processes may have to be computed for a long time, and results of these partial computations must be discarded and will probably have to be recomputed later. The second method is to abort one process at a time until the deadlock cycle is eliminated. Aborting one process at a time incurs considerable overhead, since, after each process is aborted, a deadlock-detection algorithm must be invoked to determine whether any processes are still deadlocked.
+Name three issues that need to be addressed if a preemption is required to deal with deadlocks? First, the order of resources and processes that need to be preempted must be determined to minimize cost. Second, if a resource is preempted from a process, the process must be rolled back to some safe state and restarted from that state. The simplest solution is a total rollback. Finally, we must ensure that starvation does not occur from always preempting resources from the same process.
+Describe how a safe state ensures deadlock will be avoided? A safe state ensures that there is a sequence of processes to finish their program execution. Deadlock is not possible while the system is in a safe state. However, if a system goes from a safe state to an unsafe state, deadlock is possible. One technique for avoiding deadlock is to ensure that the system always stays in a safe state. This can be done by only assigning a resource as long as it maintains the system in a safe state.
+_T_ The circular-wait condition for a deadlock implies the hold-and-wait condition.
+_F_ If a resource-allocation graph has a cycle, the system must be in a deadlocked state.
+_F_ Protocols to prevent hold-and-wait conditions typically also prevent starvation.
+_T_ The wait-for graph scheme is not applicable to a resource allocation system with multiple instances of each resource type.
+_F_ Ordering resources and requiring the resources to be acquired in order prevents the circular wait from occurring and therefore prevents deadlock from occurring.
+_T_ The banker's algorithm is useful in a system with multiple instances of each resource type.
+_F_ A system in an unsafe state will ultimately deadlock.
+_F_ [T or F] Deadlock prevention and deadlock avoidance are essentially the same approaches for handling deadlock.
+
+
+
+
+

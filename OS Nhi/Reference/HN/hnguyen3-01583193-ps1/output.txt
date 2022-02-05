@@ -1,0 +1,49 @@
+Hungs-MacBook-Pro:ps1 hungnguyen$ ./ps1 
+
+This is the prof process report:
+	PROF PROG:  Process ID is:		5650
+	PROF PROG:  Process parent ID is:	751
+	PROF PROG:  Real UID is:		501
+	PROF PROG:  Real GID is:		20
+	PROF PROG:  Effective UID is:		501
+	PROF PROG:  Effective GID is:		20
+	PROF PROG:  Process priority is:	0
+	
+	PARENT PROG: Creating child process...!
+	************************************************
+	PARENT PROG: Created child with PID: 5651
+
+This is the child process report:
+	CHILD PROG:  Process ID is:		5651
+	CHILD PROG:  Process parent ID is:	5650
+	CHILD PROG:  Real UID is:		501
+	CHILD PROG:  Real GID is:		20
+	CHILD PROG:  Effective UID is:		501
+	CHILD PROG:  Effective GID is:		20
+	CHILD PROG:  Process priority is:	0
+	
+**CHILD PROG: Entering infinite loop
+
+PARENT PROG: killing child's process, waiting to exit!
+CHILD PROG: Signal 15 is called after 7492 time loops: 
+
+This is the Prof process report:
+
+PROF PROG:  Process ID is:		5651
+            PROF PROG:  Process parent ID is:	ki5650
+            PROF PROG:  Real UID is:		501
+            PROF PROG:  Real GID is:		20
+            PROF PROG:  Effective UID is:		501
+            PROF PROG:  Effective GID is:		20
+            PROF PROG:  Process priority is:	5
+            
+PROF PROG: going into and endless loop, use
+ kill 5651   to kill me now
+
+kill 5651
+
+PROF PROG: Awake in handler - You Got Me With Signal
+ Number 15 after spinning for more
+ than 22371293  loop iterations, goodbye
+
+PARENT PROG: Child (PID: 5651) exited with EXIT code: 7

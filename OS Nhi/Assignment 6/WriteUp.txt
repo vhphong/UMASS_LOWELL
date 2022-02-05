@@ -1,0 +1,30 @@
+/**********************************************
+Class: 		CS308 - Operating Systems
+Name: 		DangNhi Ngoc Ngo
+Student ID: 	01553277
+Email: 		DangNhi_Ngo@student.uml.edu
+Homework 6
+***********************************************/
+
+DEGREE OF SUCCESS: 100%
+
+Command line: ./main > results.txt
+
+I have finished this assignment with 100% success.
+I have utilized all the codes and guidelines from Professor for reference.
+
+The results printed out from the code have satisfied the requirements of this assignment.
+It is written in the following format:
+FILE NAME: WriteUp.txt
+FILE_TYPE: ordinary
+PERMISSIONS: -rw-------
+OWNER_NAME: dngo    
+GROUP_NAME: cs2018  
+DATE_OF_LAST_MODIFICATION: Mon Dec 10 14:45:56 2018
+LINK_COUNT: 1
+SIZE_IN_BYTES: 772
+INODE_NUMBER: -6587493017798323993
+
+I have not encountered any problem for this assignment.
+
+

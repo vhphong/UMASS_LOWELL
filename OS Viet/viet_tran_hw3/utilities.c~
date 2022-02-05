@@ -1,0 +1,59 @@
+/*Son Nguyen
+  son_nguyen@student.uml.edu
+*/
+
+#include "donuts.h"
+
+/*p(), v(), semsetall();*/
+
+int p(int _sem, int _donut)
+{
+  struct sembuf _semBuf;
+
+  /*This is why p() is -1*/
+  _semBuf.sem_num = _donut;
+  _semBuf.sem_op = (-1);    
+  _semBuf.sem_flg = 0;
+
+  if(semop (_sem, &_semBuf,1) == -1){
+    return (-1);
+  }
+  return (0);
+}
+
+int v( int sem, int _donut)
+{
+  struct sembuf _semBuf;
+  
+  _semBuf.sem_num = _donut;
+  _semBuf.sem_op = (+1);
+  _semBuf.sem_flg = 0;
+
+  if(semop(sem, &_semBuf, 1) == -1){
+    return (-1);
+  }
+  return (0);
+}
+
+
+int semsetall( int sem, int _number , int _setVal )
+{
+  int i, j, k;
+  union semun /*** need this union ***/
+  {
+    int val;
+    struct semid_ds *buf;
+    unsigned short int *array;
+  }sem_Un;
+
+  // previously declared:  union semun sem_ctl_un;
+  sem_Un.val = _setVal;  /*** for command SETVAL ***/
+  for (i = 0; i < _number; i++){
+    if(semctl(sem, i, SETVAL, sem_Un) == -1){
+      return (-1);
+    }
+  }
+  return (0);
+
+
+}

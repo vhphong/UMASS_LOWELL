@@ -1,0 +1,18 @@
+[dngo@mercury1 Ngo_DangNhi_01553277_hw2]$ make
+gcc -Wall sort.c -o sort
+gcc -Wall grep.c -o grep
+[dngo@mercury1 Ngo_DangNhi_01553277_hw2]$ ./sort
+Area Code 103:  Number of people: 87
+Area Code 215:  Number of people: 107
+Area Code 220:  Number of people: 114
+Area Code 316:  Number of people: 96
+Area Code 403:  Number of people: 100
+Area Code 508:  Number of people: 101
+Area Code 579:  Number of people: 103
+Area Code 604:  Number of people: 86
+Area Code 617:  Number of people: 88
+Area Code 783:  Number of people: 77
+[dngo@mercury1 Ngo_DangNhi_01553277_hw2]$ ./grep data_grep_1
+PARENT PROGRESS: Number of lines returned by grep: 23
+[dngo@mercury1 Ngo_DangNhi_01553277_hw2]$ ./grep data_grep_2
+

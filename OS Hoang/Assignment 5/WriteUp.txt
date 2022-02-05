@@ -1,0 +1,25 @@
+Class: 		CS308 - Operating Systems
+Name: 		DangNhi Ngoc Ngo
+Student ID: 	01553277
+Email: 		DangNhi_Ngo@student.uml.edu
+Homework 5
+
+DEGREE OF SUCCESS: 100%
+
+WriteUp:
+I have finished this assignment with 100% success.
+I have utilized all the codes from the Assignment_5_data_structs.txt for references from Professor.
+Also, I have used the proj5_data file downloaded from bill/cs308 to support the assignment.
+
+Run command line: "make run" to execute these lines:
+	./main bestfit 1024 proj5_data.txt > best1024Results.txt
+	./main firstfit 1024 proj5_data.txt > first1024Results.txt
+	./main buddysys 1024 proj5_data.txt > buddy1024Results.txt
+	./main buddysys 512 proj5_data.txt > buddy512Results.txt
+	./main firstfit 512 proj5_data.txt > first512Results.txt
+	./main bestfit 512 proj5_data.txt > best512Results.txt
+
+Then I have gotten the results as expected.
+I am able to implement the allocation requests and memory free operations for the best fit, buddy system
+and first fit linked lists.
+Sometimes, we get segmented problem or killed, but it can be easily fixed by trying to re-run "make run".

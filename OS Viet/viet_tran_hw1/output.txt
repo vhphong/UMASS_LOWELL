@@ -1,0 +1,60 @@
+-bash-4.1$ ./a1 &
+[1] 30576
+-bash-4.1$ 
+ This is Parent Process Report: 
+	PARENT PROG:  Process ID is:		30576
+            PARENT PROG:  Process parent ID is:	27459
+            PARENT PROG:  Real UID is:		11704
+            PARENT PROG:  Real GID is:		2017
+            PARENT PROG:  Effective UID is:	11704
+            PARENT PROG:  Effective GID is:	2017
+            PARENT PROG:  Process priority is:	0
+             PARENT PROG: will now create child, read pipe, 
+     signal child  and wait for obituary from child 
+PARENT PROG: created child with 30577 PID
+     signal child  and wait for obituary from child 
+ This is the Chold Process info: 
+
+ This is Child report: 
+		PARENT PROG:  Process ID is:		30577
+                    PARENT PROG:  Process parent ID is:	30576
+                    PARENT PROG:  Real UID is:		11704
+                    PARENT PROG:  Real GID is:		2017
+                    PARENT PROG:  Effective UID is:	11704
+                    PARENT PROG:  Effective GID is:	2017
+                    PARENT PROG:  Process priority is:	0
+                
+CHILD PROG: write pipe and go to endless loop
+
+
+
+PARENT PROG: Awake in handler - You Got Me With Signal
+ PARENT PROG: read pipe and sent SIGTERM, now wait exit
+ Number 15 after spinning for more
+ than 5640  loop iterations, goodbye
+
+CHILD PROG: Now beginning to exec target program. goodbye
+
+This is the Prof process report:
+
+PROF PROG:  Process ID is:		30577
+PROF PROG:  Process parent ID is:	30576
+PROF PROG:  Real UID is:		11704
+PROF PROG:  Real GID is:		2017
+PROF PROG:  Effective UID is:		11704
+PROF PROG:  Effective GID is:		2017
+PROF PROG:  Process priority is:	5
+
+PROF PROG: going into and endless loop, use
+ kill 30577   to kill me now
+
+kill 30577
+
+
+PROF PROG: Awake in handler - You Got Me With Signal
+ Number 15 after spinning for more
+ than 1003568780  loop iterations, goodbye
+
+-bash-4.1$ 
+ PARENT PROG: Child 30577 exited with exit code 1, good bye 
+

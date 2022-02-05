@@ -1,0 +1,16 @@
+Name: 		    Hoang Do
+Student ID: 	01521888
+Email: 		    Hoang_Do@student.uml.edu
+Assginment 3
+
+DEGREE OF SUCCESS: 100%
+
+I think my degree of success for this assignment is 100%.
+I got all the code from the call_help_assign3.txt from Professor website.
+
+I created 4 files: donuts.h, utilities.c, proddonuts.c, consdonuts.c that also work with the Makefile from the website without any errors. I can print out the output normally after I compiled the code and ran the shell file.
+
+I also provide the graph of the deadlock and Queue size. As I see on the graph, the queue size around 45 would produce 50% chance of the deadlock. The lower queue size, the higher chance of geting deadlock
+
+Also, the higher number of consumers, the higher the chance of deadlock because there is only one producer.
+

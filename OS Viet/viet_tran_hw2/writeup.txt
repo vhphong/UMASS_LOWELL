@@ -1,0 +1,6 @@
+Name: Viet Tran Quoc Hoang
+SID: 01607460
+Email: viet_tran1@student.uml.edu
+Assignment 2 Writeup
+This assignment is an extension of assignment 1. Based on the previous assignment coupled with the help files from Dr.Bill lecture, I managed to finish this assignment and completed it 100%. 
+Grep1 took very little time to execute. However Grep2 , running on the 2nd data set, took forever to run. By the time, I am writing this, it is still running (at this point approx 20mins from the time it started). The data2 file is a lot bigger than data1 file. At the same time, it seems like there is simply not enough space to accomodate for child process. Therefore, the app never finishes running. 

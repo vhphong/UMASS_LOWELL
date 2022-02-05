@@ -1,0 +1,112 @@
+ 
+The configuration is for 10 LOOPS
+ 
+ 
+Working on LOOP 1
+ 
+JOB AND PID IS 21710
+just before threads created
+just after threads created
+Elapsed consumer time is 0 sec and 692115 usec
+
+
+ ALL CONSUMERS FINISHED, KILLING  PROCESS
+
+ 
+Working on LOOP 2
+ 
+JOB AND PID IS 22473
+just before threads created
+just after threads created
+Elapsed consumer time is 5 sec and 348069 usec
+
+
+ ALL CONSUMERS FINISHED, KILLING  PROCESS
+
+ 
+Working on LOOP 3
+ 
+JOB AND PID IS 22938
+just before threads created
+just after threads created
+Elapsed consumer time is 0 sec and 835423 usec
+
+
+ ALL CONSUMERS FINISHED, KILLING  PROCESS
+
+ 
+Working on LOOP 4
+ 
+JOB AND PID IS 23348
+just before threads created
+just after threads created
+Elapsed consumer time is 0 sec and 854415 usec
+
+
+ ALL CONSUMERS FINISHED, KILLING  PROCESS
+
+ 
+Working on LOOP 5
+ 
+JOB AND PID IS 23966
+just before threads created
+just after threads created
+Elapsed consumer time is 3 sec and 743222 usec
+
+
+ ALL CONSUMERS FINISHED, KILLING  PROCESS
+
+ 
+Working on LOOP 6
+ 
+JOB AND PID IS 24503
+just before threads created
+just after threads created
+Elapsed consumer time is 0 sec and 805835 usec
+
+
+ ALL CONSUMERS FINISHED, KILLING  PROCESS
+
+ 
+Working on LOOP 7
+ 
+JOB AND PID IS 24953
+PID REMAINING IS 24953
+ 
+DEADLOCK DETECTED ON LOOP 7
+ 
+#### KILLING ALL THREADS
+ 
+Working on LOOP 8
+ 
+JOB AND PID IS 25499
+just before threads created
+just after threads created
+Elapsed consumer time is 0 sec and 759607 usec
+
+
+ ALL CONSUMERS FINISHED, KILLING  PROCESS
+
+ 
+Working on LOOP 9
+ 
+JOB AND PID IS 25857
+just before threads created
+just after threads created
+Elapsed consumer time is 1 sec and 774 usec
+
+
+ ALL CONSUMERS FINISHED, KILLING  PROCESS
+
+ 
+Working on LOOP 10
+ 
+JOB AND PID IS 26200
+just before threads created
+just after threads created
+Elapsed consumer time is 0 sec and 788473 usec
+
+
+ ALL CONSUMERS FINISHED, KILLING  PROCESS
+
+10 loops and 1 deadlocks

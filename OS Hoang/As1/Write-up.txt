@@ -1,0 +1,8 @@
+Name: 		Hoang Do
+Student ID:	01521888
+			Operating System Assignment 1
+Degree of success: 100%
+Most of my code was provided by Professor in his website (Assign1.c).
+I also used Assignment1_help.pdf in to complete my assigment. My code meet the requirements from this assignment.
+My program create the parent and print out the report for the parent. Then the parent will create a child and print out the report for the child. Then the child will run into a loop and wait until it send signal to SIGTERM. 
+

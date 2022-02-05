@@ -1,0 +1,9 @@
+main: project_header.h main.o
+	cc -o pc_threads main.o -lpthread
+main.o: .h hw5.c
+	cc -c hw5.c
+
+clean:
+	rm *.o pc_threads
+
+

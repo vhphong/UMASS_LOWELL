@@ -1,0 +1,217 @@
+Hungs-MacBook-Pro:ps3 hungnguyen$ make
+gcc -c utilities.c
+gcc -o proddonuts proddonuts.o utilities.o
+gcc -o consdonuts consdonuts.o utilities.o
+
+Hungs-MacBook-Pro:ps3 hungnguyen$ ./A3_donut_loop.sh 5
+ 
+The configuration is for 5 LOOPS
+___________________________________________________________
+ 
+Working on LOOP 1
+ 
+DEADLOCK DETECTED ON LOOP 1
+
+>>>>>>>> NOW KILLING THE PRODUCER PROCESS PID: 23140 
+___________________________________________________________
+ 
+Working on LOOP 2
+ 
+LOOP 2 COMPLETED SUCCESSFULLY
+ 
+>>>>>>>> NOW KILLING THE PRODUCER PROCESS PID: 23163 
+___________________________________________________________
+ 
+Working on LOOP 3
+ 
+LOOP 3 COMPLETED SUCCESSFULLY
+ 
+>>>>>>>> NOW KILLING THE PRODUCER PROCESS PID: 23183 
+___________________________________________________________
+ 
+Working on LOOP 4
+ 
+LOOP 4 COMPLETED SUCCESSFULLY
+ 
+>>>>>>>> NOW KILLING THE PRODUCER PROCESS PID: 23203 
+___________________________________________________________
+ 
+Working on LOOP 5
+ 
+LOOP 5 COMPLETED SUCCESSFULLY
+ 
+>>>>>>>> NOW KILLING THE PRODUCER PROCESS PID: 23224 
+___________________________________________________________
+ 
+5 loops and 1 deadlocks
+
+
+Hungs-MacBook-Pro:ps3 hungnguyen$ emacs c1
+
+	CONS PROCESS PID: 23226, TIME: 10784 , dozen #: 1
+
+	plain	jelly	coconut	honey-dip
+	1							
+							0
+	0						
+	0						
+	1346857864						
+							32767
+					1346858223		
+					1346858516		
+			32767				
+			32767				
+			1650553973				
+	1598902853
+
+
+	CONS PROCESS PID: 23226, TIME: 10881 , dozen #: 2
+	plain	jelly	coconut	honey-dip
+							0
+	0						
+					3		
+			0				
+			32767				
+							32767
+					1346858223		
+							32767
+					1346858773		
+					1346858840		
+					1885300076		
+					1028473170
+
+	CONS PROCESS PID: 23226, TIME: 10926 , dozen #: 3
+	plain	jelly	coconut	honey-dip
+			0				
+					7		
+			9				
+			0				
+	1346857864						
+							32767
+	1346858207						
+	1346858450						
+							32767
+					1346858840		
+							1030255713
+							1819308097
+	CONS PROCESS PID: 23226, TIME: 10972 , dozen #: 4
+
+
+	plain	jelly	coconut	honey-dip
+					0		
+							0
+					12		
+							11
+					-2104557342		
+					1346858144		
+					1346858223		
+					1346858516		
+			32767				
+			32767				
+			1650553973				
+			1196380752
+
+
+	CONS PROCESS PID: 23226, TIME: 11018 , dozen #: 5
+
+	plain	jelly	coconut	honey-dip
+	10						
+							0
+							17
+					13		
+							1381941053
+					1346858144		
+					1346858223		
+							32767
+					1346858773		
+			32767				
+			1650553973				
+			1196380752		
+
+
+	CONS PROCESS PID: 23226, TIME: 11277 , dozen #: 6
+
+	plain	jelly	coconut	honey-dip
+			0				
+					17		
+			21				
+					0		
+			32767				
+					1346858144		
+			32767				
+			32767				
+					1346858773		
+			32767				
+					1885300076		
+							1819308097
+
+
+	CONS PROCESS PID: 23226, TIME: 11329 , dozen #: 7
+
+	plain	jelly	coconut	honey-dip
+							0
+	0						
+	0						
+							18
+					-2104557342		
+					1346858144		
+							32767
+					1346858516		
+			32767				
+			32767				
+	1667594341						
+							1819308097
+
+
+	CONS PROCESS PID: 23226, TIME: 11378 , dozen #: 8
+
+
+	plain	jelly	coconut	honey-dip
+							0
+	0						
+	0						
+							22
+					-2104557342		
+					1346858144		
+			32767				
+			32767				
+	1346858754						
+							32767
+							1030255713
+							1819308097
+
+
+	CONS PROCESS PID: 23226, TIME: 11428 , dozen #: 9
+
+	plain	jelly	coconut	honey-dip
+							0
+							0
+					31		
+					0		
+			32767				
+	2						
+	1346858207						
+							32767
+					1346858773		
+					1346858840		
+			1650553973				
+					1028473170		
+
+
+	CONS PROCESS PID: 23226, TIME: 11525 , dozen #: 10
+
+	plain	jelly	coconut	honey-dip
+			0				
+					29		
+			36				
+					0		
+			32767				
+	2						
+	1346858207						
+							32767
+					1346858773		
+							32767
+							1030255713
+	1598902853			
+
+				

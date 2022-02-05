@@ -1,0 +1,13 @@
+Name: Hoang Do
+SID: 01521888
+Email: Hoang_Do@student.uml.edu
+Assignment 2
+Degree of Success: 100%
+
+In this assignment, I found some help from my 1st assignment and some slide provided by professor. I believe that my code fullfilled all the requirements of this assignment. 
+
+In "sort.c", I sorted the data by area code and print out the results of people having the same area code using the command: ./Sort cs308a2_sort_data
+In "grep.c", I counted how many lines that including string "123" and return the result by the command: ./Grep cs308a2_grep_data_1
+                        ./Grep cs308a2_grep_data_2
+
+Grep1 took very fast to execute. However Grep2 , running on the 2nd data set, took forever to run since the data of the file is too large.

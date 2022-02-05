@@ -1,0 +1,3 @@
+I believe I have 100% success with this assignment. Using the provided code in Dr. Bill Lecture as well as the help files,I managed to display the info as needed. 
+My program will create the parent and run the parents report.After that, it will create a child and report the child info.Then the child is looped infinitely until it gets the SIGTERM, at that point, my program will run A1 provided from Dr.Bill
+

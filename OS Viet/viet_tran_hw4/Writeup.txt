@@ -1,0 +1,17 @@
+Viet Tran
+viet_tran1@student.uml.edu
+
+
+My assignment complete 100%. There were no errors when I run and generate the output.
+For this assignment, I base on my homework 3 and call_help_assign4 of professor Bill provide us on website.
+We have 2 parts for this assignment. 
+
+1. Set NUMCONSUMERS = 50, NUMPRODUCERS=30, NUMDOZENS = 200
+I change the NUMSLOTS From 100 to 1000 ( add 100 each time), Each time I run 4 times with loop 10. I store the % of DEADLOCKS and calulating the average to file which NUMSLOTS give us 50% of DEADLOCKS.
+With the NUMSLOTS = 500 we have 62.5 % of DEADLOCKS. NUMSLOTS = 600 we have 40% of DEADLOCKS. So I try the NUMSLOTS = 550. I got 50% of  in average.
+
+2. Set NUMCONSUMERS = 50, NUMPRODUCERS=30, NUMSLOTS = 550 (use the value from part 1).
+I change the NUMDOZENS with the value 100, 150, 250, 300. For each value I run 4 time with loop 10,storing the % of DEADLOCKS and calulating the average.
+Accoding to the data I have. If we increase the number of NUMDOZENS. we will get higher change to get the deadlocks.
+
+I submit 4 file Output_d100, Output_d150, Output_d250, Output_d300 which is the output when i run with NUMDOZENS with the value 100, 150, 250, 300.

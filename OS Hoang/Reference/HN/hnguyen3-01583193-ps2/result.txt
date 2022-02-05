@@ -1,0 +1,21 @@
+Hungs-MacBook-Pro:ps2 hungnguyen$ make
+gcc -Wall sort.c -o sort
+gcc -Wall grep.c -o grep
+
+Hungs-MacBook-Pro:ps2 hungnguyen$ ./sort 
+Area Code 103: 87
+Area Code 215: 107
+Area Code 220: 114
+Area Code 316: 96
+Area Code 403: 100
+Area Code 508: 101
+Area Code 579: 103
+Area Code 604: 86
+Area Code 617: 88
+Area Code 783: 77
+
+Hungs-MacBook-Pro:ps2 hungnguyen$ ./grep data_grep_1
+PARENT PROGRESS: Collected 23 lines (hits) of grep!
+
+Hungs-MacBook-Pro:ps2 hungnguyen$ ./grep data_grep_2
+

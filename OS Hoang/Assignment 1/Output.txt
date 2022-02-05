@@ -1,0 +1,50 @@
+[dngo@mercury1 ps1]$ make
+gcc -Wall -pedantic -o ps1 ps1.c
+gcc -Wall -pedantic -o assign1 assign1.c
+[dngo@mercury1 ps1]$ ./ps1
+
+This is the Parent process report:
+
+PARENT PROG:  Process ID is:            12271
+PARENT PROG:  Process parent ID is:     25088
+PARENT PROG:  Real UID is:              15570
+PARENT PROG:  Real GID is:              2018
+PARENT PROG:  Effective UID is:         15570
+PARENT PROG:  Effective GID is:         2018
+PARENT PROG:  Process priority is:      0
+
+PARENT PROG: will now create child, read pipe,
+signal child, and wait for obituary from child
+
+PARENT PROG: created child with 12272 PID
+
+This is the Child process report:
+
+CHILD PROG:  Process ID is:             12272
+CHILD PROG:  Process parent ID is:      12271
+CHILD PROG:  Real UID is:               15570
+CHILD PROG:  Real GID is:               2018
+CHILD PROG:  Effective UID is:          15570
+CHILD PROG:  Effective GID is:          2018
+CHILD PROG:  Process priority is:       0
+
+CHILD PROG: about to write pipe and go to endless loop
+
+CHILD PROG: Signal 15 is called after 1441 time loops:
+PARENT PROG: read pipe and send SIGTERM, now wait for exiting
+
+This is the Prof process report:
+
+PROF PROG:  Process ID is:              12272
+PROF PROG:  Process parent ID is:       12271
+PROF PROG:  Real UID is:                15570
+PROF PROG:  Real GID is:                2018
+PROF PROG:  Effective UID is:           15570
+PROF PROG:  Effective GID is:           2018
+PROF PROG:  Process priority is:        5
+
+PROF PROG: going into and endless loop, use
+ kill 12272   to kill me now
+
+PROF PROG: timed out after 20 billion iterations
+PARENT PROG: Child PID: 12272 exited with EXIT code: 2

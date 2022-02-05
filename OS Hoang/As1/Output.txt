@@ -1,0 +1,56 @@
+osboxes@osboxes:~/Desktop/A1$ make all
+gcc -Wall -pedantic -o A1 A1.c
+gcc -Wall -pedantic -o Assign1 Assign1.c
+osboxes@osboxes:~/Desktop/A1$ ./A1
+
+This is the Parent process report:
+
+PROF PROG:  Process ID is:		3567
+PROF PROG:  Process parent ID is:	2276
+PROF PROG:  Real UID is:		1000
+PROF PROG:  Real GID is:		1000
+PROF PROG:  Effective UID is:		1000
+PROF PROG:  Effective GID is:		1000
+PROF PROG:  Process priority is:	0
+
+PARENT PROC: will now create child, write pipe,
+ signal child, and wait for obituary from child
+
+
+This is the Child process report: 
+
+CHILD PROG:  Process ID is:		3568
+CHILD PROC:  Process parent ID is:	3567
+CHILD PROC:  Real UID is:		1000
+CHILD PROC:  Real GID is:		1000
+CHILD PROC:  Effective UID is:		1000
+CHILD PROC:  Effective GID is:		1000
+CHILD PROC:  Process priority is:	0
+
+CHILD PROG: about to write pipe and go to endless loop
+PARENT PROG: created Child with 3568 PID
+ PARENT PROG: read pipe and sent SIGTERM, now wait to exit
+
+
+PROF PROG: Awake in handler - You Got Me With Signal
+ Number 15 after spinning for more
+ than 102103  loop iterations, goodbye
+
+CHILD PROG: Now beginning to exec target program
+
+This is the Prof process report:
+
+PROF PROG:  Process ID is:		3568
+PROF PROG:  Process parent ID is:	3567
+PROF PROG:  Real UID is:		1000
+PROF PROG:  Real GID is:		1000
+PROF PROG:  Effective UID is:		1000
+PROF PROG:  Effective GID is:		1000
+PROF PROG:  Process priority is:	5
+
+PROF PROG: going into and endless loop, use
+ kill 3568   to kill me now
+
+PROF PROG: timed out after 20 billion iterations
+PARENT PROG: Child PID: 3568 exited with EXIT code: 2
+

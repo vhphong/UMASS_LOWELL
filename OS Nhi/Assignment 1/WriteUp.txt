@@ -1,0 +1,16 @@
+COMP3080 Operating Systems
+Name: 		DangNhi Ngoc Ngo
+StudentID: 	01553277
+Email: 		DangNhi_Ngo@student.uml.edu
+
+ASSIGNMENT 1
+
+Degree of Success: 100%
+
+I have used the file Assignment_1_help.pdf along with Assign.c provided by Professor
+for reference.
+
+I think my code meets the requirements from the assignment.
+I have used many system calls, for example: fork() call to create a child process,
+parent calls read() and the child writes the the pipe with write(),
+kill() to send signal SIGTERM (#15), and wait() for parent awaits the death of the child

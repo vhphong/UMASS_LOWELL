@@ -1,0 +1,811 @@
+Working on LOOP 5
+ 
+just before threads created
+just after threads created
+	CONS PROCESS PID: 20601, TIME: 25162 , dozen #: 1
+
+
+	plain	jelly	coconut	honey-dip
+			0	
+			0	
+			3	
+			0	
+			999620647	
+			-1664554505	
+			0	
+			0	
+			0	
+			0	
+			0	
+			0	
+	CONS PROCESS PID: 20601, TIME: 25207 , dozen #: 1
+
+
+	plain	jelly	coconut	honey-dip
+			0	
+			0	
+			15	
+			0	
+			999620647	
+			-1664554505	
+			0	
+			0	
+			0	
+			0	
+			0	
+			0	
+	CONS PROCESS PID: 20601, TIME: 25242 , dozen #: 1
+
+
+	plain	jelly	coconut	honey-dip
+	1			
+	0			
+	0			
+	0			
+	207147008			
+	207146832			
+	0			
+	0			
+	0			
+	0			
+	1414025796			
+	0			
+	CONS PROCESS PID: 20601, TIME: 25277 , dozen #: 1
+
+
+	plain	jelly	coconut	honey-dip
+		0		
+		2		
+		0		
+		0		
+		28672		
+		28672		
+		0		
+		0		
+		0		
+		0		
+		0		
+		0		
+	CONS PROCESS PID: 20601, TIME: 25312 , dozen #: 1
+
+
+	plain	jelly	coconut	honey-dip
+		0		
+		14		
+		0		
+		0		
+		28672		
+		28672		
+		0		
+		0		
+		0		
+		0		
+		0		
+		0		
+	CONS PROCESS PID: 20601, TIME: 28709 , dozen #: 2
+
+
+	plain	jelly	coconut	honey-dip
+			0	
+			0	
+			27	
+			0	
+			999620647	
+			-1664554505	
+			0	
+			0	
+			0	
+			0	
+			0	
+			0	
+	CONS PROCESS PID: 20601, TIME: 28756 , dozen #: 2
+
+
+	plain	jelly	coconut	honey-dip
+			14	
+	0			
+	37			
+	0			
+	206610432			
+	206610256			
+	0			
+	0			
+	0			
+	0			
+	1414025796			
+	0			
+	CONS PROCESS PID: 20601, TIME: 28793 , dozen #: 2
+
+
+	plain	jelly	coconut	honey-dip
+	24			
+			0	
+			39	
+			0	
+			999620647	
+			-1664554505	
+			0	
+			0	
+			0	
+			0	
+			0	
+				
+	CONS PROCESS PID: 20601, TIME: 28828 , dozen #: 2
+
+
+	plain	jelly	coconut	honey-dip
+		25		
+	25			
+	0			
+	0			
+	207683584			
+	207683408			
+	0			
+	0			
+	0			
+	0			
+	1414025796			
+	0			
+	CONS PROCESS PID: 20601, TIME: 28863 , dozen #: 2
+
+
+	plain	jelly	coconut	honey-dip
+		0		
+				
+				
+			0	
+			999620647	
+			-1664554505	
+			0	
+			0	
+			0	
+			0	
+			0	
+			0	
+	CONS PROCESS PID: 20601, TIME: 30996 , dozen #: 3
+
+
+	plain	jelly	coconut	honey-dip
+			37	
+	0			
+	9			
+	0			
+	206073856			
+	206073680			
+	0			
+	0			
+	0			
+	0			
+	1414025796			
+	0			
+	CONS PROCESS PID: 20601, TIME: 31516 , dozen #: 3
+
+
+	plain	jelly	coconut	honey-dip
+	47			
+	0			
+	0			
+	0			
+	206610432			
+	206610256			
+	0			
+	0			
+	0			
+	0			
+	1414025796			
+	0			
+	CONS PROCESS PID: 20601, TIME: 31555 , dozen #: 3
+
+
+	plain	jelly	coconut	honey-dip
+			0	
+			0	
+			12	
+			0	
+			999620647	
+			-1664554505	
+			0	
+			0	
+			0	
+			0	
+			0	
+			0	
+	CONS PROCESS PID: 20601, TIME: 31593 , dozen #: 3
+
+
+	plain	jelly	coconut	honey-dip
+	8			
+	0			
+	0			
+	0			
+	207683584			
+	207683408			
+	0			
+	0			
+	0			
+	0			
+	1414025796			
+	0			
+	CONS PROCESS PID: 20601, TIME: 31630 , dozen #: 3
+
+
+	plain	jelly	coconut	honey-dip
+			0	
+			0	
+			24	
+			0	
+			999620647	
+			-1664554505	
+			0	
+			0	
+			0	
+			0	
+			0	
+			0	
+	CONS PROCESS PID: 20601, TIME: 32643 , dozen #: 4
+
+
+	plain	jelly	coconut	honey-dip
+	20			
+	0			
+	0			
+	0			
+	206073856			
+	206073680			
+	0			
+	0			
+	0			
+	0			
+	1414025796			
+	0			
+	CONS PROCESS PID: 20601, TIME: 32685 , dozen #: 4
+
+
+	plain	jelly	coconut	honey-dip
+	32			
+			0	
+			35	
+			0	
+			999620647	
+			-1664554505	
+			0	
+			0	
+			0	
+			0	
+			0	
+			0	
+	CONS PROCESS PID: 20601, TIME: 32722 , dozen #: 4
+
+
+	plain	jelly	coconut	honey-dip
+			0	
+		27		
+		0		
+		0		
+		28672		
+		28672		
+		0		
+		0		
+		0		
+		0		
+		0		
+		0		
+	CONS PROCESS PID: 20601, TIME: 32759 , dozen #: 4
+
+
+	plain	jelly	coconut	honey-dip
+	33			
+			0	
+			47	
+				
+				
+				
+			0	
+			0	
+			0	
+			0	
+			0	
+			0	
+	CONS PROCESS PID: 20601, TIME: 32800 , dozen #: 4
+
+
+	plain	jelly	coconut	honey-dip
+			0	
+		38		
+		0		
+		0		
+				
+				
+				
+				
+				
+				
+				
+				
+	CONS PROCESS PID: 20601, TIME: 33942 , dozen #: 5
+
+
+	plain	jelly	coconut	honey-dip
+	34			
+				0
+				0
+				3
+				1595340210
+				32767
+				0
+				0
+				0
+				0
+				0
+				0
+	CONS PROCESS PID: 20601, TIME: 33982 , dozen #: 5
+
+
+	plain	jelly	coconut	honey-dip
+			0	
+			0	
+			9	
+			0	
+			999620647	
+			-1664554505	
+			0	
+			0	
+			0	
+			0	
+			0	
+			0	
+	CONS PROCESS PID: 20601, TIME: 34017 , dozen #: 5
+
+
+	plain	jelly	coconut	honey-dip
+				
+				
+		0		
+		0		
+		28672		
+		28672		
+		0		
+		0		
+		0		
+		0		
+		0		
+		0		
+	CONS PROCESS PID: 20601, TIME: 34053 , dozen #: 5
+
+
+	plain	jelly	coconut	honey-dip
+			0	
+				0
+				0
+				14
+				1595340210
+				32767
+				0
+				0
+				0
+				0
+				0
+				0
+	CONS PROCESS PID: 20601, TIME: 34089 , dozen #: 5
+
+
+	plain	jelly	coconut	honey-dip
+		35		
+	10			
+	0			
+	0			
+	208220160			
+	208219984			
+	0			
+	0			
+	0			
+	0			
+	1414025796			
+	0			
+JOB AND PID IS 20601 20604
+	CONS PROCESS PID: 20601, TIME: 35083 , dozen #: 6
+
+
+	plain	jelly	coconut	honey-dip
+				0
+			0	
+			21	
+			0	
+			999620647	
+			-1664554505	
+			0	
+			0	
+			0	
+			0	
+			0	
+			4611	
+	CONS PROCESS PID: 20601, TIME: 35122 , dozen #: 6
+
+
+	plain	jelly	coconut	honey-dip
+			47	
+	0			
+	31			
+	0			
+	206610432			
+	206610256			
+	0			
+	0			
+	0			
+	0			
+	1414025796			
+	0			
+	CONS PROCESS PID: 20601, TIME: 35158 , dozen #: 6
+
+
+	plain	jelly	coconut	honey-dip
+		0		
+		12		
+		0		
+		0		
+		28672		
+		28672		
+		0		
+		0		
+		0		
+		0		
+		0		
+		0		
+	CONS PROCESS PID: 20601, TIME: 35196 , dozen #: 6
+
+
+	plain	jelly	coconut	honey-dip
+				0
+			0	
+			33	
+			0	
+			999620647	
+			-1664554505	
+			0	
+			0	
+			0	
+			0	
+			0	
+			0	
+	CONS PROCESS PID: 20601, TIME: 35231 , dozen #: 6
+
+
+	plain	jelly	coconut	honey-dip
+	6			
+			0	
+			44	
+			0	
+			999620647	
+			-1664554505	
+				
+				
+				
+			0	
+			0	
+			0	
+	CONS PROCESS PID: 20601, TIME: 36379 , dozen #: 7
+
+
+	plain	jelly	coconut	honey-dip
+			0	
+		23		
+		0		
+		0		
+		28672		
+		28672		
+		0		
+		0		
+		0		
+		0		
+		0		
+		0		
+	CONS PROCESS PID: 20601, TIME: 36422 , dozen #: 7
+
+
+	plain	jelly	coconut	honey-dip
+	7			
+		34		
+		0		
+		0		
+		28672		
+		28672		
+		0		
+		0		
+				
+				
+				
+				
+	CONS PROCESS PID: 20601, TIME: 36458 , dozen #: 7
+
+
+	plain	jelly	coconut	honey-dip
+				
+				
+				
+				
+				
+				
+		0		
+		0		
+		0		
+		0		
+		0		
+		0		
+	CONS PROCESS PID: 20601, TIME: 36491 , dozen #: 7
+
+
+	plain	jelly	coconut	honey-dip
+			0	
+			0	
+			6	
+			0	
+			999620647	
+			-1664554505	
+			0	
+			0	
+			0	
+			0	
+			0	
+			0	
+	CONS PROCESS PID: 20601, TIME: 36527 , dozen #: 7
+
+
+	plain	jelly	coconut	honey-dip
+			9	
+	0			
+	16			
+	0			
+	208220160			
+	208219984			
+	0			
+	0			
+	0			
+	0			
+	1414025796			
+	0			
+	CONS PROCESS PID: 20601, TIME: 37681 , dozen #: 8
+
+	CONS PROCESS PID: 20601, TIME: 37682 , dozen #: 8
+
+	CONS PROCESS PID: 20601, TIME: 37691 , dozen #: 8
+
+
+	plain	jelly	coconut	honey-dip
+	CONS PROCESS PID: 20601, TIME: 37697 , dozen #: 8
+
+	CONS PROCESS PID: 20601, TIME: 37699 , dozen #: 8
+
+
+	plain	jelly	coconut	honey-dip
+
+	plain	jelly	coconut	honey-dip
+	
+	plain	jelly	coconut	honey-dip
+
+	plain	jelly	coconut	honey-dip
+			0		30	19	0							0		
+		
+
+	
+
+	7							0				0				
+	0	0
+
+	
+
+	0							18				29				
+	0	0
+
+	
+
+	0							0				0				
+	27	38
+
+	
+
+	206073856							999620647				999620647	
+	1595340210	1595340210
+
+	
+
+	206073680							-1664554505				-1664554505
+	32767	32767
+
+	
+
+	0							0				0				
+	0	0
+
+	
+
+	0							0				0				
+	0	
+
+	
+
+	0							0				0				
+	0	
+
+	
+
+	0							0				0				
+	0	
+
+	
+
+	1414025796							0				0			
+	0	
+
+	
+
+	0							0				0				
+	0	
+
+
+
+	CONS PROCESS PID: 20601, TIME: 40531 , dozen #: 9
+
+	CONS PROCESS PID: 20601, TIME: 40534 , dozen #: 9
+
+
+	plain	jelly	coconut	honey-dip
+	CONS PROCESS PID: 20601, TIME: 40540 , dozen #: 9
+
+	CONS PROCESS PID: 20601, TIME: 40545 , dozen #: 9
+
+	CONS PROCESS PID: 20601, TIME: 40546 , dozen #: 9
+
+
+	plain	jelly	coconut	honey-dip
+	
+	plain	jelly	coconut	honey-dip
+
+	plain	jelly	coconut	honey-dip
+
+	plain	jelly	coconut	honey-dip
+					31		0						0			0
+		0	
+	
+
+
+										9	0		0	0		
+			
+	
+
+
+										0	42		3	14		
+			
+	
+
+
+										0	0		0	0		
+			
+	
+
+
+										28672	999620647		999620647	999620647		
+			
+	
+
+
+										28672	-1664554505	32767	-166455450-1664554505		
+			
+	
+
+
+										0	0	0	0	0		
+			
+	
+
+
+										0	0	0	0	0		
+			
+	
+
+
+										0		0	0	0		
+			
+	
+
+
+										0		0	0	0		
+			
+	
+
+
+										0		0	0	0		
+			
+	
+
+
+										0	0	0	0	0		
+			
+
+
+
+	CONS PROCESS PID: 20601, TIME: 43838 , dozen #: 10
+
+
+	plain	jelly	coconut	honey-dip
+	CONS PROCESS PID: 20601, TIME: 43844 , dozen #: 10
+
+	
+	plain	jelly	coconut	honey-dip
+	CONS PROCESS PID: 20601, TIME: 43860 , dozen #: 10
+
+		
+	plain	jelly	coconut	honey-dip
+	33	0				
+	CONS PROCESS PID: 20601, TIME: 43922 , dozen #: 10
+
+		CONS PROCESS PID: 20601, TIME: 43927 , dozen #: 10
+
+		0
+	plain	jelly	coconut	honey-dip
+
+
+	plain	jelly	coconut	honey-dip
+	0				
+							0	0	0	21
+					26
+
+
+					
+								28		0
+	0		0		0
+
+
+					
+								0		0
+	0		0		207683584
+
+
+					
+								999620647		28672
+	12		16		207683408
+
+
+					
+								-1664554505		28672
+	1595340210		1595340210		0
+
+
+					
+								0		0
+	32767		32767		0
+
+
+					
+								0		0
+	0		0		0
+
+
+					
+								0		0
+	0		0		0
+
+
+					
+								0		0
+	0		0		1414025796
+
+
+					
+								0		0
+	0		0		0
+
+
+					
+								4611		0
+	0		0	
+
+
+			
+					0	0
+
+Elapsed consumer time is 0 sec and 22501 usec
+
+
+ ALL CONSUMERS FINISHED, KILLING  PROCESS
+
+ 

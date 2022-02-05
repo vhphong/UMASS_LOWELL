@@ -1,0 +1,48 @@
+[dngo@mercury1 Ngo_DangNhi_01553277_hw3]$ make
+gcc -c proddonuts.c
+gcc -c consdonuts.c
+gcc -c utilities.c
+gcc -o proddonuts proddonuts.o utilities.o
+gcc -o consdonuts consdonuts.o utilities.o
+
+[dngo@mercury1 Ngo_DangNhi_01553277_hw3]$ ./A3_donut_loop.sh 5
+ 
+The configuration is for 5 LOOPS
+___________________________________________________________
+ 
+Working on LOOP 1
+ 
+DEADLOCK DETECTED ON LOOP 1
+
+>>>>>>>> NOW KILLING THE PRODUCER PROCESS PID: 23140 
+___________________________________________________________
+ 
+Working on LOOP 2
+ 
+LOOP 2 COMPLETED SUCCESSFULLY
+ 
+>>>>>>>> NOW KILLING THE PRODUCER PROCESS PID: 23163 
+___________________________________________________________
+ 
+Working on LOOP 3
+ 
+LOOP 3 COMPLETED SUCCESSFULLY
+ 
+>>>>>>>> NOW KILLING THE PRODUCER PROCESS PID: 23183 
+___________________________________________________________
+ 
+Working on LOOP 4
+ 
+LOOP 4 COMPLETED SUCCESSFULLY
+ 
+>>>>>>>> NOW KILLING THE PRODUCER PROCESS PID: 23203 
+___________________________________________________________
+ 
+Working on LOOP 5
+ 
+LOOP 5 COMPLETED SUCCESSFULLY
+ 
+>>>>>>>> NOW KILLING THE PRODUCER PROCESS PID: 23224 
+___________________________________________________________
+ 
+5 loops and 1 deadlocks

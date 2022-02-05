@@ -1,0 +1,27 @@
+Class: 		CS308 - Operating Systems
+Name: 		DangNhi Ngoc Ngo
+Student ID: 	01553277
+Email: 		DangNhi_Ngo@student.uml.edu
+Homework 3
+
+DEGREE OF SUCCESS: 100%
+
+I have finished this assignment with 100% success.
+I have utilized all the codes from the call_help_assign3.txt for references from Professor.
+
+The provided Makefile can run and clean the project by compiling these following files:
+donuts.h, utilities.c, proddonuts.c, consdonuts.c.
+
+In consdonuts.c, I have provided some functions to determine deadlocks, terminate somaphores and print out PID values.
+In proddonuts.c, the infinite loop is the producer for ID value and shared ring flavors.
+
+I ran the shell script with loops set to 5 (5 consumers and 1 producer).
+From the results excel and graph which shows the relation between the depth of queue size and the probability of
+deadlock, the distribution is linear. At queue size 10, the deadlock is 100% and decreases to 0 from queue
+size 70, 80, 90 to 100.
+
+The queue size around 45 (between 40 ahy 50) would produce a 50% chance of deadlocking.
+
+Result: the higher number of consumers, the higher the chance of deadlock occurs.
+
+The results excel file and graph are also attached with the assignment.

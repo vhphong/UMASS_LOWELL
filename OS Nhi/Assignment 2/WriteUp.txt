@@ -1,0 +1,22 @@
+COMP3080 Operating Systems
+Name: 		DangNhi Ngoc Ngo
+StudentID: 	01553277
+Email: 		DangNhi_Ngo@student.uml.edu
+
+ASSIGNMENT 2
+
+Degree of Success: 100%
+
+I think my code meets the requirements from the assignment.
+
+I utilized some parts from assignment 1 and professor's reference to
+complete this assignment.
+
+For sort.c file, I sort the cs308a2_sort_data file by area code, then print out
+the sorted result with code number and number of people found in the data.
+For grep.c file, I print out the number of lines returned by grep searching
+any line that has the string "123".
+
+The result shows that there are 23 lines returned by grep for grep_data_1.
+However, we can not print out the result for the file name grep_data_2 because
+of the size of the file.
